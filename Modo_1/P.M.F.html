@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Productividad Multifactorial Simple</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
+<link href="css/Metodos.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/jquery-3.2.0.min.js"></script>
+
+</head>
+<body>
+
+<!--Modos-->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#8592;</a>
+	<a href="P.F.T.html">Productividad F.T</a>
+    <a href="P.F.M.html">Productividad F.M</a>
+    <a href="P.M.F.html">Productividad M.F</a>
+    <hr>
+	<p></p>
+    <a href="../Pagina_Principal.html">Pagina Principal</a>
+    <a href="Productividad.html">Productividad</a>  
+	<a href="#">Hombre Maquina</a>
+	<a href="#">Balance de Lineas</a>   
+	<a href="#">Muestreo de trabajo</a>
+	<hr>
+	<p></p>
+	<a href="#"><span class="glyphicon glyphicon-question-sign"></span>Ayuda</a>
+	<a href="#"><span class="glyphicon glyphicon-info-sign"></span>Acerca de</a>
+</div>
+<a id="tab" style="font-size:30px;cursor:pointer" onclick="openNav()">&#8801;<label>Methods</label></a>
+<!--Copiar Todo lo de Arriba-->
+ <h3>Productividad Multifactorial Simple</h3>
+<!--Costos Transformaciones-->
+<h3>Tranformaciones</h3>
+<form method="POST" action="nada1.html" id="costo1">
+	<div id="lineas1">
+        <input type="text" class="importe_linea1" value="0"/><br/>
+	</div>
+    <p>Resultado</p>
+    <input type="text" id="total1" value="0"/><br/>
+    <p>Agregar/Calcular</p>
+	<input type="button" value="Nueva l&iacute;nea" onclick="nueva_linea1()"/>
+	<input type="button" value="Calcular" onclick="calcular_total1()"/>
+</form>
+<!--Costos Totales-->
+<h3>Costos Totales</h3>
+<form method="POST" action="nada.html" id="costo">
+	<div id="lineas">
+        <input type="text" class="importe_linea" value="0"/><br/>
+	</div>
+    <p>Resultado</p>
+    <input type="text" id="total" value="0"/><br/>
+    <p>Agregar/Calcular Costos</p>
+	<input type="button" value="Nueva l&iacute;nea" onclick="nueva_linea()"/>
+	<input type="button" value="Calcular" onclick="calcular_total()"/>
+</form>
+<!--Productividad-->
+<form id="unidades">
+    <h3>Productividad</h3>
+    <p>Costo Total</p>
+    <input type="text" id="Costo_Total" value="0" placeholder="Total"/>
+	<p>Candidad de Unidades</p>
+    <input type="text" id="Unidades" value="0" placeholder="Unidades"/>
+    <p>Resultado</p>
+    <input type="text" id="Resultado" value="0"/><br/>
+    <p></p>
+    <input type="button" value="Calcular" onclick="Productividad()"/>
+</form>
+<!--Costo Unitario-->
+<form id="unidades">
+    <h3>Costo Unitario</h3>
+    <p>Costo Total</p>
+    <input type="text" id="Costo_Total1" value="0" placeholder="Total"/>
+	<p>Candidad de Unidades</p>
+    <input type="text" id="Unidades1" value="0" placeholder="Unidades"/>
+    <p>Resultado</p>
+    <input type="text" id="Resultado1" value="0"/><br/>
+    <p></p>
+    <input type="button" value="Calcular" onclick="Costo_Unitario()"/>
+</form>
+<!--Ganancia-->
+<form id="unidades">
+    <h3>Ganancia</h3>
+    <p>Costo Unitario</p>
+    <input type="text" id="Costo_unitario" value="0" placeholder="Total"/>
+	<p>Precio de Venta al Publico</p>
+    <input type="text" id="pvp" value="0" placeholder="Unidades"/>
+    <p>Resultado</p>
+    <input type="text" id="Resultado2" value="0"/><br/>
+    <p></p>
+    <input type="button" value="Calcular" onclick="Ganancia()"/>
+</form>
+<!--Rentabilidad-->
+<form id="unidades">
+    <h3>Rentabilidad</h3>
+    <p>Costo Unitario</p>
+    <input type="text" id="Costo_unitario1" value="0" placeholder="Total"/>
+	<p>Precio de Venta al Publico</p>
+    <input type="text" id="pvp1" value="0" placeholder="Unidades"/>
+    <p>Resultado</p>
+    <input type="text" id="Resultado3" value="0"/><br/>
+    <p></p>
+    <input type="button" value="Calcular" onclick="Rentabilidad()"/>
+</form>
+<script src="js/Metodos.js"></script>
+</body>
+    
+</html>

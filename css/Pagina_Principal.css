@@ -1,0 +1,136 @@
+/* FUENTES TIPOGRAFICAS */
+.fuente{
+font-family: 'Roboto Regular', sans-serif;
+}
+
+@font-face {
+font-family: "FontAwesome";
+src: url('../fonts/fontawesome-webfont.eot');
+src: url('../fonts/fontawesome-webfont.eot?#iefix') format('eot'),
+url('../fonts/fontawesome-webfont.woff') format('woff'),
+url('../fonts/fontawesome-webfont.ttf') format('truetype'),
+url('../fonts/fontawesome-webfont.svg#FontAwesome') format('svg');
+font-weight: normal;
+font-style: normal;
+-webkit-font-smoothing: antialiased;
+}
+@font-face{
+font-family: "Roboto";
+src:url('../fonts/Roboto-Condensed.ttf')format('truetype');
+src:url('../fonts/Roboto-CondensedItalic.ttf')format('truetype');
+src:url('../fonts/Roboto-Italic.ttf')format('truetype');
+src:url('../fonts/Roboto-Light.ttf')format('truetype');
+src:url('../fonts/Roboto-LightItalic.ttf')format('truetype');
+src:url('../fonts/Roboto-Medium.ttf')format('truetype');
+src:url('../fonts/Roboto-MediumItalic.ttf')format('truetype');
+src:url('../fonts/Roboto-Regular.ttf')format('truetype');
+}
+/* ESTILOS PRINCIPALES */
+html, body {
+    font-family: 'Roboto Regular', sans-serif;
+    position: relative;
+    margin: auto; 
+    padding: 0; 
+    border: 1; 
+    height: 100%; 
+    background: DimGray;
+    }
+
+body { 
+font-family: 'Roboto Regular', sans-serif;
+color: grey;
+background-color:  #e6e6e6;
+}
+
+body > .container { 
+padding: 60px 15px 0; 
+}
+
+.container .text-muted {
+  margin: 20px 0;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 2px 3px grey;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  top: 0 em;
+  left: 0 ;
+  right: 0 ;
+  height: 60px;
+  background: #696969;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #e6e6e6;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: grey; 
+    display: block;
+    transition: 0.3s;
+    background: #e6e6e6; 
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+     background: #cccccc; 
+     color: grey; 
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 25px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+label {
+ color:  #f2f2f2; 
+ font-size: 25px; 
+ text-indent:0.5cm;
+ font-family: 'Roboto Regular', sans-serif;
+}
+a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: grey; 
+    display: block;
+    transition: 0.3s;
+    font-family: 'Roboto Regular', sans-serif;
+}
+
+ a:hover, a:focus{
+     background: #cccccc; 
+     color: grey;  
+}
+#opentab {
+    color:  #f2f2f2;  
+   background: #696969; 
+}
