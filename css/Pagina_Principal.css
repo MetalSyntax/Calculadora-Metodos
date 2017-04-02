@@ -1,17 +1,8 @@
 @import url(css/Fuente_Principal.css);
 /* ESTILOS PRINCIPALES */
-
 body > .container { 
 padding: 60px 15px 0; 
 }
-
-.container .text-muted {
-  margin: 20px 0;
-  text-align: center;
-  color: white;
-  text-shadow: 1px 2px 3px grey;
-}
-
 .footer {
   position: fixed;
   bottom: 0;
@@ -21,54 +12,10 @@ padding: 60px 15px 0;
   height: 60px;
   background: #696969;
 }
-
 .footer > .container {
   padding-right: 15px;
   padding-left: 15px;
 }
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background: #e6e6e6;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 20px;
-    color: grey; 
-    display: block;
-    transition: 0.3s;
-    background: #e6e6e6; 
-}
-
-.sidenav a:hover, .offcanvas a:focus{
-     background: #cccccc; 
-     color: grey; 
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 25px;
-    margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-
 label {
  color:  #f2f2f2; 
  font-size: 25px; 
@@ -84,7 +31,6 @@ a {
     transition: 0.3s;
     font-family: 'Roboto Regular', sans-serif;
 }
-
  a:hover, a:focus{
      background: #cccccc; 
      color: grey;  
