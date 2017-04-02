@@ -3,7 +3,7 @@
 /*******************************************************/
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
-     document.body.style.backgroundColor = "rgba(230,230,230,0.80)";
+     document.body.style.backgroundColor = "rgba(230,230,230,0.70)";
 }
 
 function closeNav() {
