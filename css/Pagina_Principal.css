@@ -3,19 +3,6 @@
 body > .container { 
 padding: 60px 15px 0; 
 }
-.footer {
-  position: fixed;
-  bottom: 0;
-  top: 0 em;
-  left: 0 ;
-  right: 0 ;
-  height: 60px;
-  background: #696969;
-}
-.footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
-}
 label {
  color:  #f2f2f2; 
  font-size: 25px; 
@@ -38,4 +25,7 @@ a {
 #opentab {
     color:  #f2f2f2;  
    background: #696969; 
+}
+p {
+    color: whitesmoke;
 }
