@@ -3,6 +3,8 @@ Methods es una calculadora realizada con la intencion de agilizar los calculos r
 
 Este proyecto es Open Source
 
+version 1.0.3 Mejora en la estructuracion de los archivos HTML a una sola Ruta. 
+
 Version 1.0.2 Se agregaron las rutas Ayuda y Acerca de.
 
 Version 1.0.15 Se creo el archivo SideNav.css para el SideNav fuera de los otros codigos CSS
