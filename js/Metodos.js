@@ -9,7 +9,7 @@ function openNav() {
 document.getElementById("closetab").addEventListener("click", closeNav);
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-    document.body.style.backgroundColor = "#e6e6e6";
+    document.body.style.backgroundColor = "white";
    
 }
 /*******************************************************/

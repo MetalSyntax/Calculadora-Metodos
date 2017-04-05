@@ -1,14 +1,17 @@
+/* ESTILOS IMPORTADOS */
 @import url(../css/Fuente_Principal.css);
 /* ESTILOS PRINCIPALES */
 body > .container { 
 padding: 60px 15px 0; 
 }
+
 label {
  color:  #f2f2f2; 
  font-size: 25px; 
  text-indent:0.5cm;
  font-family: 'Roboto Regular', sans-serif;
 }
+/* LINKS */
 a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -22,11 +25,7 @@ a {
      background: #cccccc; 
      color: grey;  
 }
-#tab {
-    color:  #f2f2f2;  
-   background: #696969; 
-}
-
+/* ENTRADAS */
 input {
 	padding: 5px 10px;
 	border: 2px solid silver;
@@ -35,6 +34,7 @@ input {
 	background-color: #F0F3F4;
 	font-family: 'Roboto Condensed', sans-serif;  
 }
+/* PARRAFOS */
 p {
 	color: #595959; 
 	padding: 5px 10px;
@@ -43,6 +43,7 @@ p {
 em{
     text-align: justify;
 }
+/* TITULOS */
 h1 {
 	color: #595959; 
 	padding: 20px;
@@ -52,7 +53,12 @@ h2, h3,h4, h5,h6{
 	color: #595959; 
 	text-align: center;
 }
-
+/* ESPECIFICOS */
 #costo, #unidades, #costo1 {
 	text-align: center;
+}
+
+#tab {
+    color:  #f2f2f2;  
+   background: #696969; 
 }

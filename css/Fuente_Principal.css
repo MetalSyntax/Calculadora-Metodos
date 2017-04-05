@@ -32,12 +32,12 @@ html, body {
     padding: 0; 
     border: 1; 
     height: 100%; 
-    background-color:#e6e6e6;
+    background-color:white;
     }
     body { 
 font-family: 'Roboto Condensed', sans-serif;
 color: grey;
-background-color:#e6e6e6;
+background-color:white;
 }
 .sidenav {
     height: 100%;
@@ -48,7 +48,7 @@ background-color:#e6e6e6;
     left: 0;
     background: #e6e6e6;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.2s;
     padding-top: 60px;
 }
 .sidenav a {
