@@ -1,30 +1,9 @@
 /* ESTILOS IMPORTADOS */
 @import url(../css/Fuente_Principal.css);
 /* ESTILOS PRINCIPALES */
-body > .container { 
-padding: 60px 15px 0; 
-}
 
-label {
- color:  #f2f2f2; 
- font-size: 25px; 
- text-indent:0.5cm;
- font-family: 'Roboto Regular', sans-serif;
-}
 /* LINKS */
-a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 20px;
-    color: grey; 
-    display: block;
-    transition: 0.3s;
-    font-family: 'Roboto Regular', sans-serif;
-}
- a:hover, a:focus{
-     background: #cccccc; 
-     color: grey;  
-}
+
 /* ENTRADAS */
 input {
 	padding: 5px 10px;
