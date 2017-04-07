@@ -11,17 +11,23 @@
 
 <link href="css/bootstrap.min.css" rel="stylesheet" >
 <link href="css/SideNav.css" rel="stylesheet">
+<link href="css/Accordion.css" rel="stylesheet">
+<link href="css/Card.css" rel="stylesheet">
 <link href="css/Pagina_Principal.css" rel="stylesheet">
-
-<script src="js/bootstrap.min.js"></script>
+    
 <script src="js/jquery-3.2.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
 
 </head>
 <body>
    
 <!--Modos-->
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" id="closetab">&#8592;</a>
+ <a href="javascript:void(0)" class="closebtn" id="closetab">&#8592;</a>
+    <div class="card">
+    <img src="images/methods.png" alt="Methods" style="width:100%">
+    </div>
 	<a href="index.html">Pagina Principal</a>
 	<a href="html/Productividad.html">Productividad</a>  
 	<a href="#">Hombre Maquina</a>
@@ -31,19 +37,29 @@
 	<p></p>
 	<a href="html/Ayuda.html"><span class="glyphicon glyphicon-question-sign"></span>Ayuda</a>
 	<a href="html/Acerca_de.html"><span class="glyphicon glyphicon-info-sign"></span>Acerca de</a>
+    <a href="html/Terminos.html"><span class="glyphicon glyphicon-list-alt"></span>Terminos y Condciones</a>
 </div>
-<a id="opentab" style="font-size:30px;cursor:pointer">&#8801;<label>Methods</label></a>
+<a id="tab" style="font-size:30px;cursor:pointer">&#8801;<label>Methods</label></a>
 
 <!--Copiar Todo lo de Arriba-->
-
+<button class="accordion">Productividad</button>
+<div class="panel">
 <a  href="html/Productividad.html">Productividad</a>
+<a href="P.F.T.html">Productividad F.T</a>
+<a href="P.F.M.html">Productividad F.M</a>
+<a href="P.M.F.html">Productividad M.F</a>
+<a href="P.M.F.I.html">Productividad con I</a>
+</div>
 <a  href="#">Hombre Maquina</a>
 <a  href="#">Balance de Lineas</a>
 <a  href="#">Muestreo de trabajo</a>
 
 <!--Copiar Todo lo de Abajo-->
 
+<script src="js/SideNav.js"></script>
+<script src="js/Accordion.js"></script>
 <script src="js/Metodos.js"></script>
 
+    
 </body>
 </html>

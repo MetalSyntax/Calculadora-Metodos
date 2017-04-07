@@ -13,8 +13,8 @@
 <link href="../css/SideNav.css" rel="stylesheet">
 <link href="../css/Metodos.css" rel="stylesheet">
 
-<script src="../js/bootstrap.min.js"></script>
 <script src="../js/jquery-3.2.0.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -22,9 +22,13 @@
 <!--Modos-->
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#8592;</a>
+    <div class="card">
+    <img src="../images/methods.png" alt="Methods" style="width:100%">
+    </div>
 	<a href="P.F.T.html">Productividad en F.T</a>
     <a href="P.F.M.html">Productividad en F.M</a>
     <a href="P.M.F.html">Productividad M.F</a>
+    <a href="P.M.F.I.html">Productividad con I</a>
     <hr>
 	<p></p>
     <a href="../Pagina_Principal.html">Pagina Principal</a>
@@ -36,6 +40,7 @@
 	<p></p>
 	<a href="Ayuda.html"><span class="glyphicon glyphicon-question-sign"></span>Ayuda</a>
 	<a href="Acerca_de.html"><span class="glyphicon glyphicon-info-sign"></span>Acerca de</a>
+     <a href="Terminos.html"><span class="glyphicon glyphicon-list-alt"></span>Terminos y Condciones</a>
 </div>
 <a id="tab" style="font-size:30px;cursor:pointer" onclick="openNav()">&#8801;<label>Methods</label></a>
 
@@ -48,16 +53,22 @@
     <p>Cantidad de Materiales</p>
     <input type="text" id="Materiales" value="0" placeholder="Materiales"/>
     
-    <p>Resultado en P/$Material</p>
+    <p>Resultado Previo</p>
     <p id="SubTotal">0</p><br/>
+    
     <p>Resultado</p>
     <p id="Total">0</p><br/>
+  
     <input type="button" value="Calcular Total" onclick="Productividad_FM()"/>
 </form>
 </div>
 
 
+<script src="../js/SideNav.js"></script>
+<script src="../js/Accordion.js"></script>   
 <script src="../js/Metodos.js"></script>
+
+    
 </body>
     
 </html>

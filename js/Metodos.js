@@ -1,18 +1,4 @@
 /*******************************************************/
-/*Navigator*/
-/*******************************************************/
-document.getElementById("opentab").addEventListener("click", openNav);
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-     document.body.style.backgroundColor = "rgba(230,230,230,0.70)";
-}
-document.getElementById("closetab").addEventListener("click", closeNav);
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.body.style.backgroundColor = "white";
-   
-}
-/*******************************************************/
 /*Productividad en Funcion de los Trabajadores*/
 /*******************************************************/
 function Productividad_FT(){
@@ -43,7 +29,7 @@ function Productividad_FM(){
 	document.getElementById("Total").innerHTML = "El Total es = " + total;
 }
 /*******************************************************/
-/*Conversiones a Unidades * $/Unidades */
+/*Conversiones a Unidades Multiplicacion*/
 /*******************************************************/
 function calcular_total1() {
 	importe_total1 = 1
@@ -53,9 +39,16 @@ function calcular_total1() {
 		});
 	$("#total1").val(importe_total1);
 }
+function calcular_total2() {
+	importe_total1 = 1
+	$(".importe_linea1").each(
+		function(index, value) {
+            importe_total1 =  eval($(this).val()) / importe_total1 ;
+		});
+	$("#total2").val(importe_total1);
+}
 function nueva_linea1() {
-	$("#lineas1").append('<input type="text" class="importe_linea1" value="0"/><br/>');
-    input.placeholder = "Valor $";
+	$("#lineas1").append('<input type="text" class="importe_linea1" value="0"/><br/>');   
 }
 /*******************************************************/
 /*Costos Totales*/
@@ -127,4 +120,46 @@ function Rentabilidad(){
 		Costo_unitario1 = Costo_unitario1 + eval($(this).val());
 	});
 	$("#Resultado3").val(Math.round ((pvp1 / Costo_unitario1) * 100));
+}
+/*******************************************************/
+/*Costos de Produccion*/
+/*******************************************************/
+function Costos_de_Produccion(){
+	Material = 0
+	Costo = 0
+	$("#Material1").each(function(index,value){
+		Material = Material + eval($(this).val());
+	});
+	$("#Costo1").each(function(index,value){
+		Costo = Costo + eval($(this).val());
+	});
+	$("#Resultado1").val(Math.round (Material * Costo));
+}
+/*******************************************************/
+/*Indicadores*/
+/*******************************************************/
+function Indicadores(){
+	Mes = 0
+	Material = 0
+	$("#Mes").each(function(index,value){
+		Mes = Mes + eval($(this).val());
+	});
+	$("#Material2").each(function(index,value){
+		Material = Material + eval($(this).val());
+	});
+	$("#Resultado2").val(Mes / Material);
+}
+/*******************************************************/
+/*Indices*/
+/*******************************************************/
+function Indices(){
+	Estudio = 0
+	Base = 0
+	$("#Estudio").each(function(index,value){
+		Estudio = Estudio + eval($(this).val());
+	});
+	$("#Base").each(function(index,value){
+		Base = Base + eval($(this).val());
+	});
+	$("#Resultado3").val(Estudio / Base)*100;
 }

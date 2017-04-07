@@ -13,14 +13,17 @@
 <link href="../css/SideNav.css" rel="stylesheet">
 <link href="../css/Metodos.css" rel="stylesheet">
 
-<script src="../js/bootstrap.min.js"></script>
 <script src="../js/jquery-3.2.0.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 
 </head>
 <body>
 <!--Modos-->
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#8592;</a>
+    <div class="card">
+    <img src="../images/methods.png" alt="Methods" style="width:100%">
+    </div>
     <a href="../index.html">Pagina Principal</a>
     <a href="Productividad.html">Productividad</a>  
 	<a href="#">Hombre Maquina</a>
@@ -30,30 +33,64 @@
 	<p></p>
 	<a href="Ayuda.html"><span class="glyphicon glyphicon-question-sign"></span>Ayuda</a>
 	<a href="Acerca_de.html"><span class="glyphicon glyphicon-info-sign"></span>Acerca de</a>
+    <a href="Terminos.html"><span class="glyphicon glyphicon-list-alt"></span>Terminos y Condciones</a>
 </div>
 <a id="tab" style="font-size:30px;cursor:pointer" onclick="openNav()">&#8801;<label>Methods</label></a>
 <h1>Ayuda</h1>
 
 <h3>Productividad</h3>
+    
     <p>Leyenda</p>
+    
     <ul>
         <li>P = Productividad</li>
         <li>N.U = Numero de Unidades</li>
-        <li>T.R = Tiempo </li>
+        <li>T = Tiempo </li>
         <li>G = Ganancia</li>
-        <li>M.O = Mano de Obra </li>
         <li>P.V.P =	Precio de Venta al Publico</li>
         <li>U.M = Unidad Material</li>
         <li>C.U = Costo Unitario</li>
         <li>C.T = Costo total </li>
-        <li>P.B = Piedra en Bruto </li>
     </ul>
+    
+    <p>Insumos Frecuentes</p>
+    <ul>
+    <li>P.B = Piedra en Bruto </li>
+    <li>M.O = Mano de Obra </li>
+    <li>H.H = Horas Hombre</li>
+    </ul>
+    
+    <p>Ejemplos de Otros Insumos</p>
+    <ul>
+    <li>Agua</li>
+    <li>Electricidad</li>
+    <li>Energia</li>
+    <li>Resina</li>
+    <li>Pega</li>
+    <li>Madera</li>
+    <li>Clavos</li>
+    </ul>
+    
+    <p>Formulas</p>
+    <ul>
+    <li>Indicador de Productividad-> P = N.U/I </li>
+    <li>Indice = P.E/P.B X 100</li>
+    <li>P.E = Periodo Estudio</li>
+    <li>P.B = Periodo Base</li>
+    </ul>
+    
     <p>Tipos de Productividad</p>
     <ul>
     	<li>Productividad en Funcion de los Trabajadores</li>
     	<li>Productividad en Funcion de los Materiales</li>
     	<li>Productividad Multifactorial</li>
     </ul>
+    
+<script src="../js/SideNav.js"></script>
+<script src="../js/Accordion.js"></script>   
 <script src="../js/Metodos.js"></script>
+
+    
 </body>
+    
 </html>
