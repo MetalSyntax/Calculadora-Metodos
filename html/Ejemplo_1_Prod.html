@@ -7,15 +7,15 @@
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-<title>Productividad en Funcion de los trabajadores</title>
+<title>Ejemplo</title>
 
 <link rel="stylesheet" href="../css/bootstrap.min.css">
 <link href="../css/SideNav.css" rel="stylesheet">
 <link href="../css/Metodos.css" rel="stylesheet">
-
-<script src="../js/bootstrap.min.js"></script>
+<link href="../css/Accordion.css" rel="stylesheet">
+    
 <script src="../js/jquery-3.2.0.min.js"></script>
-
+<script src="../js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -38,25 +38,38 @@
 </div>
 <a id="tab" style="font-size:30px;cursor:pointer" onclick="openNav()">&#8801;<label>Methods</label></a>
 
-<!--Copiar Todo lo de Arriba-->
-<div class="container">   
-<form id="unidades">
-    <h3>Productividad en Funcion de los trabajadores</h3>
-    <p>La candidad de Unidades</p>
-    <input type="text" id="Unidades" value="0" placeholder="Unidades"/>
-    <p>Cantidad de Trabajadores</p>
-    <input type="text" id="Trabajadores" value="0" placeholder="Trabajadores"/>
-    <p>Resultado</p>
-    <input type="text" id="total" value="0"/><br/>
-    <p></p>
-    <input type="button" value="Calcular" onclick="Productividad_FT()"/>
-</form>
+ <div class="container">
+    <h1 class="card-title">Ejemplo</h1>
+    <p>Cierta Empresa vendio 6.000 unidades a un precio de 100$ para la cual requirio de 600 personas y recibieron 300$. Requieren de materiales uqe cuestas 20$, los gastos de maquinaria y energia cuestan 60.000 y 20.000 respectivamente. Se requiere los siguientes</p>
+    <ul>
+        <li>A - Productividad en Funcion de los Trabajadores</li>
+        <li>B - Productividad en Funcion de los Materiales</li>
+        <li>C - Productividad Multifactorial</li>
+     </ul>
 </div>
-
+    
+<button class="accordion">Resolucion</button>
+<div class="panel">
+     <a href="../images/1.PNG" id="I1">
+    <img src="../images/1.PNG" id="I1" alt="1">
+    </a>
+    <a href="../images/2.PNG" id="I1">
+     <img src="../images/2.PNG" id="I1" alt="2">
+    </a>
+    <a href="../images/3.PNG" id="I1">
+     <img src="../images/3.PNG" id="I1" alt="3">
+    </a>
+        <a href="../images/4.PNG" id="I1">
+     <img src="../images/4.PNG" id="I1" alt="4">
+    </a>
+            <a href="../images/5.PNG" id="I1">
+     <img src="../images/5.PNG" id="I1" alt="5">
+    </a>
+</div>
+    
 <script src="../js/SideNav.js"></script>
 <script src="../js/Accordion.js"></script>   
-<script src="../js/Productividad.js"></script>
-
+  
 </body>
     
 </html>

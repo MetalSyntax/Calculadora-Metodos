@@ -5,6 +5,7 @@ font-family: 'Roboto Regular', sans-serif;
 
 @font-face {
 font-family: "FontAwesome";
+src: url('../fonts/FontAwesome.otf');
 src: url('../fonts/fontawesome-webfont.eot');
 src: url('../fonts/fontawesome-webfont.eot?#iefix') format('eot'),
 url('../fonts/fontawesome-webfont.woff') format('woff'),
@@ -39,85 +40,6 @@ html, body {
 font-family: 'Roboto Condensed', sans-serif;
 color: grey;
 background-color:white;
-        
-/*SIDE NAV*/
-}
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background: #e6e6e6;
-    overflow-x: hidden;
-    transition: 0.2s;
-    padding-top: 60px;
-}
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 20px;
-    color: grey; 
-    display: block;
-    transition: 0.3s;
-    background: #e6e6e6; 
-}
-
-.sidenav a:hover, .offcanvas a:focus{
-     background: #cccccc; 
-     color: grey; 
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 25px;
-    margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-/*ACORDION*/
-button.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-}
-
-button.accordion.active, button.accordion:hover {
-    background-color: #ddd;
-}
-
-button.accordion:after {
-    content: '\002B';
-    color: #777;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-}
-
-button.accordion.active:after {
-    content: "\2212";
-}
-
-div.panel {
-    padding: 0 18px;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
 }
 /* ESTILOS PRINCIPALES */
 .container .text-muted {
@@ -137,17 +59,31 @@ label {
 a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
     color: grey; 
     display: block;
     transition: 0.3s;
     font-family: 'Roboto Regular', sans-serif;
+    text-decoration: none;
 }
  a:hover, a:focus{
-     background: #cccccc; 
+     background: #f2f2f2;
      color: grey;  
+     text-decoration: none;
 }
 #tab {
 color:  #f2f2f2;  
 background: #696969; 
 }
+table {
+    border-collapse: collapse;
+    color: dimgrey;
+    table-layout: fixed;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+

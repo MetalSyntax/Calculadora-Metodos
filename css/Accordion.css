@@ -28,9 +28,12 @@ button.accordion.active:after {
 }
 
 div.panel {
-   padding: 0 18px;
+    padding: 0 18px;
     background-color: white;
     max-height: 0;
-    overflow: scroll;
+    overflow-y: scroll;
     transition: max-height 0.2s ease-out;
+}
+.panel{
+    margin-bottom: 0px; 
 }

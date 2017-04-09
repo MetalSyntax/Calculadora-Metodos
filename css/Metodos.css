@@ -44,3 +44,26 @@ h2, h3,h4, h5,h6{
 #costo, #unidades, #costo1 {
 	text-align: center;
 }
+
+.jumbotron{
+    margin-bottom: 1px;
+     color: #595959;     
+}
+#E1{
+     text-align: justify;
+}
+
+#I1{
+text-align:center;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+align-content: center;
+}
+
+img{
+    width: 100%;
+}
+
