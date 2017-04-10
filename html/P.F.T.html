@@ -46,11 +46,11 @@
 <form id="unidades">
     <h3>Productividad en Funcion de los trabajadores</h3>
     <p>La candidad de Unidades</p>
-    <input type="text" id="Unidades" value="0" placeholder="Unidades"/>
+    <input type="number" id="Unidades" value="0" placeholder="Unidades" required/>
     <p>Cantidad de Trabajadores</p>
-    <input type="text" id="Trabajadores" value="0" placeholder="Trabajadores"/>
+    <input type="number" id="Trabajadores" value="0" placeholder="Trabajadores" required/>
     <p>Resultado</p>
-    <input type="text" id="total" value="0"/><br/>
+    <input type="number" id="total" value="0" disabled/><br/>
     <p></p>
     <input type="button" value="Calcular" onclick="Productividad_FT()"/>
 </form>

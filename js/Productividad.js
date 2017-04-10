@@ -29,48 +29,50 @@ function Productividad_FM(){
 	document.getElementById("Total").innerHTML = "El Total es = " + total;
 }
 /*******************************************************/
-/*Conversiones a Unidades Multiplicacion*/
+/*Conversiones a Unidades*/
 /*******************************************************/
-function calcular_total1() {
-	importe_total1 = 1
-	$(".importe_linea1").each(
+function Multiplicando() {
+	Numero_de_Unidades = 1
+	$(".Numero_de_Unidades").each(
 		function(index, value) {
-			importe_total1 = importe_total1 * eval($(this).val());
+			Numero_de_Unidades = Numero_de_Unidades * eval($(this).val());
 		});
-	$("#total1").val(importe_total1);
+	$("#Resultado_Multi").val(Numero_de_Unidades);
 }
-function calcular_total2() {
-	importe_total1 = 1
-	$(".importe_linea1").each(
-		function(index, value) {
-            importe_total1 =  eval($(this).val());
-		});
-    importe_total2 = 0
-    importe_total2 = importe_total1;
-    if (importe_total1==importe_total2){
-        
-    } else {
-        importe_total1 
-    }
-	$("#total2").val(importe_total1);
+function Dividiendo() {
+    $("#Resultado_Divi").val(Numero_de_Unidades);
 }
-function nueva_linea1() {
-	$("#lineas1").append('<input type="text" class="importe_linea1" value="0"/><br/>');   
+function Nueva_Linea() {
+	$("#Transformaciones").append('<input type="number" class="Numero_de_Unidades" value="0"/><br/>');   
 }
 /*******************************************************/
 /*Costos Totales*/
 /*******************************************************/
-function calcular_total() {
-	importe_total = 0
+function Costos_Totales() {
+	costo_total = 0
 	$(".importe_linea").each(
 		function(index, value) {
-			importe_total = importe_total + eval($(this).val());
+			costo_total = costo_total + eval($(this).val());
 		});
-	$("#total").val(importe_total);
+	$("#costo_total").val(costo_total);
 }
-function nueva_linea() {
+function Nueva_Linea() {
 	$("#lineas").append('<input type="text" class="importe_linea" value="0"/><br/>');
     input.placeholder = "Valor $";
+}
+/*******************************************************/
+/*Costo Unitario*/
+/*******************************************************/
+function Costo_Unitario(){
+	total_unidades = 0
+	Costo_Total = 0
+	$("#Unidades1").each(function(index,value){
+		total_unidades = total_unidades + eval($(this).val());
+	});
+	$("#Costo_Total1").each(function(index,value){
+		Costo_Total = Costo_Total + eval($(this).val());
+	});
+	$("#Costo_Unitario").val(Math.round (Costo_Total / total_unidades));
 }
 /*******************************************************/
 /*Productividad*/
@@ -85,20 +87,6 @@ function Productividad(){
 		Costo_Total = Costo_Total + eval($(this).val());
 	});
 	$("#Resultado").val(total_unidades / Costo_Total);
-}
-/*******************************************************/
-/*Costo Unitario*/
-/*******************************************************/
-function Costo_Unitario(){
-	total_unidades = 0
-	Costo_Total = 0
-	$("#Unidades1").each(function(index,value){
-		total_unidades = total_unidades + eval($(this).val());
-	});
-	$("#Costo_Total1").each(function(index,value){
-		Costo_Total = Costo_Total + eval($(this).val());
-	});
-	$("#Resultado1").val(Math.round (Costo_Total / total_unidades));
 }
 /*******************************************************/
 /*Ganancia*/
