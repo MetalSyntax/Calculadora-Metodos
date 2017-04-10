@@ -43,8 +43,15 @@ function calcular_total2() {
 	importe_total1 = 1
 	$(".importe_linea1").each(
 		function(index, value) {
-            importe_total1 =  eval($(this).val()) / importe_total1 ;
+            importe_total1 =  eval($(this).val());
 		});
+    importe_total2 = 0
+    importe_total2 = importe_total1;
+    if (importe_total1==importe_total2){
+        
+    } else {
+        importe_total1 
+    }
 	$("#total2").val(importe_total1);
 }
 function nueva_linea1() {
