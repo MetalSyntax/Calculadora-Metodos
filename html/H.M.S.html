@@ -28,13 +28,13 @@
 <div id="mySidenav" class="sidenav">
  <a href="javascript:void(0)" class="closebtn" id="closetab">&#8592;</a>
     <div class="card">
-    <img src="images/methods.png" alt="Methods" style="width:100%">
+    <img src="../images/methods.png" alt="Methods" style="width:100%">
     </div>
-	<a href="index.html">Pagina Principal</a>
-	<a href="html/Productividad.html">Productividad</a>  
-	<a href="Hombre_Maquina.html">Hombre Maquina</a>
-	<a href="#">Balance de Lineas</a>   
-	<a href="#">Muestreo de trabajo</a>
+	   <a href="../index.html"> <i class="fa fa-home" aria-hidden="true"></i>Pagina Principal</a>
+   <a href="Productividad.html"><i class="fa fa-line-chart" aria-hidden="true"></i>Productividad</a>  
+	<a href="Hombre_Maquina.html"><i class="fa fa-cog" aria-hidden="true"></i>Hombre Maquina</a>
+	<a href="#"><i class="fa fa-balance-scale" aria-hidden="true"></i>Balance de Lineas</a>   
+	<a href="#"><i class="fa fa-hourglass-half" aria-hidden="true"></i>Muestreo de trabajo</a>
 	<hr>
 	<p></p>
 	<a href="html/Ayuda.html"><span class="glyphicon glyphicon-question-sign"></span>Ayuda</a>
@@ -42,12 +42,42 @@
      <a href="html/Terminos.html"><span class="glyphicon glyphicon-list-alt"></span>Terminos y Condiciones</a>
 </div>
 <a id="tab" style="font-size:30px;cursor:pointer">&#8801;<label>Methods</label></a>
-   
     
+<!--Numero Tecnico-->
+<button class="accordion">Numero Tecnico</button>
+<div class="panel">
+<form id="unidades">
+    <h3>Numero Tecnico, Ciclos y Piezas por Ciclo</h3>
     
+    <p>Tiempo de Hombre Externo</p>
+    <input type="text" id="toe" value="0"/>
+	<p>Tiempo de Hombre Interno</p>
+    <input type="text" id="toi" value="0"/>
+   <p>Tiempo de Maquinado</p>
+    <input type="text" id="tm" value="0"/>
+	<p>Tiempo de desplazamiento</p>
+    <input type="text" id="td" value="0"/>
+    
+    <p>Numero Tecnico</p>
+    <input type="text" id="nt" value="0"/><br/>
+    
+    <p>Ciclos</p>
+    <input type="text" id="c1" value="0"/><br/>
+    <input type="text" id="c2" value="0"/><br/>
+    
+     <p>Piezas por Ciclo</p>
+    <input type="text" id="pc1" value="0"/><br/>
+    <input type="text" id="pc2" value="0"/><br/>
+    <p></p>
+    <input type="button" value="Calcular" onclick="Numero_Tecnico()"/>
+    
+</form>
+</div> 
+
+
 <script src="../js/SideNav.js"></script>
 <script src="../js/Accordion.js"></script>
-    
+<script src="../js/Hombre_Maquina.js"></script>
 
 </body>
     
