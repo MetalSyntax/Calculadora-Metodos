@@ -66,10 +66,99 @@ function Tiempo_Necesario(){
 /*******************************************************/
 /*Analisis de Costos*/
 /*******************************************************/
-function Analisis_de_Costos(){
+    function Analisis_de_Costos1(){
+    mohjn = 0
+   mocjn = 0
+    tjn = 0
+    cmojn = 0
     
+    $("#mohjn").each(function(index,value){
+		mohjn = mohjn + eval($(this).val());
+	});
+	$("#mocjn").each(function(index,value){
+		mocjn = mocjn + eval($(this).val());
+	});
+    $("#tjn").each(function(index,value){
+		tjn = tjn + eval($(this).val());
+	});
+    cmojn = mohjn * mocjn * tjn
+    $("#cmojn").val(cmojn);
+   
+    }
+     function Analisis_de_Costos2(){
+    motje = 0
+    mocje = 0
+    tje = 0
+    cmoje = 0
     
-}
+    $("#motje").each(function(index,value){
+		motje = motje + eval($(this).val());
+	});
+	$("#mocje").each(function(index,value){
+		mocje = mocje + eval($(this).val());
+	});
+    $("#tje").each(function(index,value){
+		tje = tje + eval($(this).val());
+	});
+    cmoje = motje * mocje * tje
+    $("#cmoje").val(cmoje);
+     }
+    function Analisis_de_Costos3(){
+    mmjf = 0
+    mcjf = 0
+    mf = 0
+    cmjf = 0
+    tnm1 = 0
+    tcm1 = 0
+    
+    $("#tnm1").each(function(index,value){
+		tnm1 = tnm1 + eval($(this).val());
+	});
+    $("#tcm1").each(function(index,value){
+		tcm1 = tcm1 + eval($(this).val());
+	});
+    
+    $("#mmjf").each(function(index,value){
+		mmjf = mmjf + eval($(this).val());
+	});
+	$("#mcjf").each(function(index,value){
+		mcjf = mcjf + eval($(this).val());
+	});
+    $("#mf").each(function(index,value){
+		mf = mf + eval($(this).val());
+	});
+    cmjf = mmjf * mcjf * tnm1 * (mf/tcm1)
+    $("#cmjf").val(cmjf);
+    }
+
+    function Analisis_de_Costos4(){
+    mmja = 0
+    mcja = 0
+    mp = 0
+    cmjp = 0
+    tnm2 = 0
+    tcm2 = 0
+    
+    $("#tnm2").each(function(index,value){
+		tnm2 = tnm2 + eval($(this).val());
+	});
+    $("#tcm2").each(function(index,value){
+		tcm2 = tcm2 + eval($(this).val());
+	});
+    
+    $("#mmja").each(function(index,value){
+		mmja = mmja + eval($(this).val());
+	});
+	$("#mcja").each(function(index,value){
+		mcja = mcja + eval($(this).val());
+	});
+    $("#mp").each(function(index,value){
+		mp = mp + eval($(this).val());
+	});
+    cmjp = mmja * mcja * tnm2 * (mp/tcm2)
+    $("#cmjp").val(cmjp);
+    }
+
 /*******************************************************/
 /*Costos Totales*/
 /*******************************************************/

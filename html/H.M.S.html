@@ -101,6 +101,9 @@
 <form id="unidades">
     <h3>Analisis de Costos</h3> 
     
+<button class="accordion">Costo de Mano de Obra Jornada Normal</button>
+<div class="panel">
+<form id="unidades">
     <!--Jornada Normal-->
     <p>Mano de Obra (Hombres)(Jornada Normal)</p>
     <input type="number" id="mohjn" value="0" required/>
@@ -108,7 +111,17 @@
     <input type="number" id="mocjn" value="0" required/>
     <p>Tiempo</p>
     <input type="number" id="tjn" value="0" required/>
+   <!--Costos-->
+    <p>Costo de Mano de Obra Jornada Normal</p>
+    <input type="number" id="cmojn" value="0" disabled/>
     
+    <input type="button" value="Calcular" onclick="Analisis_de_Costos1()"/>
+</form>
+</div>
+    
+<button class="accordion">Costo de Mano de Obra Jornada Extra</button>
+<div class="panel">
+<form id="unidades">
     <!--Jornada Extra-->
     <p>Mano de Obra (Hombres)(Jornada Extra)</p>
     <input type="number" id="motje" value="0" required/>
@@ -116,7 +129,17 @@
     <input type="number" id="mocje" value="0" required/>
     <p>Tiempo</p>
     <input type="number" id="tje" value="0" required/>
+    <!--Costos-->
+      <p>Costo de Mano de Obra Jornada Extra</p>
+    <input type="number" id="cmoje" value="0" disabled/>
     
+    <input type="button" value="Calcular" onclick="Analisis_de_Costos2()"/>
+</form>
+</div>
+    
+<button class="accordion">Costo de Maquinaria Funcionando</button>
+<div class="panel">
+<form id="unidades">
     <!--Maquina Funcionando-->
      <p>Maquinado (Maquinas)(Jornada Funcionando)</p>
     <input type="number" id="mmjf" value="0" required/>
@@ -124,7 +147,22 @@
     <input type="number" id="mcjf" value="0" required/>
     <p>Tiempo Funcionando</p>
     <input type="number" id="mf" value="0" required/>
+
+    <p>Tiempo de Ciclo Maquinaria</p>
+    <input type="number" id="tcm1" value="0" required/>
+    <p>Tiempo Necesario (Maquinaria)</p>
+    <input type="number" id="tnm1" value="0" required/>
+    <!--Costos-->
+     <p>Costo de Maquinaria Jornada Funcionando</p>
+    <input type="number" id="cmjf" value="0" disabled/>
     
+    <input type="button" value="Calcular" onclick="Analisis_de_Costos3()"/>
+</form>
+</div> 
+    
+<button class="accordion">Costo de Maquinaria Apagada</button>
+<div class="panel">
+<form id="unidades">
     <!--Maquina Apagada-->
     <p>Maquinado (Maquinas)(Jornada Apagada)</p>
     <input type="number" id="mmja" value="0" required/>
@@ -133,14 +171,17 @@
     <p>Tiempo Parado</p>
     <input type="number" id="mp" value="0" required/>
     
-    <p>Tiempo Necesario</p>
-    <input type="number" id="tnm" value="0" required/>
+    <p>Tiempo de Ciclo Maquinaria</p>
+    <input type="number" id="tcm2" value="0" required/>
+    <p>Tiempo Necesario (Maquinaria)</p>
+    <input type="number" id="tnm2" value="0" required/>
+    <!--Costos-->
+     <p>Costo de Maquinaria Jornada Apgada</p>
+    <input type="number" id="cmjp" value="0" disabled/>
     
-    <p>Resultado</p>
-    <input type="number" id="ac" value="0" disabled/>
-     <p></p>
-    <input type="button" value="Calcular" onclick="Analisis_de_Costos()"/>
-    
+    <input type="button" value="Calcular" onclick="Analisis_de_Costos4()"/>
+</form>
+</div> 
     </form>
 </div>
     
