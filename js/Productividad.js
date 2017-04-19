@@ -158,8 +158,23 @@ function Indices(){
 	$("#Resultado3").val(Estudio / Base)*100;
 }
 /*******************************************************/
-/*Limpiar Transformaciones*/
+/*Limpiar*/
 /*******************************************************/
-function Limpiar() {
+function Limpiar_Trans() {
     document.getElementById("trans").reset();
+}
+function Limpiar_costos() {
+    document.getElementById("costos").reset();
+}
+function Limpiar_indicadores() {
+    document.getElementById("indicadores").reset();
+}
+function Limpiar_indices() {
+    document.getElementById("indices").reset();
+}
+function Limpiar_ganancia() {
+    document.getElementById("ganancia").reset();
+}
+function Limpiar_rentabilidad() {
+    document.getElementById("rentabilidad").reset();
 }

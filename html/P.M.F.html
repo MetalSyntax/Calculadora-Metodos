@@ -49,7 +49,7 @@
 <button class="accordion">Transformaciones</button>
 <div class="panel">
 <h3>Tranformaciones</h3>
-<form method="POST" action="nada.html" id="costo">
+<form method="POST" action="nada.html" id="trans">
 	<div id="Transformaciones">
     <input type="number" class="Numero_de_Unidades" value="0" required/><br/>
 	</div>
@@ -59,24 +59,24 @@
     <span>Dividiendo</span>
     <input type="number" id="Resultado_Divi" value="0" disabled/><br/>
     <p>Agregar/Calcular</p>
-	<input type="button" value="Nueva l&iacute;nea" onclick="Nueva_Linea()"/>
+	<input type="button" value="Nueva l&iacute;nea" onclick="Nueva_Linea_Trans()"/>
 	<input type="button" value="Calcular Multiplicacion" onclick="Multiplicando()"/>
+    <input type="button" value="Limpiar" onclick="Limpiar()">
     <input type="button" value="Calcular Division" onclick="Dividiendo()" disabled/>
 </form>
 </div>
-    
 <!--Costos Totales-->
 <button class="accordion">Costos Totales</button>
 <div class="panel">
 <h3>Costos Totales</h3>
-<form method="POST" action="nada.html" id="costo">
-	<div id="lineas">
-        <input type="number" class="importe_linea" value="0" required/><br/>
+<form method="POST" action="nada1.html" id="costos">
+	<div id="Costos_Linea">
+        <input type="number" class="costos_totales" value="0" required/><br/>
 	</div>
     <p>Resultado</p>
     <input type="number" id="costo_total" value="0" disabled/><br/>
     <p>Agregar/Calcular Costos</p>
-	<input type="button" value="Nueva l&iacute;nea" onclick="Nueva_Linea()"/>
+	<input type="button" value="Nueva l&iacute;nea" onclick="Nueva_Linea_Costo()"/>
 	<input type="button" value="Calcular" onclick="Costos_Totales()"/>
 </form>
 </div>
