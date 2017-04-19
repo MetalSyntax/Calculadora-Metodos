@@ -61,10 +61,11 @@
     <p>Agregar/Calcular</p>
 	<input type="button" value="Nueva l&iacute;nea" onclick="Nueva_Linea_Trans()"/>
 	<input type="button" value="Calcular Multiplicacion" onclick="Multiplicando()"/>
-    <input type="button" value="Limpiar" onclick="Limpiar()">
     <input type="button" value="Calcular Division" onclick="Dividiendo()" disabled/>
+    <input type="button" value="Limpiar" onclick="Limpiar_Trans()">
 </form>
 </div>
+    
 <!--Costos Totales-->
 <button class="accordion">Costos Totales</button>
 <div class="panel">
@@ -78,22 +79,24 @@
     <p>Agregar/Calcular Costos</p>
 	<input type="button" value="Nueva l&iacute;nea" onclick="Nueva_Linea_Costo()"/>
 	<input type="button" value="Calcular" onclick="Costos_Totales()"/>
+     <input type="button" value="Limpiar" onclick="Limpiar_costos()">
 </form>
 </div>
     
 <!--Costo Unitario-->
 <button class="accordion">Costo Unitario</button>
 <div class="panel">
-<form id="unidades">
+<form id="costo">
     <h3>Costo Unitario</h3>
     <p>Costo Total</p>
-    <input type="number" id="Costo_Total1" value="0" required/>
+    <input type="number" id="Costo_Total_U" value="0" required/>
 	<p>Candidad de Unidades</p>
-    <input type="number" id="Unidades1" value="0" required/>
+    <input type="number" id="Unidades_U" value="0" required/>
     <p>Resultado</p>
     <input type="number" id="Costo_Unitario" value="0" disabled/><br/>
     <p></p>
-    <input type="button" value="Calcular" onclick="Costo_Unitario()"/>
+    <input type="button" value="Calcular" onclick="Costo_Unitario_Prod()"/>
+     <input type="button" value="Limpiar" onclick="Limpiar_costo()">
 </form>
 </div>
 
@@ -110,38 +113,41 @@
     <input type="number" id="Resultado" value="0" disabled/><br/>
     <p></p>
     <input type="button" value="Calcular" onclick="Productividad()"/>
+     <input type="button" value="Limpiar" onclick="Limpiar_produc()">
 </form>
 </div>
     
 <!--Ganancia-->
 <button class="accordion">Ganancia</button>
 <div class="panel">
-<form id="unidades">
+<form id="ganancia">
     <h3>Ganancia</h3>
     <p>Costo Unitario</p>
     <input type="number" id="Costo_unitario" value="0" required/>
 	<p>Precio de Venta al Publico</p>
     <input type="number" id="pvp" value="0" required/>
     <p>Resultado</p>
-    <input type="number" id="Resultado2" value="0" disabled/><br/>
+    <input type="number" id="ResultadoG" value="0" disabled/><br/>
     <p></p>
-    <input type="button" value="Calcular" onclick="Ganancia()"/>
+    <input type="button" value="Calcular" onclick="Ganancia_R()"/>
+    <input type="button" value="Limpiar" onclick="Limpiar_ganancia()">
 </form>
 </div>
     
 <!--Rentabilidad-->
 <button class="accordion">Rentabilidad</button>
 <div class="panel">
-<form id="unidades">
+<form id="rentabilidad">
     <h3>Rentabilidad</h3>
     <p>Costo Unitario</p>
     <input type="number" id="Costo_unitario1" value="0" required/>
 	<p>Precio de Venta al Publico</p>
     <input type="number" id="pvp1" value="0" required/>
     <p>Resultado</p>
-    <input type="number" id="Resultado3" value="0" disabled/><br/>
+    <input type="number" id="ResultadoR" value="0" disabled/><br/>
     <p></p>
     <input type="button" value="Calcular" onclick="Rentabilidad()"/>
+    <input type="button" value="Limpiar" onclick="Limpiar_rentabilidad()">
 </form>
 </div> 
 

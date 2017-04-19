@@ -62,13 +62,13 @@ function Nueva_Linea_Costo() {
 /*******************************************************/
 /*Costo Unitario*/
 /*******************************************************/
-function Costo_Unitario(){
+function Costo_Unitario_Prod(){
 	total_unidades = 0
 	Costo_Total = 0
-	$("#Unidades1").each(function(index,value){
+	$("#Costo_Total_U").each(function(index,value){
 		total_unidades = total_unidades + eval($(this).val());
 	});
-	$("#Costo_Total1").each(function(index,value){
+	$("#Unidades_U").each(function(index,value){
 		Costo_Total = Costo_Total + eval($(this).val());
 	});
 	$("#Costo_Unitario").val(Math.round (Costo_Total / total_unidades));
@@ -90,7 +90,7 @@ function Productividad(){
 /*******************************************************/
 /*Ganancia*/
 /*******************************************************/
-function Ganancia(){
+function Ganancia_R(){
 	pvp = 0
 	Costo_unitario = 0
 	$("#pvp").each(function(index,value){
@@ -99,7 +99,7 @@ function Ganancia(){
 	$("#Costo_unitario").each(function(index,value){
 		Costo_unitario = Costo_unitario + eval($(this).val());
 	});
-	$("#Resultado2").val(Math.round (pvp - Costo_unitario));
+	$("#ResultadoG").val(Math.round (pvp - Costo_unitario));
 }
 /*******************************************************/
 /*Rentabilidad*/
@@ -113,7 +113,7 @@ function Rentabilidad(){
 	$("#Costo_unitario1").each(function(index,value){
 		Costo_unitario1 = Costo_unitario1 + eval($(this).val());
 	});
-	$("#Resultado3").val(Math.round ((pvp1 / Costo_unitario1) * 100));
+	$("#ResultadoR").val(Math.round ((pvp1 / Costo_unitario1) * 100));
 }
 /*******************************************************/
 /*Costos de Produccion*/
@@ -141,7 +141,7 @@ function Indicadores(){
 	$("#Material2").each(function(index,value){
 		Material = Material + eval($(this).val());
 	});
-	$("#Resultado2").val(Mes / Material);
+	$("#ResultadoI").val(Mes / Material);
 }
 /*******************************************************/
 /*Indices*/
@@ -155,26 +155,44 @@ function Indices(){
 	$("#Base").each(function(index,value){
 		Base = Base + eval($(this).val());
 	});
-	$("#Resultado3").val(Estudio / Base)*100;
+	$("#ResultadoIN").val(Estudio / Base)*100;
 }
 /*******************************************************/
 /*Limpiar*/
 /*******************************************************/
+/*Tranformaciones*/
 function Limpiar_Trans() {
     document.getElementById("trans").reset();
 }
+/*Produccion*/
+function Limpiar_prod() {
+    document.getElementById("Produccion").reset();
+}
+function Limpiar_produc() {
+    document.getElementById("unidades").reset();
+}
+/*Totales*/
 function Limpiar_costos() {
     document.getElementById("costos").reset();
 }
+
+function Limpiar_costo() {
+    document.getElementById("costo").reset();
+}
+
 function Limpiar_indicadores() {
     document.getElementById("indicadores").reset();
 }
+
 function Limpiar_indices() {
     document.getElementById("indices").reset();
 }
+
 function Limpiar_ganancia() {
     document.getElementById("ganancia").reset();
 }
+
 function Limpiar_rentabilidad() {
     document.getElementById("rentabilidad").reset();
 }
+
