@@ -42,7 +42,7 @@ function Multiplicando() {
 function Dividiendo() {
     $("#Resultado_Divi").val(Numero_de_Unidades);
 }
-function Nueva_Linea() {
+function Nueva_Linea_Trans() {
 	$("#Transformaciones").append('<input type="number" class="Numero_de_Unidades" value="0"/><br/>');   
 }
 /*******************************************************/
@@ -50,15 +50,14 @@ function Nueva_Linea() {
 /*******************************************************/
 function Costos_Totales() {
 	costo_total = 0
-	$(".importe_linea").each(
+	$(".costos_totales").each(
 		function(index, value) {
 			costo_total = costo_total + eval($(this).val());
 		});
 	$("#costo_total").val(costo_total);
 }
-function Nueva_Linea() {
-	$("#lineas").append('<input type="text" class="importe_linea" value="0"/><br/>');
-    input.placeholder = "Valor $";
+function Nueva_Linea_Costo() {
+	$("#Costos_Linea").append('<input type="number" class="costos_totales" value="0"/><br/>');
 }
 /*******************************************************/
 /*Costo Unitario*/
@@ -157,4 +156,10 @@ function Indices(){
 		Base = Base + eval($(this).val());
 	});
 	$("#Resultado3").val(Estudio / Base)*100;
+}
+/*******************************************************/
+/*Limpiar Transformaciones*/
+/*******************************************************/
+function Limpiar() {
+    document.getElementById("trans").reset();
 }

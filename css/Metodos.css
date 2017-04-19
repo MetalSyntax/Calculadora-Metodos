@@ -41,7 +41,7 @@ h2, h3,h4, h5,h6{
 	text-align: center;
 }
 /* ESPECIFICOS */
-#costo, #unidades, #costo1 {
+#costos, #unidades, #trans, #indicadores, #indices, #ganancia, #rentabilidad {
 	text-align: center;
 }
 
