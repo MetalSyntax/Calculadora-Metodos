@@ -20,7 +20,6 @@
 <script src="../js/jquery-3.2.0.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 
-
 </head>
 <body>
    
@@ -41,47 +40,9 @@
 	<a href="Acerca_de.html"><span class="glyphicon glyphicon-info-sign"></span>Acerca de</a>
     <a href="Terminos.html"><span class="glyphicon glyphicon-list-alt"></span>Terminos y Condiciones</a>
 </div>
-<a id="tab" style="font-size:30px;cursor:pointer" onclick="openNav()">&#8801;<label>Methods</label></a>
+<a id="tab" style="font-size:30px;cursor:pointer" onclick="openNav()">&#8801;<label>Productividad</label></a>
    
-<!--Transformaciones-->
-<button class="accordion">Transformaciones</button>
-<div class="panel">
-<h3>Tranformaciones</h3>
-<form method="POST" action="nada.html" id="trans">
-	<div id="Transformaciones">
-    <input type="number" class="Numero_de_Unidades" value="0" required/><br/>
-	</div>
-    <p>Resultado</p>
-    <span>Multiplicando</span>
-    <input type="number" id="Resultado_Multi" value="0" disabled/><br/>
-    <span>Dividiendo</span>
-    <input type="number" id="Resultado_Divi" value="0" disabled/><br/>
-    <p>Agregar/Calcular</p>
-	<input type="button" value="Nueva l&iacute;nea" onclick="Nueva_Linea_Trans()"/>
-	<input type="button" value="Calcular Multiplicacion" onclick="Multiplicando()"/>
-    <input type="button" value="Calcular Division" onclick="Dividiendo()" disabled/>
-    <input type="button" value="Limpiar" onclick="Limpiar_Trans()">
-
-</form>
-</div>
-    
-<!--Costos de Produccion-->
-<button class="accordion">Costos de Produccion</button>
-<div class="panel">
-<form id="Produccion">
-    <h3>Costos de Produccion</h3>
-    <p>Material</p>
-    <input type="number" id="Material1" value="0" required/>
-	<p>Costo</p>
-    <input type="number" id="Costo1" value="0" required/>
-    <p>Resultado</p>
-    <input type="number" id="Resultado1" value="0" disabled/><br/>
-    <p></p>
-    <input type="button" value="Calcular" onclick="Costos_de_Produccion()"/>
-    <input type="button" value="Limpiar" onclick="Limpiar_prod()">
-</form>
-</div> 
-    
+   
 <!--Indicadores-->
 <button class="accordion">Indicadores</button>
 <div class="panel">
@@ -90,7 +51,7 @@
     <p>Mes</p>
     <input type="number" id="Mes" value="0" required/>
 	<p>Material</p>
-    <input type="number" id="Material2" value="0" required/>
+    <input type="number" id="MaterialI" value="0" required/>
     <p>Resultado</p>
     <input type="number" id="ResultadoI" value="0" disabled/><br/>
     <p></p>
@@ -115,6 +76,23 @@
     <input type="button" value="Limpiar" onclick="Limpiar_indices()">
 </form>
 </div> 
+    
+<!--Costos de Produccion-->
+<button class="accordion">Costos de Produccion</button>
+<div class="panel">
+<form id="Produccion">
+    <h3>Costos de Produccion</h3>
+    <p>Material</p>
+    <input type="number" id="MaterialP" value="0" required/>
+	<p>Costo</p>
+    <input type="number" id="CostoP" value="0" required/>
+    <p>Resultado</p>
+    <input type="number" id="ResultadoP" value="0" disabled/><br/>
+    <p></p>
+    <input type="button" value="Calcular" onclick="Costos_de_Produccion()"/>
+    <input type="button" value="Limpiar" onclick="Limpiar_prod()">
+</form>
+</div> 
 
 <!--Costos Totales-->
 <button class="accordion">Costos Totales</button>
@@ -136,7 +114,7 @@
 <!--Costo Unitario-->
 <button class="accordion">Costo Unitario</button>
 <div class="panel">
-<form id="costo">
+<form id="Unitario">
     <h3>Costo Unitario</h3>
     <p>Costo Total</p>
     <input type="number" id="Costo_Total_U" value="0" required/>
@@ -149,7 +127,62 @@
      <input type="button" value="Limpiar" onclick="Limpiar_costo()">
 </form>
 </div>
-
+    
+<!--Productividad-->
+<button class="accordion">Productividad</button>
+<div class="panel">
+<form id="Productividad">
+    <h3>Productividad</h3>
+    <p>Costo Total</p>
+    <input type="number" id="Costo_Total" value="0" required/>
+	<p>Candidad de Unidades</p>
+    <input type="number" id="Unidades" value="0" required/>
+    <p>Resultado</p>
+    <input type="number" id="Resultado" value="0" disabled/><br/>
+    <p></p>
+    <input type="button" value="Calcular" onclick="Productividad()"/>
+    <input type="button" value="Limpiar" onclick="Limpiar_produc()">
+</form>
+</div>
+    
+<!--Productividad en Funcion de los trabajadores-->
+<button class="accordion">Productividad en Funcion de los Trabajadores</button>
+<div class="panel">
+ <form id="Trabajadores1">
+    <h3>Productividad en Funcion de los Trabajadores</h3>
+    <p>La candidad de Unidades</p>
+    <input type="number" id="UnidadesT" value="0" placeholder="Unidades" required/>
+    <p>Cantidad de Trabajadores</p>
+    <input type="number" id="Trabajadores" value="0" placeholder="Trabajadores" required/>
+    <p>Resultado</p>
+    <input type="number" id="Total_FT" value="0" disabled/><br/>
+    <p></p>
+    <input type="button" value="Calcular" onclick="Productividad_FT()"/>
+    <input type="button" value="Limpiar" onclick="Limpiar_Trabajadores()">
+</form>
+</div>
+    
+<!--Productividad en Funcion de los Materialess-->
+<button class="accordion">Productividad en Funcion de los Materiales</button>
+<div class="panel">
+<form id="Materiales1">
+    <h3>Productividad en Funcion de los Materiales</h3>
+    <p>La candidad de Unidades</p>
+    <input type="number" id="UnidadesM" value="0" required/>
+    <p>Cantidad de Materiales</p>
+    <input type="number" id="Materiales" value="0" required/>
+    
+    <p>Resultado Previo</p>
+    <p id="SubTotal">0</p><br/>
+    
+    <p>Resultado</p>
+    <p id="Total">0</p><br/>
+  
+    <input type="button" value="Calcular Total" onclick="Productividad_FM()"/>
+    <input type="button" value="Limpiar" onclick="Limpiar_Materiales()">
+</form>
+</div>
+    
 <!--Ganancia-->
 <button class="accordion">Ganancia</button>
 <div class="panel">
@@ -183,6 +216,28 @@
     <input type="button" value="Limpiar" onclick="Limpiar_rentabilidad()">
 </form>
 </div> 
+    
+<!--Transformaciones-->
+<button class="accordion">Transformaciones</button>
+<div class="panel">
+<h3>Tranformaciones</h3>
+<form method="POST" action="nada.html" id="trans">
+	<div id="Transformaciones">
+    <input type="number" class="Numero_de_Unidades" value="0" required/><br/>
+	</div>
+    <p>Resultado</p>
+    <span>Multiplicando</span>
+    <input type="number" id="Resultado_Multi" value="0" disabled/><br/>
+    <span>Dividiendo</span>
+    <input type="number" id="Resultado_Divi" value="0" disabled/><br/>
+    <p>Agregar/Calcular</p>
+	<input type="button" value="Nueva l&iacute;nea" onclick="Nueva_Linea_Trans()"/>
+	<input type="button" value="Calcular Multiplicacion" onclick="Multiplicando()"/>
+    <input type="button" value="Calcular Division" onclick="Dividiendo()" disabled/>
+    <input type="button" value="Limpiar" onclick="Limpiar_Trans()">
+
+</form>
+</div>
     
 <script src="../js/SideNav.js"></script>
 <script src="../js/Accordion.js"></script>   

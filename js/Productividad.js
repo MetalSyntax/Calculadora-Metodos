@@ -4,13 +4,13 @@
 function Productividad_FT(){
 	total_unidades = 0
 	total_trabajadores = 0
-	$("#Unidades").each(function(index,value){
+	$("#UnidadesT").each(function(index,value){
 		total_unidades = total_unidades + eval($(this).val());
 	});
 	$("#Trabajadores").each(function(index,value){
 		total_trabajadores = total_trabajadores + eval($(this).val());
 	});
-	$("#total").val(total_unidades / total_trabajadores);
+	$("#Total_FT").val(total_unidades / total_trabajadores);
 }
 /*******************************************************/
 /*Productividad en Funcion de los Materiales*/
@@ -19,7 +19,7 @@ function Productividad_FM(){
 	var total_unidades, total_materiales;
 	var total, subtotal;
 
-	total_unidades = document.getElementById("Unidades").value;
+	total_unidades = document.getElementById("UnidadesM").value;
 	total_materiales = document.getElementById("Materiales").value;
 	
 	subtotal = parseFloat(total_unidades) /  parseFloat(total_materiales);
@@ -63,15 +63,15 @@ function Nueva_Linea_Costo() {
 /*Costo Unitario*/
 /*******************************************************/
 function Costo_Unitario_Prod(){
-	total_unidades = 0
+	Total_Unidades = 0
 	Costo_Total = 0
 	$("#Costo_Total_U").each(function(index,value){
-		total_unidades = total_unidades + eval($(this).val());
+		Total_Unidades += eval($(this).val());
 	});
 	$("#Unidades_U").each(function(index,value){
-		Costo_Total = Costo_Total + eval($(this).val());
+		Costo_Total += eval($(this).val());
 	});
-	$("#Costo_Unitario").val(Math.round (Costo_Total / total_unidades));
+	$("#Costo_Unitario").val(Costo_Total / Total_Unidades);
 }
 /*******************************************************/
 /*Productividad*/
@@ -121,13 +121,13 @@ function Rentabilidad(){
 function Costos_de_Produccion(){
 	Material = 0
 	Costo = 0
-	$("#Material1").each(function(index,value){
+	$("#MaterialP").each(function(index,value){
 		Material = Material + eval($(this).val());
 	});
-	$("#Costo1").each(function(index,value){
+	$("#CostoP").each(function(index,value){
 		Costo = Costo + eval($(this).val());
 	});
-	$("#Resultado1").val(Math.round (Material * Costo));
+	$("#ResultadoP").val(Math.round (Material * Costo));
 }
 /*******************************************************/
 /*Indicadores*/
@@ -138,7 +138,7 @@ function Indicadores(){
 	$("#Mes").each(function(index,value){
 		Mes = Mes + eval($(this).val());
 	});
-	$("#Material2").each(function(index,value){
+	$("#MaterialI").each(function(index,value){
 		Material = Material + eval($(this).val());
 	});
 	$("#ResultadoI").val(Mes / Material);
@@ -168,31 +168,42 @@ function Limpiar_Trans() {
 function Limpiar_prod() {
     document.getElementById("Produccion").reset();
 }
+/*unidades*/
 function Limpiar_produc() {
-    document.getElementById("unidades").reset();
+    document.getElementById("Productividad").reset();
 }
 /*Totales*/
 function Limpiar_costos() {
     document.getElementById("costos").reset();
 }
-
+/*Unitarios*/
 function Limpiar_costo() {
-    document.getElementById("costo").reset();
+    document.getElementById("Unitario").reset();
 }
-
+/*Indicadores*/
 function Limpiar_indicadores() {
     document.getElementById("indicadores").reset();
 }
-
+/*Indices*/
 function Limpiar_indices() {
     document.getElementById("indices").reset();
 }
-
+/*Ganancia*/
 function Limpiar_ganancia() {
     document.getElementById("ganancia").reset();
 }
-
+/*Rentabilidad*/
 function Limpiar_rentabilidad() {
     document.getElementById("rentabilidad").reset();
+}
+/*Trabajadores*/
+function Limpiar_Trabajadores() {
+    document.getElementById("Trabajadores1").reset();
+}
+/*Materiales*/
+function Limpiar_Materiales() {
+    document.getElementById("Materiales1").reset();
+    document.getElementById("SubTotal").innerHTML = "0";
+    document.getElementById("Total").innerHTML = "0";
 }
 
