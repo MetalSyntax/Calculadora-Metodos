@@ -66,4 +66,17 @@ align-content: center;
 img{
     width: 100%;
 }
+/*CARRUSEL*/
 
+.carousel-inner .item img { width: 100%; }
+
+.container .carousel-indicators .active { background-color: grey; }
+
+.container .carousel-indicators li { border: 1px solid #696969; }
+
+.carousel .glyphicon-chevron-right,
+.carousel .glyphicon-chevron-left {
+  background: #00E48D;
+  border-radius: 5px;
+  color: grey;
+}
