@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
+    <head>
+<!--Meta-->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--Titulo--> 
 <title>Productividad Multifactorial</title>
-
-<link rel="stylesheet" href="../css/bootstrap.min.css">
-<link href="../css/font-awesome.min.css" rel="stylesheet">
-<link href="../css/Scrollmenu.css" rel="stylesheet"> 
-<link href="../css/Card.css" rel="stylesheet">
-<link href="../css/Accordion.css" rel="stylesheet">
-<link href="../css/SideNav.css" rel="stylesheet">
-<link href="../css/Metodos.css" rel="stylesheet">
-<link rel="icon" href="../favicon.ico" sizes="16x16">
-<script src="../js/jquery-3.2.0.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-
+<!--Scrips Principales-->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../js/jquery.touchSwipe.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+<!--Icono-->
+    <link rel="icon" href="../favicon.ico" sizes="16x16">
+<!--Estilos Principales-->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" >
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/jquery.mobile-1.4.5.min.css" rel="stylesheet">
+ <!--Estilos Personalizados-->
+        <link href="../css/Card.css" rel="stylesheet">
+        <link href="../css/Accordion.css" rel="stylesheet">
+        <link href="../css/SideNav.css" rel="stylesheet">
+        <link href="../css/Metodos.css" rel="stylesheet">
 </head>
 <body>
    
@@ -221,10 +224,10 @@
 <button class="accordion">Transformaciones</button>
 <div class="panel">
 <h3>Tranformaciones</h3>
-<form method="POST" action="nada.html" id="trans">
-	<div id="Transformaciones">
-    <input type="number" class="Numero_de_Unidades" value="0" required/><br/>
-	</div>
+    <form method="POST" action="nada.html" id="trans">
+	   <div id="Transformaciones">
+            <input type="number" class="Numero_de_Unidades" value="0" required/><br/>
+	   </div>
     <p>Resultado</p>
     <span>Multiplicando</span>
     <input type="number" id="Resultado_Multi" value="0" disabled/><br/>
@@ -235,10 +238,10 @@
 	<input type="button" value="Calcular Multiplicacion" onclick="Multiplicando()"/>
     <input type="button" value="Calcular Division" onclick="Dividiendo()" disabled/>
     <input type="button" value="Limpiar" onclick="Limpiar_Trans()">
-
-</form>
+    </form>
 </div>
     
+<!--Scripts Especificos-->  
 <script src="../js/SideNav.js"></script>
 <script src="../js/Accordion.js"></script>   
 <script src="../js/Productividad.js"></script>
