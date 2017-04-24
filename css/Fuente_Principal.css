@@ -22,28 +22,18 @@ src:url('../fonts/Roboto-Regular.ttf')format('truetype');
 
 /*BODY*/
 html, body {
-    font-family: 'Roboto Condensed', sans-serif;
     position: relative;
     margin: auto; 
     padding: 0; 
-    border: 1; 
+    border: 0; 
+    margin: 0;
     height: 100%; 
+    font-family: 'Roboto Condensed', sans-serif;
+    color: grey;
     background-color:white;
+    
     }
-    body { 
-font-family: 'Roboto Condensed', sans-serif;
-color: grey;
-background-color:white;
-}
 /* ESTILOS PRINCIPALES */
-.container .text-muted {
-  margin: 20px 0;
-  text-align: center;
-  color: white;
-}
-body > .container { 
-padding: 60px 15px 0; 
-}
 label {
  color:  #f2f2f2; 
  font-size: 25px; 
@@ -59,12 +49,14 @@ a {
     transition: 0.3s;
     font-family: 'Roboto Condensed', sans-serif;
     text-decoration: none;
+    /*border-bottom: 1px solid dimgrey;*/
 }
  a:hover, a:focus{
      background: #f2f2f2;
      color: grey;  
      text-decoration: none;
 }
+
 #tab {
 color:  #f2f2f2;  
 background: #696969; 
