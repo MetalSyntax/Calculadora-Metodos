@@ -66,8 +66,9 @@ function Tiempo_Necesario(){
 /*******************************************************/
 /*Analisis de Costos*/
 /*******************************************************/
-    
+/*******************************************************/
 /*Costo de la Mano de Obra (Jornada Normal)*/
+/*******************************************************/
     function Analisis_de_Costos1(){
     mohjn = 0
     mocjn = 0
@@ -87,7 +88,9 @@ function Tiempo_Necesario(){
     $("#cmojn").val(cmojn);
    
     }
+/*******************************************************/
 /*Costo de la Mano de Obra (Jornada Extra)*/
+/*******************************************************/
      function Analisis_de_Costos2(){
     motje = 0
     mocje = 0
@@ -106,8 +109,9 @@ function Tiempo_Necesario(){
     cmoje = motje * mocje * tje
     $("#cmoje").val(cmoje);
      }
-
+/*******************************************************/
 /*Costo de Maquinaria (Encendida)*/
+/*******************************************************/
     function Analisis_de_Costos3(){
     mmjf = 0
     mcjf = 0
@@ -135,8 +139,9 @@ function Tiempo_Necesario(){
     cmjf = mmjf * mcjf * tnm1 * (mf/tcm1)
     $("#cmjf").val(cmjf);
     }
-
+/*******************************************************/
 /*Costo de maquinaria (Apagada)*/
+/*******************************************************/
     function Analisis_de_Costos4(){
     mmja = 0
     mcja = 0
