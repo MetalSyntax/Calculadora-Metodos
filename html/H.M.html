@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+    
     <head>
+        
 <!--Meta-->
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
@@ -19,13 +21,13 @@
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/jquery.mobile-1.4.5.min.css" rel="stylesheet">
  <!--Estilos Personalizados-->
-<link href="../css/Scrollmenu.css" rel="stylesheet"> 
 <link href="../css/Card.css" rel="stylesheet">
 <link href="../css/Accordion.css" rel="stylesheet">
 <link href="../css/SideNav.css" rel="stylesheet">
 <link href="../css/Metodos.css" rel="stylesheet">
-
+        
 </head>
+    
 <body>
    
 <!--Modos-->
@@ -34,8 +36,8 @@
     <div class="card">
     <img src="../images/methods.png" alt="Methods" style="width:100%">
     </div>
-       <a href="../index.html"> <i class="fa fa-home" aria-hidden="true"></i>Pagina Principal</a>
-   <a href="Productividad.html"><i class="fa fa-line-chart" aria-hidden="true"></i>Productividad</a>  
+    <a href="../index.html"> <i class="fa fa-home" aria-hidden="true"></i>Pagina Principal</a>
+    <a href="Productividad.html"><i class="fa fa-line-chart" aria-hidden="true"></i>Productividad</a>  
 	<a href="Hombre_Maquina.html"><i class="fa fa-cog" aria-hidden="true"></i>Hombre Maquina</a>
 	<a href="Desarrollo.html"><i class="fa fa-balance-scale" aria-hidden="true"></i>Balance de Lineas</a> 
 	<a href="Desarrollo.html"><i class="fa fa-hourglass-half" aria-hidden="true"></i>Muestreo de trabajo</a>
@@ -47,24 +49,8 @@
 </div>
 <a id="tab" style="font-size:30px;cursor:pointer" onclick="openNav()">&#8801;<label>Hombre Maquina</label></a>
     
-    <!--Produccion-->
-<button class="accordion">Produccion</button>
-<div class="panel">
-<form id="produccion">
-    <h3>Produccion</h3> 
-    <p>Numero de Piezas</p>
-    <input type="number" id="Numero_Piezas" value="0" required/>
-    <p>Ciclo</p>
-    <input type="number" id="Ciclo_Produccion" value="0" required/>
-    <p>Tiempo</p>
-    <input type="number" id="Tiempo_Produccion" value="0" required/>
-    <p>Eficiencia</p>
-    <input id="Eficiencia_Produccion" type ="number" min ="0" max="1" value="0" step ="0.01" required/>
-    <p></p>
-    <input type="button" value="Calcular" onclick=""/>
-</form>
-</div>
 
+    
 <!--Scripts Especificos-->
 <script src="../js/SideNav.js"></script>
 <script src="../js/Accordion.js"></script>

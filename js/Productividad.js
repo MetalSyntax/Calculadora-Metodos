@@ -16,17 +16,17 @@ function Productividad_FT(){
 /*Productividad en Funcion de los Materiales*/
 /*******************************************************/
 function Productividad_FM(){
-	var total_unidades, total_materiales;
-	var total, subtotal;
-
-	total_unidades = document.getElementById("UnidadesM").value;
-	total_materiales = document.getElementById("Materiales").value;
-	
-	subtotal = parseFloat(total_unidades) /  parseFloat(total_materiales);
-	document.getElementById("SubTotal").innerHTML = "El SubTotal es = " + subtotal;
-	
-	total = total_unidades / subtotal
-	document.getElementById("Total").innerHTML = "El Total es = " + total;
+	total_unidades = 0
+	total_materiales = 0
+    total = 0
+	$("#UnidadesM").each(function(index,value){
+		total_unidades = total_unidades + eval($(this).val());
+	});
+	$("#Materiales").each(function(index,value){
+		total_materiales = total_materiales + eval($(this).val());
+	});
+    total = (total_unidades / (total_unidades / total_materiales))
+	$("#TotalPM").val(total);
 }
 /*******************************************************/
 /*Conversiones a Unidades*/
@@ -206,7 +206,5 @@ function Limpiar_Trabajadores() {
 /*Materiales*/
 function Limpiar_Materiales() {
     document.getElementById("Materiales1").reset();
-    document.getElementById("SubTotal").innerHTML = "0";
-    document.getElementById("Total").innerHTML = "0";
 }
 

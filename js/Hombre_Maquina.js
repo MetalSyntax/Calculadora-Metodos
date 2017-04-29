@@ -197,5 +197,168 @@ function Costo_Unitario(){
 	$("#Costo_Total1").each(function(index,value){
 		Costo_Total = Costo_Total + eval($(this).val());
 	});
-	$("#Costo_Unitario").val(Math.round (Costo_Total / total_unidades));
+	$("#Costo_Unitario").val(Costo_Total / total_unidades);
+}
+/*******************************************************/
+/*Produccion*/
+/*******************************************************/
+function Produccion(){
+     numero_piezas = 0
+     ciclo_produccion = 0
+     tiempo_produccion = 0
+     eficiencia_produccion = 0
+    produccion_resultado = 0
+    $("#Numero_Piezas").each(function(index,value){
+		numero_piezas = numero_piezas + eval($(this).val());
+	});
+	$("#Ciclo_Produccion").each(function(index,value){
+		ciclo_produccion = ciclo_produccion + eval($(this).val());
+	});
+    $("#Tiempo_Produccion").each(function(index,value){
+		tiempo_produccion = tiempo_produccion + eval($(this).val());
+	});
+	$("#Eficiencia_Produccion").each(function(index,value){
+		eficiencia_produccion = eficiencia_produccion + eval($(this).val());
+	});
+    produccion_resultado = (numero_piezas / ciclo_produccion) * tiempo_produccion * eficiencia_produccion
+    $("#produccion_resultado").val(produccion_resultado);
+}
+/*******************************************************/
+/*Piezas Defectuosas*/
+/*******************************************************/
+function piezas_defectuosas(){
+    demanda_aumentadaDF = 0
+    demandaDF = 0
+    $("#Demanda_AumentadaDF").each(function(index,value){
+		demanda_aumentadaDF = demanda_aumentadaDF + eval($(this).val());
+	});
+	$("#DemandaDF").each(function(index,value){
+		demandaDF = demandaDF + eval($(this).val());
+	});
+    PiezasDF = demanda_aumentadaDF - demandaDF
+    $("#PiezasDF_resultado").val(PiezasDF);
+}
+/*******************************************************/
+/*Demanda Aumentada*/
+/*******************************************************/
+function Demanda_Aumentada(){
+    Demanda = 0
+    PorcentajeError = 0
+    $("#Demanda").each(function(index,value){
+		Demanda = Demanda + eval($(this).val());
+	});
+	$("#PorcentajeError").each(function(index,value){
+		PorcentajeError = PorcentajeError + eval($(this).val());
+	});
+    DemandaA = (Demanda * 100 / (100-PorcentajeError))
+    $("#DemandaA_resultado").val(DemandaA);
+}
+/*******************************************************/
+/*Numero de Hombres*/
+/*******************************************************/
+function Numero_de_Hombres(){
+    Demanda_Aumentada_NH = 0
+    Produccion_NH = 0
+    HombresNH = 0
+    MaquinasNH = 0
+     $("#Demanda_Aumentada_NH").each(function(index,value){
+		Demanda_Aumentada_NH = Demanda_Aumentada_NH + eval($(this).val());
+	});
+	$("#Produccion_NH").each(function(index,value){
+		Produccion_NH = Produccion_NH + eval($(this).val());
+	});
+    NH_resultado = Demanda_Aumentada_NH / Produccion_NH
+     $("#NH_resultado").val(NH_resultado);
+    HombresNH = HombresNH +(Math.round(NH_resultado))
+     $("#HombresNH").val(HombresNH);
+     MaquinasNH = MaquinasNH + HombresNH*2
+     $("#MaquinasNH").val(MaquinasNH);
+}
+/*******************************************************/
+/*Costo de Inversion*/
+/*******************************************************/
+function Costo_Inversion(){
+    cuxum = 0
+    nxm = 0
+     $("#cuxum").each(function(index,value){
+		cuxum = cuxum + eval($(this).val());
+	});
+	$("#nxm").each(function(index,value){
+		nxm = nxm + eval($(this).val());
+	});
+    resultado_inv = cuxum * nxm
+     $("#resultado_inv").val(resultado_inv);
+}
+/*******************************************************/
+/*Costo de Piezas Defectuosas */
+/*******************************************************/
+function Costo_Piezas_Defectuosas(){
+    pdc = 0
+    cpd = 0
+     $("#pdc").each(function(index,value){
+		pdc = pdc + eval($(this).val());
+	});
+	$("#cpd").each(function(index,value){
+		cpd = cpd + eval($(this).val());
+	});
+    resultado_CDF = pdc * cpd
+     $("#resultado_CDF").val(resultado_CDF);
+}
+/*******************************************************/
+/*Ganancia*/
+/*******************************************************/
+function Ganancia_R(){
+	pvp = 0
+	Costo_unitario = 0
+	$("#pvp").each(function(index,value){
+		pvp = pvp + eval($(this).val());
+	});
+	$("#Costo_unitario").each(function(index,value){
+		Costo_unitario = Costo_unitario + eval($(this).val());
+	});
+	$("#ResultadoG").val(Math.round (pvp - Costo_unitario));
+}
+/*******************************************************/
+/*Rentabilidad*/
+/*******************************************************/
+function Rentabilidad(){
+	pvp1 = 0
+	Costo_unitario1 = 0
+	$("#pvp1").each(function(index,value){
+		pvp1 = pvp1 + eval($(this).val());
+	});
+	$("#Costo_unitario1").each(function(index,value){
+		Costo_unitario1 = Costo_unitario1 + eval($(this).val());
+	});
+	$("#ResultadoR").val(Math.round ((pvp1 / Costo_unitario1) * 100));
+}
+/*******************************************************/
+/*Depreciasion*/
+/*******************************************************/
+function Costo_Depre(){
+    cxi = 0
+    vxu = 0
+     $("#cxi").each(function(index,value){
+		cxi = cxi + eval($(this).val());
+	});
+	$("#vxu").each(function(index,value){
+		vxu = vxu + eval($(this).val());
+	});
+    resultado_Depre = cxi * vxu
+     $("#resultado_Depre").val(resultado_Depre);
+}
+/*******************************************************/
+/*Costo de Materiales*/
+/*******************************************************/
+function Costo_Materiales(){
+    daCM = 0
+    CM = 0
+     $("#daCM").each(function(index,value){
+		daCM = daCM + eval($(this).val());
+	});
+	$("#CM").each(function(index,value){
+		CM = CM + eval($(this).val());
+	});
+    resultado_CM = cxi * vxu
+     $("#resultado_CM").val(resultado_CM);
 }

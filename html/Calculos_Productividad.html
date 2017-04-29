@@ -178,13 +178,9 @@
     <input type="number" id="UnidadesM" value="0" required/>
     <p>Cantidad de Materiales</p>
     <input type="number" id="Materiales" value="0" required/>
-    
-    <p>Resultado Previo</p>
-    <p id="SubTotal">0</p><br/>
-    
     <p>Resultado</p>
-    <p id="Total">0</p><br/>
-  
+     <input type="number" id="TotalPM" value="0" disabled/><br/>
+    <p></p>
     <input type="button" value="Calcular Total" onclick="Productividad_FM()"/>
     <input type="button" value="Limpiar" onclick="Limpiar_Materiales()">
 </form>
@@ -245,6 +241,7 @@
     </form>
 </div>
     
+<!--Guardado-->
 <button class="accordion">Guardado</button>
 <div class="panel">
 <form id="Save">

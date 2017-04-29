@@ -76,6 +76,27 @@
     
 </form>
 </div> 
+    
+<!--Produccion-->
+<button class="accordion">Produccion</button>
+<div class="panel">
+<form id="produccion">
+    <h3>Produccion</h3> 
+    <p>Numero de Piezas</p>
+    <input type="number" id="Numero_Piezas" value="0" required/>
+    <p>Ciclo</p>
+    <input type="number" id="Ciclo_Produccion" value="0" required/>
+    <p>Tiempo</p>
+    <input type="number" id="Tiempo_Produccion" value="0" required/>
+    <p>Eficiencia</p>
+    <input id="Eficiencia_Produccion" type ="number" min ="0" max="1" value="0" step ="0.01" required/>
+    <p>Resultado</p>
+    <input type="number" id="produccion_resultado" value="0" disabled/>
+    <p></p>
+    <input type="button" value="Calcular" onclick="Produccion()"/>
+</form>
+</div>
+
 <!--Tiempo Necesario-->
  <button class="accordion">Tiempo Necesario</button>
 <div class="panel">
@@ -97,6 +118,75 @@
     <input type="button" value="Calcular" onclick="Tiempo_Necesario()"/>
 </form>
 </div> 
+    
+<!--Demanda Aumentada-->
+<button class="accordion">Demanda Aumentada</button>
+<div class="panel">
+<form id="Demanda_Aumentada">
+    <h3>Demanda Aumentada</h3> 
+    <p>Demanda</p>
+    <input type="number" id="Demanda" value="0" required/>
+    <p>Porcentaje de Error</p>
+    <input type="number" id="PorcentajeError" value="0" required/>
+    <p>Resultado</p>
+    <input type="number" id="DemandaA_resultado" value="0" disabled/>
+    <p></p>
+<input type="button" value="Calcular" onclick="Demanda_Aumentada()"/>
+</form>
+</div>
+     
+<!--Piezas Defectuosas-->
+<button class="accordion">Piezas Defectuosas</button>
+<div class="panel">
+<form id="Piezas_Defectuosas">
+    <h3>Piezas defectuosas</h3> 
+    <p>Demanda Aumentada</p>
+    <input type="number" id="Demanda_AumentadaDF" value="0" required/>
+    <p>Demanda</p>
+    <input type="number" id="DemandaDF" value="0" required/>
+    <p>Resultado</p>
+    <input type="number" id="PiezasDF_resultado" value="0" disabled/>
+    <p></p>
+    <input type="button" value="Calcular" onclick="piezas_defectuosas()"/>
+</form>
+</div>
+    
+<!--Numero de Hombres-->
+<button class="accordion">Numero de Hombres</button>
+<div class="panel">
+<form id="Numero_de_Hombres">
+    <h3>Numero de Hombres</h3> 
+    <p>Demanda Aumentada</p>
+    <input type="number" id="Demanda_Aumentada_NH" value="0" required/>
+    <p>Produccion</p>
+    <input type="number" id="Produccion_NH" value="0" required/>
+    <p>Resultado</p>
+    <input type="number" id="NH_resultado" value="0" disabled/>
+    <p>Hombres</p>
+    <input type="number" id="HombresNH" value="0" disabled/>
+    <p>Maquinas</p>
+    <input type="number" id="MaquinasNH" value="0" disabled/>
+    <p></p>
+    <input type="button" value="Calcular" onclick="Numero_de_Hombres()"/>
+</form>
+</div>
+    
+<!--Costo de Inversion-->
+<button class="accordion">Costo de Inversion</button>
+<div class="panel">
+<form id="Costo_de_Inversion">
+    <h3>Costo de Inversion</h3> 
+    <p>Costo unitario por unidad de Maquina</p>
+    <input type="number" id="cuxum" value="0" required/>
+    <p>Numero de Maquinas</p>
+    <input type="number" id="nxm" value="0" required/>
+    <p>Resultado</p>
+    <input type="number" id="resultado_inv" value="0" disabled/>
+    <p></p>
+    <input type="button" value="Calcular" onclick="Costo_Inversion()"/>
+</form>
+</div>
+    
 <!--Analisis de Costos-->
 <button class="accordion"> Costo de Mano de Obra Jornada Normal</button>
 <div class="panel">
@@ -177,7 +267,39 @@
     <input type="button" value="Calcular" onclick="Analisis_de_Costos4()"/>
 </form>
 </div> 
-
+    
+<!--Costo de Piezas Defectuosas-->
+<button class="accordion">Costo de Piezas Defectuosas</button>
+<div class="panel">
+<form id="Costo_Piezas_Defectuosas">
+    <h3>Costo de Piezas Defectuosas</h3> 
+    <p>Piezas Defectuosas</p>
+    <input type="number" id="pdc" value="0" required/>
+    <p>Costo</p>
+    <input type="number" id="cpd" value="0" required/>
+    <p>Resultado</p>
+    <input type="number" id="resultado_CDF" value="0" disabled/>
+    <p></p>
+    <input type="button" value="Calcular" onclick="Costo_Piezas_Defectuosas()"/>
+</form>
+</div>
+    
+<!--Costo de Materiales-->
+<button class="accordion">Costo de Materiales</button>
+<div class="panel">
+<form id="Costo_de_Materiales">
+    <h3>Costo de Materiales</h3> 
+    <p>Demanda Aumentada</p>
+    <input type="number" id="daCM" value="0" required/>
+    <p>Costo de materiales</p>
+    <input type="number" id="CM" value="0" required/>
+    <p>Resultado</p>
+    <input type="number" id="resultado_CM" value="0" disabled/>
+    <p></p>
+    <input type="button" value="Calcular" onclick="Costo_Materiales()"/>
+</form>
+</div>
+    
 <!--Costos Totales-->
 <button class="accordion">Costos Totales</button>
 <div class="panel">
@@ -210,6 +332,57 @@
 </form>
 </div>
     
+<!--Ganancia-->
+<button class="accordion">Ganancia</button>
+<div class="panel">
+<form id="ganancia">
+    <h3>Ganancia</h3>
+    <p>Costo Unitario</p>
+    <input type="number" id="Costo_unitario" value="0" required/>
+	<p>Precio de Venta al Publico</p>
+    <input type="number" id="pvp" value="0" required/>
+    <p>Resultado</p>
+    <input type="number" id="ResultadoG" value="0" disabled/><br/>
+    <p></p>
+    <input type="button" value="Calcular" onclick="Ganancia_R()"/>
+    <input type="button" value="Limpiar" onclick="Limpiar_ganancia()">
+</form>
+</div>
+    
+<!--Rentabilidad-->
+<button class="accordion">Rentabilidad</button>
+<div class="panel">
+<form id="rentabilidad">
+    <h3>Rentabilidad</h3>
+    <p>Costo Unitario</p>
+    <input type="number" id="Costo_unitario1" value="0" required/>
+	<p>Precio de Venta al Publico</p>
+    <input type="number" id="pvp1" value="0" required/>
+    <p>Resultado</p>
+    <input type="number" id="ResultadoR" value="0" disabled/><br/>
+    <p></p>
+    <input type="button" value="Calcular" onclick="Rentabilidad()"/>
+    <input type="button" value="Limpiar" onclick="Limpiar_rentabilidad()">
+</form>
+</div> 
+    
+<!--Depreciasion-->
+<button class="accordion">Depreciasion</button>
+<div class="panel">
+<form id="Depreciasion">
+    <h3>Depreciasion</h3> 
+    <p>Costo de Inversion</p>
+    <input type="number" id="cxi" value="0" required/>
+    <p>Vida Util</p>
+    <input type="number" id="vxu" value="0" required/>
+    <p>Resultado</p>
+    <input type="number" id="resultado_Depre" value="0" disabled/>
+    <p></p>
+    <input type="button" value="Calcular" onclick="Costo_Depre()"/>
+</form>
+</div>
+
+<!--Guardado-->
 <button class="accordion">Guardado</button>
 <div class="panel">
 <form id="Save">
