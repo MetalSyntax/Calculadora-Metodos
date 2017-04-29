@@ -65,11 +65,11 @@ function Nueva_Linea_Costo() {
 function Costo_Unitario_Prod(){
 	Total_Unidades = 0
 	Costo_Total = 0
-	$("#Costo_Total_U").each(function(index,value){
-		Total_Unidades += eval($(this).val());
-	});
 	$("#Unidades_U").each(function(index,value){
-		Costo_Total += eval($(this).val());
+		Total_Unidades = Total_Unidades + eval($(this).val());
+	});
+	$("#Costo_Total_U").each(function(index,value){
+		Costo_Total = Costo_Total + eval($(this).val());
 	});
 	$("#Costo_Unitario").val(Costo_Total / Total_Unidades);
 }
@@ -155,7 +155,10 @@ function Indices(){
 	$("#Base").each(function(index,value){
 		Base = Base + eval($(this).val());
 	});
-	$("#ResultadoIN").val(Estudio / Base)*100;
+    indice_p = (Estudio / Base)*100
+    indice_R = (indice_p - 100)
+	$("#ResultadoIN").val(indice_p);
+    $("#ResultadoPOR").val(indice_R);
 }
 /*******************************************************/
 /*Limpiar*/

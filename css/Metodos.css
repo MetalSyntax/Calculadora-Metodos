@@ -41,7 +41,7 @@ h2, h3,h4, h5,h6{
 	text-align: center;
 }
 /* ESPECIFICOS */
-#costos, #unidades, #trans, #indicadores, #indices, #ganancia, #rentabilidad, #costo, #Produccion, #Unitario, #Productividad, #Trabajadores1, #Materiales1 {
+#costos, #unidades, #trans, #indicadores, #indices, #ganancia, #rentabilidad, #costo, #Produccion, #Unitario, #Productividad, #Trabajadores1, #Materiales1, #Save {
 	text-align: center;
 }
 
@@ -79,4 +79,10 @@ img{
   background: #00E48D;
   border-radius: 5px;
   color: grey;
+}
+#title{
+    color: #595959; 
+	padding: 5px 10px;
+    font-size: 16px;
+    font-family: 'Roboto Condensed', sans-serif;
 }
