@@ -5,6 +5,10 @@ A partir de la Version 2 se dejara la version 1.x.x como proyecto individual sin
 
 Este proyecto es Open Source
 
+Version 1.0.7 Modulo de Balance de Lineas Habilitado/Incompleto
+
+Version 1.0.6 Cambios en la estructura de la aplicacion, Cambios en el icono, Funcion "Hombre-Maquina" Finalizada. Se le agrego la posibilidad de guardar historial momentaneo en la funcion productividad. Se elimino los enlaces de informacion no relevante. 
+
 Version 1.0.5 Se agregaron los iconos en el menu principal. Cambios menores en el CSS. Funcion "Hombre-Maquina" Habilitada. Fuentes Habilitadas. Se eliminaron algunas Fuentes y archivos Css obsoletos. Cambios menores y Arreglos en la Estructura. Se agregaron y deshabilitaron los archivos de cordova para futura compilacion.
 
 version 1.0.4 Correciones entre los hipervinculos.  Correcciones a nivel Offline. Se agregaron las fuentes locales, imagen de logotipo, iconos, css especificos y el ultimo formulario de productividad hasta el momento. 

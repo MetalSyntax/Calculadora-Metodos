@@ -46,19 +46,18 @@
 </div>
 <a id="tab" style="font-size:30px;cursor:pointer" onclick="openNav()">&#8801;<label>Productividad</label></a>
 
-<h3>Costos Totales</h3> 
-<form method="POST" action="nada1.html" id="costos">
-	<div id="Costos_Linea">
-        <input type="number" class="costos_totales" value="0" required/><br/>
-	</div>
+<form id="Unitario">
+    <h3>Costo Unitario</h3>
+    <p>Costo Total</p>
+    <input type="number" id="Costo_Total_U" value="0" required/>
+	<p>Candidad de Unidades</p>
+    <input type="number" id="Unidades_U" value="0" required/>
     <p>Resultado</p>
-    <input type="number" id="costo_total" value="0" disabled/><br/>
-    <p>Agregar/Calcular Costos</p>
-	<input type="button" value="Nueva l&iacute;nea" onclick="Nueva_Linea_Costo()"/>
-	<input type="button" value="Calcular" onclick="Costos_Totales()"/>
-     <input type="button" value="Limpiar" onclick="Limpiar_costos()">
-    </form>
-      <p></p>
+    <input type="number" id="Costo_Unitario" value="0" disabled/><br/>
+    <p></p>
+    <input type="button" value="Calcular" onclick="Costo_Unitario_Prod()"/>
+     <input type="button" value="Limpiar" onclick="Limpiar_costo()">
+</form>
     <h3>Historial</h3>
     <ul id="myUL">
     </ul>
