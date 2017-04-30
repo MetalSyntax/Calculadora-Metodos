@@ -413,3 +413,10 @@ function Limpiar_Costo_Piezas_Defectuosas() {
 function Limpiar_Costo_de_Materiales() {
     document.getElementById("Costo_de_Materiales").reset();
 }
+/*Depreciasion*/
+function Limpiar_Depreciasion() {
+    document.getElementById("Depreciasion").reset();
+}
+
+
+
