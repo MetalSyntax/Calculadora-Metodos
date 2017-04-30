@@ -41,7 +41,7 @@ h2, h3,h4, h5,h6{
 	text-align: center;
 }
 /* ESPECIFICOS */
-#costos, #unidades, #trans, #indicadores, #indices, #ganancia, #rentabilidad, #costo, #Produccion, #Unitario, #Productividad, #Trabajadores1, #Materiales1, #Save, #produccion, #Demanda_Aumentada, #Piezas_Defectuosas, #Numero_de_Hombres, #Costo_de_Inversion, #Costo_Piezas_Defectuosas, #Costo_de_Materiales, #Depreciasion {
+#costos, #unidades, #trans, #indicadores, #indices, #ganancia, #rentabilidad, #costo, #Produccion, #Unitario, #Productividad, #Trabajadores1, #Materiales1, #Save, #produccion, #Demanda_Aumentada, #Piezas_Defectuosas, #Numero_de_Hombres, #Costo_de_Inversion, #Costo_Piezas_Defectuosas, #Costo_de_Materiales, #Depreciasion, #NTCPC, Produccion_HM, #CMOJN, #CMOJE {
 	text-align: center;
 }
 

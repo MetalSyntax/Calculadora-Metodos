@@ -11,6 +11,30 @@ function Productividad_FT(){
 		total_trabajadores = total_trabajadores + eval($(this).val());
 	});
 	$("#Total_FT").val(total_unidades / total_trabajadores);
+    
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("Total_FT").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("Total_FT").value;
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
 }
 /*******************************************************/
 /*Productividad en Funcion de los Materiales*/
@@ -27,6 +51,30 @@ function Productividad_FM(){
 	});
     total = (total_unidades / (total_unidades / total_materiales))
 	$("#TotalPM").val(total);
+    
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("TotalPM").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("TotalPM").value;
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
 }
 /*******************************************************/
 /*Conversiones a Unidades*/
@@ -38,6 +86,30 @@ function Multiplicando() {
 			Numero_de_Unidades = Numero_de_Unidades * eval($(this).val());
 		});
 	$("#Resultado_Multi").val(Numero_de_Unidades);
+    
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("Resultado_Multi").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("Resultado_Multi").value;
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
 }
 function Dividiendo() {
     $("#Resultado_Divi").val(Numero_de_Unidades);
@@ -55,6 +127,30 @@ function Costos_Totales() {
 			costo_total = costo_total + eval($(this).val());
 		});
 	$("#costo_total").val(costo_total);
+    
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("costo_total").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("costo_total").value;
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
 }
 function Nueva_Linea_Costo() {
 	$("#Costos_Linea").append('<input type="number" class="costos_totales" value="0"/><br/>');
@@ -72,6 +168,30 @@ function Costo_Unitario_Prod(){
 		Costo_Total = Costo_Total + eval($(this).val());
 	});
 	$("#Costo_Unitario").val(Costo_Total / Total_Unidades);
+    
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("Costo_Unitario").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("Costo_Unitario").value;
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
 }
 /*******************************************************/
 /*Productividad*/
@@ -86,6 +206,30 @@ function Productividad(){
 		Costo_Total = Costo_Total + eval($(this).val());
 	});
 	$("#Resultado").val(total_unidades / Costo_Total);
+
+var li = document.createElement("li");
+  var inputValue = document.getElementById("Resultado").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("Resultado").value;
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
 }
 /*******************************************************/
 /*Ganancia*/
@@ -100,6 +244,30 @@ function Ganancia_R(){
 		Costo_unitario = Costo_unitario + eval($(this).val());
 	});
 	$("#ResultadoG").val(Math.round (pvp - Costo_unitario));
+    
+ var li = document.createElement("li");
+  var inputValue = document.getElementById("ResultadoG").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("ResultadoG").value;
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
 }
 /*******************************************************/
 /*Rentabilidad*/
@@ -114,6 +282,30 @@ function Rentabilidad(){
 		Costo_unitario1 = Costo_unitario1 + eval($(this).val());
 	});
 	$("#ResultadoR").val(Math.round ((pvp1 / Costo_unitario1) * 100));
+    
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("ResultadoR").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("ResultadoR").value;
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
 }
 /*******************************************************/
 /*Costos de Produccion*/
@@ -128,6 +320,30 @@ function Costos_de_Produccion(){
 		Costo = Costo + eval($(this).val());
 	});
 	$("#ResultadoP").val(Math.round (Material * Costo));
+    
+    var li = document.createElement("li");
+  var inputValue = document.getElementById("ResultadoP").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("ResultadoP").value;
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
 }
 /*******************************************************/
 /*Indicadores*/
@@ -142,6 +358,30 @@ function Indicadores(){
 		Material = Material + eval($(this).val());
 	});
 	$("#ResultadoI").val(Mes / Material);
+    
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("ResultadoI").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("ResultadoI").value;
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
 }
 /*******************************************************/
 /*Indices*/
@@ -159,6 +399,30 @@ function Indices(){
     indice_R = (indice_p - 100)
 	$("#ResultadoIN").val(indice_p);
     $("#ResultadoPOR").val(indice_R);
+    
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("ResultadoPOR").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("ResultadoPOR").value;
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
 }
 /*******************************************************/
 /*Limpiar*/

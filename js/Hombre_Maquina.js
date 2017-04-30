@@ -362,3 +362,54 @@ function Costo_Materiales(){
     resultado_CM = cxi * vxu
      $("#resultado_CM").val(resultado_CM);
 }
+/*******************************************************/
+/*Limpiar*/
+/*******************************************************/
+/*Numero_Tecnico*/
+function Limpiar_Numero_Tecnico() {
+    document.getElementById("NTCPC").reset();
+}
+/*Produccion_HM*/
+function Limpiar_Produccion_HM() {
+    document.getElementById("Produccion_HM").reset();
+}
+/*Demanda_Aumentada*/
+function Limpiar_Demanda_Aumentada() {
+    document.getElementById("Demanda_Aumentada").reset();
+}
+/*Piezas_Defectuosas*/
+function Limpiar_Piezas_Defectuosas() {
+    document.getElementById("Piezas_Defectuosas").reset();
+}
+/*Numero_de_Hombres*/
+function Limpiar_Numero_de_Hombres() {
+    document.getElementById("Numero_de_Hombres").reset();
+}
+/*Costo_de_Inversion*/
+function Limpiar_Costo_de_Inversion() {
+    document.getElementById("Costo_de_Inversion").reset();
+}
+/*CMOJN*/
+function Limpiar_CMOJN() {
+    document.getElementById("CMOJN").reset();
+}
+/*CMOJE*/
+function Limpiar_CMOJE() {
+    document.getElementById("CMOJE").reset();
+}
+/*CMF*/
+function Limpiar_CMF() {
+    document.getElementById("CMF").reset();
+}
+/*CMP*/
+function Limpiar_CMP() {
+    document.getElementById("CMP").reset();
+}
+/*Costo_Piezas_Defectuosas*/
+function Limpiar_Costo_Piezas_Defectuosas() {
+    document.getElementById("Costo_Piezas_Defectuosas").reset();
+}
+/*Costo_de_Materiales*/
+function Limpiar_Costo_de_Materiales() {
+    document.getElementById("Costo_de_Materiales").reset();
+}

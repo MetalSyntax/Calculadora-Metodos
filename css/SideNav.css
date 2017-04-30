@@ -5,7 +5,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background: #ffffff;
+    background: #fff;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -17,7 +17,7 @@
     color: grey; 
     display: block;
     transition: 0.3s;
-    background: #ffffff; 
+    background: #fff; 
 }
 
 .sidenav a:hover, .offcanvas a:focus{

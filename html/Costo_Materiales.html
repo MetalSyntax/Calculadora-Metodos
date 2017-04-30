@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <!--Titulo--> 
-<title>Ayuda</title>
+<title>Hombre Maquina</title>
 <!--Scrips Principales-->
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="../js/jquery.mobile-1.4.5.min.js"></script>
@@ -22,17 +22,17 @@
 <link href="../css/Card.css" rel="stylesheet">
 <link href="../css/SideNav.css" rel="stylesheet">
 <link href="../css/Metodos.css" rel="stylesheet">
-
-
+<link href="../css/list.css" rel="stylesheet">
 </head>
 <body>
+   
 <!--Modos-->
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#8592;</a>
     <div class="card">
     <img src="../images/methods.png" alt="Methods" style="width:100%">
     </div>
-   <a href="../index.html"> <i class="fa fa-home" aria-hidden="true"></i>Pagina Principal</a>
+       <a href="../index.html"> <i class="fa fa-home" aria-hidden="true"></i>Pagina Principal</a>
    <a href="Productividad.html"><i class="fa fa-line-chart" aria-hidden="true"></i>Productividad</a>  
 	<a href="Hombre_Maquina.html"><i class="fa fa-cog" aria-hidden="true"></i>Hombre Maquina</a>
 	<a href="Desarrollo.html"><i class="fa fa-balance-scale" aria-hidden="true"></i>Balance de Lineas</a> 
@@ -41,21 +41,27 @@
 	<p></p>
 	<a href="Ayuda.html"><span class="glyphicon glyphicon-question-sign"></span>Ayuda</a>
 	<a href="Acerca_de.html"><span class="glyphicon glyphicon-info-sign"></span>Acerca de</a>
-   <a href="Terminos.html"><span class="glyphicon glyphicon-list-alt"></span>Terminos y Condiciones</a>
+    <a href="Terminos.html"><span class="glyphicon glyphicon-list-alt"></span>Terminos y Condiciones</a>
 </div>
-<a id="tab" style="font-size:30px;cursor:pointer" onclick="openNav()">&#8801;<label>Ayuda</label></a>
+<a id="tab" style="font-size:30px;cursor:pointer">&#8801;<label>Hombre Maquina</label></a>
+    
+<form id="Costo_de_Materiales">
+    <h3>Costo de Materiales</h3> 
+    <p>Demanda Aumentada</p>
+    <input type="number" id="daCM" value="0" required/>
+    <p>Costo de materiales</p>
+    <input type="number" id="CM" value="0" required/>
+    <p>Resultado</p>
+    <input type="number" id="resultado_CM" value="0" disabled/>
+    <p></p>
+    <input type="button" value="Calcular" onclick="Costo_Materiales()"/>
+      <input type="button" value="Limpiar" onclick="Limpiar_Costo_de_Materiales()">
+</form>
+     
+    <!--Scripts Especificos-->
+<script src="../js/SideNav.js"></script>
+<script src="../js/Hombre_Maquina.js"></script>
 
-<h4>Ingenieria de Metodos</h4>
-<a href="Concepto_Fundamentales.html">Conceptos Fundamentales</a>
-<h4>Productividad</h4>
-<a href="Concepto_Productividad.html"><i class="fa fa-line-chart" aria-hidden="true"></i>Concepto</a>
-<a href="Ejemplo_1_Prod.html"><i class="fa fa-line-chart" aria-hidden="true"></i>Ejemplo</a>
-<a href="Ejercicio_1_Prod.html"><i class="fa fa-line-chart" aria-hidden="true"></i>Ejercicios</a>
-<a href="Leyenda_Prod.html"><i class="fa fa-line-chart" aria-hidden="true"></i>Leyenda</a>
-
-<!--Scripts Especificos-->
-<script src="../js/SideNav.js"></script> 
- 
 </body>
-
+    
 </html>

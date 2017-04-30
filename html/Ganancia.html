@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <!--Titulo--> 
-<title>Ayuda</title>
+<title>Productividad Multifactorial</title>
 <!--Scrips Principales-->
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="../js/jquery.mobile-1.4.5.min.js"></script>
@@ -19,20 +19,21 @@
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/jquery.mobile-1.4.5.min.css" rel="stylesheet">
  <!--Estilos Personalizados-->
-<link href="../css/Card.css" rel="stylesheet">
-<link href="../css/SideNav.css" rel="stylesheet">
-<link href="../css/Metodos.css" rel="stylesheet">
-
-
+        <link href="../css/Card.css" rel="stylesheet">
+        <link href="../css/Accordion.css" rel="stylesheet">
+        <link href="../css/SideNav.css" rel="stylesheet">
+        <link href="../css/Metodos.css" rel="stylesheet">
+        <link href="../css/list.css" rel="stylesheet">
 </head>
 <body>
+   
 <!--Modos-->
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#8592;</a>
     <div class="card">
     <img src="../images/methods.png" alt="Methods" style="width:100%">
     </div>
-   <a href="../index.html"> <i class="fa fa-home" aria-hidden="true"></i>Pagina Principal</a>
+       <a href="../index.html"> <i class="fa fa-home" aria-hidden="true"></i>Pagina Principal</a>
    <a href="Productividad.html"><i class="fa fa-line-chart" aria-hidden="true"></i>Productividad</a>  
 	<a href="Hombre_Maquina.html"><i class="fa fa-cog" aria-hidden="true"></i>Hombre Maquina</a>
 	<a href="Desarrollo.html"><i class="fa fa-balance-scale" aria-hidden="true"></i>Balance de Lineas</a> 
@@ -41,21 +42,33 @@
 	<p></p>
 	<a href="Ayuda.html"><span class="glyphicon glyphicon-question-sign"></span>Ayuda</a>
 	<a href="Acerca_de.html"><span class="glyphicon glyphicon-info-sign"></span>Acerca de</a>
-   <a href="Terminos.html"><span class="glyphicon glyphicon-list-alt"></span>Terminos y Condiciones</a>
+    <a href="Terminos.html"><span class="glyphicon glyphicon-list-alt"></span>Terminos y Condiciones</a>
 </div>
-<a id="tab" style="font-size:30px;cursor:pointer" onclick="openNav()">&#8801;<label>Ayuda</label></a>
+<a id="tab" style="font-size:30px;cursor:pointer" onclick="openNav()">&#8801;<label>Productividad</label></a>
 
-<h4>Ingenieria de Metodos</h4>
-<a href="Concepto_Fundamentales.html">Conceptos Fundamentales</a>
-<h4>Productividad</h4>
-<a href="Concepto_Productividad.html"><i class="fa fa-line-chart" aria-hidden="true"></i>Concepto</a>
-<a href="Ejemplo_1_Prod.html"><i class="fa fa-line-chart" aria-hidden="true"></i>Ejemplo</a>
-<a href="Ejercicio_1_Prod.html"><i class="fa fa-line-chart" aria-hidden="true"></i>Ejercicios</a>
-<a href="Leyenda_Prod.html"><i class="fa fa-line-chart" aria-hidden="true"></i>Leyenda</a>
-
-<!--Scripts Especificos-->
-<script src="../js/SideNav.js"></script> 
- 
+<form id="ganancia">
+    <h3>Ganancia</h3>
+    <p>Costo Unitario</p>
+    <input type="number" id="Costo_unitario" value="0" required/>
+	<p>Precio de Venta al Publico</p>
+    <input type="number" id="pvp" value="0" required/>
+    <p>Resultado</p>
+    <input type="number" id="ResultadoG" value="0" disabled/><br/>
+    <p></p>
+    <input type="button" value="Calcular" onclick="Ganancia_R()"/>
+    <input type="button" value="Limpiar" onclick="Limpiar_ganancia()">
+</form>
+      <p></p>
+    <h3>Historial</h3>
+    <div class="panel">
+    <ul id="myUL">
+    </ul>
+    </div>
+    
+<!--Scripts Especificos-->  
+<script src="../js/SideNav.js"></script>   
+<script src="../js/Productividad.js"></script>
+<script src="../js/list.js"></script>
+    
 </body>
-
 </html>
