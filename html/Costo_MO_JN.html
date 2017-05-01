@@ -28,14 +28,13 @@
    
 <!--Modos-->
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#8592;</a>
     <div class="card">
     <img src="../images/methods.png" alt="Methods" style="width:100%">
     </div>
        <a href="../index.html"> <i class="fa fa-home" aria-hidden="true"></i>Pagina Principal</a>
    <a href="Productividad.html"><i class="fa fa-line-chart" aria-hidden="true"></i>Productividad</a>  
 	<a href="Hombre_Maquina.html"><i class="fa fa-cog" aria-hidden="true"></i>Hombre Maquina</a>
-	<a href="Desarrollo.html"><i class="fa fa-balance-scale" aria-hidden="true"></i>Balance de Lineas</a> 
+	<a href="Balance_Lineas.html"><i class="fa fa-balance-scale" aria-hidden="true"></i>Balance de Lineas</a> 
 	<a href="Desarrollo.html"><i class="fa fa-hourglass-half" aria-hidden="true"></i>Muestreo de trabajo</a>
 	<hr>
 	<p></p>
@@ -43,7 +42,9 @@
 	<a href="Acerca_de.html"><span class="glyphicon glyphicon-info-sign"></span>Acerca de</a>
     <a href="Terminos.html"><span class="glyphicon glyphicon-list-alt"></span>Terminos y Condiciones</a>
 </div>
-<a id="tab" style="font-size:30px;cursor:pointer">&#8801;<label>Hombre Maquina</label></a>
+<a id="tab" onclick="openNav()"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span><label>Hombre Maquina</label></a>
+    
+    <div id="overlay"></div>
     
 <form id="CMOJN">
     <h3>Costo de Mano de Obra Jornada Normal</h3>

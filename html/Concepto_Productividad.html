@@ -27,7 +27,6 @@
    
 <!--Modos-->
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#8592;</a>
     <div class="card">
     <img src="../images/methods.png" alt="Methods" style="width:100%">
     </div>
@@ -42,8 +41,10 @@
 	<a href="Acerca_de.html"><span class="glyphicon glyphicon-info-sign"></span>Acerca de</a>
     <a href="Terminos.html"><span class="glyphicon glyphicon-list-alt"></span>Terminos y Condiciones</a>
 </div>
-<a id="tab" style="font-size:30px;cursor:pointer">&#8801;<label>Productividad</label></a>
+ <a id="tab" onclick="openNav()"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span><label>Productividad</label></a>
     
+ <div id="overlay"></div>
+
 <h3>Productividad</h3>
 <p>Segun Criollo :<em>La Productividad es el grado de rendimiento con que se emplean los recursos disponibles para alcanzar objetivos determinados</em></p>
 <p>Segun Kanawaty :<em>La Productividad es la relacion entre produccion e insumo</em></p>

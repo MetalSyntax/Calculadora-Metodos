@@ -27,7 +27,6 @@
 <body>
 <!--Modos-->
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#8592;</a>
     <div class="card">
     <img src="../images/methods.png" alt="Methods" style="width:100%">
     </div>
@@ -42,9 +41,10 @@
 	<a href="Acerca_de.html"><span class="glyphicon glyphicon-info-sign"></span>Acerca de</a>
     <a href="Terminos.html"><span class="glyphicon glyphicon-list-alt"></span>Terminos y Condiciones</a>
 </div>
-<a id="tab" style="font-size:30px;cursor:pointer" onclick="openNav()">&#8801;<label>Acerca de</label></a>
+<a id="tab"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span><label>Acerca de</label></a>
 
-
+<div id="overlay"></div>
+    
 <h1>Methods</h1>
 <p> <strong>Methods</strong> es una calculadora realizada con la intencion de agilizar los calculos relacionados con la ingenieria de Metodos, Estudios de Tiempo, Estudio del Trabajo, entre otros, escrita en HTML, CSS y JavaScript (Vanilla y JQuery).</p>
 <p>Version 1.0.7</p>
