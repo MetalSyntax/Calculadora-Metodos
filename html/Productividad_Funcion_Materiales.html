@@ -9,7 +9,6 @@
 <title>Productividad Multifactorial</title>
 <!--Scrips Principales-->
     <script src="../js/jquery-3.2.1.min.js"></script>
-    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
     <script src="../js/jquery.touchSwipe.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 <!--Icono-->
@@ -17,7 +16,6 @@
 <!--Estilos Principales-->
     <link href="../css/bootstrap.min.css" rel="stylesheet" >
     <link href="../css/font-awesome.min.css" rel="stylesheet">
-    <link href="../css/jquery.mobile-1.4.5.min.css" rel="stylesheet">
  <!--Estilos Personalizados-->
         <link href="../css/Card.css" rel="stylesheet">
         <link href="../css/Accordion.css" rel="stylesheet">
@@ -49,10 +47,12 @@
 
 <form id="Materiales1">
     <h3>Productividad en Funcion de los Materiales</h3>
-    <p>La candidad de Unidades</p>
+    <p>La cantidad de Unidades</p>
     <input type="number" id="UnidadesM" value="0" required/>
+    <input type="text" id="Tipo_Unidad" value="" placeholder="Unidad" required/>
     <p>Cantidad de Materiales</p>
     <input type="number" id="Materiales" value="0" required/>
+    <input type="text" id="Tipo_Material" value="" placeholder="Unidad" required/>
     <p>Resultado</p>
      <input type="number" id="TotalPM" value="0" disabled/><br/>
     <p></p>

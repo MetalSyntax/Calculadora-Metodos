@@ -10,14 +10,16 @@ function Productividad_FT(){
 	$("#Trabajadores").each(function(index,value){
 		total_trabajadores = total_trabajadores + eval($(this).val());
 	});
-	$("#Total_FT").val(total_unidades / total_trabajadores);
+    ttf = total_unidades / total_trabajadores
+    cttf = ttf.toFixed(4)
+	$("#Total_FT").val(cttf);
     
   var li = document.createElement("li");
-  var inputValue = document.getElementById("Total_FT").value;
+  var inputValue = document.getElementById("Total_FT").value+" "+document.getElementById("Tipo_UnidadT").value+" / Trabajadores";
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
-    alert("You must write something!");
+    alert("¡Debes escribir algo!");
   } else {
     document.getElementById("myUL").appendChild(li);
   }
@@ -53,11 +55,11 @@ function Productividad_FM(){
 	$("#TotalPM").val(total);
     
   var li = document.createElement("li");
-  var inputValue = document.getElementById("TotalPM").value;
+  var inputValue = document.getElementById("TotalPM").value+" "+document.getElementById("Tipo_Unidad").value+" / "+document.getElementById("Tipo_Material").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
-    alert("You must write something!");
+    alert("¡Debes escribir algo!");
   } else {
     document.getElementById("myUL").appendChild(li);
   }
@@ -92,7 +94,7 @@ function Multiplicando() {
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
-    alert("You must write something!");
+    alert("¡Debes escribir algo!");
   } else {
     document.getElementById("myUL").appendChild(li);
   }
@@ -117,6 +119,9 @@ function Dividiendo() {
 function Nueva_Linea_Trans() {
 	$("#Transformaciones").append('<input type="number" class="Numero_de_Unidades" value="0"/><br/>');   
 }
+function Borrar_Linea_Trans(){
+    $("#Transformaciones").empty('<input type="number" class="costos_totales" value="0">/><br/>');
+}
 /*******************************************************/
 /*Costos Totales*/
 /*******************************************************/
@@ -133,7 +138,7 @@ function Costos_Totales() {
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
-    alert("You must write something!");
+    alert("¡Debes escribir algo!");
   } else {
     document.getElementById("myUL").appendChild(li);
   }
@@ -155,6 +160,9 @@ function Costos_Totales() {
 function Nueva_Linea_Costo() {
 	$("#Costos_Linea").append('<input type="number" class="costos_totales" value="0"/><br/>');
 }
+function Borrar_Linea_Costo(){
+    $("#Costos_Linea").empty('<input type="number" class="costos_totales" value="0">/><br/>');
+}
 /*******************************************************/
 /*Costo Unitario*/
 /*******************************************************/
@@ -167,14 +175,16 @@ function Costo_Unitario_Prod(){
 	$("#Costo_Total_U").each(function(index,value){
 		Costo_Total = Costo_Total + eval($(this).val());
 	});
-	$("#Costo_Unitario").val(Costo_Total / Total_Unidades);
+    cu = Costo_Total / Total_Unidades
+    dcu = cu.toFixed(4)
+	$("#Costo_Unitario").val(dcu);
     
   var li = document.createElement("li");
-  var inputValue = document.getElementById("Costo_Unitario").value;
+  var inputValue = document.getElementById("Costo_Unitario").value+" "+document.getElementById("Moneda_Total").value+" / "+document.getElementById("Tipo_Unidad_U").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
-    alert("You must write something!");
+    alert("¡Debes escribir algo!");
   } else {
     document.getElementById("myUL").appendChild(li);
   }
@@ -212,7 +222,7 @@ var li = document.createElement("li");
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
-    alert("You must write something!");
+    alert("¡Debes escribir algo!");
   } else {
     document.getElementById("myUL").appendChild(li);
   }
@@ -250,7 +260,7 @@ function Ganancia_R(){
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
-    alert("You must write something!");
+    alert("¡Debes escribir algo!");
   } else {
     document.getElementById("myUL").appendChild(li);
   }
@@ -284,11 +294,11 @@ function Rentabilidad(){
 	$("#ResultadoR").val(Math.round ((pvp1 / Costo_unitario1) * 100));
     
   var li = document.createElement("li");
-  var inputValue = document.getElementById("ResultadoR").value;
+  var inputValue = document.getElementById("ResultadoR").value+"%";
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
-    alert("You must write something!");
+    alert("¡Debes escribir algo!");
   } else {
     document.getElementById("myUL").appendChild(li);
   }
@@ -326,7 +336,7 @@ function Costos_de_Produccion(){
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
-    alert("You must write something!");
+    alert("¡Debes escribir algo!");
   } else {
     document.getElementById("myUL").appendChild(li);
   }
@@ -364,7 +374,7 @@ function Indicadores(){
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
-    alert("You must write something!");
+    alert("¡Debes escribir algo!!");
   } else {
     document.getElementById("myUL").appendChild(li);
   }
@@ -405,7 +415,7 @@ function Indices(){
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
-    alert("You must write something!");
+    alert("¡Debes escribir algo!");
   } else {
     document.getElementById("myUL").appendChild(li);
   }
