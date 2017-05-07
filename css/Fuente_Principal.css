@@ -19,7 +19,6 @@ font-family: "Roboto";
 src:url('../fonts/Roboto-Condensed.ttf')format('truetype');
 src:url('../fonts/Roboto-Regular.ttf')format('truetype');
 }
-
 /*BODY*/
 html, body {
     position: relative;
@@ -72,4 +71,11 @@ td, th {
     text-align: center;
     padding: 8px;
 }
-
+.container{
+    padding-right: 0px; 
+    padding-left: 0px; 
+    margin-right: 0; 
+    margin-left: 0; 
+    min-width: none;
+    width: auto;
+}

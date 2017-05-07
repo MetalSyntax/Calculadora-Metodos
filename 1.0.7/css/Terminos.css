@@ -1,0 +1,21 @@
+@import url(../css/Fuente_Principal.css);
+/* ESTILOS PRINCIPALES */
+
+body > .container { 
+border: 1; 
+margin: auto;
+}
+input{
+  padding: 7px 7px;
+  display: inline-block;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid silver;
+  background-color:#8c8c8c;
+  color: #FDFEFE;
+}
+
+p {
+ text-align: justify;
+}

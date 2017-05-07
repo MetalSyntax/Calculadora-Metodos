@@ -1,0 +1,20 @@
+<form id="Tiempo_Necesario">
+    <h3>Tiempo Necesario</h3> 
+    <p>Numero de Piezas</p>
+    <input type="number" id="np" value="0" required/>
+    <p>Ciclo</p>
+    <input type="number" id="tc" value="0" required/>
+    <p>Tiempo</p>
+    <input type="number" id="pt" value="0" required/>
+    <p>Eficiencia</p>
+    <input id="e" type ="number" min ="0" max="1" value="0" step ="0.01" required/>
+    <p>Resultado</p>
+    <input type="number" id="tn" value="0" disabled/>
+    <p></p>
+    <input type="button" value="Calcular" onclick="Tiempo_Necesario()"/>
+    <input type="button" value="Limpiar" onclick="Limpiar_Tiempo_Necesario()">
+</form>
+<p></p>
+<h3>Historial</h3>
+<ul id="myUL">
+</ul>

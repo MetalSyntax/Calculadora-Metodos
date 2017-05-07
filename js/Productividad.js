@@ -14,6 +14,29 @@ function Productividad_FT(){
     cttf = ttf.toFixed(4)
 	$("#Total_FT").val(cttf);
     
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false); 
   var li = document.createElement("li");
   var inputValue = document.getElementById("Total_FT").value+" "+document.getElementById("Tipo_UnidadT").value+" / Trabajadores";
   var t = document.createTextNode(inputValue);
@@ -54,6 +77,30 @@ function Productividad_FM(){
     total = (total_unidades / (total_unidades / total_materiales))
 	$("#TotalPM").val(total);
     
+    var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+    
   var li = document.createElement("li");
   var inputValue = document.getElementById("TotalPM").value+" "+document.getElementById("Tipo_Unidad").value+" / "+document.getElementById("Tipo_Material").value;
   var t = document.createTextNode(inputValue);
@@ -79,7 +126,7 @@ function Productividad_FM(){
   }
 }
 /*******************************************************/
-/*Conversiones a Unidades*/
+/*Homogenizar las Unidades*/
 /*******************************************************/
 function Multiplicando() {
 	Numero_de_Unidades = 1
@@ -88,6 +135,30 @@ function Multiplicando() {
 			Numero_de_Unidades = Numero_de_Unidades * eval($(this).val());
 		});
 	$("#Resultado_Multi").val(Numero_de_Unidades);
+    
+    var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
     
   var li = document.createElement("li");
   var inputValue = document.getElementById("Resultado_Multi").value;
@@ -120,21 +191,44 @@ function Nueva_Linea_Trans() {
 	$("#Transformaciones").append('<input type="number" class="Numero_de_Unidades" value="0"/><br/>');   
 }
 function Borrar_Linea_Trans(){
-    $("#Transformaciones").empty('<input type="number" class="costos_totales" value="0">/><br/>');
+    $("#Transformaciones").empty('<input type="number" class="Numero_de_Unidades" value="0">/><br/>');
 }
 /*******************************************************/
 /*Costos Totales*/
 /*******************************************************/
 function Costos_Totales() {
-	costo_total = 0
-	$(".costos_totales").each(
-		function(index, value) {
-			costo_total = costo_total + eval($(this).val());
+	Sumatoria_Costos = 0
+	$(".Costos_Totales_Datos").each(function(index, value) {
+			Sumatoria_Costos = Sumatoria_Costos + eval($(this).val());
 		});
-	$("#costo_total").val(costo_total);
+	$("#Costo_Total_Resultado").val(Sumatoria_Costos);
     
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("costo_total").value;
+    var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+    
+    var li = document.createElement("li");
+  var inputValue = document.getElementById("Costo_Total_Resultado").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
@@ -142,7 +236,7 @@ function Costos_Totales() {
   } else {
     document.getElementById("myUL").appendChild(li);
   }
-  document.getElementById("costo_total").value;
+  document.getElementById("Costo_Total_Resultado").value;
 
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
@@ -158,10 +252,10 @@ function Costos_Totales() {
   }
 }
 function Nueva_Linea_Costo() {
-	$("#Costos_Linea").append('<input type="number" class="costos_totales" value="0"/><br/>');
+	$("#Costos_Linea").append('<input type="number" class="Costos_Totales_Datos" value="0"/><br/>');
 }
 function Borrar_Linea_Costo(){
-    $("#Costos_Linea").empty('<input type="number" class="costos_totales" value="0">/><br/>');
+    $("#Costos_Linea").empty('<input type="number" class="Costos_Totales_Datos" value="0">/><br/>');
 }
 /*******************************************************/
 /*Costo Unitario*/
@@ -178,6 +272,30 @@ function Costo_Unitario_Prod(){
     cu = Costo_Total / Total_Unidades
     dcu = cu.toFixed(4)
 	$("#Costo_Unitario").val(dcu);
+    
+    var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
     
   var li = document.createElement("li");
   var inputValue = document.getElementById("Costo_Unitario").value+" "+document.getElementById("Moneda_Total").value+" / "+document.getElementById("Tipo_Unidad_U").value;
@@ -216,6 +334,30 @@ function Productividad(){
 		Costo_Total = Costo_Total + eval($(this).val());
 	});
 	$("#Resultado").val(total_unidades / Costo_Total);
+    
+    var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
 
 var li = document.createElement("li");
   var inputValue = document.getElementById("Resultado").value;
@@ -253,10 +395,40 @@ function Ganancia_R(){
 	$("#Costo_unitario").each(function(index,value){
 		Costo_unitario = Costo_unitario + eval($(this).val());
 	});
+    if (pvp>Costo_unitario){
+    var ganancia = "Ganancia = ";
+    } else {
+    var ganancia = "Perdida = ";
+    }
 	$("#ResultadoG").val(Math.round (pvp - Costo_unitario));
     
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+    
+    
  var li = document.createElement("li");
-  var inputValue = document.getElementById("ResultadoG").value;
+  var inputValue = ganancia+document.getElementById("ResultadoG").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
@@ -292,6 +464,31 @@ function Rentabilidad(){
 		Costo_unitario1 = Costo_unitario1 + eval($(this).val());
 	});
 	$("#ResultadoR").val(Math.round ((pvp1 / Costo_unitario1) * 100));
+    
+    var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+    
     
   var li = document.createElement("li");
   var inputValue = document.getElementById("ResultadoR").value+"%";
@@ -331,6 +528,31 @@ function Costos_de_Produccion(){
 	});
 	$("#ResultadoP").val(Math.round (Material * Costo));
     
+    var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+    
+    
     var li = document.createElement("li");
   var inputValue = document.getElementById("ResultadoP").value;
   var t = document.createTextNode(inputValue);
@@ -368,6 +590,31 @@ function Indicadores(){
 		Material = Material + eval($(this).val());
 	});
 	$("#ResultadoI").val(Mes / Material);
+    
+    var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+    
     
   var li = document.createElement("li");
   var inputValue = document.getElementById("ResultadoI").value;
@@ -409,6 +656,31 @@ function Indices(){
     indice_R = (indice_p - 100)
 	$("#ResultadoIN").val(indice_p);
     $("#ResultadoPOR").val(indice_R);
+    
+    var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+    
     
   var li = document.createElement("li");
   var inputValue = document.getElementById("ResultadoPOR").value;

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<!--Meta-->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--Titulo--> 
+<title>Productividad Multifactorial</title>
+<!--Scrips Principales-->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../js/jquery.touchSwipe.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+<!--Icono-->
+    <link rel="icon" href="../favicon.ico" sizes="16x16">
+<!--Estilos Principales-->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" >
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/jquery.mobile-1.4.5.min.css" rel="stylesheet">
+ <!--Estilos Personalizados-->
+        <link href="../css/Card.css" rel="stylesheet">
+        <link href="../css/Accordion.css" rel="stylesheet">
+        <link href="../css/SideNav.css" rel="stylesheet">
+        <link href="../css/Metodos.css" rel="stylesheet">
+        <link href="../css/list.css" rel="stylesheet">
+</head>
+<body>
+   
+<!--Modos-->
+<div id="mySidenav" class="sidenav">
+    <div class="card">
+    <img src="../images/methods.png" alt="Methods" style="width:100%">
+    </div>
+       <a href="../index.html"> <i class="fa fa-home" aria-hidden="true"></i>Pagina Principal</a>
+   <a href="Productividad.html"><i class="fa fa-line-chart" aria-hidden="true"></i>Productividad</a>  
+	<a href="Hombre_Maquina.html"><i class="fa fa-cog" aria-hidden="true"></i>Hombre Maquina</a>
+	<a href="Balance_Lineas.html"><i class="fa fa-balance-scale" aria-hidden="true"></i>Balance de Lineas</a> 
+	<a href="Desarrollo.html"><i class="fa fa-hourglass-half" aria-hidden="true"></i>Muestreo de trabajo</a>
+	<hr>
+	<p></p>
+	<a href="Ayuda.html"><span class="glyphicon glyphicon-question-sign"></span>Ayuda</a>
+	<a href="Acerca_de.html"><span class="glyphicon glyphicon-info-sign"></span>Acerca de</a>
+    <a href="Terminos.html"><span class="glyphicon glyphicon-list-alt"></span>Terminos y Condiciones</a>
+</div>
+ <a id="tab" onclick="openNav()"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span><label>Productividad</label></a>
+    
+ <div id="overlay"></div>
+
+<h3>Tranformaciones</h3>
+    <form method="POST" action="nada.html" id="trans">
+	   <div id="Transformaciones">
+            <input type="number" class="Numero_de_Unidades" value="0" required/><br/>
+	   </div>
+    <p>Resultado</p>
+    <span>Multiplicando</span>
+    <input type="number" id="Resultado_Multi" value="0" disabled/><br/>
+    <span>Dividiendo</span>
+    <input type="number" id="Resultado_Divi" value="0" disabled/><br/>
+    <p>Agregar/Calcular</p>
+	<input type="button" value="Nueva l&iacute;nea" onclick="Nueva_Linea_Trans()"/>
+    <input type="button" value="Borrar l&iacute;neas" onclick="Borrar_Linea_Trans()"/>
+	<input type="button" value="Calcular Multiplicacion" onclick="Multiplicando()"/>
+    <input type="button" value="Calcular Division" onclick="Dividiendo()" disabled/>
+    <input type="button" value="Limpiar" onclick="Limpiar_Trans()">
+    </form>
+    <p></p>
+    <h3>Historial</h3>
+    <ul id="myUL">
+    </ul>
+<!--Scripts Especificos-->  
+<script src="../js/SideNav.js"></script>   
+<script src="../js/Productividad.js"></script>
+<script src="../js/list.js"></script>
+    
+</body>
+</html>

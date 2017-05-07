@@ -1,0 +1,88 @@
+/* ESTILOS IMPORTADOS */
+@import url(../css/Fuente_Principal.css);
+/* ESTILOS PRINCIPALES */
+
+/* LINKS */
+
+/* ENTRADAS */
+input {
+	padding: 5px 10px;
+	border: 2px solid silver;
+    border-radius: 8px;
+	border-style: solid;
+	background-color: #F0F3F4;
+	font-family: 'Roboto Condensed', sans-serif;  
+}
+select {
+	padding: 5px 10px;
+	border: 2px solid silver;
+    border-radius: 8px;
+	border-style: solid;
+	background-color: #F0F3F4;
+	font-family: 'Roboto Condensed', sans-serif;  
+}
+/* PARRAFOS */
+p {
+	color: #595959; 
+	padding: 5px 10px;
+	text-align: center;
+}
+em{
+    text-align: justify;
+}
+/* TITULOS */
+h1 {
+	color: #595959; 
+	padding: 20px;
+	text-align: center;
+}
+h2, h3,h4, h5,h6{
+	color: #595959; 
+	text-align: center;
+}
+/* ESPECIFICOS */
+#costos, #unidades, #trans, #indicadores, #indices, #ganancia, #rentabilidad, #costo, #Produccion, #Unitario, #Productividad, #Trabajadores1, #Materiales1, #Save, #produccion, #Demanda_Aumentada, #Piezas_Defectuosas, #Numero_de_Hombres, #Costo_de_Inversion, #Costo_Piezas_Defectuosas, #Costo_de_Materiales, #Depreciación, #NTCPC, #Produccion_HM, #CMOJN, #CMOJE, #Numero_Recursos, #Produccion_HM, #CMF, #CMP {
+	text-align: center;
+}
+
+.jumbotron{
+    margin-bottom: 1px;
+     color: #595959;     
+}
+#E1{
+     text-align: justify;
+}
+
+#I1{
+text-align:center;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+align-content: center;
+}
+
+img{
+    width: 100%;
+}
+/*CARRUSEL*/
+
+.carousel-inner .item img { width: 100%; }
+
+.container .carousel-indicators .active { background-color: grey; }
+
+.container .carousel-indicators li { border: 1px solid #696969; }
+
+.carousel .glyphicon-chevron-right,
+.carousel .glyphicon-chevron-left {
+  background: #00E48D;
+  border-radius: 5px;
+  color: grey;
+}
+#title{
+    color: #595959; 
+	padding: 5px 10px;
+    font-size: 16px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
