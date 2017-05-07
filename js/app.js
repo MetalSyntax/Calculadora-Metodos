@@ -125,6 +125,10 @@ AppMethods.config( [ '$routeProvider' , function($routeProvider){
         templateUrl: 'html/Numero_Recursos.html',
         controller: 'Balance_Lineas'
     })
+        $routeProvider.when('/Base_Equilibrio', {
+        templateUrl: 'html/Base_Equilibrio.html',
+        controller: 'Balance_Lineas'
+    })
     /*Desarrollo*/
     $routeProvider.when('/Desarrollo', {
         templateUrl: 'html/Desarrollo.html',

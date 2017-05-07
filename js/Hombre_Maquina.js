@@ -165,12 +165,9 @@ list.addEventListener('click', function(ev) {
     
 }
 /*******************************************************/
-/*Analisis de Costos*/
-/*******************************************************/
-/*******************************************************/
 /*Costo de la Mano de Obra (Jornada Normal)*/
 /*******************************************************/
-    function Analisis_de_Costos1(){
+function Analisis_de_Costos1(){
     mohjn = 0
     mocjn = 0
     tjn = 0
@@ -213,7 +210,7 @@ list.addEventListener('click', function(ev) {
 }, false);
     
     var li = document.createElement("li");
-  var inputValue = document.getElementById("cmojn").value;
+  var inputValue = document.getElementById("cmojn").value+" $ ";
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
@@ -240,7 +237,7 @@ list.addEventListener('click', function(ev) {
 /*******************************************************/
 /*Costo de la Mano de Obra (Jornada Extra)*/
 /*******************************************************/
-     function Analisis_de_Costos2(){
+function Analisis_de_Costos2(){
     motje = 0
     mocje = 0
     tje = 0
@@ -283,7 +280,7 @@ list.addEventListener('click', function(ev) {
 }, false);
     
     var li = document.createElement("li");
-  var inputValue = document.getElementById("cmoje").value;
+  var inputValue = document.getElementById("cmoje").value+" $ ";
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
@@ -309,7 +306,7 @@ list.addEventListener('click', function(ev) {
 /*******************************************************/
 /*Costo de Maquinaria (Encendida)*/
 /*******************************************************/
-    function Analisis_de_Costos3(){
+function Analisis_de_Costos3(){
     mmjf = 0
     mcjf = 0
     mf = 0
@@ -361,7 +358,7 @@ list.addEventListener('click', function(ev) {
 }, false);
     
     var li = document.createElement("li");
-  var inputValue = document.getElementById("cmjf").value;
+  var inputValue = document.getElementById("cmjf").value+" $ ";
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
@@ -388,7 +385,7 @@ list.addEventListener('click', function(ev) {
 /*******************************************************/
 /*Costo de maquinaria (Apagada)*/
 /*******************************************************/
-    function Analisis_de_Costos4(){
+function Analisis_de_Costos4(){
     mmja = 0
     mcja = 0
     mp = 0
@@ -440,7 +437,7 @@ list.addEventListener('click', function(ev) {
 }, false);
     
     var li = document.createElement("li");
-  var inputValue = document.getElementById("cmjp").value;
+  var inputValue = document.getElementById("cmjp").value+" $ ";
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
@@ -576,7 +573,7 @@ list.addEventListener('click', function(ev) {
 }, false);
     
     var li = document.createElement("li");
-  var inputValue = document.getElementById("PiezasDF_resultado").value;
+  var inputValue = document.getElementById("PiezasDF_resultado").value+" Piezas Defectuosas";
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
@@ -708,7 +705,7 @@ list.addEventListener('click', function(ev) {
 }, false);
     
     var li = document.createElement("li");
-  var inputValue = document.getElementById("MaquinasNH").value;
+  var inputValue = document.getElementById("HombresNH").value+" Hombres "+document.getElementById("MaquinasNH").value+" Maquinas ";
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {

@@ -425,10 +425,9 @@ list.addEventListener('click', function(ev) {
     ev.target.classList.toggle('checked');
   }
 }, false);
-    
-    
+
  var li = document.createElement("li");
-  var inputValue = ganancia+document.getElementById("ResultadoG").value;
+  var inputValue = ganancia+document.getElementById("ResultadoG").value+" $ ";
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {

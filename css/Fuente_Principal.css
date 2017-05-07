@@ -30,7 +30,7 @@ html, body {
     font-family: 'Roboto Condensed', sans-serif;
     color: grey;
     background-color:white;
-    
+    text-align: center;
     }
 /* ESTILOS PRINCIPALES */
 label {
@@ -48,6 +48,7 @@ a {
     transition: 0.3s;
     font-family: 'Roboto Condensed', sans-serif;
     text-decoration: none;
+    text-align: left;
     /*border-bottom: 1px solid dimgrey;*/
 }
  a:hover, a:focus{
