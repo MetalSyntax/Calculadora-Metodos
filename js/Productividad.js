@@ -526,7 +526,8 @@ function Costos_de_Produccion(){
 	$("#CostoP").each(function(index,value){
 		Costo = Costo + eval($(this).val());
 	});
-	$("#ResultadoP").val(Math.round (Material * Costo));
+    produccion = Math.round (Material * Costo)
+	$("#ResultadoP").val(produccion);
     
     var myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -552,9 +553,8 @@ list.addEventListener('click', function(ev) {
   }
 }, false);
     
-    
     var li = document.createElement("li");
-  var inputValue = document.getElementById("ResultadoP").value;
+  var inputValue = document.getElementById("ResultadoP").value+" "+document.getElementById("Tipo_Unidad3").value+" / "+document.getElementById("Tipo_Material2").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
@@ -617,7 +617,7 @@ list.addEventListener('click', function(ev) {
     
     
   var li = document.createElement("li");
-  var inputValue = document.getElementById("ResultadoI").value;
+  var inputValue = document.getElementById("ResultadoI").value+" "+document.getElementById("Tipo_Unidad1").value+" / "+document.getElementById("Tipo_Unidad2").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
@@ -654,6 +654,11 @@ function Indices(){
 	});
     indice_p = (Estudio / Base)*100
     indice_R = (indice_p - 100)
+    if (indice_p>100){
+    var indice = " Aumento"
+    } else {
+    var indice = " Disminucion"
+    }
 	$("#ResultadoIN").val(indice_p);
     $("#ResultadoPOR").val(indice_R);
     
@@ -681,9 +686,8 @@ list.addEventListener('click', function(ev) {
   }
 }, false);
     
-    
   var li = document.createElement("li");
-  var inputValue = document.getElementById("ResultadoPOR").value;
+  var inputValue = document.getElementById("ResultadoIN").value+indice+" "+document.getElementById("ResultadoPOR").value+" % ";
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {

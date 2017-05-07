@@ -23,23 +23,27 @@ function Numero_Tecnico(){
 	});
     cm = toe + tm
     co = toe + toi +td
-	$("#nt").val(cm / co);
+    nt = cm / co
+	$("#nt").val(nt);
     
     c1 = 0
     c2 = 0
-    c1 = (cm / co)*10
+    c1 = cm
     c2 = c1 + toi
+    if (cm == c2){
+    var c2 = c2 + Math.floor(nt)
+    }
     $("#c1").val(Math.round(c1));
     $("#c2").val(Math.round(c2));
     
     pc1 = 0
     pc2 = 0
-    pc1 = c1/10
-    pc2 = c2/10
+    pc1 = nt
+    pc2 = nt
     $("#pc1").val(Math.floor(pc1));
     $("#pc2").val(Math.ceil(pc2));
     
-    var myNodelist = document.getElementsByTagName("LI");
+var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -740,7 +744,11 @@ function Costo_Inversion(){
 		nxm = nxm + eval($(this).val());
 	});
     resultado_inv = cuxum * nxm
+    if (document.getElementById("cdim").value == ""){
+    var cdim = document.getElementById("cdim").value = " $ "
+    }
      $("#resultado_inv").val(resultado_inv);
+    
     
 var myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -767,7 +775,7 @@ list.addEventListener('click', function(ev) {
 }, false);
     
     var li = document.createElement("li");
-  var inputValue = document.getElementById("resultado_inv").value;
+  var inputValue = document.getElementById("resultado_inv").value+" "+document.getElementById("cdim").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
