@@ -46,10 +46,11 @@
     
     <div id="overlay"></div>
     
-<form id="Costo_de_Inversion">
+ <form id="Costo_de_Inversion">
     <h3>Costo de Inversion</h3> 
     <p>Costo unitario por unidad de Maquina</p>
     <input type="number" id="cuxum" value="0" required/>
+    <input type="text" id="cdim" value="" placeholder="Unidad" required/>
     <p>Numero de Maquinas</p>
     <input type="number" id="nxm" value="0" required/>
     <p>Resultado</p>
@@ -58,6 +59,10 @@
     <input type="button" value="Calcular" onclick="Costo_Inversion()"/>
     <input type="button" value="Limpiar" onclick="Limpiar_Costo_de_Inversion()">
 </form>
+ <p></p>
+    <h3>Historial</h3>
+    <ul id="myUL">
+    </ul>
      
     <!--Scripts Especificos-->
 <script src="../js/SideNav.js"></script>

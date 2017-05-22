@@ -46,22 +46,23 @@
  <div id="overlay"></div>
 
 <h3>Costos Totales</h3> 
-<form method="POST" action="nada1.html" id="costos">
+<form id="costos">
 	<div id="Costos_Linea">
-        <input type="number" class="costos_totales" value="0" required/><br/>
+    <input type="number" class="Costos_Totales_Datos" value="0" required/><br/>
 	</div>
     <p>Resultado</p>
-    <input type="number" id="costo_total" value="0" disabled/><br/>
+    <input type="number" id="Costo_Total_Resultado" value="0" disabled/><br/>
     <p>Agregar/Calcular Costos</p>
 	<input type="button" value="Nueva l&iacute;nea" onclick="Nueva_Linea_Costo()"/>
     <input type="button" value="Borrar l&iacute;nea" onclick="Borrar_Linea_Costo()"/>
 	<input type="button" value="Calcular" onclick="Costos_Totales()"/>
-     <input type="button" value="Limpiar" onclick="Limpiar_costos()">
+    <input type="button" value="Limpiar" onclick="Limpiar_costos()">
 </form>
-      <p></p>
+    <p></p>
     <h3>Historial</h3>
     <ul id="myUL">
     </ul>
+
     
 <!--Scripts Especificos-->  
 <script src="../js/SideNav.js"></script>   
