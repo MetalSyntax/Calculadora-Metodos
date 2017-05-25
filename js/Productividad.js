@@ -228,7 +228,7 @@ list.addEventListener('click', function(ev) {
 }, false);
     
     var li = document.createElement("li");
-  var inputValue = document.getElementById("Costo_Total_Resultado").value;
+  var inputValue = document.getElementById("Costo_Total_Resultado").value+" $";
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
