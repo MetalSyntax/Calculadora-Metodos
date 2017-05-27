@@ -5,6 +5,8 @@ A partir de la Version 2 se dejara la version 1.x.x como proyecto individual sin
 
 Este proyecto es Open Source
 
+Version 1.0.8 Modulo de balance de lineas terminado con historial temporal,imagen propia,cambios menores en el css y html
+
 Version 1.0.7 Modulo de Balance de Lineas Habilitado/Incompleto
 
 Version 1.0.6 Cambios en la estructura de la aplicacion, Cambios en el icono, Funcion "Hombre-Maquina" Finalizada. Se le agrego la posibilidad de guardar historial momentaneo en la funcion productividad. Se elimino los enlaces de informacion no relevante. 
