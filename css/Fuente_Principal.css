@@ -32,7 +32,7 @@ html, body {
     background-color:white;
     text-align: center;
     min-width: 250px;
-    background: linear-gradient(#ffffff, #f2f2f2);
+    /*background: linear-gradient(#ffffff, #f2f2f2);*/
     }
 /* ESTILOS PRINCIPALES */
 label {
@@ -157,4 +157,7 @@ ul li.checked::before {
 }
 i {
     letter-spacing: 10px;
+}
+#help {
+    text-align-last: left;
 }
