@@ -2,8 +2,8 @@
 /* ESTILOS PRINCIPALES */
 
 body > .container { 
-border: 1; 
-margin: auto;
+border: 5px; 
+margin: 3px;
 }
 input{
   padding: 7px 7px;

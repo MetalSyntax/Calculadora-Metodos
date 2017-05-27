@@ -16,14 +16,67 @@ function Numero_Recursos(){
 /*******************************************************/
 /*Red de Precedencia*/
 /*******************************************************/
-function red_precedencia(){
+function Red_de_Precedencia(){
+Tiempos_Red = 0
+	$(".Tiempos_Red").each(
+		function(index, value) {
+			Tiempos_Red = Tiempos_Red + eval($(this).val());
+		});
+$("#Resultado_Red_Precedencia").val(Tiempos_Red);
+    
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
 
+ var li = document.createElement("li");
+  var inputValue = document.getElementById("Resultado_Red_Precedencia").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("¡Debes escribir algo!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("Resultado_ritmo").value;
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
 }
 function Nueva_Linea_Red() {
-	$("#Red_de_Precedencia").append('<input type="number" class="Numero_de_Unidades" value="0"/><br/>');   
+	$("#Red_de_Precedencia").append('<input type="number" class="Tiempos_Red" value="0"/><br/>');   
 }
 function Borrar_Linea_Red(){
-    $("#Red_de_Precedencia").empty('<input type="number" class="Numero_de_Unidades" value="0">/><br/>');
+    $("#Red_de_Precedencia").empty('<input type="number" class="Tiempos_Red" value="0">/><br/>');
 }
 /*******************************************************/
 /*Ritmo*/
@@ -233,6 +286,70 @@ list.addEventListener('click', function(ev) {
   }
 }
 /*******************************************************/
+/*Tiempo Extra*/
+/*******************************************************/
+function tiempo_extra(){
+    ritmo_exta = 0
+    base_equi_extra = 0
+    resultado_extra = 0
+    $("#ritmo_exta").each(function(index,value){
+		ritmo_exta = ritmo_exta + eval($(this).val());
+	});
+    $("#base_equi_extra").each(function(index,value){
+		base_equi_extra = base_equi_extra + eval($(this).val());
+	});
+    resultado_extra = ritmo_exta - base_equi_extra
+    $("#resultado_extra").val(resultado_extra);
+    
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+ var li = document.createElement("li");
+  var inputValue = document.getElementById("resultado_extra").value+" Minutos / Unidades";
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("¡Debes escribir algo!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("Resultado_be").value;
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+/*******************************************************/
 /*Limpiar*/
 /*******************************************************/
 /*Numero_Recursos*/
@@ -244,4 +361,7 @@ function Limpiar_base_equilibrio() {
 }
 function Limpiar_Eficiencia_de_Linea() {
     document.getElementById("Eficiencia_Linea").reset();
+}
+function Limpiar_tiempo_extra() {
+    document.getElementById("tiempo_extra").reset();
 }

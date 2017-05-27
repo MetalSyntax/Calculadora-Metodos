@@ -42,7 +42,7 @@ label {
 font-family: 'Roboto Condensed', sans-serif;
 }
 a {
-    padding: 8px 8px 8px 32px;
+    padding: 10px 10px 10px 30px;
     text-decoration: none;
     font-size: 20px;
     color: grey; 
@@ -155,4 +155,6 @@ ul li.checked::before {
   display: table;
   clear: both;
 }
-
+i {
+    letter-spacing: 10px;
+}

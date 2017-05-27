@@ -22,7 +22,7 @@
 <body> 
 <!--Modos-->
 <div id="mySidenav" class="sidenav">
-    <img src="../images/methods.png" alt="Methods" style="width:100%">
+    <img src="../images/MethodsLogo.png" alt="Methods" style="width:100%">
        <a href="../index.html"> <i class="fa fa-home" aria-hidden="true"></i>Pagina Principal</a>
    <a href="Productividad.html"><i class="fa fa-line-chart" aria-hidden="true"></i>Productividad</a>  
 	<a href="Hombre_Maquina.html"><i class="fa fa-cog" aria-hidden="true"></i>Hombre Maquina</a>
@@ -37,8 +37,9 @@
     <div id="overlay"></div>
 <h3>Red de Precedencia</h3> 
 <form method="POST" action="r_p.html" id="redprec">
-	<div id="Red_de_Precedencia">
-        <input type="number" class="Tiempos_Red" value="0" required/><br/>
+	<p>Tiempos Lineales</p>
+    <div id="Red_de_Precedencia">
+    <input type="number" class="Tiempos_Red" value="0" required/><br/>
 	</div>
     <p>Resultado</p>
     <input type="number" id="Resultado_Red_Precedencia" value="0" disabled/><br/>
@@ -48,6 +49,10 @@
 	<input type="button" value="Calcular" onclick="Red_de_Precedencia()"/>
      <input type="button" value="Limpiar" onclick="Limpiar_Red_de_Precedencia()">
 </form>
+<p></p>
+<h3>Historial</h3>
+<ul id="myUL">
+</ul> 
 <!--Scripts Especificos-->
 <script src="../js/SideNav.js"></script>
 <script src="../js/Balance_Lineas.js"></script>
