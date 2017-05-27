@@ -14,16 +14,80 @@ function Numero_Recursos(){
 	$("#nr").val(nr);
 }
 /*******************************************************/
-/*Red de Presedencia*/
+/*Red de Precedencia*/
 /*******************************************************/
 function red_precedencia(){
 
 }
 function Nueva_Linea_Red() {
-	$("#Transformaciones").append('<input type="number" class="Numero_de_Unidades" value="0"/><br/>');   
+	$("#Red_de_Precedencia").append('<input type="number" class="Numero_de_Unidades" value="0"/><br/>');   
 }
 function Borrar_Linea_Red(){
-    $("#Transformaciones").empty('<input type="number" class="Numero_de_Unidades" value="0">/><br/>');
+    $("#Red_de_Precedencia").empty('<input type="number" class="Numero_de_Unidades" value="0">/><br/>');
+}
+/*******************************************************/
+/*Ritmo*/
+/*******************************************************/
+function Ritmo_Balance_Lineas(){
+    tiempo_s_a = 0
+    recurso_ritmo = 0
+    $("#tiempo_s_a").each(function(index,value){
+		tiempo_s_a = tiempo_s_a + eval($(this).val());
+	});
+	$("#recurso_ritmo").each(function(index,value){
+		recurso_ritmo = recurso_ritmo + eval($(this).val());
+	});
+    Resultado_ritmo = tiempo_s_a/recurso_ritmo
+	$("#Resultado_ritmo").val(Resultado_ritmo);
+    
+    var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+ var li = document.createElement("li");
+  var inputValue = document.getElementById("Resultado_ritmo").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("¡Debes escribir algo!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("Resultado_ritmo").value;
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+    
 }
 /*******************************************************/
 /*Eficiencia de Linea*/
