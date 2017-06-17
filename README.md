@@ -7,9 +7,13 @@ Este proyecto es Open Source
 
 **Hiato temporal proximamente nuevas actualizaciones**
 
-### Nota Importante 
+## Donate
 
-**La version para descarga puede tener errores si la version es muy antigua ya que las correcciones se realizaron posterior a estas. Solo disponible para Android. Versiones Estables y Experimentales**
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](paypal.me/MetalSyntax)
+
+## Nota Importante 
+
+La version para descarga puede tener errores, si la version es muy antigua ya que las correcciones se realizaron posterior a estas. Solo disponible para Android. Versiones Betas Estables y Experimentales.
 
 ## Registro de cambios
 
