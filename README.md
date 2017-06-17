@@ -7,7 +7,11 @@ Este proyecto es Open Source
 
 **Hiato temporal proximamente nuevas actualizaciones**
 
-**Nota Importante: La version para descarga puede tener errores si la version es muy antigua ya que las correcciones se realizaron posterior a estas. Solo disponible para Android. Versiones Estables y Experimentales**
+### Nota Importante 
+
+**La version para descarga puede tener errores si la version es muy antigua ya que las correcciones se realizaron posterior a estas. Solo disponible para Android. Versiones Estables y Experimentales**
+
+## Registro de cambios
 
 > **Version 1.0.8** Modulo de balance de lineas terminado con historial temporal,imagen propia,cambios menores en el css y html [Methods 1.0.8 Beta](http://adf.ly/1n048L)
 
