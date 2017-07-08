@@ -32,7 +32,6 @@ html, body {
     background-color:white;
     text-align: center;
     min-width: 250px;
-    /*background: linear-gradient(#ffffff, #f2f2f2);*/
     }
 /* ESTILOS PRINCIPALES */
 label {
@@ -42,7 +41,7 @@ label {
 font-family: 'Roboto Condensed', sans-serif;
 }
 a {
-    padding: 10px 10px 10px 30px;
+    padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 20px;
     color: grey; 
@@ -155,9 +154,4 @@ ul li.checked::before {
   display: table;
   clear: both;
 }
-i {
-    letter-spacing: 10px;
-}
-#help {
-    text-align-last: left;
-}
+
