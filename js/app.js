@@ -145,6 +145,39 @@ AppMethods.config( [ '$routeProvider' , function($routeProvider){
         templateUrl: 'html/Red_Precedencia.html',
         controller: 'Balance_Lineas'
     })
+/*Muestreo de Trabajo*/
+      $routeProvider.when('/Muestreo_trabajo', {
+        templateUrl: 'html/Muestreo_trabajo.html',
+        controller: 'Muestreo_trabajo'
+    })
+     $routeProvider.when('/Calificacion_Operario', {
+        templateUrl: 'html/Calificacion_Operario.html',
+        controller: 'Muestreo_trabajo'
+    })
+       $routeProvider.when('/Tiempo_NecesarioMT', {
+        templateUrl: 'html/Tiempo_NecesarioMT.html',
+        controller: 'Muestreo_trabajo'
+    })
+      $routeProvider.when('/Coeficiente_Variacion', {
+        templateUrl: 'html/Coeficiente_Variacion.html',
+        controller: 'Muestreo_trabajo'
+    })
+      $routeProvider.when('/Tiempo_Estandar', {
+        templateUrl: 'html/Tiempo_Estandar.html',
+        controller: 'Muestreo_trabajo'
+    })
+      $routeProvider.when('/Porcentaje_Descanso', {
+        templateUrl: 'html/Porcentaje_Descanso.html',
+        controller: 'Muestreo_trabajo'
+    })
+      $routeProvider.when('/Sumatoria_Suplementos', {
+        templateUrl: 'html/Sumatoria_Suplementos.html',
+        controller: 'Muestreo_trabajo'
+    })
+      $routeProvider.when('/Numero_Observaciones', {
+        templateUrl: 'html/Numero_Observaciones.html',
+        controller: 'Muestreo_trabajo'
+    })
     /*Desarrollo*/
     $routeProvider.when('/Desarrollo', {
         templateUrl: 'html/Desarrollo.html',
@@ -181,6 +214,7 @@ AppMethods.config( [ '$routeProvider' , function($routeProvider){
         templateUrl: 'html/Terminos.html',
         controller: 'inicio'
     })
+    /*404*/
     $routeProvider.when('/404', {
         templateUrl: 'html/404.html',
         controller: 'inicio'

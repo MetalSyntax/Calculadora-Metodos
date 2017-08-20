@@ -10,6 +10,9 @@ AppMethods.controller('Hombre-Maquina',["$scope", function($scope){
 AppMethods.controller('Balance_Lineas',["$scope", function($scope){
     $scope.mensaje = "Balance de Lineas";        
 }]);
+AppMethods.controller('Muestreo_trabajo',["$scope", function($scope){
+    $scope.mensaje = "Muestreo de Trabajo";        
+}]);
 AppMethods.controller('Ayuda',["$scope", function($scope){
     $scope.mensaje = "Ayuda";        
 }]);

@@ -50,7 +50,6 @@ a {
     font-family: 'Roboto Condensed', sans-serif;
     text-decoration: none;
     text-align: left;
-    /*border-bottom: 1px solid dimgrey;*/
 }
  a:hover, a:focus{
      background: #f2f2f2;
