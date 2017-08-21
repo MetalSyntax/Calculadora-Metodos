@@ -23,37 +23,36 @@
    <link href="css/bootstrap.min.css" rel="stylesheet" >
    <link href="css/font-awesome.min.css" rel="stylesheet">
 <!--Estilos Personalizados-->
-    <link href="css/SideNav.css" rel="stylesheet">
-    <link href="css/Metodos.css" rel="stylesheet">
+    <link href="css/Methods.css" rel="stylesheet">
 </head>
-    
 <body ng-app='navegacion'>
-    
-    <div id="mySidenav" class="sidenav">
-    <img src="images/MethodsLogo.png" alt="Methods" style="width:100%">
-    <a href="#/"><i class="fa fa-home" aria-hidden="true"></i>Pagina Principal</a>
-    <a href="#/Productividad"><i class="fa fa-line-chart" aria-hidden="true"></i>Productividad</a>
-    <a href="#/Hombre-Maquina"><i class="fa fa-cog" aria-hidden="true"></i>Hombre-Maquina</a>
-    <a href="#/Balance_Lineas"><i class="fa fa-balance-scale" aria-hidden="true"></i>Balance Lineas</a>
-	<a href="#/Muestreo_trabajo"><i class="fa fa-hourglass-half" aria-hidden="true"></i>Muestreo de trabajo</a>
-	<hr>
-	<a href="#/Ayuda"><i class="fa fa-question-circle" aria-hidden="true"></i>Ayuda</a>
-	<a href="#/Acerca_de"><i class="fa fa-info-circle" aria-hidden="true"></i>Acerca de</a>
-    <a href="#/Terminos"><i class="fa fa-file-text-o" aria-hidden="true"></i>Terminos y Condiciones</a>
+<!--Barra de Navegacion-->
+<nav class="navbar navbar-expand-xl navbar-dark justify-content-between" style="background-color: #003681">
+<!--Titulo Principal-->
+<a class="navbar-brand" href="#/"><img src="Assets/V3.png" width="35" height="35">Methods</a>
+<!--Boton Desplegable--> 
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<!--Menu Desplegable-->
+<div class="collapse navbar-collapse" id="navbars">
+<nav class="navbar-nav mr-auto">
+<a class="nav-link" href="#/Productividad">Productividad</a>
+<a class="nav-link" href="#/Hombre-Maquina">Hombre-Maquina</a>
+<a class="nav-link" href="#/Balance_Lineas">Balance de Lineas</a>
+<a class="nav-link" href="#/Muestreo_trabajo">Muestreo de Trabajo</a>
+</nav>  
+<form class="form-inline">
+<input class="form-control mr-sm-2" type="text" placeholder="Buscar..." aria-label="Search">
+<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+</form>
+</div>
+</nav>
+<!--Contenido-->
+   <div class="container-fluid" ng-view >
     </div>
-    <a id="tab"><i class="fa fa-bars" aria-hidden="true"></i><label>Methods</label></a>
-
-    <div id="overlay"></div>
-    
-    <div class="container" ng-view >
-    
-    </div>
-    
-    <script src="js/SideNav.js"></script>
+<!--Scripts-->
     <script src="js/Productividad.js"></script>
     <script src="js/Hombre_Maquina.js"></script>
     <script src="js/Balance_Lineas.js"></script>
     <script src="js/Muestreo_Trabajo.js"></script>
-</body>
-    
+</body>    
 </html>
