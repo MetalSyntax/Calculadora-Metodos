@@ -50,7 +50,7 @@ a {
 input {
     margin: 3px;
 	padding: 10px 10px;
-	border: 2px solid silver;
+	border: 2px #336699;
     border-radius: 10px;
 	border-style: solid;
 	background-color: #F0F3F4;
@@ -148,4 +148,7 @@ ul li.checked::before {
 }
 .footer ul li:not(:last-child) {
   border-right: 1px solid white;
+}
+#prod_conc {
+    text-align: justify;
 }
