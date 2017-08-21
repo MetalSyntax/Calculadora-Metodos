@@ -112,8 +112,8 @@ AppMethods.config( [ '$routeProvider' , function($routeProvider){
         templateUrl: 'html/Costo_Materiales.html',
         controller: 'Hombre-Maquina'
     })
-        $routeProvider.when('/Depreciación', {
-        templateUrl: 'html/Depreciación.html',
+        $routeProvider.when('/Depreciacion', {
+        templateUrl: 'html/Depreciacion.html',
         controller: 'Hombre-Maquina'
     })
 /*Balance de Lineas*/
