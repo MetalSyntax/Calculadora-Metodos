@@ -1037,8 +1037,8 @@ function Limpiar_Costo_de_Materiales() {
     document.getElementById("Costo_de_Materiales").reset();
 }
 /*Depreciasion*/
-function Limpiar_Depreciasion() {
-    document.getElementById("Depreciasion").reset();
+function Limpiar_Depreciacion() {
+    document.getElementById("Depreciacion").reset();
 }
 /*Tiempo Necesario*/
 function Limpiar_Tiempo_Necesario() {

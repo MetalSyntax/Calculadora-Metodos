@@ -170,10 +170,6 @@ AppMethods.config( [ '$routeProvider' , function($routeProvider){
         templateUrl: 'html/Porcentaje_Descanso.html',
         controller: 'Muestreo_trabajo'
     })
-      $routeProvider.when('/Sumatoria_Suplementos', {
-        templateUrl: 'html/Sumatoria_Suplementos.html',
-        controller: 'Muestreo_trabajo'
-    })
       $routeProvider.when('/Numero_Observaciones', {
         templateUrl: 'html/Numero_Observaciones.html',
         controller: 'Muestreo_trabajo'
@@ -198,10 +194,6 @@ AppMethods.config( [ '$routeProvider' , function($routeProvider){
     })
          $routeProvider.when('/Concepto_Productividad', {
         templateUrl: 'html/Concepto_Productividad.html',
-        controller: 'Ayuda'
-    })
-        $routeProvider.when('/Leyenda_Prod', {
-        templateUrl: 'html/Leyenda_Prod.html',
         controller: 'Ayuda'
     })
     /*Aerca de*/
