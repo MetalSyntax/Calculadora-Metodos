@@ -150,8 +150,8 @@ AppMethods.config( [ '$routeProvider' , function($routeProvider){
         templateUrl: 'html/Muestreo_trabajo.html',
         controller: 'Muestreo_trabajo'
     })
-     $routeProvider.when('/Calificacion_Operario', {
-        templateUrl: 'html/Calificacion_Operario.html',
+     $routeProvider.when('/Suplementos_Descanso', {
+        templateUrl: 'html/Suplementos_Descanso.html',
         controller: 'Muestreo_trabajo'
     })
        $routeProvider.when('/Tiempo_NecesarioMT', {
