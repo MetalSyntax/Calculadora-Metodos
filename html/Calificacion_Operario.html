@@ -2,13 +2,33 @@
 <div class="card-body">
 <form id="Calif_Op">
 <h3>Calificacion del Operario</h3>
-<p>Ingrese Sumplemento</p>
-<input type="number" id="Sumplemento" value="0" required>
+<!--Sumplementos Constante-->
+<p>Suplemento por necesidades personales, base por fatiga y trabajar de pie</p>
+<select id="Supl_Sex"><option>Hombres</option><option>Mujeres</option></select>
+<!--Sumplementos Variables-->
+<p>Suplemento  por postura anormal </p>
+<select id="Supl_Postura"><option>Ligeramente incómoda</option><option>incómoda</option><option>Muy incómoda</option></select>
+    
+<p>Suplemento Uso de fuerza/energía muscular (Kg)</p>
+<select id="Supl_Fuerza"><option>2,5</option><option>5</option><option>10</option><option>25</option><option>35,5</option></select>
+    
+<p>Mala iluminación</p>
+<select id="Supl_Iluminacion"><option>Ligeramente por debajo</option><option> Bastante por debajo</option><option>Absolutamente insuficiente</option></select>
+    
+<p>Condiciones atmosféricas</p>
+<p><em>Índice de enfriamiento Kata</em></p>
+<select id="Supl_atmosfericas"><option>16</option><option>8</option><option>4</option><option>2</option></select>
+    
+<P>Concentración intensa</P>
+<select id="Supl_Concentracion"><option>Cierta precisión</option><option>Fatigosos</option><option>Muy fatigosos </option></select>
+    
+<p>Ruido</p>
+<select id="Supl_Ruido"><option>Continuo</option><option>Intermitente y fuerte </option><option>Intermitente y muy fuerte</option><option>Estridente y fuerte </option></select>
+    
 <p>Resultado</p>
 <input type="number" id="resultado_calif_opera" value="0" disabled>
+
 <p></p>
-<input type="button" value="Nueva l&iacute;nea" onclick="Nueva_Linea_cal_op()"/>
-<input type="button" value="Borrar l&iacute;neas" onclick="Borrar_Linea_cal_op()"/>
 <input type="button" value="Calcular" onclick="Calificacion_del_operario()"/>
 <input type="button" value="Limpiar" onclick="Limpiar_Calificacion_del_operario()">
 </form>

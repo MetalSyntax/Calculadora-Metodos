@@ -56,10 +56,21 @@ input {
 	background-color: #F0F3F4;
 	font-family: 'Roboto Condensed', sans-serif;  
 }
+/* SELECTORES */
+select {
+    margin: 3px;
+	padding: 7px 7px;
+	border: 2px #336699;
+    border-radius: 10px;
+	border-style: solid;
+	background-color: #F0F3F4;
+	font-family: 'Roboto Condensed', sans-serif;  
+}
+}
 /* PARRAFOS */
 p {
 	color: #595959; 
-	padding: 5px 10px;
+	padding: 5px 5px;
 	text-align: center;
 }
 /*List*/
