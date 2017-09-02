@@ -8,11 +8,12 @@ function Calificacion_OP(){
    var Supl_Fuerza, Fuerza;
    var Supl_Iluminacion, Iluminacion;
    var Supl_atmosfericas, Atmosfericas;
-   var Supl_Concentracion;
-   var Supl_Ruido;
-   var Supl_mental;
-   var Supl_Monotonia;
-   var Supl_Tedio;
+   var Supl_Concentracion, concentracion;
+   var Supl_Ruido, Ruido;
+   var Supl_mental, mental;
+   var Supl_Monotonia, Monotonia;
+   var Supl_Tedio, Tedio;
+   var sum_tol;
     
     Supl_Sex = document.getElementById("Supl_Sex").value;
     Supl_Postura = document.getElementById("Supl_Postura").value;
@@ -85,7 +86,70 @@ function Calificacion_OP(){
     Atmosfericas = 100;
     }
         
+    /*Concentracion*/
+    if (Supl_Concentracion=="Cierta precisión"){
+    concentracion = 0;
     }
+    if (Supl_Concentracion=="Fatigosos"){
+    concentracion = 2;
+    }
+    if (Supl_Concentracion=="Muy fatigosos"){
+    concentracion = 5;
+    }
+        
+    /*Ruido*/
+    if (Supl_Ruido=="Continuo"){
+    Ruido = 0;
+    }
+    if (Supl_Ruido=="Intermitente y fuerte"){
+    Ruido = 2;
+    }
+    if (Supl_Ruido=="Intermitente y muy fuerte"){
+    Ruido = 5;
+    }
+    if (Supl_Ruido=="Estridente y fuerte"){
+    Ruido = 5;
+    }
+    
+    /*Tension Mental*/
+    if (Supl_mental=="Proceso Bastante complejo"){
+    mental = 1;
+    }
+    if (Supl_mental=="Proceso complejo"){
+    mental = 4;
+    }
+    if (Supl_mental=="Muy complejo"){
+    mental = 8;
+    }
+        
+    /*Monotonía*/
+    if (Supl_Monotonia=="Algo Monótono"){
+    Monotonia = 0;
+    }
+    if (Supl_Monotonia=="Bastante Monótono"){
+    Monotonia = 1;
+    }
+    if (Supl_Monotonia=="Muy Monótono"){
+    Monotonia = 4;
+    }
+    
+    /*Tedio*/
+    if (Supl_Tedio=="Algo Aburrido"){
+    Tedio = 0;
+    }
+    if (Supl_Tedio=="Bastante Aburrido"){
+    Tedio = 2;
+    }
+    if (Supl_Tedio=="Muy Aburrido"){
+    Tedio = 5;
+    }
+        
+    Sum_Tol = (Necesidades + Fatiga + Trabajo + postura + Fuerza + Iluminacion + Atmosfericas + concentracion + Ruido + mental + Monotonia + Tedio)/100
+    
+    $("#resultado_supl_de").val(Sum_Tol);
+        
+    }
+    
     /*Mujeres*/
     if (Supl_Sex=="Mujer"){
    
@@ -142,6 +206,68 @@ function Calificacion_OP(){
     if (Supl_atmosfericas=="2"){
     Atmosfericas = 100;
     }
+        
+    /*Concentracion*/
+    if (Supl_Concentracion=="Cierta precisión"){
+    concentracion = 0;
+    }
+    if (Supl_Concentracion=="Fatigosos"){
+    concentracion = 2;
+    }
+    if (Supl_Concentracion=="Muy fatigosos"){
+    concentracion = 5;
+    }
+        
+    /*Ruido*/
+    if (Supl_Ruido=="Continuo"){
+    Ruido = 0;
+    }
+    if (Supl_Ruido=="Intermitente y fuerte"){
+    Ruido = 2;
+    }
+    if (Supl_Ruido=="Intermitente y muy fuerte"){
+    Ruido = 5;
+    }
+    if (Supl_Ruido=="Estridente y fuerte"){
+    Ruido = 5;
+    }
+        
+    /*Tension Mental*/
+    if (Supl_mental=="Proceso Bastante complejo"){
+    mental = 1;
+    }
+    if (Supl_mental=="Proceso complejo"){
+    mental = 4;
+    }
+    if (Supl_mental=="Muy complejo"){
+    mental = 8;
+    }
+        
+     /*Monotonía*/
+    if (Supl_Monotonia=="Algo Monótono"){
+    Monotonia = 0;
+    }
+    if (Supl_Monotonia=="Bastante Monótono"){
+    Monotonia = 1;
+    }
+    if (Supl_Monotonia=="Muy Monótono"){
+    Monotonia = 4;
+    }
+    
+    /*Tedio*/
+    if (Supl_Tedio=="Algo Aburrido"){
+    Tedio = 0;
+    }
+    if (Supl_Tedio=="Bastante Aburrido"){
+    Tedio = 1;
+    }
+    if (Supl_Tedio=="Muy Aburrido"){
+    Tedio = 2;
+    } 
+        
+     Sum_Tol = (Necesidades + Fatiga + Trabajo + postura + Fuerza + Iluminacion + Atmosfericas + concentracion + Ruido + mental + Monotonia + Tedio)/100
+    
+    $("#resultado_supl_de").val(Sum_Tol);
         
     }
     
