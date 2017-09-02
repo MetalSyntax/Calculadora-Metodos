@@ -4,16 +4,16 @@
 function Calificacion_OP(){
     
    var Supl_Sex,Necesidades,Fatiga,Trabajo;
-   var Supl_Postura, postura;
+   var Supl_Postura, Postura;
    var Supl_Fuerza, Fuerza;
    var Supl_Iluminacion, Iluminacion;
    var Supl_atmosfericas, Atmosfericas;
-   var Supl_Concentracion, concentracion;
+   var Supl_Concentracion, Concentracion;
    var Supl_Ruido, Ruido;
-   var Supl_mental, mental;
+   var Supl_mental, Mental;
    var Supl_Monotonia, Monotonia;
    var Supl_Tedio, Tedio;
-   var sum_tol;
+   var Sum_Tol,Sum_Tol_Total;
     
     Supl_Sex = document.getElementById("Supl_Sex").value;
     Supl_Postura = document.getElementById("Supl_Postura").value;
@@ -24,7 +24,7 @@ function Calificacion_OP(){
     Supl_Ruido =  document.getElementById("Supl_Ruido").value;
     Supl_mental = document.getElementById("Supl_mental").value;
     Supl_Monotonia = document.getElementById("Supl_Monotonia").value;
-    Supl_Tedio = Supl_Monotonia = document.getElementById("Supl_Tedio").value;
+    Supl_Tedio = document.getElementById("Supl_Tedio").value;
 
     /*Hombre*/
     if (Supl_Sex=="Hombres"){
@@ -88,13 +88,13 @@ function Calificacion_OP(){
         
     /*Concentracion*/
     if (Supl_Concentracion=="Cierta precisión"){
-    concentracion = 0;
+    Concentracion = 0;
     }
     if (Supl_Concentracion=="Fatigosos"){
-    concentracion = 2;
+    Concentracion = 2;
     }
     if (Supl_Concentracion=="Muy fatigosos"){
-    concentracion = 5;
+    Concentracion = 5;
     }
         
     /*Ruido*/
@@ -113,13 +113,13 @@ function Calificacion_OP(){
     
     /*Tension Mental*/
     if (Supl_mental=="Proceso Bastante complejo"){
-    mental = 1;
+    Mental = 1;
     }
     if (Supl_mental=="Proceso complejo"){
-    mental = 4;
+    Mental = 4;
     }
     if (Supl_mental=="Muy complejo"){
-    mental = 8;
+    Mental = 8;
     }
         
     /*Monotonía*/
@@ -143,12 +143,74 @@ function Calificacion_OP(){
     if (Supl_Tedio=="Muy Aburrido"){
     Tedio = 5;
     }
+     
+    console.log(Necesidades)
+    console.log(Fatiga)
+    console.log(Trabajo)
+    console.log(Postura)
+    console.log(Fuerza)
+    console.log(Iluminacion)
+    console.log(Atmosfericas)
+    console.log(Concentracion)
+    console.log(Ruido)
+    console.log(Mental)
+    console.log(Monotonia)
+    console.log(Tedio)
         
-    Sum_Tol = (Necesidades + Fatiga + Trabajo + postura + Fuerza + Iluminacion + Atmosfericas + concentracion + Ruido + mental + Monotonia + Tedio)/100
+        
+    Sum_Tol = (Necesidades + Fatiga + Trabajo + parseFloat(Postura) + parseFloat(Fuerza) + parseFloat(Iluminacion) + parseFloat(Atmosfericas) + parseFloat(Concentracion) + parseFloat(Ruido) + parseFloat(Mental) + parseFloat(Monotonia) + parseFloat(Tedio));
+    Sum_Tol_Total = (Sum_Tol/100)+1;
     
-    $("#resultado_supl_de").val(Sum_Tol);
+    $("#resultado_supl").val(Sum_Tol_Total);
         
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+ var li = document.createElement("li");
+  var inputValue = document.getElementById("resultado_supl").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("¡Debes escribir algo!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("Resultado_Red").value;
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
     }
+  }
+}
     
     /*Mujeres*/
     if (Supl_Sex=="Mujer"){
@@ -209,13 +271,13 @@ function Calificacion_OP(){
         
     /*Concentracion*/
     if (Supl_Concentracion=="Cierta precisión"){
-    concentracion = 0;
+    Concentracion = 0;
     }
     if (Supl_Concentracion=="Fatigosos"){
-    concentracion = 2;
+    Concentracion = 2;
     }
     if (Supl_Concentracion=="Muy fatigosos"){
-    concentracion = 5;
+    Concentracion = 5;
     }
         
     /*Ruido*/
@@ -234,13 +296,13 @@ function Calificacion_OP(){
         
     /*Tension Mental*/
     if (Supl_mental=="Proceso Bastante complejo"){
-    mental = 1;
+    Mental = 1;
     }
     if (Supl_mental=="Proceso complejo"){
-    mental = 4;
+    Mental = 4;
     }
     if (Supl_mental=="Muy complejo"){
-    mental = 8;
+    Mental = 8;
     }
         
      /*Monotonía*/
@@ -265,13 +327,72 @@ function Calificacion_OP(){
     Tedio = 2;
     } 
         
-     Sum_Tol = (Necesidades + Fatiga + Trabajo + postura + Fuerza + Iluminacion + Atmosfericas + concentracion + Ruido + mental + Monotonia + Tedio)/100
-    
-    $("#resultado_supl_de").val(Sum_Tol);
+    console.log(Necesidades)
+    console.log(Fatiga)
+    console.log(Trabajo)
+    console.log(Postura)
+    console.log(Fuerza)
+    console.log(Iluminacion)
+    console.log(Atmosfericas)
+    console.log(Concentracion)
+    console.log(Ruido)
+    console.log(Mental)
+    console.log(Monotonia)
+    console.log(Tedio)
         
+  Sum_Tol = (Necesidades + Fatiga + Trabajo + parseFloat(Postura) + parseFloat(Fuerza) + parseFloat(Iluminacion) + parseFloat(Atmosfericas) + parseFloat(Concentracion) + parseFloat(Ruido) + parseFloat(Mental) + parseFloat(Monotonia) + parseFloat(Tedio));
+  Sum_Tol_Total = (Sum_Tol/100)+1;
+    
+    $("#resultado_supl").val(Sum_Tol_Total);
+        
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+ var li = document.createElement("li");
+  var inputValue = document.getElementById("resultado_supl").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("¡Debes escribir algo!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("Resultado_Red").value;
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
     }
-    
-    
+  }
+}
 }
 /*******************************************************/
 /*Suplementos de Descanso*/
@@ -319,6 +440,6 @@ function Observaciones_NUM(){
 /*Limpiar*/
 /*******************************************************/
 /*Suplementos*/
-function Limpiar_Suplementos_de_descanso() {
+function Limpiar_Calificacion_OP() {
     document.getElementById("Supl_De").reset();
 }
