@@ -1,5 +1,6 @@
 <div class="card">
 <div class="card-body">
+<section>
 <form id="Unitario">
     <h3>Costo Unitario</h3>
     <p>Costo Total</p>
@@ -12,10 +13,15 @@
     <input type="number" id="Costo_Unitario" value="0" disabled/><br/>
     <p></p>
     <input type="button" id="Costo_Unitario_Produccion" value="Calcular" onclick="Costo_Unitario_Prod()"/>
-     <input type="button" id="Limp_costo" value="Limpiar" onclick="Limpiar_costo()">
+    <input type="button" id="Limp_costo" value="Limpiar" onclick="Limpiar_costo()">
+    <input type="button" id="Historial_Costo_Unitario" value="Historial" onclick="Mostrar_Costo_Unitario()"/>
+
 </form>
-    <h3>Historial</h3>
-    <ul id="myUL">
-    </ul>
+</section>
+ <section>
+<h4>Historial</h4> 
+<div id="Zona_datos_Costo_Unitario"></div>
+<input type="button" id="Borrar_Costo_U" value="Borrar Todo" onclick="Borrar_Costo_Unitario()">
+</section>
 </div>
 </div>

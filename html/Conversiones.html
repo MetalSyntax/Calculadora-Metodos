@@ -1,26 +1,27 @@
 <div class="card">
 <div class="card-body">
+<section>
 <h3>Homogenizar Unidades</h3>
-    <form id="trans">
-        <p>Unidades a homogeniza</p>
-        <div id="Transformaciones">
-        <input type="number" class="Numero_de_Unidades" value="0" required/><br/>
-	   </div>
-    <p>Resultado</p>
-    <span>Multiplicando</span>
-    <input type="number" id="Resultado_Multi" value="0" disabled/><br/>
-    <span>Dividiendo</span>
-    <input type="number" id="Resultado_Divi" value="0" disabled/><br/>
-    <p>Agregar/Calcular</p>
-	<input type="button" id="New_Linea_Trans" value="Nueva l&iacute;nea" onclick="Nueva_Linea_Trans()"/>
-    <input type="button" id="Delete_Linea_Trans" value="Borrar l&iacute;neas" onclick="Borrar_Linea_Trans()"/>
-	<input type="button" id="Calcular_Multiplicando" value="Calcular Multiplicacion" onclick="Multiplicando()"/>
-    <input type="button" id="" value="Calcular Division" onclick="Dividiendo()" disabled/>
-    <input type="button" id="Limp_Trans" value="Limpiar" onclick="Limpiar_Trans()">
-    </form>
-    <p></p>
-    <h3>Historial</h3>
-    <ul id="myUL">
-    </ul>
+<form id="trans">
+<p>Unidades a homogenizar</p>
+<div id="Transformaciones">
+<input type="number" class="Numero_de_Unidades" value="0" required/><br/>
+</div>
+<p>Resultado</p>
+<input type="number" id="Resultado_Multi" value="0" disabled/><br/>
+<p>Agregar/Calcular</p>
+<input type="button" id="New_Linea_Trans" value="Nueva l&iacute;nea" onclick="Nueva_Linea_Homogenizar()"/>
+<input type="button" id="Delete_Linea_Trans" value="Borrar l&iacute;neas" onclick="Borrar_Linea_Homogenizar()"/>
+<input type="button" id="Calcular_Multiplicando" value="Calcular" onclick="Homogenizar_Multiplicando()"/>
+<input type="button" id="Limp_Trans" value="Limpiar" onclick="Limpiar_Homogenizar()">
+<input type="button" id="Historial_Homogenizar" value="Historial" onclick="Mostrar_Homogenizar()"/>
+</form>
+</section>
+<section>
+<p></p>
+<h4>Historial</h4> 
+<div id="Zona_datos_Homogenizar"></div>
+<input type="button" id="Borrar_Homog" value="Borrar Todo" onclick="Borrar_Homogenizar()">
+</section>
 </div>
 </div>
