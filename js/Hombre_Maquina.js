@@ -179,7 +179,7 @@ function Limpiar_Tiempo_Necesario() {
 /*******************************************************/
 /*Costo de la Mano de Obra (Jornada Normal)*/
 /*******************************************************/
-document.getElementById("Analisis_de_Costos1").addEventListener("click",Analisis_de_Costos1);
+document.getElementById("A_de_Costos1").addEventListener("click",Analisis_de_Costos1);
 function Analisis_de_Costos1(){
     mohjn = 0
     mocjn = 0
@@ -248,14 +248,14 @@ list.addEventListener('click', function(ev) {
   } 
 }
 /*CMOJN*/
-document.getElementById("Limpiar_CMOJN").addEventListener("click",Limpiar_CMOJN);
+document.getElementById("Limp_CMOJN").addEventListener("click",Limpiar_CMOJN);
 function Limpiar_CMOJN() {
     document.getElementById("CMOJN").reset();
 }
 /*******************************************************/
 /*Costo de la Mano de Obra (Jornada Extra)*/
 /*******************************************************/
-document.getElementById("Analisis_de_Costos2").addEventListener("click",Analisis_de_Costos2);
+document.getElementById("A_de_Costos2").addEventListener("click",Analisis_de_Costos2);
 function Analisis_de_Costos2(){
     motje = 0
     mocje = 0
@@ -324,14 +324,14 @@ list.addEventListener('click', function(ev) {
   }
 }
 /*CMOJE*/
-document.getElementById("Limpiar_CMOJE").addEventListener("click",Limpiar_CMOJE);
+document.getElementById("Limp_CMOJE").addEventListener("click",Limpiar_CMOJE);
 function Limpiar_CMOJE() {
     document.getElementById("CMOJE").reset();
 }
 /*******************************************************/
 /*Costo de Maquinaria (Encendida)*/
 /*******************************************************/
-document.getElementById("Analisis_de_Costos3").addEventListener("click",Analisis_de_Costos3);
+document.getElementById("A_de_Costos3").addEventListener("click",Analisis_de_Costos3);
 function Analisis_de_Costos3(){
     mmjf = 0
     mcjf = 0
@@ -409,14 +409,14 @@ list.addEventListener('click', function(ev) {
   }     
 }
 /*CMF*/
-document.getElementById("Limpiar_CMF").addEventListener("click",Limpiar_CMF);
+document.getElementById("Limp_CMF").addEventListener("click",Limpiar_CMF);
 function Limpiar_CMF() {
     document.getElementById("CMF").reset();
 }
 /*******************************************************/
 /*Costo de maquinaria (Apagada)*/
 /*******************************************************/
-document.getElementById("Analisis_de_Costos4").addEventListener("click",Analisis_de_Costos4);
+document.getElementById("A_de_Costos4").addEventListener("click",Analisis_de_Costos4);
 function Analisis_de_Costos4(){
     mmja = 0
     mcja = 0
@@ -494,7 +494,7 @@ list.addEventListener('click', function(ev) {
   }   
 }
 /*CMP*/
-document.getElementById("Limpiar_CMP").addEventListener("click",Limpiar_CMP);
+document.getElementById("Limp_CMP").addEventListener("click",Limpiar_CMP);
 function Limpiar_CMP() {
     document.getElementById("CMP").reset();
 }
@@ -1001,10 +1001,10 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
-/*Costo_de_Materiales*/
-document.getElementById("Limpiar_Costo_de_Materiales").addEventListener("click", Limpiar_Costo_de_Materiales);
-function Limpiar_Costo_de_Materiales() {
-    document.getElementById("Costo_de_Materiales").reset();
+/*Depreciasion*/
+document.getElementById("Limpiar_Depreciacion").addEventListener("click", Limpiar_Depreciacion);
+function Limpiar_Depreciacion() {
+    document.getElementById("Depreciacion").reset();
 }
 /*******************************************************/
 /*Costo de Materiales*/
@@ -1019,7 +1019,7 @@ function Costo_Materiales(){
 	$("#CM").each(function(index,value){
 		CM = CM + eval($(this).val());
 	});
-    resultado_CM = cxi * vxu
+    resultado_CM = daCM * CM
      $("#resultado_CM").val(resultado_CM);
     
 /*Hitorial*/
@@ -1071,8 +1071,8 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
-/*Depreciasion*/
-document.getElementById("Limpiar_Depreciacion").addEventListener("click", Limpiar_Depreciacion);
-function Limpiar_Depreciacion() {
-    document.getElementById("Depreciacion").reset();
+/*Costo_de_Materiales*/
+document.getElementById("Limp_Costo_de_Materiales").addEventListener("click", Limpiar_Costo_de_Materiales);
+function Limpiar_Costo_de_Materiales() {
+    document.getElementById("Costo_de_Materiales").reset();
 }
