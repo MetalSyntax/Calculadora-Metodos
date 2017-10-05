@@ -30,17 +30,13 @@ function Mostrar_Costos_Totales(){
 }
 /*Borrar Historial*/
 function Borrar_Costos_Totales(){
-    if(confirm("Desea borrar el historial?")){
         localStorage.clear();
         Leer_Costos_Totales();
-    }
 }
 /*Borrar Item*/
 function Eliminar_Item_Costos_Totales(Costos_Totales_Clave){
-    if(confirm("Estas seguro de Eliminar este Item?")){
     localStorage.removeItem(Costos_Totales_Clave);
      Leer_Costos_Totales();
-    }
 }
 /*Linea Nueva*/
 function Nueva_Linea_Costo() {
@@ -71,7 +67,7 @@ function Costo_Unitario_Prod(){
 	$("#Costo_Unitario").val(dcu);
     
 /*Informacion Guardada*/
-var Costo_Unitario_Clave = "Costo Total = "+document.getElementById("Costo_Total_U").value+" "+document.getElementById("Moneda_Total").value+" Unidades "+document.getElementById("Unidades_U").value+" "+document.getElementById("Tipo_Unidad_U").value;
+var Costo_Unitario_Clave = "Costo Total = "+document.getElementById("Costo_Total_U").value+"  "+document.getElementById("Moneda_Total").value+" Unidades "+document.getElementById("Unidades_U").value+"   "+document.getElementById("Tipo_Unidad_U").value;
 var Costo_Unitario_Valor = document.getElementById("Costo_Unitario").value;
 localStorage.setItem(Costo_Unitario_Clave, Costo_Unitario_Valor);
 }
@@ -93,17 +89,13 @@ function Mostrar_Costo_Unitario(){
 }
 /*Borrar Historial*/
 function Borrar_Costo_Unitario(){
-    if(confirm("Desea borrar el historial?")){
         localStorage.clear();
         Leer_Costo_Unitario();
-    }
 }
 /*Borrar Item*/
 function Eliminar_Item_Costo_Unitario(Costo_Unitario_Clave){
-    if(confirm("Estas seguro de Eliminar este Item?")){
     localStorage.removeItem(Costo_Unitario_Clave);
      Leer_Costo_Unitario();
-    }
 }
 /*Unitarios*/
 function Limpiar_costo() {
@@ -112,7 +104,6 @@ function Limpiar_costo() {
 /*******************************************************/
 /*Costos de Produccion*/
 /*******************************************************/
-document.getElementById("Calcular_Costos_de_Produccion").addEventListener("click", Costos_de_Produccion);
 function Costos_de_Produccion(){
 	Material = 0
 	Costo = 0
@@ -124,22 +115,45 @@ function Costos_de_Produccion(){
 	});
     produccion = Math.round (Material * Costo)
 	$("#ResultadoP").val(produccion);
+    
+/*Informacion Guardada*/
+var Costo_Produccion_Clave = "Material = "+document.getElementById("MaterialP").value+" "+document.getElementById("Tipo_Unidad3").value+" Costo = "+document.getElementById("CostoP").value+" "+document.getElementById("Tipo_Material2").value;
+var Costo_Produccion_Valor = document.getElementById("ResultadoP").value;
+localStorage.setItem(Costo_Produccion_Clave, Costo_Produccion_Valor);
 }
-
-
-
-
-
-
+/*Leer Informacion Guardada*/
+function Leer_Costo_Produccion(Costo_Produccion_Clave){
+    
+    var Zona_datos_Costo_Produccion = document.getElementById("Zona_datos_Costo_Produccion");
+    var Valor_Costo_Produccion = localStorage.getItem(Costo_Produccion_Clave);
+    Zona_datos_Costo_Produccion.innerHTML = "";
+    for (i=0;i<localStorage.length;i++){ 
+        var Costo_Produccion_Clave = localStorage.key(i);
+        var Valor_Costo_Produccion = localStorage.getItem(Costo_Produccion_Clave);
+        Zona_datos_Costo_Produccion.innerHTML += '<div> Datos: '+Costo_Produccion_Clave+' -- '+ 'Resultado: '+Valor_Costo_Produccion+' $ '+'<input type="button" onclick="Eliminar_Item_Costo_Produccion(\''+ Costo_Produccion_Clave + '\')" value="X"></div>';
+    }   
+}
+/*Mostrar Historial*/
+function Mostrar_Costo_Produccion(){
+    Leer_Costo_Produccion();
+}
+/*Borrar Historial*/
+function Borrar_Costo_Produccion(){
+        localStorage.clear();
+        Leer_Costo_Produccion();
+}
+/*Borrar Item*/
+function Eliminar_Item_Costo_Produccion(Costo_Produccion_Clave){
+    localStorage.removeItem(Costo_Produccion_Clave);
+     Leer_Costo_Produccion();
+}
 /*Produccion*/
-document.getElementById("Limpiar_prod").addEventListener("click", Limpiar_prod);
 function Limpiar_prod() {
     document.getElementById("Produccion").reset();
 }
 /*******************************************************/
 /*Ganancia*/
 /*******************************************************/
-document.getElementById("Ganancia_").addEventListener("click", Ganancia_R);
 function Ganancia_R(){
 	pvp = 0
 	Costo_unitario = 0
@@ -155,9 +169,39 @@ function Ganancia_R(){
     var ganancia = "Perdida = ";
     }
 	$("#ResultadoG").val(Math.round (pvp - Costo_unitario));
+
+/*Informacion Guardada*/
+var Ganancia_Clave = "Costo Unitario = "+document.getElementById("Costo_unitario").value+" Precio de Venta al Publico = "+document.getElementById("pvp").value;
+var Ganancia_Valor = document.getElementById("ResultadoG").value;
+localStorage.setItem(Ganancia_Clave, Ganancia_Valor);
+}
+/*Leer Informacion Guardada*/
+function Leer_Ganancia(Ganancia_Clave){
+    
+    var Zona_datos_Ganancia = document.getElementById("Zona_datos_Ganancia");
+    var Valor_Ganancia = localStorage.getItem(Ganancia_Clave);
+    Zona_datos_Ganancia.innerHTML = "";
+    for (i=0;i<localStorage.length;i++){ 
+        var Ganancia_Clave = localStorage.key(i);
+        var Valor_Ganancia = localStorage.getItem(Ganancia_Clave);
+        Zona_datos_Ganancia.innerHTML += '<div> Datos: '+Ganancia_Clave+' -- '+ 'Resultado: '+Valor_Ganancia+' $ '+'<input type="button" onclick="Eliminar_Item_Ganancia(\''+ Ganancia_Clave + '\')" value="X"></div>';
+    }   
+}
+/*Mostrar Historial*/
+function Mostrar_Ganancia(){
+    Leer_Ganancia();
+}
+/*Borrar Historial*/
+function Borrar_Ganancia(){
+        localStorage.clear();
+        Leer_Ganancia();
+}
+/*Borrar Item*/
+function Eliminar_Item_Ganancia(Ganancia_Clave){
+    localStorage.removeItem(Ganancia_Clave);
+     Leer_Ganancia();
 }
 /*Ganancia*/
-document.getElementById("Limp_ganancia").addEventListener("click", Limpiar_ganancia);
 function Limpiar_ganancia() {
     document.getElementById("ganancia").reset();
 }
@@ -194,17 +238,13 @@ function Mostrar_Homogenizar(){
 }
 /*Borrar Historial*/
 function Borrar_Homogenizar(){
-    if(confirm("Desea borrar el historial?")){
         localStorage.clear();
         Leer_Homogenizar();
-    }
 }
 /*Borrar Item*/
 function Eliminar_Item_Homogenizar(Homogenizar_Clave){
-    if(confirm("Estas seguro de Eliminar este Item?")){
     localStorage.removeItem(Homogenizar_Clave);
      Leer_Homogenizar();
-    }
 }
 /*Linea Nueva*/
 function Nueva_Linea_Homogenizar() {
@@ -306,17 +346,13 @@ function Mostrar_Productividad_FT(){
 }
 /*Borrar Historial*/
 function Borrar_Productividad_Trabajadores(){
-    if(confirm("Desea borrar el historial?")){
         localStorage.clear();
         Leer_Productividad_FT();
-    }
 }
 /*Borrar Item*/
 function Eliminar_Item_Productividad_FT(Productividad_FT_Clave){
-    if(confirm("Estas seguro de Eliminar este Item?")){
     localStorage.removeItem(Productividad_FT_Clave);
      Leer_Productividad_FT();
-    }
 }
 /*Limpiar Productividad en Funcion de los Trabajadores*/
 function Limpiar_Trabajadores() {
@@ -370,10 +406,8 @@ function Borrar_Productividad_Materiales(){
 }
 /*Borrar Item*/
 function Eliminar_Item_Productividad_FM(Productividad_FM_Clave){
-    if(confirm("Estas seguro de Eliminar este Item?")){
     localStorage.removeItem(Productividad_FM_Clave);
      Leer_Productividad_FM();
-    }
 }
 /*Limpiar Productividad en Funcion de los Materiales*/
 function Limpiar_Materiales() {

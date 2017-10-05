@@ -1,5 +1,6 @@
 <div class="card">
 <div class="card-body">
+<section>
 <form id="ganancia">
     <h3>Ganancia</h3>
     <p>Costo Unitario</p>
@@ -11,10 +12,14 @@
     <p></p>
     <input type="button" id="Ganancia_" value="Calcular" onclick="Ganancia_R()"/>
     <input type="button" id="Limp_ganancia" value="Limpiar" onclick="Limpiar_ganancia()">
+    <input type="button" id="Historial_Ganancia" value="Historial" onclick="Mostrar_Ganancia()"/>
 </form>
-    <p></p>
-    <h3>Historial</h3>
-    <ul id="myUL">
-    </ul>
+</section>
+<section>
+<p></p>
+<h4>Historial</h4> 
+<div id="Zona_datos_Ganancia"></div>
+<input type="button" id="Borrar_Ga" value="Borrar Todo" onclick="Borrar_Ganancia()">
+</section>
 </div>
 </div>
