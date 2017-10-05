@@ -1,8 +1,8 @@
 /*******************************************************/
 /*Calificacion del Operario*/
 /*******************************************************/
-document.getElementById("Calificacion_OP").addEventListener("click",Calificacion_OP);
-function Calificacion_OP(){
+document.getElementById("Calificacion_OP").addEventListener("click", CalificacionOP);
+function CalificacionOP(){
     
    var Supl_Sex,Necesidades,Fatiga,Trabajo;
    var Supl_Postura, Postura;
@@ -144,20 +144,6 @@ function Calificacion_OP(){
     if (Supl_Tedio=="Muy Aburrido"){
     Tedio = 5;
     }
-     
-    console.log(Necesidades)
-    console.log(Fatiga)
-    console.log(Trabajo)
-    console.log(Postura)
-    console.log(Fuerza)
-    console.log(Iluminacion)
-    console.log(Atmosfericas)
-    console.log(Concentracion)
-    console.log(Ruido)
-    console.log(Mental)
-    console.log(Monotonia)
-    console.log(Tedio)
-        
         
     Sum_Tol = (Necesidades + Fatiga + Trabajo + parseFloat(Postura) + parseFloat(Fuerza) + parseFloat(Iluminacion) + parseFloat(Atmosfericas) + parseFloat(Concentracion) + parseFloat(Ruido) + parseFloat(Mental) + parseFloat(Monotonia) + parseFloat(Tedio));
     Sum_Tol_Total = (Sum_Tol/100)+1;
@@ -328,25 +314,13 @@ list.addEventListener('click', function(ev) {
     if (Supl_Tedio=="Muy Aburrido"){
     Tedio = 2;
     } 
-        
-    console.log(Necesidades)
-    console.log(Fatiga)
-    console.log(Trabajo)
-    console.log(Postura)
-    console.log(Fuerza)
-    console.log(Iluminacion)
-    console.log(Atmosfericas)
-    console.log(Concentracion)
-    console.log(Ruido)
-    console.log(Mental)
-    console.log(Monotonia)
-    console.log(Tedio)
-        
+
   Sum_Tol = (Necesidades + Fatiga + Trabajo + parseFloat(Postura) + parseFloat(Fuerza) + parseFloat(Iluminacion) + parseFloat(Atmosfericas) + parseFloat(Concentracion) + parseFloat(Ruido) + parseFloat(Mental) + parseFloat(Monotonia) + parseFloat(Tedio));
   Sum_Tol_Total = (Sum_Tol/100)+1;
     
     $("#resultado_supl").val(Sum_Tol_Total);
-        
+
+/*Hitorial*/           
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -397,49 +371,42 @@ list.addEventListener('click', function(ev) {
 }
 }
 /*Limpiar Calificacion*/
-document.getElementById("Limpiar_Calificacion_OP").addEventListener("click",Limpiar_Calificacion_OP);
-function Limpiar_Calificacion_OP() {
-    document.getElementById("Supl_De").reset();
+document.getElementById("Limpiar_Calificacion_OP").addEventListener("click", LimpiarCalificacionOP);
+function LimpiarCalificacionOP() {
+document.getElementById("Supl_De").reset();
 }
 /*******************************************************/
 /*Suplementos de Descanso*/
 /*******************************************************/
 function Suplementos_DE(){
-    
 }
 /*******************************************************/
 /*Tiempo Necesario*/
 /*******************************************************/
 function Tiempo_NEMT(){
-    
 }
 /*******************************************************/
 /*Coeficiente de Variacion*/
 /*******************************************************/
 function Coeficiente_VAR(){
-    
 }
 /*******************************************************/
 /*Tiempo Estandar*/
 /*******************************************************/
 function Tiempo_ES(){
-    
 }
 /*******************************************************/
 /*Porcentaje de Tolerancia de Descanso*/
 /*******************************************************/
 function Tolerancia_DE(){
-    
 }
 /*******************************************************/
 /*Sumatoria de Suplementos*/
 /*******************************************************/
 function Suplementos_SU(){
-    
 }
 /*******************************************************/
 /*Numero de Observaciones*/
 /*******************************************************/
-function Observaciones_NUM(){
-    
+function Observaciones_NUM(){  
 }

@@ -1,7 +1,7 @@
 /*******************************************************/
 /*Numero de Recursos*/
 /*******************************************************/
-document.getElementById("Calcular_Numero_Recursos").addEventListener("click",Numero_Recursos);
+document.getElementById("Calcular_Numero_Recursos").addEventListener("click", Numero_Recursos);
 function Numero_Recursos(){
 	tsi = 0
 	be = 0
@@ -66,7 +66,7 @@ list.addEventListener('click', function(ev) {
 /*Numero de Recursos*/
 document.getElementById("Limpiar_Numero_Recursos").addEventListener("click",Limpiar_Numero_Recursos);
 function Limpiar_Numero_Recursos() {
-    document.getElementById("Numero_Recursos").reset();
+document.getElementById("Numero_Recursos").reset();
 }
 /*******************************************************/
 /*Base de Equilibrio*/
