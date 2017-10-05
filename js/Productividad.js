@@ -18,70 +18,38 @@ function Productividad_FT(){
 var Productividad_FT_Clave = "Unidades = "+document.getElementById("UnidadesT").value+" "+document.getElementById("Tipo_UnidadT").value+" -- Trabajadores = "+document.getElementById("Trabajadores").value;
 var Productividad_FT_Valor = document.getElementById("Total_FT").value;
 sessionStorage.setItem(Productividad_FT_Clave, Productividad_FT_Valor);
-//sessionStorage[Productividad_FT_Clave]=Productividad_FT_Valor; 
-Leer_Productividad_FT(Productividad_FT_Clave);
-
-    
-/*Hitorial*/
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false); 
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("Total_FT").value+" "+document.getElementById("Tipo_UnidadT").value+" / Trabajadores";
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("¡Debes escribir algo!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("Total_FT").value;
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
 }
 /*Leer Informacion Guardada*/
 function Leer_Productividad_FT(Productividad_FT_Clave){
     var Zona_datos_Productividad_FT = document.getElementById("Zona_datos_Productividad_FT");
+    
     var Valor_Productividad_FT = sessionStorage.getItem(Productividad_FT_Clave);
-   // var Valor_Productividad_FT = sessionStorage[Productividad_FT_Clave];
     Zona_datos_Productividad_FT.innerHTML = "";
     
     for (i=0;i<sessionStorage.length;i++){
-        var Clave_Productividad_FT = sessionStorage.key(i);
+        var Productividad_FT_Clave = sessionStorage.key(i);
         var Valor_Productividad_FT = sessionStorage.getItem(Productividad_FT_Clave);
-        Zona_datos_Productividad_FT.innerHTML += "<div> Datos: "+Productividad_FT_Clave+" -- "+ "Resultado: "+Valor_Productividad_FT+"</div>";
+        Zona_datos_Productividad_FT.innerHTML += '<div> Datos: '+Productividad_FT_Clave+' -- '+ 'Resultado: '+Valor_Productividad_FT+'<input type="button" onclick="Eliminar_Item_Productividad_FT(\''+ Productividad_FT_Clave + '\')" value="X"></div>';
     }   
+}
+/*Mostrar Historial*/
+function Mostrar_Productividad_FT(){
+    Leer_Productividad_FT();
+}
+/*Borrar Historial*/
+function Borrar_Trabajadores(){
+    if(confirm("Desea borrar el historial?")){
+        sessionStorage.clear();
+        Leer_Productividad_FT();
+    }
+}
+/*Borrar Item*/
+function Eliminar_Item_Productividad_FT(Productividad_FT_Clave){
+    if(confirm("Estas seguro de Eliminar este Item?")){
+        sessionStorage.removeItem(Productividad_FT_Clave);
+        Leer_Productividad_FT();
+    }
+    
 }
 /*Limpiar Productividad en Funcion de los Trabajadores*/
 function Limpiar_Trabajadores() {
