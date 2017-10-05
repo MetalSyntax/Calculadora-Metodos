@@ -1,7 +1,6 @@
 /*******************************************************/
 /*Productividad en Funcion de los Trabajadores*/
 /*******************************************************/
-document.getElementById("Calcular_Productividad_FT").addEventListener("click",Productividad_FT);
 function Productividad_FT(){
 	total_unidades = 0
 	total_trabajadores = 0
@@ -14,6 +13,14 @@ function Productividad_FT(){
     ttf = total_unidades / total_trabajadores
     cttf = ttf.toFixed(4)
 	$("#Total_FT").val(cttf);
+    
+/*Informacion Guardada*/
+var Productividad_FT_Clave = "Unidades = "+document.getElementById("UnidadesT").value+" "+document.getElementById("Tipo_UnidadT").value+" -- Trabajadores = "+document.getElementById("Trabajadores").value;
+var Productividad_FT_Valor = document.getElementById("Total_FT").value;
+sessionStorage.setItem(Productividad_FT_Clave, Productividad_FT_Valor);
+//sessionStorage[Productividad_FT_Clave]=Productividad_FT_Valor; 
+Leer_Productividad_FT(Productividad_FT_Clave);
+
     
 /*Hitorial*/
 var myNodelist = document.getElementsByTagName("LI");
@@ -63,8 +70,20 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
+/*Leer Informacion Guardada*/
+function Leer_Productividad_FT(Productividad_FT_Clave){
+    var Zona_datos_Productividad_FT = document.getElementById("Zona_datos_Productividad_FT");
+    var Valor_Productividad_FT = sessionStorage.getItem(Productividad_FT_Clave);
+   // var Valor_Productividad_FT = sessionStorage[Productividad_FT_Clave];
+    Zona_datos_Productividad_FT.innerHTML="";
+    
+    for (i=0;i<sessionStorage.length;i++){
+        var Clave_Productividad_FT = sessionStorage.key(i);
+        var Valor_Productividad_FT = sessionStorage.getItem(Productividad_FT_Clave);
+        Zona_datos_Productividad_FT.innerHTML += "<div> Datos: "+Productividad_FT_Clave+" -- "+ "Resultado: "+Valor_Productividad_FT+"</div>";
+    }   
+}
 /*Limpiar Productividad en Funcion de los Trabajadores*/
-document.getElementById("Limpiar_Trabajadores").addEventListener("click",Limpiar_Trabajadores);
 function Limpiar_Trabajadores() {
     document.getElementById("Trabajadores1").reset();
 }
@@ -257,7 +276,7 @@ list.addEventListener('click', function(ev) {
 }, false);
     
     var li = document.createElement("li");
-  var inputValue = document.getElementById("Costo_Total_Resultado").value;
+  var inputValue = document.getElementById("Costo_Total_Resultado").value+" $";
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
