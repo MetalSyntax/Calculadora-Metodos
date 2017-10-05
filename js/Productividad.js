@@ -1,6 +1,7 @@
 /*******************************************************/
 /*Productividad en Funcion de los Trabajadores*/
 /*******************************************************/
+document.getElementById("Calcular_Productividad_FT").addEventListener("click",Productividad_FT);
 function Productividad_FT(){
 	total_unidades = 0
 	total_trabajadores = 0
@@ -14,6 +15,7 @@ function Productividad_FT(){
     cttf = ttf.toFixed(4)
 	$("#Total_FT").val(cttf);
     
+/*Hitorial*/
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -61,9 +63,15 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
+/*Limpiar Productividad en Funcion de los Trabajadores*/
+document.getElementById("Limpiar_Trabajadores").addEventListener("click",Limpiar_Trabajadores);
+function Limpiar_Trabajadores() {
+    document.getElementById("Trabajadores1").reset();
+}
 /*******************************************************/
 /*Productividad en Funcion de los Materiales*/
 /*******************************************************/
+document.getElementById("Calcular_Productividad_FM").addEventListener("click",Productividad_FM);
 function Productividad_FM(){
 	total_unidades = 0
 	total_materiales = 0
@@ -77,7 +85,8 @@ function Productividad_FM(){
     total = (total_unidades / (total_unidades / total_materiales))
 	$("#TotalPM").val(total);
     
-    var myNodelist = document.getElementsByTagName("LI");
+/*Hitorial*/
+var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -125,9 +134,15 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
+/*Limpiar Productividad en Funcion de los Materiales*/
+document.getElementById("Limpiar_Materiales").addEventListener("click", Limpiar_Materiales);
+function Limpiar_Materiales() {
+    document.getElementById("Materiales1").reset();
+}
 /*******************************************************/
 /*Homogenizar las Unidades*/
 /*******************************************************/
+document.getElementById("Calcular_Multiplicando").addEventListener("click",Multiplicando);
 function Multiplicando() {
 	Numero_de_Unidades = 1
 	$(".Numero_de_Unidades").each(
@@ -136,7 +151,8 @@ function Multiplicando() {
 		});
 	$("#Resultado_Multi").val(Numero_de_Unidades);
     
-    var myNodelist = document.getElementsByTagName("LI");
+/*Hitorial*/
+var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -184,18 +200,30 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
+/*Dividiendo*/
+document.getElementById("Calcular_Multiplicando").addEventListener("click",Multiplicando);
 function Dividiendo() {
     $("#Resultado_Divi").val(Numero_de_Unidades);
 }
+/*Linea Nueva*/
+document.getElementById("Nueva_Linea_Trans").addEventListener("click",Nueva_Linea_Trans);
 function Nueva_Linea_Trans() {
 	$("#Transformaciones").append('<input type="number" class="Numero_de_Unidades" value="0"/><br/>');   
 }
+/*Borrar*/
+document.getElementById("Borrar_Linea_Trans").addEventListener("click",Borrar_Linea_Trans);
 function Borrar_Linea_Trans(){
     $("#Transformaciones").empty('<input type="number" class="Numero_de_Unidades" value="0">/><br/>');
+}
+/*Homogenizar las Unidades*/
+document.getElementById("Limpiar_Trans").addEventListener("click",Limpiar_Trans);
+function Limpiar_Trans() {
+    document.getElementById("trans").reset();
 }
 /*******************************************************/
 /*Costos Totales*/
 /*******************************************************/
+document.getElementById("Calcular_Costos_Totales").addEventListener("click", Costos_Totales);
 function Costos_Totales() {
 	Sumatoria_Costos = 0
 	$(".Costos_Totales_Datos").each(function(index, value) {
@@ -203,7 +231,8 @@ function Costos_Totales() {
 		});
 	$("#Costo_Total_Resultado").val(Sumatoria_Costos);
     
-    var myNodelist = document.getElementsByTagName("LI");
+/*Hitorial*/
+var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -251,15 +280,25 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
+/*Linea Nueva*/
+document.getElementById("Nueva_Linea_Costo").addEventListener("click", Nueva_Linea_Costo);
 function Nueva_Linea_Costo() {
 	$("#Costos_Linea").append('<input type="number" class="Costos_Totales_Datos" value="0"/><br/>');
 }
+/*Borrar*/
+document.getElementById("Borrar_Linea_Costo").addEventListener("click", Borrar_Linea_Costo);
 function Borrar_Linea_Costo(){
     $("#Costos_Linea").empty('<input type="number" class="Costos_Totales_Datos" value="0">/><br/>');
+}
+/*Totales*/
+document.getElementById("Limpiar_costos").addEventListener("click", Limpiar_costos);
+function Limpiar_costos() {
+    document.getElementById("costos").reset();
 }
 /*******************************************************/
 /*Costo Unitario*/
 /*******************************************************/
+document.getElementById("Costo_Unitario_Prod").addEventListener("click", Costo_Unitario_Prod);
 function Costo_Unitario_Prod(){
 	Total_Unidades = 0
 	Costo_Total = 0
@@ -273,7 +312,8 @@ function Costo_Unitario_Prod(){
     dcu = cu.toFixed(4)
 	$("#Costo_Unitario").val(dcu);
     
-    var myNodelist = document.getElementsByTagName("LI");
+/*Hitorial*/
+var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -321,9 +361,15 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
+/*Unitarios*/
+document.getElementById("Limpiar_costo").addEventListener("click", Limpiar_costo);
+function Limpiar_costo() {
+    document.getElementById("Unitario").reset();
+}
 /*******************************************************/
 /*Productividad*/
 /*******************************************************/
+document.getElementById("Calcular_Productividad").addEventListener("click", Productividad);
 function Productividad(){
 	total_unidades = 0
 	Costo_Total = 0
@@ -335,7 +381,8 @@ function Productividad(){
 	});
 	$("#Resultado").val(total_unidades / Costo_Total);
     
-    var myNodelist = document.getElementsByTagName("LI");
+/*Hitorial*/
+var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -383,9 +430,15 @@ var li = document.createElement("li");
     }
   }
 }
+/*Productividad*/
+document.getElementById("Limpiar_produc").addEventListener("click", Limpiar_produc);
+function Limpiar_produc() {
+    document.getElementById("Productividad").reset();
+}
 /*******************************************************/
 /*Ganancia*/
 /*******************************************************/
+document.getElementById("Ganancia_R").addEventListener("click", Ganancia_R);
 function Ganancia_R(){
 	pvp = 0
 	Costo_unitario = 0
@@ -402,6 +455,7 @@ function Ganancia_R(){
     }
 	$("#ResultadoG").val(Math.round (pvp - Costo_unitario));
     
+/*Hitorial*/
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -450,9 +504,15 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
+/*Ganancia*/
+document.getElementById("Limpiar_ganancia").addEventListener("click", Limpiar_ganancia);
+function Limpiar_ganancia() {
+    document.getElementById("ganancia").reset();
+}
 /*******************************************************/
 /*Rentabilidad*/
 /*******************************************************/
+document.getElementById("Calcular_Rentabilidad").addEventListener("click", Rentabilidad);
 function Rentabilidad(){
 	pvp1 = 0
 	Costo_unitario1 = 0
@@ -464,7 +524,8 @@ function Rentabilidad(){
 	});
 	$("#ResultadoR").val(Math.round ((pvp1 / Costo_unitario1) * 100));
     
-    var myNodelist = document.getElementsByTagName("LI");
+/*Hitorial*/
+var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -513,9 +574,16 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
+
+/*Rentabilidad*/
+document.getElementById("Limpiar_rentabilidad").addEventListener("click", Limpiar_rentabilidad);
+function Limpiar_rentabilidad() {
+    document.getElementById("rentabilidad").reset();
+}
 /*******************************************************/
 /*Costos de Produccion*/
 /*******************************************************/
+document.getElementById("Calcular_Costos_de_Produccion").addEventListener("click", Costos_de_Produccion);
 function Costos_de_Produccion(){
 	Material = 0
 	Costo = 0
@@ -528,7 +596,8 @@ function Costos_de_Produccion(){
     produccion = Math.round (Material * Costo)
 	$("#ResultadoP").val(produccion);
     
-    var myNodelist = document.getElementsByTagName("LI");
+/*Hitorial*/
+var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -576,9 +645,15 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
+/*Produccion*/
+document.getElementById("Limpiar_prod").addEventListener("click", Limpiar_prod);
+function Limpiar_prod() {
+    document.getElementById("Produccion").reset();
+}
 /*******************************************************/
 /*Indicadores*/
 /*******************************************************/
+document.getElementById("Calcular_Indicadores").addEventListener("click", Indicadores);
 function Indicadores(){
 	Mes = 0
 	Material = 0
@@ -590,7 +665,8 @@ function Indicadores(){
 	});
 	$("#ResultadoI").val(Mes / Material);
     
-    var myNodelist = document.getElementsByTagName("LI");
+/*Hitorial*/
+var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -639,9 +715,16 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
+
+/*Indicadores*/
+document.getElementById("Limpiar_indicadores").addEventListener("click", Limpiar_indicadores);
+function Limpiar_indicadores() {
+    document.getElementById("indicadores").reset();
+}
 /*******************************************************/
 /*Indices*/
 /*******************************************************/
+document.getElementById("Calcular_Indices").addEventListener("click", Indices);
 function Indices(){
 	Estudio = 0
 	Base = 0
@@ -661,7 +744,8 @@ function Indices(){
 	$("#ResultadoIN").val(indice_p);
     $("#ResultadoPOR").val(indice_R);
     
-    var myNodelist = document.getElementsByTagName("LI");
+/*Hitorial*/
+var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -709,51 +793,8 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
-/*******************************************************/
-/*Limpiar*/
-/*******************************************************/
-/*Tranformaciones*/
-function Limpiar_Trans() {
-    document.getElementById("trans").reset();
-}
-/*Produccion*/
-function Limpiar_prod() {
-    document.getElementById("Produccion").reset();
-}
-/*unidades*/
-function Limpiar_produc() {
-    document.getElementById("Productividad").reset();
-}
-/*Totales*/
-function Limpiar_costos() {
-    document.getElementById("costos").reset();
-}
-/*Unitarios*/
-function Limpiar_costo() {
-    document.getElementById("Unitario").reset();
-}
-/*Indicadores*/
-function Limpiar_indicadores() {
-    document.getElementById("indicadores").reset();
-}
 /*Indices*/
+document.getElementById("Limpiar_indices").addEventListener("click", Limpiar_indices);
 function Limpiar_indices() {
     document.getElementById("indices").reset();
 }
-/*Ganancia*/
-function Limpiar_ganancia() {
-    document.getElementById("ganancia").reset();
-}
-/*Rentabilidad*/
-function Limpiar_rentabilidad() {
-    document.getElementById("rentabilidad").reset();
-}
-/*Trabajadores*/
-function Limpiar_Trabajadores() {
-    document.getElementById("Trabajadores1").reset();
-}
-/*Materiales*/
-function Limpiar_Materiales() {
-    document.getElementById("Materiales1").reset();
-}
-

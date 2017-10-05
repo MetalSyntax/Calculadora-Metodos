@@ -1,6 +1,7 @@
 /*******************************************************/
 /*Numero Tecnico, Ciclos y Piezas por Ciclo*/
 /*******************************************************/
+document.getElementById("Calcular_Numero_Tecnico").addEventListener("click",Numero_Tecnico);
 function Numero_Tecnico(){
    toe = 0
    toi = 0
@@ -43,6 +44,7 @@ function Numero_Tecnico(){
     $("#pc1").val(Math.floor(pc1));
     $("#pc2").val(Math.ceil(pc2));
     
+/*Hitorial*/    
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -88,12 +90,17 @@ list.addEventListener('click', function(ev) {
       var div = this.parentElement;
       div.style.display = "none";
     }
-  }
-    
+  }   
+}
+/*Numero_Tecnico*/
+document.getElementById("Limpiar_Numero_Tecnico").addEventListener("click",Limpiar_Numero_Tecnico);
+function Limpiar_Numero_Tecnico() {
+    document.getElementById("NTCPC").reset();
 }
 /*******************************************************/
 /*Tiempo Necesario*/
 /*******************************************************/
+document.getElementById("Calcular_Tiempo_Necesario").addEventListener("click",Tiempo_Necesario);
 function Tiempo_Necesario(){
     np = 0
     tc = 0
@@ -114,7 +121,8 @@ function Tiempo_Necesario(){
 	});
     tn = np * (tc/pt)*(1/e)*(1/60);
     $("#tn").val(tn);
-    
+
+/*Hitorial*/
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -161,12 +169,17 @@ list.addEventListener('click', function(ev) {
       var div = this.parentElement;
       div.style.display = "none";
     }
-  }
-    
+  } 
+}
+/*Tiempo Necesario*/
+document.getElementById("Limpiar_Tiempo_Necesario").addEventListener("click",Limpiar_Tiempo_Necesario);
+function Limpiar_Tiempo_Necesario() {
+    document.getElementById("Tiempo_Necesario").reset();
 }
 /*******************************************************/
 /*Costo de la Mano de Obra (Jornada Normal)*/
 /*******************************************************/
+document.getElementById("Analisis_de_Costos1").addEventListener("click",Analisis_de_Costos1);
 function Analisis_de_Costos1(){
     mohjn = 0
     mocjn = 0
@@ -184,7 +197,8 @@ function Analisis_de_Costos1(){
 	});
     cmojn = mohjn * mocjn * tjn
     $("#cmojn").val(cmojn);
-   
+    
+/*Hitorial*/
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -231,12 +245,17 @@ list.addEventListener('click', function(ev) {
       var div = this.parentElement;
       div.style.display = "none";
     }
-  }
-        
-    }
+  } 
+}
+/*CMOJN*/
+document.getElementById("Limpiar_CMOJN").addEventListener("click",Limpiar_CMOJN);
+function Limpiar_CMOJN() {
+    document.getElementById("CMOJN").reset();
+}
 /*******************************************************/
 /*Costo de la Mano de Obra (Jornada Extra)*/
 /*******************************************************/
+document.getElementById("Analisis_de_Costos2").addEventListener("click",Analisis_de_Costos2);
 function Analisis_de_Costos2(){
     motje = 0
     mocje = 0
@@ -254,7 +273,8 @@ function Analisis_de_Costos2(){
 	});
     cmoje = motje * mocje * tje
     $("#cmoje").val(cmoje);
-         
+    
+/*Hitorial*/     
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -302,10 +322,16 @@ list.addEventListener('click', function(ev) {
       div.style.display = "none";
     }
   }
-     }
+}
+/*CMOJE*/
+document.getElementById("Limpiar_CMOJE").addEventListener("click",Limpiar_CMOJE);
+function Limpiar_CMOJE() {
+    document.getElementById("CMOJE").reset();
+}
 /*******************************************************/
 /*Costo de Maquinaria (Encendida)*/
 /*******************************************************/
+document.getElementById("Analisis_de_Costos3").addEventListener("click",Analisis_de_Costos3);
 function Analisis_de_Costos3(){
     mmjf = 0
     mcjf = 0
@@ -332,7 +358,8 @@ function Analisis_de_Costos3(){
 	});
     cmjf = mmjf * mcjf * tnm1 * (mf/tcm1)
     $("#cmjf").val(cmjf);
-        
+    
+/*Hitorial*/    
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -379,12 +406,17 @@ list.addEventListener('click', function(ev) {
       var div = this.parentElement;
       div.style.display = "none";
     }
-  }
-        
-    }
+  }     
+}
+/*CMF*/
+document.getElementById("Limpiar_CMF").addEventListener("click",Limpiar_CMF);
+function Limpiar_CMF() {
+    document.getElementById("CMF").reset();
+}
 /*******************************************************/
 /*Costo de maquinaria (Apagada)*/
 /*******************************************************/
+document.getElementById("Analisis_de_Costos4").addEventListener("click",Analisis_de_Costos4);
 function Analisis_de_Costos4(){
     mmja = 0
     mcja = 0
@@ -412,6 +444,7 @@ function Analisis_de_Costos4(){
     cmjp = mmja * mcja * tnm2 * (mp/tcm2)
     $("#cmjp").val(cmjp);
         
+/*Hitorial*/
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -458,12 +491,17 @@ list.addEventListener('click', function(ev) {
       var div = this.parentElement;
       div.style.display = "none";
     }
-  }
-        
-    }
+  }   
+}
+/*CMP*/
+document.getElementById("Limpiar_CMP").addEventListener("click",Limpiar_CMP);
+function Limpiar_CMP() {
+    document.getElementById("CMP").reset();
+}
 /*******************************************************/
 /*Produccion*/
 /*******************************************************/
+document.getElementById("Calcular_Produccion").addEventListener("click",Produccion);
 function Produccion(){
      numero_piezas = 0
      ciclo_produccion = 0
@@ -485,7 +523,8 @@ function Produccion(){
     produccion_resultado = (numero_piezas / ciclo_produccion) * tiempo_produccion * eficiencia_produccion
     $("#produccion_resultado").val(produccion_resultado);
     
-    var myNodelist = document.getElementsByTagName("LI");
+/*Hitorial*/
+var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -533,9 +572,15 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
+/*Produccion_HM*/
+document.getElementById("Limpiar_Produccion_HM").addEventListener("click",Limpiar_Produccion_HM);
+function Limpiar_Produccion_HM() {
+    document.getElementById("Produccion_HM").reset();
+}
 /*******************************************************/
 /*Piezas Defectuosas*/
 /*******************************************************/
+document.getElementById("Calcular_piezas_defectuosas").addEventListener("click", piezas_defectuosas);
 function piezas_defectuosas(){
     demanda_aumentadaDF = 0
     demandaDF = 0
@@ -548,6 +593,7 @@ function piezas_defectuosas(){
     PiezasDF = demanda_aumentadaDF - demandaDF
     $("#PiezasDF_resultado").val(PiezasDF);
     
+/*Hitorial*/
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -596,9 +642,15 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
+/*Piezas_Defectuosas*/
+document.getElementById("Limpiar_Piezas_Defectuosas").addEventListener("click",Limpiar_Piezas_Defectuosas);
+function Limpiar_Piezas_Defectuosas() {
+    document.getElementById("Piezas_Defectuosas").reset();
+}
 /*******************************************************/
 /*Demanda Aumentada*/
 /*******************************************************/
+document.getElementById("Calcular_Demanda_Aumentada").addEventListener("click", Demanda_Aumentada);
 function Demanda_Aumentada(){
     Demanda = 0
     PorcentajeError = 0
@@ -611,7 +663,8 @@ function Demanda_Aumentada(){
     DemandaA = (Demanda * 100 / (100-PorcentajeError))
     $("#DemandaA_resultado").val(DemandaA);
     
-    var myNodelist = document.getElementsByTagName("LI");
+/*Hitorial*/
+var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -659,9 +712,15 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
+/*Demanda_Aumentada*/
+document.getElementById("Limpiar_Demanda_Aumentada").addEventListener("click", Limpiar_Demanda_Aumentada);
+function Limpiar_Demanda_Aumentada() {
+    document.getElementById("Demanda_Aumentada").reset();
+}
 /*******************************************************/
 /*Numero de Hombres*/
 /*******************************************************/
+document.getElementById("Calcular_Numero_de_Hombres").addEventListener("click", Numero_de_Hombres);
 function Numero_de_Hombres(){
     Demanda_Aumentada_NH = 0
     Produccion_NH = 0
@@ -680,6 +739,7 @@ function Numero_de_Hombres(){
      MaquinasNH = MaquinasNH + HombresNH*2
      $("#MaquinasNH").val(MaquinasNH);
     
+/*Hitorial*/
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -728,9 +788,15 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
+/*Numero_de_Hombres*/
+document.getElementById("Limpiar_Numero_de_Hombres").addEventListener("click", Limpiar_Numero_de_Hombres);
+function Limpiar_Numero_de_Hombres() {
+    document.getElementById("Numero_de_Hombres").reset();
+}
 /*******************************************************/
 /*Costo de Inversion*/
 /*******************************************************/
+document.getElementById("Calcular_Costo_Inversion").addEventListener("click", Costo_Inversion);
 function Costo_Inversion(){
     cuxum = 0
     nxm = 0
@@ -746,7 +812,7 @@ function Costo_Inversion(){
     }
      $("#resultado_inv").val(resultado_inv);
     
-    
+/*Hitorial*/
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -795,9 +861,15 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
+/*Limpiar Costo_de_Inversion*/
+document.getElementById("Limpiar_Costo_de_Inversion").addEventListener("click", Limpiar_Costo_de_Inversion);
+function Limpiar_Costo_de_Inversion() {
+    document.getElementById("Costo_de_Inversion").reset();
+}
 /*******************************************************/
 /*Costo de Piezas Defectuosas */
 /*******************************************************/
+document.getElementById("Calcular_Costo_Piezas_Defectuosas").addEventListener("click", Costo_Piezas_Defectuosas);
 function Costo_Piezas_Defectuosas(){
     pdc = 0
     cpd = 0
@@ -810,7 +882,8 @@ function Costo_Piezas_Defectuosas(){
     resultado_CDF = pdc * cpd
      $("#resultado_CDF").val(resultado_CDF);
     
-    var myNodelist = document.getElementsByTagName("LI");
+/*Hitorial*/
+var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -858,9 +931,15 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
+/*Costo_Piezas_Defectuosas*/
+document.getElementById("Limpiar_Costo_Piezas_Defectuosas").addEventListener("click", Limpiar_Costo_Piezas_Defectuosas);
+function Limpiar_Costo_Piezas_Defectuosas() {
+    document.getElementById("Costo_Piezas_Defectuosas").reset();
+}
 /*******************************************************/
 /*Depreciasion*/
 /*******************************************************/
+document.getElementById("Calcular_Costo_Depre").addEventListener("click", Costo_Depre);
 function Costo_Depre(){
     cxi = 0
     vxu = 0
@@ -873,7 +952,8 @@ function Costo_Depre(){
     resultado_Depre = cxi * vxu
      $("#resultado_Depre").val(resultado_Depre);
     
-        var myNodelist = document.getElementsByTagName("LI");
+/*Hitorial*/
+var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -921,9 +1001,15 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
+/*Costo_de_Materiales*/
+document.getElementById("Limpiar_Costo_de_Materiales").addEventListener("click", Limpiar_Costo_de_Materiales);
+function Limpiar_Costo_de_Materiales() {
+    document.getElementById("Costo_de_Materiales").reset();
+}
 /*******************************************************/
 /*Costo de Materiales*/
 /*******************************************************/
+document.getElementById("Calcular_Costo_Materiales").addEventListener("click", Costo_Materiales);
 function Costo_Materiales(){
     daCM = 0
     CM = 0
@@ -936,6 +1022,7 @@ function Costo_Materiales(){
     resultado_CM = cxi * vxu
      $("#resultado_CM").val(resultado_CM);
     
+/*Hitorial*/
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -983,65 +1070,9 @@ list.addEventListener('click', function(ev) {
       div.style.display = "none";
     }
   }
-    
-}
-/*******************************************************/
-/*Limpiar*/
-/*******************************************************/
-/*Numero_Tecnico*/
-function Limpiar_Numero_Tecnico() {
-    document.getElementById("NTCPC").reset();
-}
-/*Produccion_HM*/
-function Limpiar_Produccion_HM() {
-    document.getElementById("Produccion_HM").reset();
-}
-/*Demanda_Aumentada*/
-function Limpiar_Demanda_Aumentada() {
-    document.getElementById("Demanda_Aumentada").reset();
-}
-/*Piezas_Defectuosas*/
-function Limpiar_Piezas_Defectuosas() {
-    document.getElementById("Piezas_Defectuosas").reset();
-}
-/*Numero_de_Hombres*/
-function Limpiar_Numero_de_Hombres() {
-    document.getElementById("Numero_de_Hombres").reset();
-}
-/*Costo_de_Inversion*/
-function Limpiar_Costo_de_Inversion() {
-    document.getElementById("Costo_de_Inversion").reset();
-}
-/*CMOJN*/
-function Limpiar_CMOJN() {
-    document.getElementById("CMOJN").reset();
-}
-/*CMOJE*/
-function Limpiar_CMOJE() {
-    document.getElementById("CMOJE").reset();
-}
-/*CMF*/
-function Limpiar_CMF() {
-    document.getElementById("CMF").reset();
-}
-/*CMP*/
-function Limpiar_CMP() {
-    document.getElementById("CMP").reset();
-}
-/*Costo_Piezas_Defectuosas*/
-function Limpiar_Costo_Piezas_Defectuosas() {
-    document.getElementById("Costo_Piezas_Defectuosas").reset();
-}
-/*Costo_de_Materiales*/
-function Limpiar_Costo_de_Materiales() {
-    document.getElementById("Costo_de_Materiales").reset();
 }
 /*Depreciasion*/
+document.getElementById("Limpiar_Depreciacion").addEventListener("click", Limpiar_Depreciacion);
 function Limpiar_Depreciacion() {
     document.getElementById("Depreciacion").reset();
 }
-/*Tiempo Necesario*/
-function Limpiar_Tiempo_Necesario() {
-    document.getElementById("Tiempo_Necesario").reset();
-}
-

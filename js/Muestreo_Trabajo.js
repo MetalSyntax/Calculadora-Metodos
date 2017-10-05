@@ -1,6 +1,7 @@
 /*******************************************************/
 /*Calificacion del Operario*/
 /*******************************************************/
+document.getElementById("Calificacion_OP").addEventListener("click",Calificacion_OP);
 function Calificacion_OP(){
     
    var Supl_Sex,Necesidades,Fatiga,Trabajo;
@@ -163,6 +164,7 @@ function Calificacion_OP(){
     
     $("#resultado_supl").val(Sum_Tol_Total);
         
+/*Hitorial*/      
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -394,6 +396,11 @@ list.addEventListener('click', function(ev) {
   }
 }
 }
+/*Limpiar Calificacion*/
+document.getElementById("Limpiar_Calificacion_OP").addEventListener("click",Limpiar_Calificacion_OP);
+function Limpiar_Calificacion_OP() {
+    document.getElementById("Supl_De").reset();
+}
 /*******************************************************/
 /*Suplementos de Descanso*/
 /*******************************************************/
@@ -435,11 +442,4 @@ function Suplementos_SU(){
 /*******************************************************/
 function Observaciones_NUM(){
     
-}
-/*******************************************************/
-/*Limpiar*/
-/*******************************************************/
-/*Suplementos*/
-function Limpiar_Calificacion_OP() {
-    document.getElementById("Supl_De").reset();
 }

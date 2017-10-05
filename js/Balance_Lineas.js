@@ -1,6 +1,7 @@
 /*******************************************************/
 /*Numero de Recursos*/
 /*******************************************************/
+document.getElementById("Calcular_Numero_Recursos").addEventListener("click",Numero_Recursos);
 function Numero_Recursos(){
 	tsi = 0
 	be = 0
@@ -12,7 +13,8 @@ function Numero_Recursos(){
 	});
     nr = tsi/be
 	$("#nr").val(nr);
-    
+
+/*Hitorial*/
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -61,10 +63,15 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
-
+/*Numero de Recursos*/
+document.getElementById("Limpiar_Numero_Recursos").addEventListener("click",Limpiar_Numero_Recursos);
+function Limpiar_Numero_Recursos() {
+    document.getElementById("Numero_Recursos").reset();
+}
 /*******************************************************/
 /*Base de Equilibrio*/
 /*******************************************************/
+document.getElementById("Calcular_base_equilibrio").addEventListener("click", base_equilibrio);
 function base_equilibrio() {
     demanda_inv = 0
     jornada_normal_be = 0
@@ -82,6 +89,7 @@ function base_equilibrio() {
     base_equi = (1/demanda_inv)*jornada_normal_be*60*eficiencia_be
     $("#Resultado_be").val(base_equi);
     
+/*Hitorial*/  
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -130,27 +138,15 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
-/*******************************************************/
-/*Ritmo*/
-/*******************************************************/
-
-
-
-/*******************************************************/
-/*Eficiencia de Linea*/
-/*******************************************************/
-
-
-
-/*******************************************************/
-/*Tiempo Extra*/
-/*******************************************************/
-
-
-
+/*Base de Equilibrio*/
+document.getElementById("Limpiar_base_equilibrio").addEventListener("click",Limpiar_base_equilibrio);
+function Limpiar_base_equilibrio() {
+    document.getElementById("Base_Equilibrio").reset();
+}
 /*******************************************************/
 /*Red de Presedencia*/
 /*******************************************************/
+document.getElementById("Calcular_red_precedencia").addEventListener("click",red_precedencia);
 function red_precedencia(){
 	Sumatoria_RP = 0
 	$(".Tiempos_Red").each(function(index, value) {
@@ -158,6 +154,8 @@ function red_precedencia(){
 		});
 	$("#Resultado_Red").val(Sumatoria_RP);
     
+    
+/*Hitorial*/
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -206,24 +204,29 @@ list.addEventListener('click', function(ev) {
     }
   }
 }
+/*Nueva Linea*/
+document.getElementById("Nueva_Linea_Red").addEventListener("click",Nueva_Linea_Red);
 function Nueva_Linea_Red() {
 	$("#Red_de_Precedencia").append('<input type="number" class="Tiempos_Red" value="0"/><br/>');
 }
-function Limpiar_Red_de_Precedencia(){
+/*Borrar Linea*/
+document.getElementById("Borrar_Linea_Red").addEventListener("click",Borrar_Linea_Red);
+function Borrar_Red_de_Precedencia(){
     $("#Red_de_Precedencia").empty('<input type="number" class="Tiempos_Red" value="0">/><br/>');
 }
-/*******************************************************/
-/*Limpiar*/
-/*******************************************************/
-/*Numero de Recursos*/
-function Limpiar_Numero_Recursos() {
-    document.getElementById("Numero_Recursos").reset();
-}
-/*Base de Equilibrio*/
-function Limpiar_base_equilibrio() {
-    document.getElementById("Base_Equilibrio").reset();
-}
 /*Red de Precedencia*/
+document.getElementById("Limpiar_Red_de_Precedencia").addEventListener("click",Limpiar_Red_de_Precedencia);
 function Limpiar_Red_de_Precedencia() {
     document.getElementById("red").reset();
 }
+/*******************************************************/
+/*Ritmo*/
+/*******************************************************/
+
+/*******************************************************/
+/*Eficiencia de Linea*/
+/*******************************************************/
+
+/*******************************************************/
+/*Tiempo Extra*/
+/*******************************************************/
