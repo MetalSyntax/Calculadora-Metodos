@@ -43,54 +43,6 @@ function Numero_Tecnico(){
     pc2 = nt
     $("#pc1").val(Math.floor(pc1));
     $("#pc2").val(Math.ceil(pc2));
-    
-/*Hitorial*/    
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-    
-  var li = document.createElement("li");
-  var inputValue = "Numero Tecnico = "+document.getElementById("nt").value+" Ciclo 1 = "+document.getElementById("c1").value+" Ciclo 2 = "+document.getElementById("c2").value+" Piezas Ciclo 1 = "+document.getElementById("pc1").value+" Piezas Ciclo 2 = "+document.getElementById("pc2").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("¡Debes escribir algo!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }   
 }
 /*Numero_Tecnico*/
 document.getElementById("Limpiar_Numero_Tecnico").addEventListener("click",Limpiar_Numero_Tecnico);
@@ -121,55 +73,6 @@ function Tiempo_Necesario(){
 	});
     tn = np * (tc/pt)*(1/e)*(1/60);
     $("#tn").val(tn);
-
-/*Hitorial*/
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-    
-    var li = document.createElement("li");
-  var inputValue = document.getElementById("tn").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("¡Debes escribir algo!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("tn").value;
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  } 
 }
 /*Tiempo Necesario*/
 document.getElementById("Limpiar_Tiempo_Necesario").addEventListener("click",Limpiar_Tiempo_Necesario);
@@ -197,55 +100,6 @@ function Analisis_de_Costos1(){
 	});
     cmojn = mohjn * mocjn * tjn
     $("#cmojn").val(cmojn);
-    
-/*Hitorial*/
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-    
-    var li = document.createElement("li");
-  var inputValue = document.getElementById("cmojn").value+" $ ";
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("¡Debes escribir algo!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("cmojn").value;
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  } 
 }
 /*CMOJN*/
 document.getElementById("Limp_CMOJN").addEventListener("click",Limpiar_CMOJN);
@@ -273,55 +127,6 @@ function Analisis_de_Costos2(){
 	});
     cmoje = motje * mocje * tje
     $("#cmoje").val(cmoje);
-    
-/*Hitorial*/     
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-    
-    var li = document.createElement("li");
-  var inputValue = document.getElementById("cmoje").value+" $ ";
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("¡Debes escribir algo!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("cmoje").value;
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
 }
 /*CMOJE*/
 document.getElementById("Limp_CMOJE").addEventListener("click",Limpiar_CMOJE);
@@ -358,55 +163,6 @@ function Analisis_de_Costos3(){
 	});
     cmjf = mmjf * mcjf * tnm1 * (mf/tcm1)
     $("#cmjf").val(cmjf);
-    
-/*Hitorial*/    
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-    
-    var li = document.createElement("li");
-  var inputValue = document.getElementById("cmjf").value+" $ ";
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("¡Debes escribir algo!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("cmjf").value;
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }     
 }
 /*CMF*/
 document.getElementById("Limp_CMF").addEventListener("click",Limpiar_CMF);
@@ -443,55 +199,7 @@ function Analisis_de_Costos4(){
 	});
     cmjp = mmja * mcja * tnm2 * (mp/tcm2)
     $("#cmjp").val(cmjp);
-        
-/*Hitorial*/
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-    
-    var li = document.createElement("li");
-  var inputValue = document.getElementById("cmjp").value+" $ ";
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("¡Debes escribir algo!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("cmjp").value;
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }   
+      
 }
 /*CMP*/
 document.getElementById("Limp_CMP").addEventListener("click",Limpiar_CMP);
@@ -522,55 +230,6 @@ function Produccion(){
 	});
     produccion_resultado = (numero_piezas / ciclo_produccion) * tiempo_produccion * eficiencia_produccion
     $("#produccion_resultado").val(produccion_resultado);
-    
-/*Hitorial*/
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-    
-    var li = document.createElement("li");
-  var inputValue = document.getElementById("produccion_resultado").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("¡Debes escribir algo!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("produccion_resultado").value;
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
 }
 /*Produccion_HM*/
 document.getElementById("Limpiar_Produccion_HM").addEventListener("click",Limpiar_Produccion_HM);
@@ -592,55 +251,6 @@ function piezas_defectuosas(){
 	});
     PiezasDF = demanda_aumentadaDF - demandaDF
     $("#PiezasDF_resultado").val(PiezasDF);
-    
-/*Hitorial*/
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-    
-    var li = document.createElement("li");
-  var inputValue = document.getElementById("PiezasDF_resultado").value+" Piezas Defectuosas";
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("¡Debes escribir algo!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("PiezasDF_resultado").value;
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
 }
 /*Piezas_Defectuosas*/
 document.getElementById("Limpiar_Piezas_Defectuosas").addEventListener("click",Limpiar_Piezas_Defectuosas);
@@ -662,55 +272,6 @@ function Demanda_Aumentada(){
 	});
     DemandaA = (Demanda * 100 / (100-PorcentajeError))
     $("#DemandaA_resultado").val(DemandaA);
-    
-/*Hitorial*/
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-    
-    var li = document.createElement("li");
-  var inputValue = document.getElementById("DemandaA_resultado").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("¡Debes escribir algo!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("DemandaA_resultado").value;
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
 }
 /*Demanda_Aumentada*/
 document.getElementById("Limpiar_Demanda_Aumentada").addEventListener("click", Limpiar_Demanda_Aumentada);
@@ -738,55 +299,6 @@ function Numero_de_Hombres(){
      $("#HombresNH").val(HombresNH);
      MaquinasNH = MaquinasNH + HombresNH*2
      $("#MaquinasNH").val(MaquinasNH);
-    
-/*Hitorial*/
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-    
-    var li = document.createElement("li");
-  var inputValue = document.getElementById("HombresNH").value+" Hombres "+document.getElementById("MaquinasNH").value+" Maquinas ";
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("¡Debes escribir algo!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("MaquinasNH").value;
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
 }
 /*Numero_de_Hombres*/
 document.getElementById("Limpiar_Numero_de_Hombres").addEventListener("click", Limpiar_Numero_de_Hombres);
@@ -811,55 +323,6 @@ function Costo_Inversion(){
     var cdim = document.getElementById("cdim").value = " $ "
     }
      $("#resultado_inv").val(resultado_inv);
-    
-/*Hitorial*/
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-    
-    var li = document.createElement("li");
-  var inputValue = document.getElementById("resultado_inv").value+" "+document.getElementById("cdim").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("¡Debes escribir algo!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("resultado_inv").value;
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
 }
 /*Limpiar Costo_de_Inversion*/
 document.getElementById("Limp_Costo_de_Inversion").addEventListener("click", Limpiar_Costo_de_Inversion);
@@ -881,55 +344,6 @@ function Costo_Piezas_Defectuosas(){
 	});
     resultado_CDF = pdc * cpd
      $("#resultado_CDF").val(resultado_CDF);
-    
-/*Hitorial*/
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-    
-    var li = document.createElement("li");
-  var inputValue = document.getElementById("resultado_CDF").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("¡Debes escribir algo!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("resultado_CDF").value;
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
 }
 /*Costo_Piezas_Defectuosas*/
 document.getElementById("Limpiar_Costo_Piezas_Defectuosas").addEventListener("click", Limpiar_Costo_Piezas_Defectuosas);
@@ -951,55 +365,6 @@ function Costo_Depre(){
 	});
     resultado_Depre = cxi * vxu
      $("#resultado_Depre").val(resultado_Depre);
-    
-/*Hitorial*/
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-    
-    var li = document.createElement("li");
-  var inputValue = document.getElementById("resultado_Depre").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("¡Debes escribir algo!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("resultado_Depre").value;
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
 }
 /*Depreciasion*/
 document.getElementById("Limpiar_Depreciacion").addEventListener("click", Limpiar_Depreciacion);
@@ -1021,55 +386,6 @@ function Costo_Materiales(){
 	});
     resultado_CM = daCM * CM
      $("#resultado_CM").val(resultado_CM);
-    
-/*Hitorial*/
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-    
-    var li = document.createElement("li");
-  var inputValue = document.getElementById("resultado_CM").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("¡Debes escribir algo!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("resultado_CM").value;
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
 }
 /*Costo_de_Materiales*/
 document.getElementById("Limp_Costo_de_Materiales").addEventListener("click", Limpiar_Costo_de_Materiales);

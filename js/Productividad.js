@@ -272,6 +272,37 @@ function Indicadores(){
 		Material = Material + eval($(this).val());
 	});
 	$("#ResultadoI").val(Mes / Material);
+    
+/*Informacion Guardada*/
+var Indicadores_Clave = "Costo Unitario = "+document.getElementById("Costo_unitario").value+" Precio de Venta al Publico = "+document.getElementById("pvp").value;
+var Ganancia_Valor = document.getElementById("ResultadoG").value;
+localStorage.setItem(Ganancia_Clave, Ganancia_Valor);
+}
+/*Leer Informacion Guardada*/
+function Leer_Ganancia(Ganancia_Clave){
+    
+    var Zona_datos_Ganancia = document.getElementById("Zona_datos_Ganancia");
+    var Valor_Ganancia = localStorage.getItem(Ganancia_Clave);
+    Zona_datos_Ganancia.innerHTML = "";
+    for (i=0;i<localStorage.length;i++){ 
+        var Ganancia_Clave = localStorage.key(i);
+        var Valor_Ganancia = localStorage.getItem(Ganancia_Clave);
+        Zona_datos_Ganancia.innerHTML += '<div> Datos: '+Ganancia_Clave+' -- '+ 'Resultado: '+Valor_Ganancia+' $ '+'<input type="button" onclick="Eliminar_Item_Ganancia(\''+ Ganancia_Clave + '\')" value="X"></div>';
+    }   
+}
+/*Mostrar Historial*/
+function Mostrar_Ganancia(){
+    Leer_Ganancia();
+}
+/*Borrar Historial*/
+function Borrar_Ganancia(){
+        localStorage.clear();
+        Leer_Ganancia();
+}
+/*Borrar Item*/
+function Eliminar_Item_Ganancia(Ganancia_Clave){
+    localStorage.removeItem(Ganancia_Clave);
+     Leer_Ganancia();
 }
 /*Indicadores*/
 document.getElementById("Limpiar_indicadores").addEventListener("click", Limpiar_indicadores);

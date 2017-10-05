@@ -13,55 +13,6 @@ function Numero_Recursos(){
 	});
     nr = tsi/be
 	$("#nr").val(nr);
-
-/*Hitorial*/
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-
- var li = document.createElement("li");
-  var inputValue = document.getElementById("nr").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("¡Debes escribir algo!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("Resultado_Red").value;
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
 }
 /*Numero de Recursos*/
 document.getElementById("Limpiar_Numero_Recursos").addEventListener("click",Limpiar_Numero_Recursos);
@@ -88,55 +39,6 @@ function base_equilibrio() {
 	});
     base_equi = (1/demanda_inv)*jornada_normal_be*60*eficiencia_be
     $("#Resultado_be").val(base_equi);
-    
-/*Hitorial*/  
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-
- var li = document.createElement("li");
-  var inputValue = document.getElementById("Resultado_be").value+" Minutos / Unidades";
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("¡Debes escribir algo!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("Resultado_be").value;
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
 }
 /*Base de Equilibrio*/
 document.getElementById("Limp_base_equilibrio").addEventListener("click",Limpiar_base_equilibrio);
@@ -153,56 +55,6 @@ function red_precedencia(){
 			Sumatoria_RP = Sumatoria_RP + eval($(this).val());
 		});
 	$("#Resultado_Red").val(Sumatoria_RP);
-    
-    
-/*Hitorial*/
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-
- var li = document.createElement("li");
-  var inputValue = document.getElementById("Resultado_Red").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("¡Debes escribir algo!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("Resultado_Red").value;
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
 }
 /*Nueva Linea*/
 document.getElementById("Nueva_Linea_Red").addEventListener("click",Nueva_Linea_Red);
