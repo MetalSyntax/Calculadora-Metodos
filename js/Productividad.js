@@ -206,17 +206,17 @@ function Dividiendo() {
     $("#Resultado_Divi").val(Numero_de_Unidades);
 }
 /*Linea Nueva*/
-document.getElementById("Nueva_Linea_Trans").addEventListener("click",Nueva_Linea_Trans);
+document.getElementById("New_Linea_Trans").addEventListener("click",Nueva_Linea_Trans);
 function Nueva_Linea_Trans() {
 	$("#Transformaciones").append('<input type="number" class="Numero_de_Unidades" value="0"/><br/>');   
 }
 /*Borrar*/
-document.getElementById("Borrar_Linea_Trans").addEventListener("click",Borrar_Linea_Trans);
+document.getElementById("Delete_Linea_Trans").addEventListener("click",Borrar_Linea_Trans);
 function Borrar_Linea_Trans(){
     $("#Transformaciones").empty('<input type="number" class="Numero_de_Unidades" value="0">/><br/>');
 }
 /*Homogenizar las Unidades*/
-document.getElementById("Limpiar_Trans").addEventListener("click",Limpiar_Trans);
+document.getElementById("Limp_Trans").addEventListener("click",Limpiar_Trans);
 function Limpiar_Trans() {
     document.getElementById("trans").reset();
 }
@@ -281,24 +281,24 @@ list.addEventListener('click', function(ev) {
   }
 }
 /*Linea Nueva*/
-document.getElementById("Nueva_Linea_Costo").addEventListener("click", Nueva_Linea_Costo);
+document.getElementById("New_Linea_Costo").addEventListener("click", Nueva_Linea_Costo);
 function Nueva_Linea_Costo() {
 	$("#Costos_Linea").append('<input type="number" class="Costos_Totales_Datos" value="0"/><br/>');
 }
 /*Borrar*/
-document.getElementById("Borrar_Linea_Costo").addEventListener("click", Borrar_Linea_Costo);
+document.getElementById("Delete_Linea_Costo").addEventListener("click", Borrar_Linea_Costo);
 function Borrar_Linea_Costo(){
     $("#Costos_Linea").empty('<input type="number" class="Costos_Totales_Datos" value="0">/><br/>');
 }
 /*Totales*/
-document.getElementById("Limpiar_costos").addEventListener("click", Limpiar_costos);
+document.getElementById("Limp_costos").addEventListener("click", Limpiar_costos);
 function Limpiar_costos() {
     document.getElementById("costos").reset();
 }
 /*******************************************************/
 /*Costo Unitario*/
 /*******************************************************/
-document.getElementById("Costo_Unitario_Prod").addEventListener("click", Costo_Unitario_Prod);
+document.getElementById("Costo_Unitario_Produccion").addEventListener("click", Costo_Unitario_Prod);
 function Costo_Unitario_Prod(){
 	Total_Unidades = 0
 	Costo_Total = 0
@@ -362,7 +362,7 @@ list.addEventListener('click', function(ev) {
   }
 }
 /*Unitarios*/
-document.getElementById("Limpiar_costo").addEventListener("click", Limpiar_costo);
+document.getElementById("Limp_costo").addEventListener("click", Limpiar_costo);
 function Limpiar_costo() {
     document.getElementById("Unitario").reset();
 }
@@ -438,7 +438,7 @@ function Limpiar_produc() {
 /*******************************************************/
 /*Ganancia*/
 /*******************************************************/
-document.getElementById("Ganancia_R").addEventListener("click", Ganancia_R);
+document.getElementById("Ganancia_").addEventListener("click", Ganancia_R);
 function Ganancia_R(){
 	pvp = 0
 	Costo_unitario = 0
@@ -505,7 +505,7 @@ list.addEventListener('click', function(ev) {
   }
 }
 /*Ganancia*/
-document.getElementById("Limpiar_ganancia").addEventListener("click", Limpiar_ganancia);
+document.getElementById("Limp_ganancia").addEventListener("click", Limpiar_ganancia);
 function Limpiar_ganancia() {
     document.getElementById("ganancia").reset();
 }

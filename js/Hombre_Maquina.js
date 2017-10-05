@@ -862,7 +862,7 @@ list.addEventListener('click', function(ev) {
   }
 }
 /*Limpiar Costo_de_Inversion*/
-document.getElementById("Limpiar_Costo_de_Inversion").addEventListener("click", Limpiar_Costo_de_Inversion);
+document.getElementById("Limp_Costo_de_Inversion").addEventListener("click", Limpiar_Costo_de_Inversion);
 function Limpiar_Costo_de_Inversion() {
     document.getElementById("Costo_de_Inversion").reset();
 }

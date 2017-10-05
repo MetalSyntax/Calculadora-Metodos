@@ -139,7 +139,7 @@ list.addEventListener('click', function(ev) {
   }
 }
 /*Base de Equilibrio*/
-document.getElementById("Limpiar_base_equilibrio").addEventListener("click",Limpiar_base_equilibrio);
+document.getElementById("Limp_base_equilibrio").addEventListener("click",Limpiar_base_equilibrio);
 function Limpiar_base_equilibrio() {
     document.getElementById("Base_Equilibrio").reset();
 }
