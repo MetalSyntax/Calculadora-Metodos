@@ -89,11 +89,11 @@ AppMethods.config( [ '$routeProvider' , function($routeProvider){
         controller: 'Hombre-Maquina'
     })
         $routeProvider.when('/Costo_MO_JN', {
-        templateUrl: 'html/Piezas_Defectuosas.html',
+        templateUrl: 'html/Costo_MO_JN.html',
         controller: 'Hombre-Maquina'
     })
         $routeProvider.when('/Costo_MO_JE', {
-        templateUrl: 'html/Piezas_Defectuosas.html',
+        templateUrl: 'html/Costo_MO_JE.html',
         controller: 'Hombre-Maquina'
     })
         $routeProvider.when('/Costo_MF', {
