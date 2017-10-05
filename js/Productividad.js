@@ -75,7 +75,7 @@ function Leer_Productividad_FT(Productividad_FT_Clave){
     var Zona_datos_Productividad_FT = document.getElementById("Zona_datos_Productividad_FT");
     var Valor_Productividad_FT = sessionStorage.getItem(Productividad_FT_Clave);
    // var Valor_Productividad_FT = sessionStorage[Productividad_FT_Clave];
-    Zona_datos_Productividad_FT.innerHTML="";
+    Zona_datos_Productividad_FT.innerHTML = "";
     
     for (i=0;i<sessionStorage.length;i++){
         var Clave_Productividad_FT = sessionStorage.key(i);
