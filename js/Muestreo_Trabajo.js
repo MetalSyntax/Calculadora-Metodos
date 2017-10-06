@@ -1,7 +1,6 @@
 /*******************************************************/
 /*Calificacion del Operario*/
 /*******************************************************/
-document.getElementById("Calificacion_OP").addEventListener("click", CalificacionOP);
 function CalificacionOP(){
     
    var Supl_Sex,Necesidades,Fatiga,Trabajo;
@@ -274,29 +273,20 @@ function CalificacionOP(){
 }
 }
 /*Limpiar Calificacion*/
-document.getElementById("Limpiar_Calificacion_OP").addEventListener("click", LimpiarCalificacionOP);
 function LimpiarCalificacionOP() {
 document.getElementById("Supl_De").reset();
-}
-/*******************************************************/
-/*Suplementos de Descanso*/
-/*******************************************************/
-function Suplementos_DE(){
-}
-/*******************************************************/
-/*Tiempo Necesario*/
-/*******************************************************/
-function Tiempo_NEMT(){
 }
 /*******************************************************/
 /*Coeficiente de Variacion*/
 /*******************************************************/
 function Coeficiente_VAR(){
+    
 }
 /*******************************************************/
-/*Tiempo Estandar*/
+/*Numero de Observaciones*/
 /*******************************************************/
-function Tiempo_ES(){
+function Observaciones_NUM(){ 
+    
 }
 /*******************************************************/
 /*Porcentaje de Tolerancia de Descanso*/
@@ -307,9 +297,24 @@ function Tolerancia_DE(){
 /*Sumatoria de Suplementos*/
 /*******************************************************/
 function Suplementos_SU(){
+    
 }
 /*******************************************************/
-/*Numero de Observaciones*/
+/*Suplementos de Descanso*/
 /*******************************************************/
-function Observaciones_NUM(){  
+function Suplementos_DE(){
+    
 }
+/*******************************************************/
+/*Tiempo Necesario*/
+/*******************************************************/
+function Tiempo_NEMT(){
+    
+}
+/*******************************************************/
+/*Tiempo Estandar*/
+/*******************************************************/
+function Tiempo_ES(){
+    
+}
+
