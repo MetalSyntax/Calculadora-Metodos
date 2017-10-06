@@ -261,7 +261,6 @@ function Limpiar_Homogenizar() {
 /*******************************************************/
 /*Indicadores*/
 /*******************************************************/
-document.getElementById("Calcular_Indicadores").addEventListener("click", Indicadores);
 function Indicadores(){
 	Mes = 0
 	Material = 0
@@ -274,45 +273,43 @@ function Indicadores(){
 	$("#ResultadoI").val(Mes / Material);
     
 /*Informacion Guardada*/
-var Indicadores_Clave = "Costo Unitario = "+document.getElementById("Costo_unitario").value+" Precio de Venta al Publico = "+document.getElementById("pvp").value;
-var Ganancia_Valor = document.getElementById("ResultadoG").value;
-localStorage.setItem(Ganancia_Clave, Ganancia_Valor);
+var Indicadores_Clave = "Mes = "+document.getElementById("Mes").value+" "+ document.getElementById("Tipo_Unidad1").value+" Material = "+document.getElementById("MaterialI").value+" "+document.getElementById("Tipo_Unidad2").value;
+var Indicadores_Valor = document.getElementById("ResultadoI").value;
+localStorage.setItem(Indicadores_Clave, Indicadores_Valor);
 }
 /*Leer Informacion Guardada*/
-function Leer_Ganancia(Ganancia_Clave){
+function Leer_Indicadores(Indicadores_Clave){
     
-    var Zona_datos_Ganancia = document.getElementById("Zona_datos_Ganancia");
-    var Valor_Ganancia = localStorage.getItem(Ganancia_Clave);
-    Zona_datos_Ganancia.innerHTML = "";
+    var Zona_datos_Indicadores = document.getElementById("Zona_datos_Indicadores");
+    var Valor_Indicadores = localStorage.getItem(Indicadores_Clave);
+    Zona_datos_Indicadores.innerHTML = "";
     for (i=0;i<localStorage.length;i++){ 
-        var Ganancia_Clave = localStorage.key(i);
-        var Valor_Ganancia = localStorage.getItem(Ganancia_Clave);
-        Zona_datos_Ganancia.innerHTML += '<div> Datos: '+Ganancia_Clave+' -- '+ 'Resultado: '+Valor_Ganancia+' $ '+'<input type="button" onclick="Eliminar_Item_Ganancia(\''+ Ganancia_Clave + '\')" value="X"></div>';
+        var Indicadores_Clave = localStorage.key(i);
+        var Valor_Indicadores = localStorage.getItem(Indicadores_Clave);
+        Zona_datos_Indicadores.innerHTML += '<div> Datos: '+Indicadores_Clave+' -- '+ 'Resultado: '+Valor_Indicadores+' $ '+'<input type="button" onclick="Eliminar_Item_Indicadores(\''+ Indicadores_Clave + '\')" value="X"></div>';
     }   
 }
 /*Mostrar Historial*/
-function Mostrar_Ganancia(){
-    Leer_Ganancia();
+function Mostrar_Indicadores(){
+    Leer_Indicadores();
 }
 /*Borrar Historial*/
-function Borrar_Ganancia(){
+function Borrar_Indicadores(){
         localStorage.clear();
-        Leer_Ganancia();
+        Leer_Indicadores();
 }
 /*Borrar Item*/
-function Eliminar_Item_Ganancia(Ganancia_Clave){
-    localStorage.removeItem(Ganancia_Clave);
-     Leer_Ganancia();
+function Eliminar_Item_Indicadores(Indicadores_Clave){
+    localStorage.removeItem(Indicadores_Clave);
+     Leer_Indicadores();
 }
 /*Indicadores*/
-document.getElementById("Limpiar_indicadores").addEventListener("click", Limpiar_indicadores);
 function Limpiar_indicadores() {
     document.getElementById("indicadores").reset();
 }
 /*******************************************************/
 /*Indices*/
 /*******************************************************/
-document.getElementById("Calcular_Indices").addEventListener("click", Indices);
 function Indices(){
 	Estudio = 0
 	Base = 0
@@ -331,9 +328,38 @@ function Indices(){
     }
 	$("#ResultadoIN").val(indice_p);
     $("#ResultadoPOR").val(indice_R);
+    
+var Indices_Clave = "Mes de Estudio = "+document.getElementById("Estudio").value+ " Mes de Base = "+document.getElementById("Base").value;
+var Indices_Valor = document.getElementById("ResultadoPOR").value;
+localStorage.setItem(Indices_Clave, Indices_Valor);
+}
+/*Leer Informacion Guardada*/
+function Leer_Indices(Indices_Clave){
+    
+    var Zona_datos_Indices = document.getElementById("Zona_datos_Indices");
+    var Valor_Indices = localStorage.getItem(Indices_Clave);
+    Zona_datos_Indices.innerHTML = "";
+    for (i=0;i<localStorage.length;i++){ 
+        var Indices_Clave = localStorage.key(i);
+        var Valor_Indices = localStorage.getItem(Indices_Clave);
+        Zona_datos_Indices.innerHTML += '<div> Datos: '+Indices_Clave+' -- '+ 'Resultado: '+Valor_Indices+' $ '+'<input type="button" onclick="Eliminar_Item_Indices(\''+ Indices_Clave + '\')" value="X"></div>';
+    }   
+}
+/*Mostrar Historial*/
+function Mostrar_Indices(){
+    Leer_Indices();
+}
+/*Borrar Historial*/
+function Borrar_Indices(){
+        localStorage.clear();
+        Leer_Indices();
+}
+/*Borrar Item*/
+function Eliminar_Item_Indices(Indices_Clave){
+    localStorage.removeItem(Indices_Clave);
+     Leer_Indices();
 }
 /*Indices*/
-document.getElementById("Limpiar_indices").addEventListener("click", Limpiar_indices);
 function Limpiar_indices() {
     document.getElementById("indices").reset();
 }
@@ -447,7 +473,6 @@ function Limpiar_Materiales() {
 /*******************************************************/
 /*Productividad Multifactorial*/
 /*******************************************************/
-document.getElementById("Calcular_Productividad").addEventListener("click", Productividad);
 function Productividad(){
 	total_unidades = 0
 	Costo_Total = 0
@@ -458,6 +483,36 @@ function Productividad(){
 		Costo_Total = Costo_Total + eval($(this).val());
 	});
 	$("#Resultado").val(total_unidades / Costo_Total);
+    
+var Productividad_Clave = "Costo Total = "+document.getElementById("Costo_Total").value+ " Candidad de Unidades = "+document.getElementById("Unidades").value;
+var Productividad_Valor = document.getElementById("Resultado").value;
+localStorage.setItem(Productividad_Clave, Productividad_Valor);
+}
+/*Leer Informacion Guardada*/
+function Leer_Productividad(Productividad_Clave){
+    
+    var Zona_datos_Productividad = document.getElementById("Zona_datos_Productividad");
+    var Valor_Productividad = localStorage.getItem(Productividad_Clave);
+    Zona_datos_Productividad.innerHTML = "";
+    for (i=0;i<localStorage.length;i++){ 
+        var Productividad_Clave = localStorage.key(i);
+        var Valor_Productividad = localStorage.getItem(Productividad_Clave);
+        Zona_datos_Productividad.innerHTML += '<div> Datos: '+Productividad_Clave+' -- '+ 'Resultado: '+Valor_Productividad+' $ '+'<input type="button" onclick="Eliminar_Item_Productividad(\''+ Productividad_Clave + '\')" value="X"></div>';
+    }   
+}
+/*Mostrar Historial*/
+function Mostrar_Productividad(){
+    Leer_Productividad();
+}
+/*Borrar Historial*/
+function Borrar_Productividad(){
+        localStorage.clear();
+        Leer_Productividad();
+}
+/*Borrar Item*/
+function Eliminar_Item_Productividad(Productividad_Clave){
+    localStorage.removeItem(Productividad_Clave);
+     Leer_Productividad();
 }
 /*Productividad*/
 function Limpiar_produc() {
@@ -466,7 +521,6 @@ function Limpiar_produc() {
 /*******************************************************/
 /*Rentabilidad*/
 /*******************************************************/
-document.getElementById("Calcular_Rentabilidad").addEventListener("click", Rentabilidad);
 function Rentabilidad(){
 	pvp1 = 0
 	Costo_unitario1 = 0
@@ -477,10 +531,38 @@ function Rentabilidad(){
 		Costo_unitario1 = Costo_unitario1 + eval($(this).val());
 	});
 	$("#ResultadoR").val(Math.round ((pvp1 / Costo_unitario1) * 100));
+    
+var Rentabilidad_Clave = "Costo Unitario = "+document.getElementById("Costo_unitario1").value+ " Precio de Venta al Publico = "+document.getElementById("pvp1").value;
+var Rentabilidad_Valor = document.getElementById("ResultadoR").value;
+localStorage.setItem(Rentabilidad_Clave, Rentabilidad_Valor);
 }
-
+/*Leer Informacion Guardada*/
+function Leer_Rentabilidad(Rentabilidad_Clave){
+    
+    var Zona_datos_Rentabilidad = document.getElementById("Zona_datos_Rentabilidad");
+    var Valor_Rentabilidad = localStorage.getItem(Rentabilidad_Clave);
+    Zona_datos_Rentabilidad.innerHTML = "";
+    for (i=0;i<localStorage.length;i++){ 
+        var Rentabilidad_Clave = localStorage.key(i);
+        var Valor_Rentabilidad = localStorage.getItem(Rentabilidad_Clave);
+        Zona_datos_Rentabilidad.innerHTML += '<div> Datos: '+Rentabilidad_Clave+' -- '+ 'Resultado: '+Valor_Rentabilidad+' $ '+'<input type="button" onclick="Eliminar_Item_Rentabilidad(\''+ Rentabilidad_Clave + '\')" value="X"></div>';
+    }   
+}
+/*Mostrar Historial*/
+function Mostrar_Rentabilidad(){
+    Leer_Rentabilidad();
+}
+/*Borrar Historial*/
+function Borrar_Rentabilidad(){
+        localStorage.clear();
+        Leer_Rentabilidad();
+}
+/*Borrar Item*/
+function Eliminar_Item_Rentabilidad(Rentabilidad_Clave){
+    localStorage.removeItem(Rentabilidad_Clave);
+     Leer_Rentabilidad();
+}
 /*Rentabilidad*/
-document.getElementById("Limpiar_rentabilidad").addEventListener("click", Limpiar_rentabilidad);
 function Limpiar_rentabilidad() {
     document.getElementById("rentabilidad").reset();
 }
