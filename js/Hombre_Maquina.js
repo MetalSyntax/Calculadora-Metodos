@@ -15,6 +15,37 @@ function Costo_Inversion(){
     var cdim = document.getElementById("cdim").value = " $ "
     }
      $("#resultado_inv").val(resultado_inv);
+    
+/*Informacion Guardada*/
+var Costo_Inversion_Clave = "Costo unitario por unidad de Maquina = "+document.getElementById("cuxum").value+"  "+document.getElementById("cdim").value+" Numero de Maquinas "+document.getElementById("nxm").value;
+var Costo_Inversion_Valor = document.getElementById("resultado_inv").value;
+localStorage.setItem(Costo_Inversion_Clave, Costo_Inversion_Valor);
+}
+/*Leer Informacion Guardada*/
+function Leer_Costo_Inversion(Costo_Inversion_Clave){
+    
+    var Zona_datos_Costo_Inversion = document.getElementById("Zona_datos_Costo_Inversion");
+    var Valor_Costo_Inversion = localStorage.getItem(Costo_Inversion_Clave);
+    Zona_datos_Costo_Inversion.innerHTML = "";
+    for (i=0;i<localStorage.length;i++){ 
+        var Costo_Inversion_Clave = localStorage.key(i);
+        var Valor_Costo_Inversion = localStorage.getItem(Costo_Inversion_Clave);
+        Zona_datos_Costo_Inversion.innerHTML += '<div> Datos: '+Costo_Inversion_Clave+' -- '+ 'Resultado: '+Valor_Costo_Inversion+' $ '+'<input type="button" onclick="Eliminar_Item_Costo_Inversion(\''+ Costo_Inversion_Clave + '\')" value="X"></div>';
+    }   
+}
+/*Mostrar Historial*/
+function Mostrar_Costo_Inversion(){
+    Leer_Costo_Inversion();
+}
+/*Borrar Historial*/
+function Borrar_Costo_Inversion(){
+        localStorage.clear();
+        Leer_Costo_Inversion();
+}
+/*Borrar Item*/
+function Eliminar_Item_Costo_Inversion(Costo_Inversion_Clave){
+    localStorage.removeItem(Costo_Inversion_Clave);
+     Leer_Costo_Inversion();
 }
 /*Limpiar Costo_de_Inversion*/
 function Limpiar_Costo_de_Inversion() {

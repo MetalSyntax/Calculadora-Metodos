@@ -1,5 +1,6 @@
 <div class="card">
 <div class="card-body">
+<section>
 <form id="Costo_de_Inversion">
     <h3>Costo de Inversion</h3> 
     <p>Costo unitario por unidad de Maquina</p>
@@ -12,10 +13,14 @@
     <p></p>
     <input type="button" id="Calcular_Costo_Inversion" value="Calcular" onclick="Costo_Inversion()"/>
     <input type="button" id="Limp_Costo_de_Inversion" value="Limpiar" onclick="Limpiar_Costo_de_Inversion()">
+    <input type="button" id="Historial_Costo_Inversion" value="Historial" onclick="Mostrar_Costo_Inversion()"/>
 </form>
- <p></p>
-    <h3>Historial</h3>
-    <ul id="myUL">
-    </ul>
+</section>
+<section>
+<p></p>
+<h4>Historial</h4> 
+<div id="Zona_datos_Costo_Inversion"></div>
+<input type="button" id="Borrar_Costo_Inv" value="Borrar Todo" onclick="Borrar_Costo_Inversion()">
+</section>
 </div>
 </div>
