@@ -1,18 +1,7 @@
-<div class="card">
-<div class="card-body">
-<a href="#/Costo_Inversion"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp; Costo de Inversion</a>
-<a href="#/Costo_MO_JN"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp; Costo de Mano de Obra Jornada Normal</a>
-<a href="#/Costo_MO_JE"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp; Costo de Mano de Obra Jornada Extra</a>
-<a href="#/Costo_MF"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp; Costo de Maquinaria Funcionando</a>
-<a href="#/Costo_MP"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp; Costo de Maquinaria Apagada</a>
-<a href="#/Costo_Materiales"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp; Costo de Materiales</a>
-<a href="#/Costo_Piezas_Defectuosas"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp; Costo de Piezas Defectuosas</a>    
-<a href="#/Demanda_Aumentada"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Demanda Aumentada</a>
-<a href="#/Depreciacion"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp; Depreciacion</a>   
-<a href="#/Numero_De_Hombres"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp; Numero De Hombres</a>  
-<a href="#/Numero_Tecnico"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Numero Tecnico</a>
-<a href="#/Piezas_Defectuosas"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp; Piezas Defectuosas</a>
-<a href="#/Produccion_HM"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Produccion</a>
-<a href="#/Tiempo_Necesario"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Tiempo Necesario(Experimental)</a>
+<div class="card"><div class="card-body">
+<div ng-controller="filtroHombre_Maquina">
+<div ng-repeat="itemHM in ItemHombre_Maquina | filter: Buscar">
+<a href="#/{{itemHM.Link}}"><i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp;{{itemHM.Nombre}}</a>
+</div>   
 </div>
-</div>
+</div></div>

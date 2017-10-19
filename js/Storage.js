@@ -1,5 +1,6 @@
-angular.module("localStorage",["ngStorage"])
-.controller("Costo_Inv", function($scope, $localStorage){
+var AppStorage = angular.module('localStorage',['ngStorage']);
+
+AppStorage.controller("Costo_Inv", function($scope, $localStorage){
     
     $scope.Calcular_Costo_Inv = function(){
         $localStorage.resul_inv = $scope.resul_inv

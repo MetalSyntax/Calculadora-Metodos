@@ -1,0 +1,58 @@
+[
+  {
+    "Nombre":"Costo de Inversion",
+    "Link":"Costo_Inversion"
+  },
+{
+    "Nombre":"Costo de Mano de Obra Jornada Normal",
+    "Link":"Costo_MO_JN"
+  },
+    {
+    "Nombre":"Costo de Mano de Obra Jornada Extra",
+    "Link":"Costo_MO_JE"
+  },
+    {
+    "Nombre":"Costo de Maquinaria Funcionando",
+    "Link":"Costo_MF"
+  },
+    {
+    "Nombre":"Costo de Maquinaria Apagada",
+    "Link":"Costo_MP"
+  },
+    {
+    "Nombre":"Costo de Materiales",
+    "Link":"Costo_Materiales"
+  },
+    {
+    "Nombre":"Costo de Piezas Defectuosas",
+    "Link":"Costo_Piezas_Defectuosas"
+  },
+    {
+    "Nombre":"Demanda Aumentada",
+    "Link":"Demanda_Aumentada"
+  },
+    {
+    "Nombre":"Depreciacion",
+    "Link":"Depreciacion"
+  },
+     {
+    "Nombre":"Numero De Hombres",
+    "Link":"Numero_De_Hombres"
+  },
+     {
+    "Nombre":"Numero Tecnico",
+    "Link":"Numero_Tecnico"
+  },
+    {
+    "Nombre":"Piezas Defectuosas",
+    "Link":"Piezas_Defectuosas"
+  },
+    {
+    "Nombre":"Produccion",
+    "Link":"Produccion_HM"
+  },
+    {
+    "Nombre":"Tiempo Necesario(Experimental)",
+    "Link":"Tiempo_Necesario"
+  }
+]

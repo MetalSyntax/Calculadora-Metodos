@@ -216,4 +216,3 @@ AppMethods.config( [ '$routeProvider' , function($routeProvider){
     })
     
 }])
-

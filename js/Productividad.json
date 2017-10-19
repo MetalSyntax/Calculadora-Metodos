@@ -1,0 +1,46 @@
+[
+  {
+    "Nombre":"Costos de Produccion",
+    "Link":"Costos_de_Produccion"
+  },
+{
+    "Nombre":"Costos Totales",
+    "Link":"Costos_Totales"
+  },
+    {
+    "Nombre":"Costo Unitario",
+    "Link":"Costo_Unitario"
+  },
+    {
+    "Nombre":"Ganancia",
+    "Link":"Ganancia"
+  },
+    {
+    "Nombre":"Homogenizar Unidades",
+    "Link":"Conversiones"
+  },
+    {
+    "Nombre":"Indicadores",
+    "Link":"Indicadores"
+  },
+    {
+    "Nombre":"Indices",
+    "Link":"Indices"
+  },
+    {
+    "Nombre":"Productividad en Funcion de los Materiales",
+    "Link":"Productividad_Funcion_Materiales"
+  },
+    {
+    "Nombre":"Productividad en Funcion de los Trabajadores",
+    "Link":"Productividad_Funcion_trabajadores"
+  },
+     {
+    "Nombre":"Productividad Multifactorial",
+    "Link":"Productividad_Multifactorial"
+  },
+     {
+    "Nombre":"Rentabilidad",
+    "Link":"Rentabilidad"
+  }
+]
