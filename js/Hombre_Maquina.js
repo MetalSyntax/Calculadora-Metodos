@@ -30,7 +30,7 @@ function Leer_Costo_Inversion(Costo_Inversion_Clave){
     for (i=0;i<localStorage.length;i++){ 
         var Costo_Inversion_Clave = localStorage.key(i);
         var Valor_Costo_Inversion = localStorage.getItem(Costo_Inversion_Clave);
-        Zona_datos_Costo_Inversion.innerHTML += '<div> Datos: '+Costo_Inversion_Clave+' -- '+ 'Resultado: '+Valor_Costo_Inversion+' $ '+'<input type="button" onclick="Eliminar_Item_Costo_Inversion(\''+ Costo_Inversion_Clave + '\')" value="X"></div>';
+        Zona_datos_Costo_Inversion.innerHTML += '<div> Datos: '+Costo_Inversion_Clave+' -- '+ 'Resultado: '+Valor_Costo_Inversion+' $ '+'<button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="Eliminar_Item_Costo_Inversion(\''+ Costo_Inversion_Clave + '\')"><span aria-hidden="true">&times;</span></button></div>';
     }   
 }
 /*Mostrar Historial*/

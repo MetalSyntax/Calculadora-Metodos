@@ -19,9 +19,9 @@ function Leer_Costos_Totales(Costos_Totales_Clave){
     var Valor_Costos_Totales = localStorage.getItem(Costos_Totales_Clave);
     Zona_datos_Costos_Totales.innerHTML = "";
     for (i=0;i<localStorage.length;i++){
-        var Costos_Totales_Clave = localStorage.key(i);
-        var Valor_Costos_Totales = localStorage.getItem(Costos_Totales_Clave);
-        Zona_datos_Costos_Totales.innerHTML += '<div> Datos: '+Costos_Totales_Clave+' -- '+ 'Resultado: '+Valor_Costos_Totales+' $ '+'<input type="button" onclick="Eliminar_Item_Costos_Totales(\''+ Costos_Totales_Clave + '\')" value="X"></div>';
+    var Costos_Totales_Clave = localStorage.key(i);
+    var Valor_Costos_Totales = localStorage.getItem(Costos_Totales_Clave);
+    Zona_datos_Costos_Totales.innerHTML += '<div> Datos: '+Costos_Totales_Clave+' -- '+ 'Resultado: '+Valor_Costos_Totales+' $ '+'<input type="button" onclick="Eliminar_Item_Costos_Totales(\''+ Costos_Totales_Clave + '\')" value="X"></div>';
     }   
 }
 /*Mostrar Historial*/
@@ -78,9 +78,9 @@ function Leer_Costo_Unitario(Costo_Unitario_Clave){
     var Valor_Costo_Unitario = localStorage.getItem(Costo_Unitario_Clave);
     Zona_datos_Costo_Unitario.innerHTML = "";
     for (i=0;i<localStorage.length;i++){ 
-        var Costo_Unitario_Clave = localStorage.key(i);
-        var Valor_Costo_Unitario = localStorage.getItem(Costo_Unitario_Clave);
-        Zona_datos_Costo_Unitario.innerHTML += '<div> Datos: '+Costo_Unitario_Clave+' -- '+ 'Resultado: '+Valor_Costo_Unitario+' $ '+'<input type="button" onclick="Eliminar_Item_Costo_Unitario(\''+ Costo_Unitario_Clave + '\')" value="X"></div>';
+    var Costo_Unitario_Clave = localStorage.key(i);
+    var Valor_Costo_Unitario = localStorage.getItem(Costo_Unitario_Clave);
+    Zona_datos_Costo_Unitario.innerHTML += '<div> Datos: '+Costo_Unitario_Clave+' -- '+ 'Resultado: '+Valor_Costo_Unitario+' $ '+'<input type="button" onclick="Eliminar_Item_Costo_Unitario(\''+ Costo_Unitario_Clave + '\')" value="X"></div>';
     }   
 }
 /*Mostrar Historial*/
@@ -128,9 +128,9 @@ function Leer_Costo_Produccion(Costo_Produccion_Clave){
     var Valor_Costo_Produccion = localStorage.getItem(Costo_Produccion_Clave);
     Zona_datos_Costo_Produccion.innerHTML = "";
     for (i=0;i<localStorage.length;i++){ 
-        var Costo_Produccion_Clave = localStorage.key(i);
-        var Valor_Costo_Produccion = localStorage.getItem(Costo_Produccion_Clave);
-        Zona_datos_Costo_Produccion.innerHTML += '<div> Datos: '+Costo_Produccion_Clave+' -- '+ 'Resultado: '+Valor_Costo_Produccion+' $ '+'<input type="button" onclick="Eliminar_Item_Costo_Produccion(\''+ Costo_Produccion_Clave + '\')" value="X"></div>';
+    var Costo_Produccion_Clave = localStorage.key(i);
+    var Valor_Costo_Produccion = localStorage.getItem(Costo_Produccion_Clave);
+    Zona_datos_Costo_Produccion.innerHTML += '<div> Datos: '+Costo_Produccion_Clave+' -- '+ 'Resultado: '+Valor_Costo_Produccion+' $ '+'<input type="button" onclick="Eliminar_Item_Costo_Produccion(\''+ Costo_Produccion_Clave + '\')" value="X"></div>';
     }   
 }
 /*Mostrar Historial*/
@@ -182,9 +182,9 @@ function Leer_Ganancia(Ganancia_Clave){
     var Valor_Ganancia = localStorage.getItem(Ganancia_Clave);
     Zona_datos_Ganancia.innerHTML = "";
     for (i=0;i<localStorage.length;i++){ 
-        var Ganancia_Clave = localStorage.key(i);
-        var Valor_Ganancia = localStorage.getItem(Ganancia_Clave);
-        Zona_datos_Ganancia.innerHTML += '<div> Datos: '+Ganancia_Clave+' -- '+ 'Resultado: '+Valor_Ganancia+' $ '+'<input type="button" onclick="Eliminar_Item_Ganancia(\''+ Ganancia_Clave + '\')" value="X"></div>';
+    var Ganancia_Clave = localStorage.key(i);
+    var Valor_Ganancia = localStorage.getItem(Ganancia_Clave);
+    Zona_datos_Ganancia.innerHTML += '<div> Datos: '+Ganancia_Clave+' -- '+ 'Resultado: '+Valor_Ganancia+' $ '+'<input type="button" onclick="Eliminar_Item_Ganancia(\''+ Ganancia_Clave + '\')" value="X"></div>';
     }   
 }
 /*Mostrar Historial*/
@@ -227,9 +227,9 @@ function Leer_Homogenizar(Homogenizar_Clave){
     var Valor_Homogenizar = localStorage.getItem(Homogenizar_Clave);
     Zona_datos_Homogenizar.innerHTML = "";
     for (i=0;i<localStorage.length;i++){
-        var Homogenizar_Clave = localStorage.key(i);
-        var Valor_Homogenizar = localStorage.getItem(Homogenizar_Clave);
-        Zona_datos_Homogenizar.innerHTML += '<div> Datos: '+Homogenizar_Clave+' -- '+ 'Resultado: '+Valor_Homogenizar+'<input type="button" onclick="Eliminar_Item_Homogenizar(\''+ Homogenizar_Clave + '\')" value="X"></div>';
+    var Homogenizar_Clave = localStorage.key(i);
+    var Valor_Homogenizar = localStorage.getItem(Homogenizar_Clave);
+    Zona_datos_Homogenizar.innerHTML += '<div> Datos: '+Homogenizar_Clave+' -- '+ 'Resultado: '+Valor_Homogenizar+'<input type="button" onclick="Eliminar_Item_Homogenizar(\''+ Homogenizar_Clave + '\')" value="X"></div>';
     }   
 }
 /*Mostrar Historial*/
@@ -284,9 +284,9 @@ function Leer_Indicadores(Indicadores_Clave){
     var Valor_Indicadores = localStorage.getItem(Indicadores_Clave);
     Zona_datos_Indicadores.innerHTML = "";
     for (i=0;i<localStorage.length;i++){ 
-        var Indicadores_Clave = localStorage.key(i);
-        var Valor_Indicadores = localStorage.getItem(Indicadores_Clave);
-        Zona_datos_Indicadores.innerHTML += '<div> Datos: '+Indicadores_Clave+' -- '+ 'Resultado: '+Valor_Indicadores+' $ '+'<input type="button" onclick="Eliminar_Item_Indicadores(\''+ Indicadores_Clave + '\')" value="X"></div>';
+    var Indicadores_Clave = localStorage.key(i);
+    var Valor_Indicadores = localStorage.getItem(Indicadores_Clave);
+    Zona_datos_Indicadores.innerHTML += '<div> Datos: '+Indicadores_Clave+' -- '+ 'Resultado: '+Valor_Indicadores+' $ '+'<input type="button" onclick="Eliminar_Item_Indicadores(\''+ Indicadores_Clave + '\')" value="X"></div>';
     }   
 }
 /*Mostrar Historial*/
@@ -340,9 +340,9 @@ function Leer_Indices(Indices_Clave){
     var Valor_Indices = localStorage.getItem(Indices_Clave);
     Zona_datos_Indices.innerHTML = "";
     for (i=0;i<localStorage.length;i++){ 
-        var Indices_Clave = localStorage.key(i);
-        var Valor_Indices = localStorage.getItem(Indices_Clave);
-        Zona_datos_Indices.innerHTML += '<div> Datos: '+Indices_Clave+' -- '+ 'Resultado: '+Valor_Indices+' $ '+'<input type="button" onclick="Eliminar_Item_Indices(\''+ Indices_Clave + '\')" value="X"></div>';
+    var Indices_Clave = localStorage.key(i);
+    var Valor_Indices = localStorage.getItem(Indices_Clave);
+    Zona_datos_Indices.innerHTML += '<div> Datos: '+Indices_Clave+' -- '+ 'Resultado: '+Valor_Indices+' $ '+'<input type="button" onclick="Eliminar_Item_Indices(\''+ Indices_Clave + '\')" value="X"></div>';
     }   
 }
 /*Mostrar Historial*/
@@ -392,9 +392,9 @@ function Leer_Productividad_FT(Productividad_FT_Clave){
     Zona_datos_Productividad_FT.innerHTML = "";
     
     for (i=0;i<localStorage.length;i++){
-        var Productividad_FT_Clave = localStorage.key(i);
-        var Valor_Productividad_FT = localStorage.getItem(Productividad_FT_Clave);
-        Zona_datos_Productividad_FT.innerHTML += '<div> Datos: '+Productividad_FT_Clave+' -- '+ 'Resultado: '+Valor_Productividad_FT+'<input type="button" onclick="Eliminar_Item_Productividad_FT(\''+ Productividad_FT_Clave + '\')" value="X"></div>';
+    var Productividad_FT_Clave = localStorage.key(i);
+    var Valor_Productividad_FT = localStorage.getItem(Productividad_FT_Clave);
+     Zona_datos_Productividad_FT.innerHTML += '<div> Datos: '+Productividad_FT_Clave+' -- '+ 'Resultado: '+Valor_Productividad_FT+'<input type="button" onclick="Eliminar_Item_Productividad_FT(\''+ Productividad_FT_Clave + '\')" value="X"></div>';
     }   
 }
 /*Mostrar Historial*/
@@ -445,9 +445,9 @@ function Leer_Productividad_FM(Productividad_FM_Clave){
     Zona_datos_Productividad_FM.innerHTML = "";
     
     for (i=0;i<localStorage.length;i++){
-        var Productividad_FM_Clave = localStorage.key(i);
-        var Valor_Productividad_FM = localStorage.getItem(Productividad_FM_Clave);
-        Zona_datos_Productividad_FM.innerHTML += '<div> Datos: '+Productividad_FM_Clave+' -- '+ 'Resultado: '+Valor_Productividad_FM+'<input type="button" onclick="Eliminar_Item_Productividad_FM(\''+ Productividad_FM_Clave + '\')" value="X"></div>';
+    var Productividad_FM_Clave = localStorage.key(i);
+    var Valor_Productividad_FM = localStorage.getItem(Productividad_FM_Clave);
+    Zona_datos_Productividad_FM.innerHTML += '<div> Datos: '+Productividad_FM_Clave+' -- '+ 'Resultado: '+Valor_Productividad_FM+'<input type="button" onclick="Eliminar_Item_Productividad_FM(\''+ Productividad_FM_Clave + '\')" value="X"></div>';
     }   
 }
 /*Mostrar Historial*/
@@ -495,9 +495,9 @@ function Leer_Productividad(Productividad_Clave){
     var Valor_Productividad = localStorage.getItem(Productividad_Clave);
     Zona_datos_Productividad.innerHTML = "";
     for (i=0;i<localStorage.length;i++){ 
-        var Productividad_Clave = localStorage.key(i);
-        var Valor_Productividad = localStorage.getItem(Productividad_Clave);
-        Zona_datos_Productividad.innerHTML += '<div> Datos: '+Productividad_Clave+' -- '+ 'Resultado: '+Valor_Productividad+' $ '+'<input type="button" onclick="Eliminar_Item_Productividad(\''+ Productividad_Clave + '\')" value="X"></div>';
+    var Productividad_Clave = localStorage.key(i);
+    var Valor_Productividad = localStorage.getItem(Productividad_Clave);
+    Zona_datos_Productividad.innerHTML += '<div> Datos: '+Productividad_Clave+' -- '+ 'Resultado: '+Valor_Productividad+' $ '+'<input type="button" onclick="Eliminar_Item_Productividad(\''+ Productividad_Clave + '\')" value="X"></div>';
     }   
 }
 /*Mostrar Historial*/
@@ -543,9 +543,9 @@ function Leer_Rentabilidad(Rentabilidad_Clave){
     var Valor_Rentabilidad = localStorage.getItem(Rentabilidad_Clave);
     Zona_datos_Rentabilidad.innerHTML = "";
     for (i=0;i<localStorage.length;i++){ 
-        var Rentabilidad_Clave = localStorage.key(i);
-        var Valor_Rentabilidad = localStorage.getItem(Rentabilidad_Clave);
-        Zona_datos_Rentabilidad.innerHTML += '<div> Datos: '+Rentabilidad_Clave+' -- '+ 'Resultado: '+Valor_Rentabilidad+' $ '+'<input type="button" onclick="Eliminar_Item_Rentabilidad(\''+ Rentabilidad_Clave + '\')" value="X"></div>';
+    var Rentabilidad_Clave = localStorage.key(i);
+    var Valor_Rentabilidad = localStorage.getItem(Rentabilidad_Clave);
+    Zona_datos_Rentabilidad.innerHTML += '<div> Datos: '+Rentabilidad_Clave+' -- '+ 'Resultado: '+Valor_Rentabilidad+' $ '+'<input type="button" onclick="Eliminar_Item_Rentabilidad(\''+ Rentabilidad_Clave + '\')" value="X"></div>';
     }   
 }
 /*Mostrar Historial*/

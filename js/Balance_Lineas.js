@@ -61,12 +61,10 @@ function red_precedencia(){
 	$("#Resultado_Red").val(Sumatoria_RP);
 }
 /*Nueva Linea*/
-document.getElementById("Nueva_Linea_Red").addEventListener("click",Nueva_Linea_Red);
 function Nueva_Linea_Red() {
 	$("#Red_de_Precedencia").append('<input type="number" class="Tiempos_Red" value="0"/><br/>');
 }
 /*Borrar Linea*/
-document.getElementById("Borrar_Linea_Red").addEventListener("click",Borrar_Linea_Red);
 function Borrar_Red_de_Precedencia(){
     $("#Red_de_Precedencia").empty('<input type="number" class="Tiempos_Red" value="0">/><br/>');
 }

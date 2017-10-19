@@ -12,47 +12,47 @@ AppMethods.config( [ '$routeProvider' , function($routeProvider){
         controller: 'Productividad'
     })
      $routeProvider.when('/Indicadores', {
-        templateUrl: 'html/Indicadores.html',
+        templateUrl: 'html/1/Indicadores.html',
         controller: 'Productividad'
     })
      $routeProvider.when('/Indices', {
-        templateUrl: 'html/Indices.html',
+        templateUrl: 'html/1/Indices.html',
         controller: 'Productividad'
     })
      $routeProvider.when('/Costos_de_Produccion', {
-        templateUrl: 'html/Costos_de_Produccion.html',
+        templateUrl: 'html/1/Costos_de_Produccion.html',
         controller: 'Productividad'
     })
     $routeProvider.when('/Costos_Totales', {
-        templateUrl: 'html/Costos_Totales.html',
+        templateUrl: 'html/1/Costos_Totales.html',
         controller: 'Productividad'
     })
     $routeProvider.when('/Costo_Unitario', {
-        templateUrl: 'html/Costo_Unitario.html',
+        templateUrl: 'html/1/Costo_Unitario.html',
         controller: 'Productividad'
     })
        $routeProvider.when('/Productividad_Multifactorial', {
-        templateUrl: 'html/Productividad_Multifactorial.html',
+        templateUrl: 'html/1/Productividad_Multifactorial.html',
         controller: 'Productividad'
     })
       $routeProvider.when('/Productividad_Funcion_trabajadores', {
-        templateUrl: 'html/Productividad_Funcion_trabajadores.html',
+        templateUrl: 'html/1/Productividad_Funcion_trabajadores.html',
         controller: 'Productividad'
     })
       $routeProvider.when('/Productividad_Funcion_Materiales', {
-        templateUrl: 'html/Productividad_Funcion_Materiales.html',
+        templateUrl: 'html/1/Productividad_Funcion_Materiales.html',
         controller: 'Productividad'
     })
       $routeProvider.when('/Ganancia', {
-        templateUrl: 'html/Ganancia.html',
+        templateUrl: 'html/1/Ganancia.html',
         controller: 'Productividad'
     })
       $routeProvider.when('/Rentabilidad', {
-        templateUrl: 'html/Rentabilidad.html',
+        templateUrl: 'html/1/Rentabilidad.html',
         controller: 'Productividad'
     })
       $routeProvider.when('/Conversiones', {
-        templateUrl: 'html/Conversiones.html',
+        templateUrl: 'html/1/Conversiones.html',
         controller: 'Productividad'
     })
 /*Hombre-Maquina*/
@@ -61,59 +61,59 @@ AppMethods.config( [ '$routeProvider' , function($routeProvider){
         controller: 'Hombre-Maquina'
     })
           $routeProvider.when('/Tiempo_Necesario', {
-        templateUrl: 'html/Tiempo_Necesario.html',
+        templateUrl: 'html/2/Tiempo_Necesario.html',
         controller: 'Hombre-Maquina'
     })
         $routeProvider.when('/Numero_Tecnico', {
-        templateUrl: 'html/Numero_Tecnico.html',
+        templateUrl: 'html/2/Numero_Tecnico.html',
         controller: 'Hombre-Maquina'
     })
         $routeProvider.when('/Produccion_HM', {
-        templateUrl: 'html/Produccion_HM.html',
+        templateUrl: 'html/2/Produccion_HM.html',
         controller: 'Hombre-Maquina'
     })
         $routeProvider.when('/Demanda_Aumentada', {
-        templateUrl: 'html/Demanda_Aumentada.html',
+        templateUrl: 'html/2/Demanda_Aumentada.html',
         controller: 'Hombre-Maquina'
     })
         $routeProvider.when('/Piezas_Defectuosas', {
-        templateUrl: 'html/Piezas_Defectuosas.html',
+        templateUrl: 'html/2/Piezas_Defectuosas.html',
         controller: 'Hombre-Maquina'
     })
         $routeProvider.when('/Numero_De_Hombres', {
-        templateUrl: 'html/Numero_De_Hombres.html',
+        templateUrl: 'html/2/Numero_De_Hombres.html',
         controller: 'Hombre-Maquina'
     })
         $routeProvider.when('/Costo_Inversion', {
-        templateUrl: 'html/Costo_Inversion.html',
+        templateUrl: 'html/2/Costo_Inversion.html',
         controller: 'Hombre-Maquina'
     })
         $routeProvider.when('/Costo_MO_JN', {
-        templateUrl: 'html/Costo_MO_JN.html',
+        templateUrl: 'html/2/Costo_MO_JN.html',
         controller: 'Hombre-Maquina'
     })
         $routeProvider.when('/Costo_MO_JE', {
-        templateUrl: 'html/Costo_MO_JE.html',
+        templateUrl: 'html/2/Costo_MO_JE.html',
         controller: 'Hombre-Maquina'
     })
         $routeProvider.when('/Costo_MF', {
-        templateUrl: 'html/Costo_MF.html',
+        templateUrl: 'html/2/Costo_MF.html',
         controller: 'Hombre-Maquina'
     })
         $routeProvider.when('/Costo_MP', {
-        templateUrl: 'html/Costo_MP.html',
+        templateUrl: 'html/2/Costo_MP.html',
         controller: 'Hombre-Maquina'
     })
         $routeProvider.when('/Costo_Piezas_Defectuosas', {
-        templateUrl: 'html/Costo_Piezas_Defectuosas.html',
+        templateUrl: 'html/2/Costo_Piezas_Defectuosas.html',
         controller: 'Hombre-Maquina'
     })
         $routeProvider.when('/Costo_Materiales', {
-        templateUrl: 'html/Costo_Materiales.html',
+        templateUrl: 'html/2/Costo_Materiales.html',
         controller: 'Hombre-Maquina'
     })
         $routeProvider.when('/Depreciacion', {
-        templateUrl: 'html/Depreciacion.html',
+        templateUrl: 'html/2/Depreciacion.html',
         controller: 'Hombre-Maquina'
     })
 /*Balance de Lineas*/
@@ -122,27 +122,27 @@ AppMethods.config( [ '$routeProvider' , function($routeProvider){
         controller: 'Balance_Lineas'
     })
         $routeProvider.when('/Numero_Recursos', {
-        templateUrl: 'html/Numero_Recursos.html',
+        templateUrl: 'html/3/Numero_Recursos.html',
         controller: 'Balance_Lineas'
     })
         $routeProvider.when('/Base_Equilibrio', {
-        templateUrl: 'html/Base_Equilibrio.html',
+        templateUrl: 'html/3/Base_Equilibrio.html',
         controller: 'Balance_Lineas'
     })
         $routeProvider.when('/Ritmo', {
-        templateUrl: 'html/Ritmo.html',
+        templateUrl: 'html/3/Ritmo.html',
         controller: 'Balance_Lineas'
     })
         $routeProvider.when('/Eficiencia_Linea', {
-        templateUrl: 'html/Eficiencia_Linea.html',
+        templateUrl: 'html/3/Eficiencia_Linea.html',
         controller: 'Balance_Lineas'
     })
         $routeProvider.when('/Tiempo_extra', {
-        templateUrl: 'html/Tiempo_extra.html',
+        templateUrl: 'html/3/Tiempo_extra.html',
         controller: 'Balance_Lineas'
     })
         $routeProvider.when('/Red_Precedencia', {
-        templateUrl: 'html/Red_Precedencia.html',
+        templateUrl: 'html/3/Red_Precedencia.html',
         controller: 'Balance_Lineas'
     })
 /*Muestreo de Trabajo*/
@@ -151,32 +151,32 @@ AppMethods.config( [ '$routeProvider' , function($routeProvider){
         controller: 'Muestreo_trabajo'
     })
      $routeProvider.when('/Suplementos_Descanso', {
-        templateUrl: 'html/Suplementos_Descanso.html',
+        templateUrl: 'html/4/Suplementos_Descanso.html',
         controller: 'Muestreo_trabajo'
     })
        $routeProvider.when('/Tiempo_NecesarioMT', {
-        templateUrl: 'html/Tiempo_NecesarioMT.html',
+        templateUrl: 'html/4/Tiempo_NecesarioMT.html',
         controller: 'Muestreo_trabajo'
     })
       $routeProvider.when('/Coeficiente_Variacion', {
-        templateUrl: 'html/Coeficiente_Variacion.html',
+        templateUrl: 'html/4/Coeficiente_Variacion.html',
         controller: 'Muestreo_trabajo'
     })
       $routeProvider.when('/Tiempo_Estandar', {
-        templateUrl: 'html/Tiempo_Estandar.html',
+        templateUrl: 'html/4/Tiempo_Estandar.html',
         controller: 'Muestreo_trabajo'
     })
       $routeProvider.when('/Porcentaje_Descanso', {
-        templateUrl: 'html/Porcentaje_Descanso.html',
+        templateUrl: 'html/4/Porcentaje_Descanso.html',
         controller: 'Muestreo_trabajo'
     })
       $routeProvider.when('/Numero_Observaciones', {
-        templateUrl: 'html/Numero_Observaciones.html',
+        templateUrl: 'html/4/Numero_Observaciones.html',
         controller: 'Muestreo_trabajo'
     })
     /*Desarrollo*/
     $routeProvider.when('/Desarrollo', {
-        templateUrl: 'html/Desarrollo.html',
+        templateUrl: 'html/5/Desarrollo.html',
         controller: 'inicio'
     })
     /*Ayuda*/
@@ -185,25 +185,25 @@ AppMethods.config( [ '$routeProvider' , function($routeProvider){
         controller: 'Ayuda'
     })
       $routeProvider.when('/Concepto_Fundamentales', {
-        templateUrl: 'html/Concepto_Fundamentales.html',
+        templateUrl: 'html/5/Concepto_Fundamentales.html',
         controller: 'Ayuda'
     })
         $routeProvider.when('/Concepto_Hombre_Maquina', {
-        templateUrl: 'html/Concepto_Hombre_Maquina.html',
+        templateUrl: 'html/5/Concepto_Hombre_Maquina.html',
         controller: 'Ayuda'
     })
          $routeProvider.when('/Concepto_Productividad', {
-        templateUrl: 'html/Concepto_Productividad.html',
+        templateUrl: 'html/5/Concepto_Productividad.html',
         controller: 'Ayuda'
     })
     /*Aerca de*/
     $routeProvider.when('/Acerca_de', {
-        templateUrl: 'html/Acerca_de.html',
+        templateUrl: 'html/5/Acerca_de.html',
         controller: 'inicio'
     })
     /*Terminos y Condiciones*/
     $routeProvider.when('/Terminos', {
-        templateUrl: 'html/Terminos.html',
+        templateUrl: 'html/5/Terminos.html',
         controller: 'inicio'
     })
     /*404*/

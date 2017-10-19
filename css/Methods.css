@@ -11,6 +11,15 @@ font-weight: normal;
 font-style: normal;
 }
 @font-face{
+font-family: "materialdesignicons-webfont";
+src: url('../fonts/materialdesignicons-webfont.otf');
+src: url('../fonts/materialdesignicons-webfont.eot');
+src: url('../fonts/materialdesignicons-webfont.eot') format('eot'),
+url('../fonts/materialdesignicons-webfont.woff') format('woff'),
+url('../fonts/materialdesignicons-webfont.ttf') format('truetype'),
+url('../fonts/materialdesignicons-webfont.svg') format('svg');
+}
+@font-face{
 font-family: "Roboto";
 src:url('../fonts/Roboto-Condensed.ttf')format('truetype');
 src:url('../fonts/Roboto-Regular.ttf')format('truetype');
@@ -53,7 +62,7 @@ input {
 	border: 2px #336699;
     border-radius: 10px;
 	border-style: solid;
-	background-color: #F0F3F4;
+	background-color: #FFF;
 	font-family: 'Roboto Condensed', sans-serif;  
 }
 /* SELECTORES */
