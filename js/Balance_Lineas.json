@@ -1,0 +1,26 @@
+[
+  {
+    "Nombre":"Base de Equilibrio",
+    "Link":"Base_Equilibrio"
+  },
+     {
+    "Nombre":"Eficiencia de Linea",
+    "Link":"Eficiencia_Linea"
+  },
+     {
+    "Nombre":"Numero de Recursos",
+    "Link":"Numero_Recursos"
+  },
+     {
+    "Nombre":"Red de Precedencia Simple",
+    "Link":"Red_Precedencia"
+  },
+     {
+    "Nombre":"Ritmo",
+    "Link":"Ritmo"
+  },
+     {
+    "Nombre":"Tiempo Extra",
+    "Link":"Tiempo_extra"
+  }
+]

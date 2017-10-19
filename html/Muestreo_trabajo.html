@@ -1,10 +1,7 @@
-<div class="card">
-<div class="card-body">
-<a href="#/Suplementos_Descanso"><i class="fa fa-hourglass-half" aria-hidden="true"></i>&nbsp; Suplementos de Descanso</a>
-<a href="#/Tiempo_NecesarioMT"><i class="fa fa-hourglass-half" aria-hidden="true"></i>&nbsp; Tiempo Necesario</a>
-<a href="#/Coeficiente_Variacion"><i class="fa fa-hourglass-half" aria-hidden="true"></i>&nbsp; Coeficiente de Variacion</a>
-<a href="#/Tiempo_Estandar"><i class="fa fa-hourglass-half" aria-hidden="true"></i>&nbsp; Tiempo Estandar</a>
-<a href="#/Porcentaje_Descanso"><i class="fa fa-hourglass-half" aria-hidden="true"></i>&nbsp; Porcentaje de Tolerancia de Descanso</a>
-<a href="#/Numero_Observaciones"><i class="fa fa-hourglass-half" aria-hidden="true"></i>&nbsp; Numero de Observaciones</a>
+<div class="card"><div class="card-body">
+<div ng-controller="filtroMuestreo_Trabajo">
+<div ng-repeat="itemMT in ItemMuestro_Tabajo | filter: Buscar">
+<a href="#/{{itemMT.Link}}"><i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp;{{itemMT.Nombre}}</a>
+</div>   
 </div>
-</div>
+</div></div>

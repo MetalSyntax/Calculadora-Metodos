@@ -3,8 +3,6 @@ Methods es una calculadora realizada con la intencion de agilizar los calculos r
 
 Este proyecto de Codigo Abierto
 
-**Hiato temporal proximamente nuevas actualizaciones**
-
 ## Donate
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](paypal.me/MetalSyntax)
@@ -14,6 +12,13 @@ Este proyecto de Codigo Abierto
 La version para descarga puede tener errores, si la version es muy antigua ya que las correcciones se realizaron posterior a estas. Solo disponible para Android. Versiones Betas Estables y Experimentales.
 
 ## Registro de cambios
+> [Methods 1.1.0 Beta]
+
+- **V1.1.0** Coming Soon
+
+> [Methods 1.0.9 Experimental](http://skamason.com/6fAB) 21/08/2017
+
+- **V1.0.9** Modulo de Estudio de Tiempo Habilitado/Incompleto. Cambio en la interfaz de usuario.**Modulos No funcionales**
 
 > [Methods 1.0.8 Beta](http://adf.ly/1n048L) 29/05/17
 
@@ -51,7 +56,7 @@ La version para descarga puede tener errores, si la version es muy antigua ya qu
 
 - **V1.0.2** Se agregaron las rutas Ayuda y Acerca de.
 
-- **V1.0.15** Se creo el archivo SideNav.css para el SideNav fuera de los otros codigos CSS
+- **V1.0.1.5** Se creo el archivo SideNav.css para el SideNav fuera de los otros codigos CSS
 
 - **V1.0.1** Se reorganizaron las carpetas simplificando su distribucion y se optimizo el codigo. 
 - Se eliminaron los archivos redundantes como Framework.
