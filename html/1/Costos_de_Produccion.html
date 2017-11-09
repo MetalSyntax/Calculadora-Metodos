@@ -5,23 +5,27 @@
     <h3>Costos de Produccion</h3>
     <p>Material</p>
     <input type="number" id="MaterialP" value="0" required/>
-     <input type="text" id="Tipo_Unidad3" value="" placeholder="Unidad" required/>
-	<p>Costo</p>
+    <p>Costo</p>
     <input type="number" id="CostoP" value="0" required/>
-     <input type="text" id="Tipo_Material2" value="" placeholder="Unidad" required/>
     <p>Resultado</p>
-    <input type="number" id="ResultadoP" value="0" disabled/><br/>
-    <p></p>
-    <input type="button" id="Calcular_Costos_de_Produccion" value="Calcular" onclick="Costos_de_Produccion()"/>
+    <input type="number" id="ResultadoP"  value="0" disabled/>
+    <br/><p></p>
+    <input type="button" id="Costos_de_Produccion" value="Calcular" onclick="Costos_de_Produc()"/>
     <input type="button" id="Limp_prod" value="Limpiar" onclick="Limpiar_prod()">
-     <input type="button" id="Historial_Costo_Produccion" value="Historial" onclick="Mostrar_Costo_Produccion()"/>
+    <input type="button" id="Borrar_Costo_P" value="Borrar Todo" onclick="Borrar_Costo_Produccion()">
+    <input type="button" id="Historial_Costo_Produccion" value="Historial" onclick="Mostrar_Costo_Produccion()"/>
 </form>
 </section>
  <section>
 <p></p>
 <h4>Historial</h4> 
-<div id="Zona_datos_Costo_Produccion"></div>
-<input type="button" id="Borrar_Costo_P" value="Borrar Todo" onclick="Borrar_Costo_Produccion()">
+<div class="container-fluid" id="Datos_Costo_Produccion">
+<ul class="list-group">
+<li class="list-group-item" id="Mat_Cos_Pro"></li>
+<li class="list-group-item" id="Cos_Cos_Pro"></li>
+<li class="list-group-item" id="Resultado_Cos_Pro"></li>
+</ul>
+</div>
 </section>
 </div>
 </div>

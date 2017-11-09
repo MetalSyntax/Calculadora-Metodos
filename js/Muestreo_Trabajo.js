@@ -273,7 +273,7 @@ function CalificacionOP(){
 }
 }
 /*Limpiar Calificacion*/
-function LimpiarCalificacionOP() {
+function Limpiar_Calificacion_OP() {
 document.getElementById("Supl_De").reset();
 }
 /*******************************************************/

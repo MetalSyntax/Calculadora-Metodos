@@ -12,15 +12,14 @@
 <!--Scrips Principales-->
     <script src="lib/angular.min.js"></script>
     <script src="lib/angular-route.min.js"></script>
-    <script src="lib/ngStorage.min.js"></script>
     <script src="lib/ngTouch.min.js"></script>
+    <script src="lib/angular-animate.min"></script>
     <script src="lib/jquery.min.js"></script>
     <script src="lib/popper.min.js"></script>
     <script src="lib/bootstrap.min.js"></script>
 <!--Script Angular-->
     <script src="js/App.js"></script>
     <script src="js/Menus.js"></script>
-<!--<script src="js/Controller.js"></script>-->
 <!--Estilos Principales-->
    <link href="css/bootstrap.min.css" rel="stylesheet" >
    <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -29,13 +28,13 @@
 </head>
 <body ng-app='navegacion'>
 <!--Barra de Navegacion-->
-<nav class="navbar navbar-expand-xl navbar-dark justify-content-between" style="background-color: #003681">
+<nav class="navbar navbar-inverse navbar-expand-xl navbar-fixed-top navbar-dark justify-content-between" role="navigation" style="background-color: #003681">
 <!--Titulo Principal-->
 <a class="navbar-brand" href="#/"><img src="icon.png" width="35" height="35">Methods</a>
 <!--Boton Desplegable--> 
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 <!--Menu Desplegable-->
-<div class="collapse navbar-collapse" id="navbars">
+<div class="navbar-collapse collapse" id="navbars">
 <nav class="navbar-nav mr-auto">
 <a class="nav-link" href="#/Productividad">Productividad</a>
 <a class="nav-link" href="#/Hombre-Maquina">Hombre-Maquina</a>
@@ -49,6 +48,7 @@
 </form>
 </div>
 </nav> 
+
 <!--Contenido-->
 <div class="container-fluid" ng-view >
 </div>
