@@ -1,7 +1,7 @@
 # Methods
-Methods es una calculadora realizada con la intencion de agilizar los calculos relacionados con la ingenieria de Metodos, Estudios de Tiempo, Estudio del Trabajo, entre otros, escrita en HTML, CSS (Bootstrap) y JavaScript (JQuery).
+Methods es una calculadora realizada con la intencion de agilizar los calculos relacionados con la ingenieria de Metodos, Estudios de Tiempo, Estudio del Trabajo, entre otros, escrita en HTML, CSS (Bootstrap) y JavaScript (JQuery y Angular.js).
 
-Este proyecto de Codigo Abierto
+**Proyecto pausado indefinidamente.**
 
 ## Donate
 
