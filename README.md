@@ -1,5 +1,5 @@
 # Methods
-Derechos de Autor (C) 2016-2018 Wonder Diaz
+Derechos de Autor (C) 2017-2018 Wonder Diaz
 
 Esta aplicacion es un software de codigo abierto para la realización de calculos relacionados con la Ingenieria de Metodos en su dispositivo Android.
 
