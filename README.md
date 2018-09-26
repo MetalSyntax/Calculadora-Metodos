@@ -3,7 +3,7 @@ Derechos de Autor (C) 2016-2018 Wonder Diaz
 
 Esta aplicacion es un software de codigo abierto para la realización de calculos relacionados con la Ingenieria de Metodos en su dispositivo Android.
 
-Esta aplicacion se realiza con fines educativos. Permite realizar calculos de productividad, calculos relacionados con Hombre-Maquina y Balance de Lineas.
+**Proyecto pausado indefinidamente.**
 
 La aplicación está disponible para descargar en GitHub.
 
@@ -11,9 +11,24 @@ La aplicación está disponible para descargar en GitHub.
 
 ## Nota Importante 
 
-La version para descarga puede contener errores. Solo disponible para Android. Versiones Alpha.
+La version para descarga puede contener errores. Solo disponible para Android y Web. Versiones Alpha.
 
-**Proyecto pausado indefinidamente.**
+## Caracteristicas
+
+- Calculo de Ingenieria de Metodos
+- Base de datos en el Local Storage
+- Diseño responsivo 
+- Multiplataforma
+
+## Preguntas más frecuentes
+
+> ¿Cual es la version de Android Minima para ejecutar la aplicacion?
+
+Se recomienda que la aplicacion sea instalada bajo un sistema operativo android 4.2+
+
+> ¿En que sistemas operativos funciona?
+
+Puede ser ejecutado desde Android de manera Nativa como Aplicacion Instalable o desde el Navegador.
 
 ## Codigo Fuente
 
