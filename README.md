@@ -46,7 +46,7 @@ La version para descarga puede tener errores, si la version es muy antigua ya qu
 
 > [Methods 1.0.4 Alpha](http://adf.ly/1n03wg) 07/04/17
 
-- **V1.0.4** Correciones entre los hipervinculos.  
+- **V1.0.4** Correcciones entre los hipervinculos.  
 - Correcciones a nivel Offline. 
 - Se agregaron las fuentes locales, imagen de logotipo, iconos, css especificos y el ultimo formulario de productividad hasta el momento. 
 
