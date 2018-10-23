@@ -3,7 +3,12 @@ Derechos de Autor (C) 2017-2018 Wonder Diaz
 
 Esta aplicacion es un software de codigo abierto para la realización de calculos relacionados con la Ingenieria de Metodos en su dispositivo Android.
 
-**Proyecto pausado indefinidamente.**
+**Proyecto retomado intermitentemente.**
+
+## Version 1.2.0
+- Nav Agregado (Nuevo)
+- Reestructuracion de la Estructura HTML (Incompleto)
+- Actualizacion de Frameworks
 
 La aplicación está disponible para descargar en GitHub.
 
