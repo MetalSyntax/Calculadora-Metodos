@@ -6,6 +6,10 @@ AppMethods.config( [ '$routeProvider' , function($routeProvider){
         templateUrl: 'html/Pagina_Principal.html',
         controller: 'inicio'
     })
+    $routeProvider.when('/pageSubmenu' , {      
+        templateUrl: 'html/Pagina_Principal.html',
+        controller: 'inicio'
+    })
 /*Productividad*/
     $routeProvider.when('/Productividad', {
         templateUrl: 'html/Productividad.html',

@@ -10,52 +10,126 @@
 <!--Icono-->
     <link rel="icon" href="favicon.ico" sizes="16x16">
 <!--Scrips Principales-->
+     <!-- Angular JS-->
     <script src="lib/angular.min.js"></script>
     <script src="lib/angular-route.min.js"></script>
     <script src="lib/ngTouch.min.js"></script>
-    <script src="lib/angular-animate.min"></script>
-    <script src="lib/jquery.min.js"></script>
-    <script src="lib/popper.min.js"></script>
-    <script src="lib/bootstrap.min.js"></script>
-<!--Script Angular-->
+    <script src="lib/angular-animate.min.js"></script>
+    <!-- Jquery JS
+    <script src="lib/jquery.min.js"></script>-->
+    <!-- Angular Custom JS-->
     <script src="js/App.js"></script>
     <script src="js/Menus.js"></script>
-<!--Estilos Principales-->
+    <!-- Font Awesome JS -->
+    <script defer src="lib/all.min.js"></script>
+    <!--Estilos Principales-->
+    <!-- Bootstrap CSS -->
    <link href="css/bootstrap.min.css" rel="stylesheet" >
-   <link href="css/font-awesome.min.css" rel="stylesheet">
-<!--Estilos Personalizados-->
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!--Estilos Personalizados-->
     <link href="css/Methods.css" rel="stylesheet">
+    <link href="css/Sidebar.css" rel="stylesheet">
 </head>
+    
 <body ng-app='navegacion'>
 <!--Barra de Navegacion-->
-<nav class="navbar navbar-inverse navbar-expand-xl navbar-fixed-top navbar-dark justify-content-between" role="navigation" style="background-color: #003681">
-<!--Titulo Principal-->
-<a class="navbar-brand" href="#/"><img src="icon.png" width="35" height="35">Methods</a>
-<!--Boton Desplegable--> 
-<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-<!--Menu Desplegable-->
-<div class="navbar-collapse collapse" id="navbars">
-<nav class="navbar-nav mr-auto">
-<a class="nav-link" href="#/Productividad">Productividad</a>
-<a class="nav-link" href="#/Hombre-Maquina">Hombre-Maquina</a>
-<a class="nav-link" href="#/Balance_Lineas">Balance de Lineas</a>
-<a class="nav-link" href="#/Muestreo_trabajo">Muestreo de Trabajo</a>
-<a class="nav-link" href="#/Ayuda">Ayuda</a>
-</nav>
-<!--Buscador-->
-<form class="form-inline">
-<input class="form-control mr-sm-2" type="text" id="input-search" placeholder="Buscar" aria-label="Search" ng-model="Buscar">
-</form>
-</div>
-</nav> 
+<div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar" class="mCustomScrollbar _mCS_1 mCS-autoHide mCS_no_scrollbar " style="overflow: visible;">
+            
+        <div id="mCSB_1" class="mCustomScrollBox mCS-minimal mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0">
+        <div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+            
+            <div id="dismiss">
+            <i class="fa fa-arrow-left"></i>
+            </div>
+            <div class="sidebar-header">
+            <h3><img src="icon.png" width="35" height="35"> Methods</h3>
+            </div>
+            <ul class="list-unstyled components">
+                <p>Version 1.2.0</p>
+                <li class="active">
+                    <a href="#/" data-toggle="collapse" aria-expanded="false">Inicio</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categorias</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li><a href="#/Productividad">Productividad</a></li>
+                        <li><a href="#/Hombre-Maquina">Hombre-Maquina</a></li>
+                        <li><a href="#/Balance_Lineas">Balance de Lineas</a></li>
+                        <li><a href="#/Muestreo_trabajo">Muestreo de Trabajo</a></li>
+                    </ul>
+                </li>
+                <li><a href="#/Ayuda">Centro de Ayuda</a>
+                </li>
+            </ul>
 
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="" class="download"> Registro</a>
+                </li>
+                <li>
+                    <a href="" class="article">Inicio de Sesion</a>
+                </li>
+            </ul>
+        </div></div>
+        <div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-minimal mCSB_scrollTools_vertical" style="display: none;">
+        <div class="mCSB_draggerContainer">
+        <div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 50px; height: 0px; top: 0px;">
+        <div class="mCSB_dragger_bar" style="line-height: 50px;"></div></div>
+        <div class="mCSB_draggerRail"></div></div></div></nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-light"><span><img src="icon.png" width="35" height="35"> Inicio</span></button>
+                </div>
+            </nav>
+<!--Overlay-->
+<div class="overlay"></div>
 <!--Contenido-->
-<div class="container-fluid" ng-view >
+<div ng-view >
+
 </div>
-<!--Scripts-->
+</div> 
+</div> 
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="lib/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="lib/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="lib/bootstrap.min.js"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="lib/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+<!-- Personalizado JS -->
 <script src="js/Productividad.js"></script>
 <script src="js/Hombre_Maquina.js"></script>
 <script src="js/Balance_Lineas.js"></script>
 <script src="js/Muestreo_Trabajo.js"></script>
+    
+    
 </body>    
 </html>
