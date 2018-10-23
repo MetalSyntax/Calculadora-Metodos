@@ -5,7 +5,7 @@ Esta aplicacion es un software de codigo abierto para la realización de calculo
 
 **Proyecto retomado intermitentemente.**
 
-## Version 1.2.0
+> Version sin compilar 1.2.0
 - Nav Agregado (Nuevo)
 - Reestructuracion de la Estructura HTML (Incompleto)
 - Actualizacion de Frameworks
@@ -17,6 +17,7 @@ La aplicación está disponible para descargar en GitHub.
 ## Nota Importante 
 
 La version para descarga puede contener errores. Solo disponible para Android y Web. Versiones Alpha.
+Hasta que no se realice un progreso importante y una revision de la calidad. No se realizaran compilaciones para Android. Con la finalidad de evitar errores en la version para movil.
 
 ## Caracteristicas
 
