@@ -1,0 +1,23 @@
+<div class="card">
+    <div class="card-body">
+        <form id="CMOJE">
+            <h3>Costo de Mano de Obra Jornada Extra</h3>
+            <!--Jornada Extra-->
+            <p>Mano de Obra (Hombres)(Jornada Extra)</p>
+            <input type="number" id="motje" value="0" required/>
+            <p>Mano de Obra (Costo)(Jornada Extra)</p>
+            <input type="number" id="mocje" value="0" required/>
+            <p>Tiempo</p>
+            <input type="number" id="tje" value="0" required/>
+            <!--Costos-->
+            <p>Costo de Mano de Obra Jornada Extra</p>
+            <input type="number" id="cmoje" value="0" disabled/>
+            <input type="button" id="A_de_Costos2" value="Calcular" onclick="Analisis_de_Costos2()" />
+            <input type="button" id="Limp_CMOJE" value="Limpiar" onclick="Limpiar_CMOJE()">
+        </form>
+        <p></p>
+        <h3>Historial</h3>
+        <ul id="myUL">
+        </ul>
+    </div>
+</div>

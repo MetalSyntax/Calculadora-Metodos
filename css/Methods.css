@@ -1,87 +1,142 @@
 /*Fuentes*/
-@font-face{
-font-family: "Roboto";
-src:url('../fonts/Roboto-Condensed.ttf')format('truetype');
-src:url('../fonts/Roboto-Regular.ttf')format('truetype');
+@font-face {
+    font-family: "Roboto";
+    src: url('../fonts/Roboto-Condensed.ttf')format('truetype');
+    src: url('../fonts/Roboto-Regular.ttf')format('truetype');
 }
-/*General*/
-html, body {
+/*Generales*/
+html,
+body {
     position: relative;
-    margin: 0; 
-    padding: 0; 
-    border: 0; 
     margin: 0;
-    height: 100%; 
+    padding: 0;
+    border: 0;
+    margin: 0;
+    height: 100%;
     font-family: 'Roboto Condensed', sans-serif;
     color: black;
-    background-color: white;
+    background-color: #f8f9fa;
     text-align: center;
     min-width: 250px;
 }
 /*Enlaces*/
 a {
-    padding: 8px 8px 8px 32px;
+    padding: 10px 10px 10px 32px;
     text-decoration: none;
-    font-size: 20px;
-    color: grey; 
+    font-size: 23px;
+    color: #333333;
     display: flex;
     transition: 0.3s;
-    font-family: 'Roboto Condensed', sans-serif;
     text-decoration: none;
     text-align: justify;
 }
- a:hover, a:focus{
-     /*background: #f2f2f2;*/
-     color: grey;
-     text-decoration: none;
+
+a:hover,
+a:focus {
+    color: #043983;
+    background: #f8f9fa;
+    text-decoration: none;
+}
+.active {
+    color: white;
 }
 /*Entradas*/
 input {
     margin: 3px;
-	padding: 8px 8px;
-	border: 2px #336699;
+    padding: 8px 8px;
+    border: 2px #336699;
     border-radius: 10px;
-	border-style: solid;
-	background-color: #FFF;
-	font-family: 'Roboto Condensed', sans-serif;  
+    border-style: solid;
+    background-color: #FFF;
+    font-family: 'Roboto Condensed', sans-serif;
 }
-/* SELECTORES */
+
 select {
     margin: 3px;
-	padding: 7px 7px;
-	border: 2px #336699;
+    padding: 7px 7px;
+    border: 2px #336699;
     border-radius: 10px;
-	border-style: solid;
-	background-color: #FFF;
-	font-family: 'Roboto Condensed', sans-serif;  
+    border-style: solid;
+    background-color: #FFF;
+    font-family: 'Roboto Condensed', sans-serif;
 }
-}
-/* PARRAFOS */
+/*Texto*/
 p {
-	color: #595959; 
-	padding: 5px 5px;
-	text-align: center;
+    color: #333333;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
 }
-/*List*/
+
+h1 {
+    font-size: 25px;
+    color: #333333;
+    text-align: center;
+    padding: 10px 10px 10px 32px;
+    font-weight:500;
+}
+
+h2 {
+    font-size: 23px;
+    color: #333333;
+    text-align: center;
+    padding: 10px 10px 10px 32px;
+    font-weight:500;
+}
+h3 {
+    font-size: 22px;
+    color: #333333;
+    text-align: center;
+    padding: 10px 10px 10px 32px;
+    font-weight:500;
+}
+
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 ul {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
+
 ul li {
-  position: relative;
-  font-size: 14px;
-  transition: 0.2s;
+    position: relative;
+    font-size: 14px;
+    transition: 0.2s;
 }
-.ayuda_parrofo{
+/*Especificos*/
+.ayuda_parrofo {
     text-align: justify;
-	padding: 5px 5px;
+    padding: 5px 5px;
 }
-.about_us{
+
+.about_us {
     text-align: justify;
 }
-.ayuda_funda{
-   text-align: justify; 
+
+.ayuda_funda {
+    text-align: justify;
+}
+
+.reciente {
+    text-align: left;
+    color: #333333;
+    padding: 8px 8px 8px 32px;
+}
+
+.iconos {
+    padding: 0px 10px 0px 0px;
+}
+/*Barra de Navegacion*/
+.navbar {
+    background-color:#043983;
+}
+.nav-item {
+    padding: 0px 0px 0px 32px;
+}
+a.nav-link:hover,a.nav-link:focus {
+   background: #043983; 
+}
+a.navbar-brand:hover, a.navbar-brand:focus {
+     background: #043983;
 }

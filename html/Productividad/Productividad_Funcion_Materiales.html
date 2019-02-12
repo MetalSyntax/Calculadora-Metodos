@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-body">
+        <section>
+            <form id="Materiales1">
+                <h3>Productividad en Funcion de los Materiales</h3>
+                <p>La cantidad de Unidades</p>
+                <input type="number" id="UnidadesM" value="0" required/>
+                <input type="text" id="Tipo_Unidad" value="" placeholder="Unidad" required/>
+                <p>Cantidad de Materiales</p>
+                <input type="number" id="Materiales" value="0" required/>
+                <input type="text" id="Tipo_Material" value="" placeholder="Unidad" required/>
+                <p>Resultado</p>
+                <input type="number" id="TotalPM" value="0" disabled/><br/>
+                <p></p>
+                <input type="button" id="Calcular_Productividad_FM" value="Calcular Total" onclick="Productividad_FM()" />
+                <input type="button" id="Limp_Materiales" value="Limpiar" onclick="Limpiar_Materiales()">
+                <input type="button" id="Historial_Productividad_FM" value="Historial" onclick="Mostrar_Productividad_FM()" />
+            </form>
+        </section>
+        <section>
+            <p></p>
+            <h4>Historial</h4>
+            <div id="Zona_datos_Productividad_FM"></div>
+            <input type="button" id="Borrar_Productividad_FM" value="Borrar Todo" onclick="Borrar_Productividad_Materiales()">
+        </section>
+    </div>
+</div>

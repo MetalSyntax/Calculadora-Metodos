@@ -1,0 +1,25 @@
+<div class="card">
+    <div class="card-body">
+        <section>
+            <form id="Productividad">
+                <h3>Productividad Multifactorial</h3>
+                <p>Costo Total</p>
+                <input type="number" id="Costo_Total" value="0" required/>
+                <p>Candidad de Unidades</p>
+                <input type="number" id="Unidades" value="0" required/>
+                <p>Resultado</p>
+                <input type="number" id="Resultado" value="0" disabled/><br/>
+                <p></p>
+                <input type="button" id="Calcular_Productividad" value="Calcular" onclick="Productividad()" />
+                <input type="button" id="Limp_produc" value="Limpiar" onclick="Limpiar_produc()">
+                <input type="button" id="Historial_Productividad" value="Historial" onclick="Mostrar_Productividad()" />
+            </form>
+        </section>
+        <section>
+            <p></p>
+            <h4>Historial</h4>
+            <div id="Zona_datos_Productividad"></div>
+            <input type="button" id="Borrar_Product" value="Borrar Todo" onclick="Borrar_Productividad()">
+        </section>
+    </div>
+</div>

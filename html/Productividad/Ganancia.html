@@ -1,0 +1,25 @@
+<div class="card">
+    <div class="card-body">
+        <section>
+            <form id="ganancia">
+                <h3>Ganancia</h3>
+                <p>Costo Unitario</p>
+                <input type="number" id="Costo_unitario" value="0" required/>
+                <p>Precio de Venta al Publico</p>
+                <input type="number" id="pvp" value="0" required/>
+                <p>Resultado</p>
+                <input type="number" id="ResultadoG" value="0" disabled/><br/>
+                <p></p>
+                <input type="button" id="Ganancia_" value="Calcular" onclick="Ganancia_R()" />
+                <input type="button" id="Limp_ganancia" value="Limpiar" onclick="Limpiar_ganancia()">
+                <input type="button" id="Historial_Ganancia" value="Historial" onclick="Mostrar_Ganancia()" />
+            </form>
+        </section>
+        <section>
+            <p></p>
+            <h4>Historial</h4>
+            <div id="Zona_datos_Ganancia"></div>
+            <input type="button" id="Borrar_Ga" value="Borrar Todo" onclick="Borrar_Ganancia()">
+        </section>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="card">
+    <div class="card-body">
+        <section>
+            <form id="rentabilidad">
+                <h3>Rentabilidad</h3>
+                <p>Costo Unitario</p>
+                <input type="number" id="Costo_unitario1" value="0" required/>
+                <p>Precio de Venta al Publico</p>
+                <input type="number" id="pvp1" value="0" required/>
+                <p>Resultado</p>
+                <label id="title">Porcentaje</label><input type="number" id="ResultadoR" value="0" disabled/><br/>
+                <p></p>
+                <input type="button" id="Calcular_Rentabilidad" value="Calcular" onclick="Rentabilidad()" />
+                <input type="button" id="Limp_rentabilidad" value="Limpiar" onclick="Limpiar_rentabilidad()">
+                <input type="button" id="Historial_Rentabilidad" value="Historial" onclick="Mostrar_Rentabilidad()" />
+            </form>
+        </section>
+        <section>
+            <p></p>
+            <h4>Historial</h4>
+            <div id="Zona_datos_Rentabilidad"></div>
+            <input type="button" id="Borrar_Renta" value="Borrar Todo" onclick="Borrar_Rentabilidad()">
+        </section>
+    </div>
+</div>

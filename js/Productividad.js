@@ -97,7 +97,7 @@ function Mostrar_Costo_Produccion(){
 /*Obtener datos almacenados*/
 var Mat_Cos_Pro = localStorage.getItem("Material_Costos_Produccion")
 var Cos_Cos_Pro = localStorage.getItem("Costo_Costos_Produccion")
-var Resul_Cost_Pro = localStorage.getItem("Resultado_Costos_Produccion");  
+var Resul_Cost_Pro = localStorage.getItem("Resultado_Costos_Produccion");
 /*Mostrar datos almacenados*/
 document.getElementById("Mat_Cos_Pro").innerHTML = "Material = " + Mat_Cos_Pro;
 document.getElementById("Cos_Cos_Pro").innerHTML = "Costo = " + Cos_Cos_Pro;

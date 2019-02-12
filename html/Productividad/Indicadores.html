@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-body">
+        <section>
+            <form id="indicadores">
+                <h3>Indicadores</h3>
+                <p>Mes</p>
+                <input type="number" id="Mes" value="0" required/>
+                <input type="text" id="Tipo_Unidad1" value="" placeholder="Unidad" required/>
+                <p>Material</p>
+                <input type="number" id="MaterialI" value="0" required/>
+                <input type="text" id="Tipo_Unidad2" value="" placeholder="Unidad" required/>
+                <p>Resultado</p>
+                <input type="number" id="ResultadoI" value="0" disabled/><br/>
+                <p></p>
+                <input type="button" id="Calcular_Indicadores" value="Calcular" onclick="Indicadores()" />
+                <input type="button" id="Limp_indicadores" value="Limpiar" onclick="Limpiar_indicadores()">
+                <input type="button" id="Historial_Indicadores" value="Historial" onclick="Mostrar_Indicadores()" />
+            </form>
+        </section>
+        <section>
+            <p></p>
+            <h4>Historial</h4>
+            <div id="Zona_datos_Indicadores"></div>
+            <input type="button" id="Borrar_Indi" value="Borrar Todo" onclick="Borrar_Indicadores()">
+        </section>
+    </div>
+</div>

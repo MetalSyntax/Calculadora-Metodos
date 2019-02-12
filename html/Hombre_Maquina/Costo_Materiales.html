@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="card-body">
+        <form id="Costo_de_Materiales">
+            <h3>Costo de Materiales</h3>
+            <p>Demanda Aumentada</p>
+            <input type="number" id="daCM" value="0" required/>
+            <p>Costo de materiales</p>
+            <input type="number" id="CM" value="0" required/>
+            <p>Resultado</p>
+            <input type="number" id="resultado_CM" value="0" disabled/>
+            <p></p>
+            <input type="button" id="Calcular_Costo_Materiales" value="Calcular" onclick="Costo_Materiales()" />
+            <input type="button" id="Limp_Costo_de_Materiales" value="Limpiar" onclick="Limpiar_Costo_de_Materiales()">
+        </form>
+        <p></p>
+        <h3>Historial</h3>
+        <ul id="myUL">
+        </ul>
+    </div>
+</div>
