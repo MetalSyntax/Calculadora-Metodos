@@ -2,24 +2,19 @@
     <div class="card-body">
         <section>
             <form id="Produccion">
-                <h3>Costos de Produccion</h3>
-                <p>Material</p>
-                <input type="number" id="MaterialP" value="0" required/>
-                <p>Costo</p>
-                <input type="number" id="CostoP" value="0" required/>
-                <p>Resultado</p>
-                <input type="number" id="ResultadoP" value="0" disabled/>
-                <br/>
-                <p></p>
-                <input type="button" id="Costos_de_Produccion" value="Calcular" onclick="Costos_de_Produc()" />
-                <input type="button" id="Limp_prod" value="Limpiar" onclick="Limpiar_prod()">
-                <input type="button" id="Borrar_Costo_P" value="Borrar Todo" onclick="Borrar_Costo_Produccion()">
-                <input type="button" id="Historial_Costo_Produccion" value="Historial" onclick="Mostrar_Costo_Produccion()" />
+                <h1>Costos de Produccion</h1>
+                <span>Material </span><input type="number" id="MaterialP" value="0" required /><br>
+                <span>Costo </span><input type="number" id="CostoP" value="0" required /><br>
+                <span>Resultado </span><input type="number" id="ResultadoP" value="0" disabled />
+                <div class="Botones_Calculo">
+                    <input type="button" id="Costos_de_Produccion" value="Calcular" onclick="Costos_de_Produc()" />
+                    <input type="button" id="Limp_prod" value="Limpiar" onclick="Limpiar_prod()">
+                </div>
             </form>
         </section>
         <section>
-            <p></p>
             <h4>Historial</h4>
+            <p id="Historial_Vacio">No hay historial</p>
             <div class="container-fluid" id="Datos_Costo_Produccion">
                 <ul class="list-group">
                     <li class="list-group-item" id="Mat_Cos_Pro"></li>
@@ -27,6 +22,8 @@
                     <li class="list-group-item" id="Resultado_Cos_Pro"></li>
                 </ul>
             </div>
+            <input type="button" id="Borrar_Costo_P" value="Borrar Todo" onclick="Borrar_Costo_Produc()">
+            <input type="button" id="Historial_Costo_Produccion" value="Historial" onclick="Mostrar_Costo_Produc()" />
         </section>
     </div>
 </div>

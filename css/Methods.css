@@ -127,6 +127,9 @@ ul li {
 .iconos {
     padding: 0px 10px 0px 0px;
 }
+.Botones_Calculo{
+    margin: 20px;
+}
 /*Barra de Navegacion*/
 .navbar {
     background-color:#043983;
@@ -139,4 +142,10 @@ a.nav-link:hover,a.nav-link:focus {
 }
 a.navbar-brand:hover, a.navbar-brand:focus {
      background: #043983;
+}
+/*Historial*/
+#Datos_Costo_Produccion, 
+#Datos_Costo_Totales, 
+#Datos_Costo_Unitario{
+    display: none;
 }

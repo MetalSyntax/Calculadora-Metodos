@@ -4,27 +4,27 @@
             <h3>Costos Totales</h3>
             <form id="costos">
                 <div id="Costos_Linea">
-                    <input type="number" class="Costos_Totales_Datos" value="0" required/><br/>
+                    <span>Datos </span><input type="number" class="Costos_Totales_Datos" value="0" required/><br/>
                 </div>
-                <p>Resultado</p>
-                <input type="number" id="Costo_Total_Resultado" value="0" disabled/><br/>
+                <span>Resultado </span><input type="number" id="Costo_Total_Resultado" value="0" disabled/><br/>
                 <p>Agregar/Calcular Costos</p>
                 <input type="button" id="New_Linea_Costo" value="Nueva l&iacute;nea" onclick="Nueva_Linea_Costo()" />
                 <input type="button" id="Delete_Linea_Costo" value="Borrar l&iacute;nea" onclick="Borrar_Linea_Costo()" />
                 <input type="button" id="Calcular_Costos_Totales" value="Calcular" onclick="Costos_Totales()" />
                 <input type="button" id="Limp_costos" value="Limpiar" onclick="Limpiar_costos()">
-                <input type="button" id="Borrar_Costo_T" value="Borrar Todo" onclick="Borrar_Costo_Totales()">
-                <input type="button" id="Historial_Costos_Totales" value="Historial" onclick="Mostrar_Costos_Totales()" />
             </form>
         </section>
         <section>
             <p></p>
             <h4>Historial</h4>
-            <div class="container-fluid" id="Datos_Costo_Produccion">
+            <p id="Historial_Vacio">No hay historial</p>
+            <div class="container-fluid" id="Datos_Costo_Totales">
                 <ul class="list-group">
                     <li class="list-group-item" id="Resul_Cos_To"></li>
                 </ul>
             </div>
+            <input type="button" id="Historial_Costos_Totales" value="Historial" onclick="Mostrar_Costos_Totales()" />
+            <input type="button" id="Borrar_Costo_T" value="Borrar Todo" onclick="Borrar_Costo_Totales()">
         </section>
     </div>
 </div>

@@ -1,49 +1,103 @@
 /*******************************************************/
+/*Costos de Produccion*/
+/*******************************************************/
+function Costos_de_Produc(){
+	var Material = 0
+	var Costo = 0
+	$("#MaterialP").each(function(){
+		Material = Material + eval($(this).val());
+	});
+	$("#CostoP").each(function(){
+		Costo = Costo + eval($(this).val());
+	});
+    produccion = Math.round (Material * Costo)
+	$("#ResultadoP").val(produccion); 
+
+	Guardar_Historial_Costo_Produccion();
+}
+
+function Guardar_Historial_Costo_Produccion(){
+/*Obtencion de Datos*/
+	var Material_Costos_Produccion = $("#MaterialP").val();
+	var Costo_Costos_Produccion = $("#CostoP").val();
+	var Resultado_Costos_Produccion = $("#ResultadoP").val();
+	var Arr_Costo_Produccion = [Material_Costos_Produccion, Costo_Costos_Produccion, Resultado_Costos_Produccion]
+/*Guardar datos en un Arreglo*/
+	localStorage.setItem('Costo_Produccion',JSON.stringify(Arr_Costo_Produccion))
+}
+
+function Mostrar_Costo_Produc(){
+/*Obtener datos almacenados*/
+	$('#Historial_Vacio').hide();
+	var Arr_Costo_Produccion = localStorage.getItem('Costo_Produccion');
+	Arr_Costo_Produccion = JSON.parse(Arr_Costo_Produccion);
+/*Mostrar datos almacenados*/
+	$("#Mat_Cos_Pro").html("Material = " + Arr_Costo_Produccion[0]);
+	$("#Cos_Cos_Pro").html("Costo = " + Arr_Costo_Produccion[1]);
+	$("#Resultado_Cos_Pro").html("Resultado = " + Arr_Costo_Produccion[2]);
+	$('#Datos_Costo_Produccion').show();
+}
+
+function Borrar_Costo_Produc(){  
+	$('#Datos_Costo_Produccion').hide();
+	localStorage.removeItem('Costo_Produccion');
+	localStorage.clear();
+/*Limpiar datos almacenados*/       
+	$('#Mat_Cos_Pro').html = "";
+	$('#Cos_Cos_Pro').html = "";
+	$('#Resultado_Cos_Pro').html = "";
+	/*location.reload();*/
+}
+
+/*Limpieza de Costo de Produccion*/
+function Limpiar_prod() {
+	document.getElementById("Produccion").reset();
+}
+/*******************************************************/
 /*Costos Totales*/
 /*******************************************************/
 function Costos_Totales() {
 	Sumatoria_Costos = 0
-	$(".Costos_Totales_Datos").each(function(index, value) {
+	$(".Costos_Totales_Datos").each(function() {
 			Sumatoria_Costos = Sumatoria_Costos + eval($(this).val());
 		});
 	$("#Costo_Total_Resultado").val(Sumatoria_Costos); 
-    
-/*Guardar Datos en el Historial*/ 
-/*Obtencion de Datos*/
-var Costo_Total_Resultado = document.getElementById("Costo_Total_Resultado").value;
-/*Guardando los datos en el LocalStorage*/ 
-localStorage.setItem("Costo_Total_Resultado", Costo_Total_Resultado)
+    Guardar_Datos_Costos_Totales();
 }
 
-/*Mostrar Historial*/
+function Guardar_Datos_Costos_Totales(){
+/*Obtencion de Datos*/
+	var Costo_Total_Resultado = $("#Costo_Total_Resultado").val();
+/*Guardando los datos en el LocalStorage*/ 
+	localStorage.setItem("Costo_Total_Resultado", Costo_Total_Resultado)
+}
+
 function Mostrar_Costos_Totales(){
 /*Obtener datos almacenados*/
-var Resul_Cos_To = localStorage.getItem("Costo_Total_Resultado")
+	$('#Historial_Vacio').hide();
+	var Resul_Cos_To = localStorage.getItem("Costo_Total_Resultado")
 /*Mostrar datos almacenados*/
-document.getElementById("Resul_Cos_To").innerHTML = "Resultado = " + Resul_Cos_To;
+	$("#Resul_Cos_To").html("Resultado = " + Resul_Cos_To);
+	$('#Datos_Costo_Totales').show();
 }
 
-/*Borrar Historial*/
 function Borrar_Costo_Totales(){  
-localStorage.removeItem("Costo_Total_Resultado");
+	localStorage.removeItem("Costo_Total_Resultado");
 /*Limpiar datos almacenados*/       
-document.getElementById('Resul_Cos_To').innerHTML = "";
-location.reload();
+	document.getElementById('Resul_Cos_To').innerHTML = "";
+	location.reload();
 }
-
-/*Linea Nueva*/
+/*Crear Linea de Costos*/
 function Nueva_Linea_Costo() {
-$("#Costos_Linea").append('<input type="number" class="Costos_Totales_Datos" value="0"/><br/>');
+	$("#Costos_Linea").append('<input type="number" class="Costos_Totales_Datos" value="0"/><br/>');
 }
-
-/*Borrar*/
+/*Borrar Linea de Costos*/
 function Borrar_Linea_Costo(){
-$("#Costos_Linea").empty('<input type="number" class="Costos_Totales_Datos" value="0">/><br/>');
+	$("#Costos_Linea").empty('<input type="number" class="Costos_Totales_Datos" value="0">/><br/>');
 }
-
-/*Totales*/
+/*Limpieza de Costos Totales*/
 function Limpiar_costos() {
-document.getElementById("costos").reset();
+	document.getElementById("costos").reset();
 }
 /*******************************************************/
 /*Costo Unitario*/
@@ -51,77 +105,56 @@ document.getElementById("costos").reset();
 function Costo_Unitario_Prod(){
 	Total_Unidades = 0
 	Costo_Total = 0
-	$("#Unidades_U").each(function(index,value){
+	$("#Unidades_U").each(function(){
 		Total_Unidades = Total_Unidades + eval($(this).val());
 	});
-	$("#Costo_Total_U").each(function(index,value){
+	$("#Costo_Total_U").each(function(){
 		Costo_Total = Costo_Total + eval($(this).val());
 	});
     cu = Costo_Total / Total_Unidades
-    dcu = cu.toFixed(4)
+    dcu = cu.toFixed(2)
 	$("#Costo_Unitario").val(dcu);
-}
-/*Unitarios*/
-function Limpiar_costo() {
-document.getElementById("Unitario").reset();
-}
-/*******************************************************/
-/*Costos de Produccion*/
-/*******************************************************/
-function Costos_de_Produc(){
-	var Material = 0
-	var Costo = 0
-	$("#MaterialP").each(function(index,value){
-		Material = Material + eval($(this).val());
-	});
-	$("#CostoP").each(function(index,value){
-		Costo = Costo + eval($(this).val());
-	});
-    produccion = Math.round (Material * Costo)
-	$("#ResultadoP").val(produccion); 
 
-/*Guardar Datos en el Historial*/ 
-/*Obtencion de Datos*/
-var Material_Costos_Produccion = document.getElementById("MaterialP").value;
-var Costo_Costos_Produccion = document.getElementById("CostoP").value;
-var Resultado_Costos_Produccion = document.getElementById("ResultadoP").value;
-
-/*Guardando los datos en el LocalStorage*/ 
-localStorage.setItem("Material_Costos_Produccion",Material_Costos_Produccion);
-localStorage.setItem("Costo_Costos_Produccion",Costo_Costos_Produccion)
-localStorage.setItem("Resultado_Costos_Produccion", Resultado_Costos_Produccion);
+	Guardar_Historial_Costo_Unitario();
 }
 
-/*Mostrar Historial*/
-function Mostrar_Costo_Produccion(){
-/*Obtener datos almacenados*/
-var Mat_Cos_Pro = localStorage.getItem("Material_Costos_Produccion")
-var Cos_Cos_Pro = localStorage.getItem("Costo_Costos_Produccion")
-var Resul_Cost_Pro = localStorage.getItem("Resultado_Costos_Produccion");
-/*Mostrar datos almacenados*/
-document.getElementById("Mat_Cos_Pro").innerHTML = "Material = " + Mat_Cos_Pro;
-document.getElementById("Cos_Cos_Pro").innerHTML = "Costo = " + Cos_Cos_Pro;
-document.getElementById("Resultado_Cos_Pro").innerHTML = "Resultado = " + Resul_Cost_Pro;
-}
+function Guardar_Historial_Costo_Unitario(){
+	/*Obtencion de Datos*/
+		var Datos_Cantidad_Unidades = $("#Unidades_U").val();
+		var Datos_Costo_Total = $("#Costo_Total_U").val();
+		var Resultado_Costo_Unitario = $("#Costo_Unitario").val();
+		var Arr_Costo_unitario = [Datos_Cantidad_Unidades, Datos_Costo_Total, Resultado_Costo_Unitario]
+	/*Guardar datos en un Arreglo*/
+		localStorage.setItem('costo_unitario',JSON.stringify(Arr_Costo_unitario))
+	}
 
-/*Borrar Historial*/
+function Mostrar_Costo_Unitario(){
+	/*Obtener datos almacenados*/
+		$('#Historial_Vacio').hide();
+		var Arr_Costo_unitario = localStorage.getItem('costo_unitario');
+		Arr_Costo_unitario = JSON.parse(Arr_Costo_unitario);
+	/*Mostrar datos almacenados*/
+		$("#Cos_Total").html("Costo Total = " + Arr_Costo_unitario[0]);
+		$("#Cant_Unid").html("Cantidad de Unidades = " + Arr_Costo_unitario[1]);
+		$("#Resultado_Cos_Uni").html("Resultado = " + Arr_Costo_unitario[2]);
+		$('#Datos_Costo_Unitario').show();
+	}
+		
 function Borrar_Costo_Produccion(){  
-localStorage.removeItem("Material_Costos_Produccion");
-localStorage.removeItem("Costo_Costos_Produccion");
-localStorage.removeItem("Resultado_Costos_Produccion");
+	$('#Datos_Costo_Unitario').hide();
+	localStorage.removeItem('costo_unitario');
 /*Limpiar datos almacenados*/       
-document.getElementById('Mat_Cos_Pro').innerHTML = "";
-document.getElementById('Cos_Cos_Pro').innerHTML = "";
-document.getElementById('Resultado_Cos_Pro').innerHTML = "";
-location.reload();
+	$('#Cos_Total').html = "";
+	$('#Cant_Unid').html = "";
+	$('#Resultado_Cos_Uni').html = "";
+	location.reload();
 }
 
-/*Produccion*/
-function Limpiar_prod() {
-document.getElementById("Produccion").reset();
+function Limpiar_costo() {
+	document.getElementById("Unitario").reset();
 }
 /*******************************************************/
-/*Ganancia*/
+/*Ganancia Incompleto*/
 /*******************************************************/
 function Ganancia_R(){
 	pvp = 0
@@ -144,7 +177,7 @@ function Limpiar_ganancia() {
     document.getElementById("ganancia").reset();
 }
 /*******************************************************/
-/*Homogenizar las Unidades*/
+/*Homogenizar las Unidades Incompleto*/
 /*******************************************************/
 function Homogenizar_Multiplicando() {
 	Numero_de_Unidades = 1
@@ -167,7 +200,7 @@ function Limpiar_Homogenizar() {
     document.getElementById("trans").reset();
 }
 /*******************************************************/
-/*Indicadores*/
+/*Indicadores Incompleto*/
 /*******************************************************/
 function Indicadores(){
 	Mes = 0
@@ -185,7 +218,7 @@ function Limpiar_indicadores() {
     document.getElementById("indicadores").reset();
 }
 /*******************************************************/
-/*Indices*/
+/*Indices Incompleto*/
 /*******************************************************/
 function Indices(){
 	Estudio = 0
@@ -211,7 +244,7 @@ function Limpiar_indices() {
     document.getElementById("indices").reset();
 }
 /*******************************************************/
-/*Productividad en Funcion de los Trabajadores*/
+/*Productividad en Funcion de los Trabajadores Incompleto*/
 /*******************************************************/
 function Productividad_FT(){
 	total_unidades = 0
@@ -231,7 +264,7 @@ function Limpiar_Trabajadores() {
     document.getElementById("Trabajadores1").reset();
 }
 /*******************************************************/
-/*Productividad en Funcion de los Materiales*/
+/*Productividad en Funcion de los Materiales Incompleto*/
 /*******************************************************/
 function Productividad_FM(){
 	total_unidades = 0
@@ -251,7 +284,7 @@ function Limpiar_Materiales() {
     document.getElementById("Materiales1").reset();
 }
 /*******************************************************/
-/*Productividad Multifactorial*/
+/*Productividad Multifactorial Incompleto*/
 /*******************************************************/
 function Productividad(){
 	total_unidades = 0
@@ -269,7 +302,7 @@ function Limpiar_produc() {
     document.getElementById("Productividad").reset();
 }
 /*******************************************************/
-/*Rentabilidad*/
+/*Rentabilidad Incompleto*/
 /*******************************************************/
 function Rentabilidad(){
 	pvp1 = 0
