@@ -5,6 +5,12 @@ Esta aplicacion es un software de codigo abierto para la realización de calculo
 
 **Proyecto retomado intermitentemente.**
 
+> Version sin complilar 1.2.5
+- Retablecimiento del Nav
+- Verificacion y mejora de la semantica de la aplicacion
+- Nuevos Modulos con LocalStorage
+- Simplificacion del Proyecto
+
 > Version sin compilar 1.2.0
 - Nav Agregado (Nuevo)
 - Reestructuracion de la Estructura HTML (Incompleto)
