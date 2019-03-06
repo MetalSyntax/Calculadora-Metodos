@@ -1,4 +1,3 @@
-/*******************************************************/
 /*Costos de Produccion*/
 /*******************************************************/
 function Costos_de_Produc(){
@@ -53,7 +52,6 @@ function Borrar_Costo_Produc(){
 function Limpiar_prod() {
 	document.getElementById("Produccion").reset();
 }
-/*******************************************************/
 /*Costos Totales*/
 /*******************************************************/
 function Costos_Totales() {
@@ -99,7 +97,6 @@ function Borrar_Linea_Costo(){
 function Limpiar_costos() {
 	document.getElementById("costos").reset();
 }
-/*******************************************************/
 /*Costo Unitario*/
 /*******************************************************/
 function Costo_Unitario_Prod(){
@@ -153,30 +150,57 @@ function Borrar_Costo_Produccion(){
 function Limpiar_costo() {
 	document.getElementById("Unitario").reset();
 }
-/*******************************************************/
-/*Ganancia Incompleto*/
+/*Ganancia*/
 /*******************************************************/
 function Ganancia_R(){
 	pvp = 0
 	Costo_unitario = 0
-	$("#pvp").each(function(index,value){
+	$("#pvp").each(function(){
 		pvp = pvp + eval($(this).val());
 	});
-	$("#Costo_unitario").each(function(index,value){
+	$("#Costo_unitario").each(function(){
 		Costo_unitario = Costo_unitario + eval($(this).val());
 	});
-    if (pvp>Costo_unitario){
-    var ganancia = "Ganancia = ";
-    } else {
-    var ganancia = "Perdida = ";
-    }
 	$("#ResultadoG").val(Math.round (pvp - Costo_unitario));
+	Guardar_Historial_Ganancia();
 }
+
+function Guardar_Historial_Ganancia(){
+	/*Obtencion de Datos*/
+		var Datos_PVP = $("#pvp").val();
+		var Datos_Costo_unitario = $("#Costo_unitario").val();
+		var Resultado_Ganacia = $("#ResultadoG").val();
+		var Arr_Ganancia = [Datos_PVP, Datos_Costo_unitario, Resultado_Ganacia]
+	/*Guardar datos en un Arreglo*/
+		localStorage.setItem('Ganancia',JSON.stringify(Arr_Ganancia))
+	}
+
+function Mostrar_Ganancia(){
+	/*Obtener datos almacenados*/
+		$('#Historial_Vacio').hide();
+		var Arr_Ganancia = localStorage.getItem('Ganancia');
+		Arr_Ganancia = JSON.parse(Arr_Ganancia);
+	/*Mostrar datos almacenados*/
+		$("#Cos_Unit").html("Costo Unitario = " + Arr_Ganancia[0]);
+		$("#Precio_Venta").html("Precio de Venta al Publico = " + Arr_Ganancia[1]);
+		$("#Resultado_Ganancia").html("Resultado = " + Arr_Ganancia[2]);
+		$('#Datos_Ganancia').show();
+	}
+		
+function Borrar_Ganancia(){  
+	$('#Datos_Ganancia').hide();
+	localStorage.removeItem('Ganancia');
+/*Limpiar datos almacenados*/       
+	$('#Cos_Unit').html = "";
+	$('#Precio_Venta').html = "";
+	$('#Resultado_Ganancia').html = "";
+	location.reload();
+}
+
 /*Ganancia*/
 function Limpiar_ganancia() {
     document.getElementById("ganancia").reset();
 }
-/*******************************************************/
 /*Homogenizar las Unidades Incompleto*/
 /*******************************************************/
 function Homogenizar_Multiplicando() {
@@ -199,7 +223,6 @@ function Borrar_Linea_Homogenizar(){
 function Limpiar_Homogenizar() {
     document.getElementById("trans").reset();
 }
-/*******************************************************/
 /*Indicadores Incompleto*/
 /*******************************************************/
 function Indicadores(){
@@ -217,7 +240,6 @@ function Indicadores(){
 function Limpiar_indicadores() {
     document.getElementById("indicadores").reset();
 }
-/*******************************************************/
 /*Indices Incompleto*/
 /*******************************************************/
 function Indices(){
@@ -243,7 +265,6 @@ function Indices(){
 function Limpiar_indices() {
     document.getElementById("indices").reset();
 }
-/*******************************************************/
 /*Productividad en Funcion de los Trabajadores Incompleto*/
 /*******************************************************/
 function Productividad_FT(){
@@ -263,7 +284,6 @@ function Productividad_FT(){
 function Limpiar_Trabajadores() {
     document.getElementById("Trabajadores1").reset();
 }
-/*******************************************************/
 /*Productividad en Funcion de los Materiales Incompleto*/
 /*******************************************************/
 function Productividad_FM(){
@@ -283,7 +303,6 @@ function Productividad_FM(){
 function Limpiar_Materiales() {
     document.getElementById("Materiales1").reset();
 }
-/*******************************************************/
 /*Productividad Multifactorial Incompleto*/
 /*******************************************************/
 function Productividad(){
@@ -301,7 +320,6 @@ function Productividad(){
 function Limpiar_produc() {
     document.getElementById("Productividad").reset();
 }
-/*******************************************************/
 /*Rentabilidad Incompleto*/
 /*******************************************************/
 function Rentabilidad(){

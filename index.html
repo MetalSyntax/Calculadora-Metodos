@@ -23,7 +23,7 @@
 
 <body ng-app='navegacion'>
     <!--Barra de Navegacion-->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-md navbar-dark">
         <a class="navbar-brand" href="#/">
             <img src="icon.png" alt="Method" width="35" height="35"> Methods
         </a>
@@ -31,18 +31,12 @@
     <span class="navbar-toggler-icon"></span>
   </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a href="#/" class="nav-link" data-toggle="collapse" aria-expanded="false">Inicio</a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="myTab">
+                <li class="nav-item">
+                    <a href="#/" class="nav-link" data-toggle="collapse" aria-expanded="false"><i class="fas fa-home"></i> Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#/Productividad">Productividad</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#/Hombre-Maquina">Hombre-Maquina</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#/Ayuda">Centro de Ayuda</a>
+                    <a class="nav-link" href="#/Ayuda"><i class="far fa-life-ring"></i> Centro de Ayuda</a>
                 </li>
             </ul>
         </div>
@@ -53,26 +47,6 @@
     <script src="lib/jquery-3.3.1.slim.min.js"></script>
     <script src="lib/popper.min.js"></script>
     <script src="lib/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $("#sidebar").mCustomScrollbar({
-                theme: "minimal"
-            });
-
-            $('#dismiss, .overlay').on('click', function() {
-                $('#sidebar').removeClass('active');
-                $('.overlay').removeClass('active');
-            });
-
-            $('#sidebarCollapse').on('click', function() {
-                $('#sidebar').addClass('active');
-                $('.overlay').addClass('active');
-                $('.collapse.in').toggleClass('in');
-                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-            });
-        });
-
-    </script>
     <!-- Personalizado JS -->
     <script src="js/Productividad.js"></script>
     <script src="js/Hombre_Maquina.js"></script>

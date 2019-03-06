@@ -59,67 +59,6 @@ AppMethods.config(['$routeProvider', function ($routeProvider) {
         templateUrl: 'html/Productividad/Conversiones.html',
         controller: 'Productividad'
     })
-    /*Hombre-Maquina*/
-    $routeProvider.when('/Hombre-Maquina', {
-        templateUrl: 'html/Hombre-Maquina.html',
-        controller: 'Hombre-Maquina'
-    })
-    $routeProvider.when('/Tiempo_Necesario', {
-        templateUrl: 'html/Hombre_Maquina/Tiempo_Necesario.html',
-        controller: 'Hombre-Maquina'
-    })
-    $routeProvider.when('/Numero_Tecnico', {
-        templateUrl: 'html/Hombre_Maquina/Numero_Tecnico.html',
-        controller: 'Hombre-Maquina'
-    })
-    $routeProvider.when('/Produccion_HM', {
-        templateUrl: 'html/Hombre_Maquina/Produccion_HM.html',
-        controller: 'Hombre-Maquina'
-    })
-    $routeProvider.when('/Demanda_Aumentada', {
-        templateUrl: 'html/Hombre_Maquina/Demanda_Aumentada.html',
-        controller: 'Hombre-Maquina'
-    })
-    $routeProvider.when('/Piezas_Defectuosas', {
-        templateUrl: 'html/Hombre_Maquina/Piezas_Defectuosas.html',
-        controller: 'Hombre-Maquina'
-    })
-    $routeProvider.when('/Numero_De_Hombres', {
-        templateUrl: 'html/Hombre_Maquina/Numero_De_Hombres.html',
-        controller: 'Hombre-Maquina'
-    })
-    $routeProvider.when('/Costo_Inversion', {
-        templateUrl: 'html/Hombre_Maquina/Costo_Inversion.html',
-        controller: 'Hombre-Maquina'
-    })
-    $routeProvider.when('/Costo_MO_JN', {
-        templateUrl: 'html/Hombre_Maquina/Costo_MO_JN.html',
-        controller: 'Hombre-Maquina'
-    })
-    $routeProvider.when('/Costo_MO_JE', {
-        templateUrl: 'html/Hombre_Maquina/Costo_MO_JE.html',
-        controller: 'Hombre-Maquina'
-    })
-    $routeProvider.when('/Costo_MF', {
-        templateUrl: 'html/Hombre_Maquina/Costo_MF.html',
-        controller: 'Hombre-Maquina'
-    })
-    $routeProvider.when('/Costo_MP', {
-        templateUrl: 'html/Hombre_Maquina/Costo_MP.html',
-        controller: 'Hombre-Maquina'
-    })
-    $routeProvider.when('/Costo_Piezas_Defectuosas', {
-        templateUrl: 'html/Hombre_Maquina/Costo_Piezas_Defectuosas.html',
-        controller: 'Hombre-Maquina'
-    })
-    $routeProvider.when('/Costo_Materiales', {
-        templateUrl: 'html/Hombre_Maquina/Costo_Materiales.html',
-        controller: 'Hombre-Maquina'
-    })
-    $routeProvider.when('/Depreciacion', {
-        templateUrl: 'html/Hombre_Maquina/Depreciacion.html',
-        controller: 'Hombre-Maquina'
-    })
     /*Ayuda*/
     $routeProvider.when('/Ayuda', {
         templateUrl: 'html/Ayuda.html',
@@ -127,10 +66,6 @@ AppMethods.config(['$routeProvider', function ($routeProvider) {
     })
     $routeProvider.when('/Concepto_Fundamentales', {
         templateUrl: 'html/Ayuda/Concepto_Fundamentales.html',
-        controller: 'Ayuda'
-    })
-    $routeProvider.when('/Concepto_Hombre_Maquina', {
-        templateUrl: 'html/Ayuda/Concepto_Hombre_Maquina.html',
         controller: 'Ayuda'
     })
     $routeProvider.when('/Concepto_Productividad', {

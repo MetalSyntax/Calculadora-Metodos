@@ -1,9 +1,19 @@
 # Methods
-Derechos de Autor (C) 2017-2018 Wonder Diaz
+Derechos de Autor (C) 2017-2019 Wonder Diaz
 
 Esta aplicacion es un software de codigo abierto para la realización de calculos relacionados con la Ingenieria de Metodos en su dispositivo Android.
 
-**Proyecto retomado intermitentemente.**
+> Version sin complilar 1.3.0
+- Se mejoro la apariencia en los archivos de Ayuda
+- Nuevos Modulos con LocalStorage
+- Se dejo solo el modulo de productividad
+- Se agregaron iconos
+
+> Version sin complilar 1.2.5
+- Retablecimiento del Nav
+- Verificacion y mejora de la semantica de la aplicacion
+- Nuevos Modulos con LocalStorage
+- Simplificacion del Proyecto
 
 > Version sin complilar 1.2.5
 - Retablecimiento del Nav
@@ -27,7 +37,7 @@ Hasta que no se realice un progreso importante y una revision de la calidad. No 
 
 ## Caracteristicas
 
-- Calculo de Ingenieria de Metodos
+- Calculo de Ingenieria de Metodos - Productividad
 - Base de datos en el Local Storage
 - Diseño responsivo 
 - Multiplataforma

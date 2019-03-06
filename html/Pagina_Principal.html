@@ -1,9 +1,10 @@
 <div class="card">
     <div class="card-body">
-        <h1><span id="iconos" class="iconos"><i class="fas fa-industry"></i></span>Modulos de Metodos</h1>
-        <a href="#/Productividad"><span id="iconos" class="iconos"><i class="fas fa-chart-line"></i></span>Productividad</a>
-            <a href="#/Hombre-Maquina"><span id="iconos" class="iconos"><i class="fas fa-cog"></i></span>Hombre-Maquina</a>
-        <br>
-        <h2><span id="iconos" class="iconos"><i class="fas fa-redo"></i></span>Modulos Recientes</h2>
-        <p id="reciente" class="reciente">No hay modulos recientes</p>
-    </div></div>
+        <h1><span id="iconos" class="iconos"><i class="fas fa-industry"></i></span>Modulos de Productividad</h1>
+        <div ng-controller="filtroProductividad">
+            <div ng-repeat="itemP in ItemProductividad | filter: Buscar">
+                <a href="#/{{itemP.Link}}"><i class="fas fa-chart-line"></i>&nbsp;{{itemP.Nombre}}</a>
+            </div>
+        </div>
+    </div>
+</div>
