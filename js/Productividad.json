@@ -16,10 +16,6 @@
     "Link":"Ganancia"
   },
     {
-    "Nombre":"Homogenizar Unidades",
-    "Link":"Conversiones"
-  },
-    {
     "Nombre":"Indicadores",
     "Link":"Indicadores"
   },
@@ -28,15 +24,15 @@
     "Link":"Indices"
   },
     {
-    "Nombre":"Productividad Materiales",
+    "Nombre":"Materiales",
     "Link":"Productividad_Funcion_Materiales"
   },
     {
-    "Nombre":"Productividad Trabajadores",
+    "Nombre":"Trabajadores",
     "Link":"Productividad_Funcion_trabajadores"
   },
      {
-    "Nombre":"Productividad Multifactorial",
+    "Nombre":"Multifactorial",
     "Link":"Productividad_Multifactorial"
   },
      {

@@ -2,31 +2,59 @@
     <div class="card-body">
         <section>
             <form id="Unitario">
-                <h3>Costo Unitario</h3>
-                <span>Costo Total </span><br><input type="number" id="Costo_Total_U" value="0" required/><br>
-                <input type="text" id="Moneda_Total" value="" placeholder="Unidad" /><br>
-                <span>Cantidad de Unidades </span><br><input type="number" id="Unidades_U" value="0" required/><br>
-                <input type="text" id="Tipo_Unidad_U" value="" placeholder="Unidad" /><br>
-                <p>Resultado</p>
-                <input type="number" id="Costo_Unitario" value="0" disabled/><br/>
-                <p></p>
-                <input type="button" id="Costo_Unitario_Produccion" value="Calcular" onclick="Costo_Unitario_Prod()" />
-                <input type="button" id="Limp_costo" value="Limpiar" onclick="Limpiar_costo()">
+                <h1>Costo Unitario</h1>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Costo Total </span>
+                    </div>
+                    <input type="number" class="form-control" id="Costo_Total_U" value="0" required>
+                    <div class="input-group-append">
+                        <span class="input-group-text">$</span>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Cantidad </span>
+                    </div>
+                    <input type="number" class="form-control" id="Unidades_U" value="0" required>
+                    <div class="input-group-append">
+                        <span class="input-group-text">Unidades</span>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Resultado</span>
+                    </div>
+                    <input type="number" id="Costo_Unitario" value="0" class="form-control" disabled>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" id="Costo_Unitario_Produccion" class="btn" onclick="Costo_Unitario_Prod()"><i
+                            class="fas fa-calculator"></i>
+                        Calcular</button>
+                    <button type="button" id="Limp_costo" class="btn" onclick="Limpiar_costo()"><i class="fas fa-eraser"></i>
+                        Limpiar</button>
+                </div>
             </form>
         </section>
         <section>
-            <p></p>
-            <h4>Historial</h4>
-            <p id="Historial_Vacio">No hay historial</p>
-            <div class="container-fluid" id="Datos_Costo_Unitario">
-                <ul class="list-group">
-                    <li class="list-group-item" id="Cos_Total"></li>
-                    <li class="list-group-item" id="Cant_Unid"></li>
-                    <li class="list-group-item" id="Resultado_Cos_Uni"></li>
-                </ul>
-            </div>
-            <input type="button" id="Historial_Costo_Unitario" value="Historial" onclick="Mostrar_Costo_Unitario()" />
-            <input type="button" id="Borrar_Costo_U" value="Borrar Todo" onclick="Borrar_Costo_Unitario()">
+            <div class="card-body">
+                <h2>Historial</h2>
+                <p id="Historial_Vacio">No hay historial</p>
+                <div class="container-fluid" id="Datos_Costo_Unitario">
+                    <ul class="list-group">
+                        <li class="list-group-item" id="Cos_Total"></li>
+                        <li class="list-group-item" id="Cant_Unid"></li>
+                        <li class="list-group-item" id="Resultado_Cos_Uni"></li>
+                    </ul>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" id="Historial_Costo_Unitario" class="btn" onclick="Mostrar_Costo_Unitario()"><i
+                            class="fas fa-history"></i>
+                        Historial</button>
+                    <button type="button" id="Borrar_Costo_U" class="btn" onclick="Borrar_Costo_Unitario()"><i class="far fa-trash-alt"></i>
+                        Borrar</button>
+                </div>
+            </div>>
         </section>
     </div>
 </div>

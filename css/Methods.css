@@ -4,6 +4,7 @@
     src: url('../fonts/Roboto-Condensed.ttf')format('truetype');
     src: url('../fonts/Roboto-Regular.ttf')format('truetype');
 }
+
 /*Generales*/
 html,
 body {
@@ -19,6 +20,7 @@ body {
     text-align: center;
     min-width: 250px;
 }
+
 /*Enlaces*/
 a {
     padding: 10px 10px 10px 10px;
@@ -30,33 +32,35 @@ a {
     text-decoration: none;
     text-align: justify;
 }
+
 a:hover,
 a:focus {
     color: #043983;
     background: #f8f9fa;
     text-decoration: none;
 }
+
 .active {
     color: white;
 }
+
 /*Entradas*/
-input {
-    margin: 3px;
-    padding: 8px 8px;
-    border: 2px #336699;
-    border-radius: 10px;
-    border-style: solid;
+.form-control:disabled {
     background-color: #FFF;
-    font-family: 'Roboto Condensed', sans-serif;
 }
-select {
-    margin: 3px;
-    padding: 7px 7px;
-    border: 2px #336699;
-    border-radius: 10px;
-    border-style: solid;
-    background-color: #FFF;
-    font-family: 'Roboto Condensed', sans-serif;
+
+span.input-group-text {
+    background-color: #043983;
+    color: #ffffff;
+}
+
+.list-group {
+    margin: 20px;
+}
+
+.btn {
+    background-color: #043983;
+    color: #ffffff;
 }
 /*Texto*/
 p {
@@ -65,39 +69,46 @@ p {
     text-align: center;
     margin-bottom: 10px;
 }
+
 h1 {
     font-size: 25px;
     color: #333333;
     text-align: center;
     padding: 10px 10px 10px 32px;
-    font-weight:500;
+    font-weight: 500;
 }
+
 h2 {
     font-size: 23px;
     color: #333333;
     text-align: center;
     padding: 10px 10px 10px 32px;
-    font-weight:500;
+    font-weight: 500;
 }
+
 h3 {
     font-size: 22px;
     color: #333333;
     text-align: center;
     padding: 10px 10px 10px 32px;
-    font-weight:500;
+    font-weight: 500;
 }
+
 * {
     box-sizing: border-box;
 }
+
 ul {
     margin: 0;
     padding: 0;
 }
+
 ul li {
     position: relative;
     font-size: 14px;
     transition: 0.2s;
 }
+
 /*Especificos*/
 .ayuda_parrofo {
     text-align: justify;
@@ -121,25 +132,45 @@ ul li {
 .iconos {
     padding: 0px 10px 0px 0px;
 }
-.Botones_Calculo{
+
+.Botones_Calculo {
     margin: 20px;
 }
+
 /*Barra de Navegacion*/
 .navbar {
-    background-color:#043983;
+    background-color: #043983;
 }
+
 .nav-item {
     padding: 0px 0px 0px 32px;
 }
-a.nav-link:hover,a.nav-link:focus {
-   background: #043983; 
+
+a.nav-link:hover,
+a.nav-link:focus {
+    background: #043983;
 }
-a.navbar-brand:hover, a.navbar-brand:focus {
-     background: #043983;
+
+a.navbar-brand:hover,
+a.navbar-brand:focus {
+    background: #043983;
 }
+
 /*Historial*/
-#Datos_Costo_Produccion, 
-#Datos_Costo_Totales, 
-#Datos_Costo_Unitario, #Datos_Ganancia{
+#Datos_Costo_Produccion,
+#Datos_Costo_Totales,
+#Datos_Costo_Unitario,
+#Datos_Ganancia,
+#Datos_Indicadores,
+#Datos_Indices,
+#Datos_Material,
+#Datos_Trabajadores,
+#Datos_Produccion,
+#Datos_Rentabilidad {
     display: none;
+}
+
+.card-header {
+    color:#C0CDE0;
+     background-color: #043983;
 }

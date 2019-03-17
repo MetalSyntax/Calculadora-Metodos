@@ -1,15 +1,15 @@
 /*Costos de Produccion*/
 /*******************************************************/
 function Costos_de_Produc(){
-	var Material = 0
-	var Costo = 0
+	var Material = 0;
+	var Costo = 0;
 	$("#MaterialP").each(function(){
 		Material = Material + eval($(this).val());
 	});
 	$("#CostoP").each(function(){
 		Costo = Costo + eval($(this).val());
 	});
-    produccion = Math.round (Material * Costo)
+    produccion = Math.round (Material * Costo);
 	$("#ResultadoP").val(produccion); 
 
 	Guardar_Historial_Costo_Produccion();
@@ -20,9 +20,9 @@ function Guardar_Historial_Costo_Produccion(){
 	var Material_Costos_Produccion = $("#MaterialP").val();
 	var Costo_Costos_Produccion = $("#CostoP").val();
 	var Resultado_Costos_Produccion = $("#ResultadoP").val();
-	var Arr_Costo_Produccion = [Material_Costos_Produccion, Costo_Costos_Produccion, Resultado_Costos_Produccion]
+	var Arr_Costo_Produccion = [Material_Costos_Produccion, Costo_Costos_Produccion, Resultado_Costos_Produccion];
 /*Guardar datos en un Arreglo*/
-	localStorage.setItem('Costo_Produccion',JSON.stringify(Arr_Costo_Produccion))
+	localStorage.setItem('Costo_Produccion',JSON.stringify(Arr_Costo_Produccion));
 }
 
 function Mostrar_Costo_Produc(){
@@ -55,7 +55,7 @@ function Limpiar_prod() {
 /*Costos Totales*/
 /*******************************************************/
 function Costos_Totales() {
-	Sumatoria_Costos = 0
+	Sumatoria_Costos = 0;
 	$(".Costos_Totales_Datos").each(function() {
 			Sumatoria_Costos = Sumatoria_Costos + eval($(this).val());
 		});
@@ -67,13 +67,13 @@ function Guardar_Datos_Costos_Totales(){
 /*Obtencion de Datos*/
 	var Costo_Total_Resultado = $("#Costo_Total_Resultado").val();
 /*Guardando los datos en el LocalStorage*/ 
-	localStorage.setItem("Costo_Total_Resultado", Costo_Total_Resultado)
+	localStorage.setItem("Costo_Total_Resultado", Costo_Total_Resultado);
 }
 
 function Mostrar_Costos_Totales(){
 /*Obtener datos almacenados*/
 	$('#Historial_Vacio').hide();
-	var Resul_Cos_To = localStorage.getItem("Costo_Total_Resultado")
+	var Resul_Cos_To = localStorage.getItem("Costo_Total_Resultado");
 /*Mostrar datos almacenados*/
 	$("#Resul_Cos_To").html("Resultado = " + Resul_Cos_To);
 	$('#Datos_Costo_Totales').show();
@@ -87,11 +87,12 @@ function Borrar_Costo_Totales(){
 }
 /*Crear Linea de Costos*/
 function Nueva_Linea_Costo() {
-	$("#Costos_Linea").append('<input type="number" class="Costos_Totales_Datos" value="0"/><br/>');
+	$("#Costos_Linea").append('<input type="number" value="0" class="form-control Costos_Totales_Datos" required>');
 }
 /*Borrar Linea de Costos*/
 function Borrar_Linea_Costo(){
-	$("#Costos_Linea").empty('<input type="number" class="Costos_Totales_Datos" value="0">/><br/>');
+	$(".Costos_Totales_Datos").remove();
+	$("#Costos_Linea").append('<input type="number" value="0" class="form-control Costos_Totales_Datos" required>');
 }
 /*Limpieza de Costos Totales*/
 function Limpiar_costos() {
@@ -100,16 +101,16 @@ function Limpiar_costos() {
 /*Costo Unitario*/
 /*******************************************************/
 function Costo_Unitario_Prod(){
-	Total_Unidades = 0
-	Costo_Total = 0
+	Total_Unidades = 0;
+	Costo_Total = 0;
 	$("#Unidades_U").each(function(){
 		Total_Unidades = Total_Unidades + eval($(this).val());
 	});
 	$("#Costo_Total_U").each(function(){
 		Costo_Total = Costo_Total + eval($(this).val());
 	});
-    cu = Costo_Total / Total_Unidades
-    dcu = cu.toFixed(2)
+    cu = Costo_Total / Total_Unidades;
+    dcu = cu.toFixed(2);
 	$("#Costo_Unitario").val(dcu);
 
 	Guardar_Historial_Costo_Unitario();
@@ -120,9 +121,9 @@ function Guardar_Historial_Costo_Unitario(){
 		var Datos_Cantidad_Unidades = $("#Unidades_U").val();
 		var Datos_Costo_Total = $("#Costo_Total_U").val();
 		var Resultado_Costo_Unitario = $("#Costo_Unitario").val();
-		var Arr_Costo_unitario = [Datos_Cantidad_Unidades, Datos_Costo_Total, Resultado_Costo_Unitario]
+		var Arr_Costo_unitario = [Datos_Cantidad_Unidades, Datos_Costo_Total, Resultado_Costo_Unitario];
 	/*Guardar datos en un Arreglo*/
-		localStorage.setItem('costo_unitario',JSON.stringify(Arr_Costo_unitario))
+		localStorage.setItem('costo_unitario',JSON.stringify(Arr_Costo_unitario));
 	}
 
 function Mostrar_Costo_Unitario(){
@@ -137,7 +138,7 @@ function Mostrar_Costo_Unitario(){
 		$('#Datos_Costo_Unitario').show();
 	}
 		
-function Borrar_Costo_Produccion(){  
+function Borrar_Costo_Unitario() {
 	$('#Datos_Costo_Unitario').hide();
 	localStorage.removeItem('costo_unitario');
 /*Limpiar datos almacenados*/       
@@ -147,14 +148,15 @@ function Borrar_Costo_Produccion(){
 	location.reload();
 }
 
+/*Limpieza de Costos Unitarios*/
 function Limpiar_costo() {
 	document.getElementById("Unitario").reset();
 }
 /*Ganancia*/
 /*******************************************************/
 function Ganancia_R(){
-	pvp = 0
-	Costo_unitario = 0
+	pvp = 0;
+	Costo_unitario = 0;
 	$("#pvp").each(function(){
 		pvp = pvp + eval($(this).val());
 	});
@@ -170,9 +172,9 @@ function Guardar_Historial_Ganancia(){
 		var Datos_PVP = $("#pvp").val();
 		var Datos_Costo_unitario = $("#Costo_unitario").val();
 		var Resultado_Ganacia = $("#ResultadoG").val();
-		var Arr_Ganancia = [Datos_PVP, Datos_Costo_unitario, Resultado_Ganacia]
+		var Arr_Ganancia = [Datos_PVP, Datos_Costo_unitario, Resultado_Ganacia];
 	/*Guardar datos en un Arreglo*/
-		localStorage.setItem('Ganancia',JSON.stringify(Arr_Ganancia))
+		localStorage.setItem('Ganancia',JSON.stringify(Arr_Ganancia));
 	}
 
 function Mostrar_Ganancia(){
@@ -181,8 +183,8 @@ function Mostrar_Ganancia(){
 		var Arr_Ganancia = localStorage.getItem('Ganancia');
 		Arr_Ganancia = JSON.parse(Arr_Ganancia);
 	/*Mostrar datos almacenados*/
-		$("#Cos_Unit").html("Costo Unitario = " + Arr_Ganancia[0]);
-		$("#Precio_Venta").html("Precio de Venta al Publico = " + Arr_Ganancia[1]);
+		$("#Cos_Unit").html("Precio de Venta al Publico = " + Arr_Ganancia[0]);
+		$("#Precio_Venta").html("Costo Unitario = " + Arr_Ganancia[1]);
 		$("#Resultado_Ganancia").html("Resultado = " + Arr_Ganancia[2]);
 		$('#Datos_Ganancia').show();
 	}
@@ -197,134 +199,287 @@ function Borrar_Ganancia(){
 	location.reload();
 }
 
-/*Ganancia*/
+/*Limpieza de Ganancia*/
 function Limpiar_ganancia() {
     document.getElementById("ganancia").reset();
 }
-/*Homogenizar las Unidades Incompleto*/
-/*******************************************************/
-function Homogenizar_Multiplicando() {
-	Numero_de_Unidades = 1
-	$(".Numero_de_Unidades").each(
-        function(index, value) {
-            Numero_de_Unidades = Numero_de_Unidades * eval($(this).val());
-		});
-	$("#Resultado_Multi").val(Numero_de_Unidades);
-}
-/*Linea Nueva*/
-function Nueva_Linea_Homogenizar() {
-	$("#Transformaciones").append('<input type="number" class="Numero_de_Unidades" value="0"/><br/>');   
-}
-/*Borrar*/
-function Borrar_Linea_Homogenizar(){
-    $("#Transformaciones").empty('<input type="number" class="Numero_de_Unidades" value="0">/><br/>');
-}
-/*Homogenizar Unidades*/
-function Limpiar_Homogenizar() {
-    document.getElementById("trans").reset();
-}
-/*Indicadores Incompleto*/
+/*Indicadores*/
 /*******************************************************/
 function Indicadores(){
-	Mes = 0
-	Material = 0
-	$("#Mes").each(function(index,value){
+	Mes = 0;
+	Material = 0;
+	$("#Mes").each(function(){
 		Mes = Mes + eval($(this).val());
 	});
-	$("#MaterialI").each(function(index,value){
+	$("#MaterialI").each(function(){
 		Material = Material + eval($(this).val());
 	});
 	$("#ResultadoI").val(Mes / Material);
+	Guardar_Historial_Indicadores();
 }
-/*Indicadores*/
+
+function Guardar_Historial_Indicadores() {
+		/*Obtencion de Datos*/
+		var Datos_Mes = $("#Mes").val();
+		var Datos_Material_Indicador = $("#MaterialI").val();
+		var Resultado_Indicador = $("#ResultadoI").val();
+		var Arr_Indicador = [Datos_Mes, Datos_Material_Indicador, Resultado_Indicador];
+		/*Guardar datos en un Arreglo*/
+		localStorage.setItem('Indicador', JSON.stringify(Arr_Indicador));
+}
+
+function Mostrar_Indicadores() {
+	/*Obtener datos almacenados*/
+	$('#Historial_Vacio').hide();
+	var Arr_Indicador = localStorage.getItem('Indicador');
+	Arr_Indicador = JSON.parse(Arr_Indicador);
+	/*Mostrar datos almacenados*/
+	$("#Histo_Mes_Indi").html("Cantidad de Meses = " + Arr_Indicador[0]);
+	$("#Histo_Mate_Indi").html("Cantidad de Materiales = " + Arr_Indicador[1]);
+	$("#Histo_Resul_Indi").html("Resultado = " + Arr_Indicador[2]);
+	$('#Datos_Indicadores').show();
+}
+
+function Borrar_Indicadores() {
+	$('#Datos_Indicadores').hide();
+	localStorage.removeItem('Indicador');
+	/*Limpiar datos almacenados*/
+	$('#Histo_Mes_Indi').html = "";
+	$('#Histo_Mate_Indi').html = "";
+	$('#Histo_Resul_Indi').html = "";
+	location.reload();
+}
+
+/*Limpieza de Indicadores*/
 function Limpiar_indicadores() {
     document.getElementById("indicadores").reset();
 }
-/*Indices Incompleto*/
+/*Indices*/
 /*******************************************************/
 function Indices(){
-	Estudio = 0
-	Base = 0
-	$("#Estudio").each(function(index,value){
+	Estudio = 0;
+	Base = 0;
+	$("#Estudio").each(function(){
 		Estudio = Estudio + eval($(this).val());
 	});
-	$("#Base").each(function(index,value){
+	$("#Base").each(function(){
 		Base = Base + eval($(this).val());
 	});
-    indice_p = (Estudio / Base)*100
-    indice_R = (indice_p - 100)
-    if (indice_p>100){
-    var indice = " Aumento"
-    } else {
-    var indice = " Disminucion"
-    }
+    indice_p = (Estudio / Base)*100;
+    indice_R = (indice_p - 100);
+	
 	$("#ResultadoIN").val(indice_p);
-    $("#ResultadoPOR").val(indice_R);
+	$("#ResultadoPOR").val(indice_R);
+	
+	Guardar_Historial_Indices();
 }
-/*Indices*/
+
+function Guardar_Historial_Indices() {
+	/*Obtencion de Datos*/
+	var Datos_Estudio = $("#Estudio").val();
+	var Datos_Base = $("#Base").val();
+	var Resultado_Indi_Ent = $("#ResultadoIN").val();
+	var Resultado_Indi_Por = $("#ResultadoPOR").val();
+	var Arr_Indice = [Datos_Estudio, Datos_Base, Resultado_Indi_Ent, Resultado_Indi_Por];
+	/*Guardar datos en un Arreglo*/
+	localStorage.setItem('Indice', JSON.stringify(Arr_Indice));
+}
+
+function Mostrar_Indices() {
+	/*Obtener datos almacenados*/
+	$('#Historial_Vacio').hide();
+	var Arr_Indice = localStorage.getItem('Indice');
+	Arr_Indice = JSON.parse(Arr_Indice);
+	/*Mostrar datos almacenados*/
+	$("#Histo_Indi_Estudio").html("Indicadores de Estudio = " + Arr_Indice[0]);
+	$("#Histo_Indi_Base").html("Indicadores de Base= " + Arr_Indice[1]);
+	$("#Histo_Indi_Result_Int").html("Resultado Entero = " + Arr_Indice[2]);
+	$("#Histo_Indi_Result_Por").html("Resultado Porcentaje = " + Arr_Indice[3]);
+	$('#Datos_Indices').show();
+}
+
+function Borrar_Indices() {
+	$('#Datos_Indices').hide();
+	localStorage.removeItem('Indice');
+	/*Limpiar datos almacenados*/
+	$("#Histo_Indi_Estudio").html = "";
+	$("#Histo_Indi_Base").html = "";
+	$("#Histo_Indi_Result_Int").html = "";
+	$("#Histo_Indi_Result_Por").html = "";
+	location.reload();
+}
+
+/*Limpieza de Indices*/
 function Limpiar_indices() {
     document.getElementById("indices").reset();
 }
-/*Productividad en Funcion de los Trabajadores Incompleto*/
+/*Productividad en Funcion de los Materiales*/
+/*******************************************************/
+function Productividad_FM() {
+	total_unidades = 0;
+	total_materiales = 0;
+	total = 0;
+	$("#UnidadesM").each(function () {
+		total_unidades = total_unidades + eval($(this).val());
+	});
+	$("#Materiales").each(function () {
+		total_materiales = total_materiales + eval($(this).val());
+	});
+	total = (total_unidades / (total_unidades / total_materiales));
+	$("#TotalPM").val(total);
+
+	Guardar_Historial_Prod_Mat();
+
+}
+
+function Guardar_Historial_Prod_Mat() {
+	/*Obtencion de Datos*/
+	var Datos_Unidades_Material = $("#UnidadesM").val();
+	var Datos_Cantidad_Material = $("#Materiales").val();
+	var Resultado_TotalPM = $("#TotalPM").val();
+	var Arr_Productividad_FM = [Datos_Unidades_Material, Datos_Cantidad_Material, Resultado_TotalPM];
+	/*Guardar datos en un Arreglo*/
+	localStorage.setItem('Productividad_FM', JSON.stringify(Arr_Productividad_FM));
+}
+
+function Mostrar_Productividad_FM() {
+	/*Obtener datos almacenados*/
+	$('#Historial_Vacio').hide();
+	var Arr_Productividad_FM = localStorage.getItem('Productividad_FM');
+	Arr_Productividad_FM = JSON.parse(Arr_Productividad_FM);
+	/*Mostrar datos almacenados*/
+	$("#Histo_Cant_Unit").html("Cantidad de Unidades = " + Arr_Productividad_FM[0]);
+	$("#Histo_Cant_Mate").html("Cantidad de Materiales = " + Arr_Productividad_FM[1]);
+	$("#Histo_Result_Mat").html("Resultado = " + Arr_Productividad_FM[2]);
+	$('#Datos_Material').show();
+}
+
+function Borrar_Productividad_Materiales() {
+	$('#Datos_Material').hide();
+	localStorage.removeItem('Productividad_FM');
+	/*Limpiar datos almacenados*/
+	$("#Histo_Cant_Unit").html = "";
+	$("#Histo_Cant_Mate").html = "";
+	$("#Histo_Result_Mat").html = "";
+	location.reload();
+}
+
+/*Limpiar Productividad en Funcion de los Materiales*/
+function Limpiar_Materiales() {
+	document.getElementById("Material").reset();
+}
+/*Productividad en Funcion de los Trabajadores*/
 /*******************************************************/
 function Productividad_FT(){
-	total_unidades = 0
-	total_trabajadores = 0
+	total_unidades = 0;
+	total_trabajadores = 0;
 	$("#UnidadesT").each(function(index,value){
 		total_unidades = total_unidades + eval($(this).val());
 	});
 	$("#Trabajadores").each(function(index,value){
 		total_trabajadores = total_trabajadores + eval($(this).val());
 	});
-    ttf = total_unidades / total_trabajadores
-    cttf = ttf.toFixed(4)
+    ttf = total_unidades / total_trabajadores;
+    cttf = ttf.toFixed(4);
 	$("#Total_FT").val(cttf);
+
+	Guardar_Historial_Prod_Trab();
 }
+
+function Guardar_Historial_Prod_Trab() {
+	/*Obtencion de Datos*/
+	var Datos_Unidades_Trabajador = $("#UnidadesT").val();
+	var Datos_Cantidad_Trabajadores = $("#Trabajadores").val();
+	var Resultado_Total_FT = $("#Total_FT").val();
+	var Arr_Productividad_FT = [Datos_Unidades_Trabajador, Datos_Cantidad_Trabajadores, Resultado_Total_FT];
+	/*Guardar datos en un Arreglo*/
+	localStorage.setItem('Productividad_FT', JSON.stringify(Arr_Productividad_FT));
+}
+
+function Mostrar_Productividad_FT() {
+	/*Obtener datos almacenados*/
+	$('#Historial_Vacio').hide();
+	var Arr_Productividad_FT = localStorage.getItem('Productividad_FT');
+	Arr_Productividad_FT = JSON.parse(Arr_Productividad_FT);
+	/*Mostrar datos almacenados*/
+	$("#Histo_Cant_Unid_Tra").html("Cantidad de Unidades = " + Arr_Productividad_FT[0]);
+	$("#Histo_Cant_Tra").html("Cantidad de Trabajadores = " + Arr_Productividad_FT[1]);
+	$("#Histo_Result_Tra").html("Resultado = " + Arr_Productividad_FT[2]);
+	$('#Datos_Trabajadores').show();
+}
+
+function Borrar_Productividad_Trabajadores() {
+	$('#Datos_Trabajadores').hide();
+	localStorage.removeItem('Productividad_FT');
+	/*Limpiar datos almacenados*/
+	$("#Histo_Cant_Unid_Tra").html = "";
+	$("#Histo_Cant_Tra").html = "";
+	$("#Histo_Result_Tra").html = "";
+	location.reload();
+}
+
 /*Limpiar Productividad en Funcion de los Trabajadores*/
 function Limpiar_Trabajadores() {
     document.getElementById("Trabajadores1").reset();
 }
-/*Productividad en Funcion de los Materiales Incompleto*/
-/*******************************************************/
-function Productividad_FM(){
-	total_unidades = 0
-	total_materiales = 0
-    total = 0
-	$("#UnidadesM").each(function(index,value){
-		total_unidades = total_unidades + eval($(this).val());
-	});
-	$("#Materiales").each(function(index,value){
-		total_materiales = total_materiales + eval($(this).val());
-	});
-    total = (total_unidades / (total_unidades / total_materiales))
-	$("#TotalPM").val(total);
-}
-/*Limpiar Productividad en Funcion de los Materiales*/
-function Limpiar_Materiales() {
-    document.getElementById("Materiales1").reset();
-}
-/*Productividad Multifactorial Incompleto*/
+/*Productividad Multifactorial*/
 /*******************************************************/
 function Productividad(){
-	total_unidades = 0
-	Costo_Total = 0
-	$("#Unidades").each(function(index,value){
+	total_unidades = 0;
+	Costo_Total = 0;
+	$("#Unidades").each(function(){
 		total_unidades = total_unidades + eval($(this).val());
 	});
-	$("#Costo_Total").each(function(index,value){
+	$("#Costo_Total").each(function(){
 		Costo_Total = Costo_Total + eval($(this).val());
 	});
 	$("#Resultado").val(total_unidades / Costo_Total);
+
+	Guardar_Historial_Productividad();
 }
+
+function Guardar_Historial_Productividad() {
+	/*Obtencion de Datos*/
+	var Datos_Unidades_Productividad = $("#Unidades").val();
+	var Datos_Costo_Total = $("#Costo_Total").val();
+	var Resultado_Productividad = $("#Resultado").val();
+	var Arr_Productividad = [Datos_Unidades_Productividad, Datos_Costo_Total, Resultado_Productividad];
+	/*Guardar datos en un Arreglo*/
+	localStorage.setItem('Productividad', JSON.stringify(Arr_Productividad));
+}
+
+function Mostrar_Productividad() {
+	/*Obtener datos almacenados*/
+	$('#Historial_Vacio').hide();
+	var Arr_Productividad = localStorage.getItem('Productividad');
+	Arr_Productividad = JSON.parse(Arr_Productividad);
+	/*Mostrar datos almacenados*/
+	$("#Histo_Costo_Total").html("Cantidad de Unidades = " + Arr_Productividad[0]);
+	$("#Histo_Unidades_Productividad").html("Cantidad de Trabajadores = " + Arr_Productividad[1]);
+	$("#Histo_Resultado_Productividad").html("Resultado = " + Arr_Productividad[2]);
+	$('#Datos_Produccion').show();
+}
+
+function Borrar_Productividad() {
+	$('#Datos_Produccion').hide();
+	localStorage.removeItem('Productividad');
+	/*Limpiar datos almacenados*/
+	$("#Histo_Costo_Total").html = "";
+	$("#Histo_Unidades_Productividad").html = "";
+	$("#Histo_Resultado_Productividad").html = "";
+	location.reload();
+}
+
 /*Productividad*/
 function Limpiar_produc() {
     document.getElementById("Productividad").reset();
 }
+
 /*Rentabilidad Incompleto*/
 /*******************************************************/
 function Rentabilidad(){
-	pvp1 = 0
-	Costo_unitario1 = 0
+	pvp1 = 0;
+	Costo_unitario1 = 0;
 	$("#pvp1").each(function(index,value){
 		pvp1 = pvp1 + eval($(this).val());
 	});
@@ -332,7 +487,42 @@ function Rentabilidad(){
 		Costo_unitario1 = Costo_unitario1 + eval($(this).val());
 	});
 	$("#ResultadoR").val(Math.round ((pvp1 / Costo_unitario1) * 100));
+
+	Guardar_Historial_Rentabilidad();
 }
+
+function Guardar_Historial_Rentabilidad() {
+	/*Obtencion de Datos*/
+	var Datos_pvp_renta = $("#pvp1").val();
+	var Datos_Costo_unitario_renta = $("#Costo_unitario1").val();
+	var Resultado_rentabillidad = $("#ResultadoR").val();
+	var Arr_Rentabilidad = [Datos_pvp_renta, Datos_Costo_unitario_renta, Resultado_rentabillidad];
+	/*Guardar datos en un Arreglo*/
+	localStorage.setItem('Rentabilidad', JSON.stringify(Arr_Rentabilidad));
+}
+
+function Mostrar_Rentabilidad() {
+	/*Obtener datos almacenados*/
+	$('#Historial_Vacio').hide();
+	var Arr_Rentabilidad = localStorage.getItem('Rentabilidad');
+	Arr_Rentabilidad = JSON.parse(Arr_Rentabilidad);
+	/*Mostrar datos almacenados*/
+	$("#Histo_Cost_Unit").html("Precio Venta al Publico = " + Arr_Rentabilidad[0]);
+	$("#Histo_pvp").html("Costo Unitario = " + Arr_Rentabilidad[1]);
+	$("#histo_result_renta").html("Resultado = " + Arr_Rentabilidad[2]);
+	$('#Datos_Rentabilidad').show();
+}
+
+function Borrar_Rentabilidad() {
+	$('#Datos_Rentabilidad').hide();
+	localStorage.removeItem('Rentabilidad');
+	/*Limpiar datos almacenados*/
+	$("#Histo_Costo_Total").html = "";
+	$("#Histo_Unidades_Productividad").html = "";
+	$("#Histo_Resultado_Productividad").html = "";
+	location.reload();
+}
+
 /*Rentabilidad*/
 function Limpiar_rentabilidad() {
     document.getElementById("rentabilidad").reset();

@@ -1,30 +1,47 @@
 <div class="card">
     <div class="card-body">
         <section>
-            <h3>Costos Totales</h3>
             <form id="costos">
-                <div id="Costos_Linea">
-                    <span>Datos </span><input type="number" class="Costos_Totales_Datos" value="0" required/><br/>
+                <h1>Costos Totales</h1>
+                <div class="input-group mb-3" id="Costos_Linea">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Datos</span>
+                    </div>
+                    <input type="number" id="Costos_Totales_Datos" value="0" class="form-control Costos_Totales_Datos"
+                        required>
                 </div>
-                <span>Resultado </span><input type="number" id="Costo_Total_Resultado" value="0" disabled/><br/>
-                <p>Agregar/Calcular Costos</p>
-                <input type="button" id="New_Linea_Costo" value="Nueva l&iacute;nea" onclick="Nueva_Linea_Costo()" />
-                <input type="button" id="Delete_Linea_Costo" value="Borrar l&iacute;nea" onclick="Borrar_Linea_Costo()" />
-                <input type="button" id="Calcular_Costos_Totales" value="Calcular" onclick="Costos_Totales()" />
-                <input type="button" id="Limp_costos" value="Limpiar" onclick="Limpiar_costos()">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Resultado</span>
+                    </div>
+                    <input type="number" id="Costo_Total_Resultado" value="0" class="form-control" disabled>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" id="New_Linea_Costo" class="btn" onclick="Nueva_Linea_Costo()"><i class="fas fa-plus"></i></button>
+                    <button type="button" id="Delete_Linea_Costo" class="btn" onclick="Borrar_Linea_Costo()"><i class="fas fa-minus"></i></button>
+                    <button type="button" id="Calcular_Costos_Totales" class="btn" onclick="Costos_Totales()"><i class="fas fa-calculator"></i>
+                        Calcular</button>
+                    <button type="button" id="Limp_costos" class="btn" onclick="Limpiar_costos()"><i class="fas fa-eraser"></i>
+                        Limpiar</button>
+                </div>
             </form>
         </section>
+    </div>
+    <div class="card-body">
         <section>
-            <p></p>
-            <h4>Historial</h4>
+            <h2>Historial</h2>
             <p id="Historial_Vacio">No hay historial</p>
             <div class="container-fluid" id="Datos_Costo_Totales">
                 <ul class="list-group">
                     <li class="list-group-item" id="Resul_Cos_To"></li>
                 </ul>
             </div>
-            <input type="button" id="Historial_Costos_Totales" value="Historial" onclick="Mostrar_Costos_Totales()" />
-            <input type="button" id="Borrar_Costo_T" value="Borrar Todo" onclick="Borrar_Costo_Totales()">
+            <div class="btn-group" role="group">
+                <button type="button" id="Historial_Costos_Totales" class="btn" onclick="Mostrar_Costos_Totales()"><i
+                        class="fas fa-history"></i> Historial</button>
+                <button type="button" id="Borrar_Costo_T" class="btn" onclick="Borrar_Costo_Totales()"><i class="far fa-trash-alt"></i>
+                    Borrar</button>
+            </div>
         </section>
     </div>
 </div>

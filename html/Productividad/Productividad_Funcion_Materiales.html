@@ -1,27 +1,61 @@
 <div class="card">
     <div class="card-body">
         <section>
-            <form id="Materiales1">
-                <h3>Productividad en Funcion de los Materiales</h3>
-                <p>La cantidad de Unidades</p>
-                <input type="number" id="UnidadesM" value="0" required/>
-                <input type="text" id="Tipo_Unidad" value="" placeholder="Unidad" required/>
-                <p>Cantidad de Materiales</p>
-                <input type="number" id="Materiales" value="0" required/>
-                <input type="text" id="Tipo_Material" value="" placeholder="Unidad" required/>
-                <p>Resultado</p>
-                <input type="number" id="TotalPM" value="0" disabled/><br/>
-                <p></p>
-                <input type="button" id="Calcular_Productividad_FM" value="Calcular Total" onclick="Productividad_FM()" />
-                <input type="button" id="Limp_Materiales" value="Limpiar" onclick="Limpiar_Materiales()">
-                <input type="button" id="Historial_Productividad_FM" value="Historial" onclick="Mostrar_Productividad_FM()" />
+            <form id="Material">
+                <h1>Productividad en Funcion de los Materiales</h1>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Cantidad</span>
+                    </div>
+                    <input type="number" id="UnidadesM" value="0" class="form-control" required>
+                    <div class="input-group-append">
+                        <span class="input-group-text">Unidades</span>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Cantidad</span>
+                    </div>
+                    <input type="number" id="Materiales" value="0" class="form-control" required>
+                    <div class="input-group-append">
+                        <span class="input-group-text">Materiales</span>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Resultado</span>
+                    </div>
+                    <input type="number" id="TotalPM" value="0" class="form-control" disabled>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" id="Calcular_Productividad_FM" class="btn" onclick="Productividad_FM()"><i
+                            class="fas fa-calculator"></i>
+                        Calcular</button>
+                    <button type="button" id="Limp_Materiales" class="btn" onclick="Limpiar_Materiales()"><i class="fas fa-eraser"></i>
+                        Limpiar</button>
+                </div>
             </form>
         </section>
+    </div>
+    <div class="card-body">
         <section>
-            <p></p>
-            <h4>Historial</h4>
-            <div id="Zona_datos_Productividad_FM"></div>
-            <input type="button" id="Borrar_Productividad_FM" value="Borrar Todo" onclick="Borrar_Productividad_Materiales()">
+            <h2>Historial</h2>
+            <p id="Historial_Vacio">No hay historial</p>
+            <div class="container-fluid" id="Datos_Material">
+                <ul class="list-group">
+                    <li class="list-group-item" id="Histo_Cant_Unit"></li>
+                    <li class="list-group-item" id="Histo_Cant_Mate"></li>
+                    <li class="list-group-item" id="Histo_Result_Mat"></li>
+                </ul>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" id="Historial_Productividad_FM" class="btn" onclick="Mostrar_Productividad_FM()"><i
+                        class="fas fa-history"></i>
+                    Historial</button>
+                <button type="button" id="Borrar_Productividad_FM" class="btn" onclick="Borrar_Productividad_Materiales()"><i
+                        class="far fa-trash-alt"></i>
+                    Borrar</button>
+            </div>
         </section>
     </div>
 </div>
