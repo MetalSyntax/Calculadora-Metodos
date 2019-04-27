@@ -14,7 +14,7 @@ La version para descarga no esta actualizada. Aplicacion disponible para Android
 ## Caracteristicas
 
 - Calculo de Ingenieria de Metodos - Productividad
-- Base de datos en el Local Storage
+- Datos en Local Storage
 - Diseño responsivo 
 - Multiplataforma
 
